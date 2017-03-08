@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# Lapikute väliveeb
 
-You can use the [editor on GitHub](https://github.com/Lapikud/lapikud.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Tegu on [Jekyll](https://jekyllrb.com/) peale ehitatud uhiuue lehega
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# how to dev
 
-### Markdown
+1. Install Ruby
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    sudo apt install ruby
 
-```markdown
-Syntax highlighted code block
+2. Install Jekyll
 
-# Header 1
-## Header 2
-### Header 3
+    gem install jekyll bundler
+    
+3. Clone repo
 
-- Bulleted
-- List
+    git clone https://github.com/Lapikud/lapikud.github.io.git 
+    
+4. Bootstrap 
 
-1. Numbered
-2. List
+    cd lapikud.github.io
+    bundle
 
-**Bold** and _Italic_ and `Code` text
+5. Serve the page
 
-[Link](url) and ![Image](src)
-```
+    bundle exec jekyll serve -w
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Lapikud/lapikud.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
