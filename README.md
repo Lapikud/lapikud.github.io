@@ -2,7 +2,21 @@
 
 Tegu on [Jekyll](https://jekyllrb.com/) peale ehitatud uhiuue lehega
 
-# How to dev
+# Development plan
+
+Materials are on `Google Drive > Lapikud > Tarkvara > Väliveeb`
+
+# Contribution guide
+
+## 1. Create Issues
+
+Easiest way to help would be to create issuses about things that are missing and wrong
+
+## 2. Fork this repo and create a pull request
+
+Fork this repo to your own account and create a pull request for changes you have done in there
+
+# How to setup devenvironment
 
 0. (Windows) Install the Windows Subsystem for Linux
 
