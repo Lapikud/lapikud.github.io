@@ -1,0 +1,32 @@
+.main-footer {
+  background: #fcfcfc;
+  padding: 2rem 0;
+  margin-top: 5rem;
+
+  .container {
+    max-width: 80rem;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: 1rem;
+    }
+  }
+
+  .footer-nav ul {
+    list-style-type: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      a {
+        padding: .5rem .2rem;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+  }
+}

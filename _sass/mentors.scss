@@ -1,0 +1,14 @@
+.mentors-page-container {
+
+  .mentor {
+    margin-bottom: 3rem;
+
+    .profile-img {
+      object-fit: cover;
+      width: 300px;
+      height: 350px;
+      float: left;
+      margin-right: 2rem;
+    }
+  }
+}
