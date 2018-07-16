@@ -50,4 +50,12 @@
             }
         }
     }
+    .description {
+        margin-top: 1em;
+    }
+    @media (min-width: 40.0rem) {
+        .description {
+            margin-top: 3em;
+        }
+    }
 }
