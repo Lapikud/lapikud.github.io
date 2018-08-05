@@ -1,0 +1,25 @@
+.mentor-info {
+  display : flex;
+
+  img {
+    flex : 1;
+    display : block;
+    max-height: 30rem;
+    max-width: 30rem;
+    height: auto;
+    width: auto;
+  }
+  .mentor-info-text {
+    flex : 3;
+    display : flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 3rem;  }
+
+}
+
+
+.row {
+  display : flex;
+  flex-direction: row;
+}
