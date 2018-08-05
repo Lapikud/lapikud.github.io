@@ -1,61 +1,61 @@
-.contact .team {
-    h1 {
-        text-align: center;
+.centered-text {
+  text-align: center;
+}
+
+#contact-helpdesk {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+
+  #contact-helpdesk-banner-container {
+    background : black;
+    padding    : 3rem;
+  }
+
+  #contact-helpdesk-banner {
+    display : block;
+    width   : 100%;
+    height  : auto;
+  }
+  #contact-helpdesk-banner-container, #contact-helpdesk-info {
+    flex   : 1;
+    margin : 0 2rem;
+  }
+}
+
+#contact-management {
+
+  #contact-management-container {
+    display         : flex;
+    flex-direction  : row;
+    flex-wrap       : wrap;
+    justify-content : center;
+
+    .contact-management-person {
+      margin-left   : 2rem;
+      margin-right  : 2rem;
+      margin-bottom : 5rem;
+
+      img {
+        display : block;
+        width   : 100%;
+        height  : auto;
+      }
+
     }
+  }
+}
 
-    .row {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-        flex-direction: row;
+
+@media (max-width : 900px) {
+
+  #contact-helpdesk {
+    flex-direction : column;
+
+    #contact-helpdesk-banner-container, #contact-helpdesk-info {
+      margin : 0;
     }
+  }
 
-    .member {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: auto;
-        flex-grow: 0;
-        padding: 0;
 
-        .profile-img {
-            display: block;
-            margin-right: 1rem;
-            width: 150px;
-            height: 150px;
-        }
-
-        .lap-img {
-            display: block;
-            margin-right: 1rem;
-            width: 200px;
-            height: 100px;
-        }
-        ul {
-            display: inline-block;
-            list-style-type: none;
-            margin-left: 0;
-            min-width: 20rem;
-
-            li {
-                margin: 0;
-
-                h4 {
-                    margin: 0;
-                }
-
-                a {
-                    padding: 0.3rem 0;
-                    display: inline-block;
-                    width: 100%;
-                }
-            }
-        }
-    }
-    @media (min-width: 30.0rem) {
-        .member {
-            flex-direction: row;
-            min-height: 176px;
-        }
-    }
 }
