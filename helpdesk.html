@@ -158,3 +158,38 @@ layout: default
 
   </div>
 </div>
+
+<!--carousel support-->
+<script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
+<script>
+    const mySiema = new Siema({
+        selector: '.siema',
+        duration: 500,
+        easing: 'ease-out',
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        multipleDrag: true,
+        threshold: 20,
+        loop: true,
+    });
+    // listen for keydown event
+    setInterval(() => mySiema.next(), 2500)
+</script>
+
+
+<!-- leafletjs map styles -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+
+<script>
+    var map = L.map('map').setView([59.396342, 24.668718], 19);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([59.396342, 24.668718]).addTo(map)
+        .openPopup();
+</script>
