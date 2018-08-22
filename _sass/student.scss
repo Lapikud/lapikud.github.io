@@ -1,25 +1,27 @@
-.mentor-info {
-  display : flex;
+.activities-info {
+  display : flex;flex-direction: row;
+  margin: 3rem auto;
 
-  img {
-    flex : 1;
-    display : block;
-    max-height: 30rem;
-    max-width: 30rem;
-    height: auto;
-    width: auto;
+  .desc {
+    flex: 1;
+
+    h2 {
+
+    }
   }
-  .mentor-info-text {
-    flex : 3;
-    display : flex;
-    flex-direction: column;
-    padding-left: 5rem;
-    padding-right: 3rem;  }
+  .promo-image {
+    flex: 1;
 
+    img {
+      display : block;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
-
-.row {
-  display : flex;
-  flex-direction: row;
+@media (max-width : 900px) {
+  .activities-info {
+    flex-direction: column;
+  }
 }

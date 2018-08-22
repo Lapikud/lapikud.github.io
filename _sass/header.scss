@@ -9,10 +9,15 @@
     max-width: 112.0rem;
 
     .logo {
-        height: 8rem;
+        height: 32px;
         vertical-align: middle;
         display: inline;
     }
+
+    #header-logo {
+        height : 8rem;
+    }
+
 
     .menu {
         display: inline;

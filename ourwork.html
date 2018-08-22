@@ -4,95 +4,31 @@ layout: default
 <div class="page">
   <div id="ourwork-banner">
     <h1 class="centered-text">Vajad head, kvaliteetset arendusteenust?</h1>
-    <h1 class="centered-text"><a href="/contact">Võta meiega ühendust!</a></h1>
+    <a href="/contact">
+      <h1 class="centered-text banner">
+        Võta meiega ühendust!
+      </h1>
+    </a>
+
   </div>
   <h1 class="centered-text">Tehtud tööd:</h1>
   <div id="ourwork-done">
-    <div class="siema">
 
-      <div class="work-item">
-        <h3>TTÜ Studentlife</h3>
-        <a href="http://studentlife.ee">
-          <h5>http://studentlife.ee</h5>
-          <img src="/assets/ourwork-images/studentlife.png">
+    {% for work in site.data.ourwork %}
+    <div class="work-item">
+      <div class="description">
+        <h2>{{ work.title }}</h2>
+        <a href="{{ work.url }}">
+          <h3>{{ work.url }}</h3>
         </a>
+        <p>{{ work.description }}</p>
       </div>
-
-      <div class="work-item">
-        <h3>Eesti Üliõpilasesinduse Liit</h3>
-        <a href="http://sallivkool.ee/">
-          <h5>http://sallivkool.ee/</h5>
-          <img src="/assets/ourwork-images/sallivkool.png">
-        </a>
-      </div>
-
-      <div class="work-item">
-        <h3>Eesti Üliõpilaskondade Liit</h3>
-        <a href="http://www.isic.ee">
-          <h5>http://www.isic.ee</h5>
-          <img src="/assets/ourwork-images/isic.png">
-        </a>
-      </div>
-
-      <div class="work-item">
-        <h3>Eesti Jalgratta Virtuaalmuuseum</h3>
-        <a href="http://www.velomuseum.ee/">
-          <h5>http://www.velomuseum.ee/</h5>
-          <img src="/assets/ourwork-images/jalgrattaveeb.jpg">
-        </a>
-      </div>
-
-      <div class="work-item">
-        <h3>Meremeeste tööotsingu portaal</h3>
-        <h5>Tänaseks on portaali omanikud selle sulgenud.</h5>
-        <img src="/assets/ourwork-images/nauticalcrew.jpg">
-      </div>
-
-      <div class="work-item">
-        <h3>Võti Tulevikku 2013 infoveeb</h3>
-        <img src="/assets/ourwork-images/votitulevikku.jpg">
-      </div>
-
-      <div class="work-item">
-        <h3>Ukseproff</h3>
-        <a href="http://www.ukseproff.ee/">
-          <h5>http://www.ukseproff.ee/</h5>
-          <img src="/assets/ourwork-images/ukseproff.jpg">
-        </a>
-      </div>
-
-      <div class="work-item">
-        <h3>Nõmme Tenniseklubi koduleht</h3>
-        <a href="http://www.nommetennis.ee/">
-          <h5>http://www.nommetennis.ee/</h5>
-          <img src="/assets/ourwork-images/nommetenniseklubi.jpg">
-        </a>
-      </div>
-
-      <div class="work-item">
-        <h3>Sporditrennid.ee trenni otsinguportaal</h3>
-        <h5>Tänaseks on portaali omanikud selle sulgenud.</h5>
-        <img src="/assets/ourwork-images/sporditrennid.jpg">
-      </div>
-
+      <a class="thumbnail" href="{{ work.url }}">
+        <img src="{{ "/assets/ourwork-images/" | append: work.photo }}" alt="{{ work.title }}">
+      </a>
     </div>
-  </div>
-</div>
+    {% endfor %}
 
-<!--carousel support-->
-<script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
-<script>
-    const mySiema = new Siema({
-        selector: '.siema',
-        duration: 1500,
-        easing: 'ease-in-out',
-        perPage: 1,
-        startIndex: 0,
-        draggable: true,
-        multipleDrag: true,
-        threshold: 20,
-        loop: true,
-    });
-    // listen for keydown event
-    setInterval(() => mySiema.next(), 4000)
-</script>
+  </div>
+
+</div>

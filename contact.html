@@ -17,46 +17,22 @@ layout: default
   </div>
   <div id="contact-management">
     <h2>Juhatus</h2>
-    <div id="contact-management-container">
-      <div class="contact-management-person">
-        <img src="/assets/management-images/hannovene.jpg">
-        <h4 class="centered-text">Hanno Vene</h4>
-        <p class="centered-text">Juhatuse esimees</p>
-        <p>E-post: <a href="mailto:hanno.vene@lapikud.ee">hanno.vene@lapikud.ee</a></p>
-        <p>Telefon: <a href="tel:+37256247690">+372 56 247 690</a></p>
+
+
+    <div id="container">
+
+      {% for person in site.data.management %}
+      <div class="person">
+        <img src="{{ "/assets/management-images/" | append: person.photo }}" alt="{{ person.name }}">
+        <h4 class="centered-text">{{ person.name }}</h4>
+        <p class="centered-text">{{ person.role }}</p>
+        <p class="centered-text">{{ person.subrole }}</p>
+        <p>E-post:</p>
+        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        <p>Telefon:</p>
+        <a href="tel:{{ person.phone }}">{{ person.phone }}</a>
       </div>
-      <div class="contact-management-person">
-        <img src="/assets/management-images/kaarelpartel.jpg">
-        <h4 class="centered-text">Kaarel Pärtel</h4>
-        <p class="centered-text">Juhatuse liige</p>
-        <p class="centered-text">Helpdeski juht</p>
-        <p>E-post: <a href="mailto:kaarel.partel@lapikud.ee"> kaarel.partel@lapikud.ee</a></p>
-        <p>Telefon: <a href="tel:+37253665368">+372 53 665 368</a></p>
-      </div>
-      <div class="contact-management-person">
-        <img src="/assets/management-images/martinoblikas.jpg">
-        <h4 class="centered-text">Martin Oblikas</h4>
-        <p class="centered-text">Juhatuse liige</p>
-        <p class="centered-text">Tarkvara juht</p>
-        <p>E-post: <a href="mailto:martin.oblikas@lapikud.ee">martin.oblikas@lapikud.ee</a></p>
-        <p>Telefon: <a href="tel:+3725070459">+372 50 70 459</a></p>
-      </div>
-      <div class="contact-management-person">
-        <img src="/assets/management-images/ristoleesmae.jpg">
-        <h4 class="centered-text">Risto Leesmäe</h4>
-        <p class="centered-text">Juhatuse liige</p>
-        <p class="centered-text">Turunduse juht</p>
-        <p>E-post: <a href="mailto:risto.leesmae@lapikud.ee">risto.leesmae@lapikud.ee</a></p>
-        <p>Telefon: <a href="tel:+37253269529">+372 53 269 529</a></p>
-      </div>
-      <div class="contact-management-person">
-        <img src="/assets/management-images/askonarep.jpg">
-        <h4 class="centered-text">Asko Närep</h4>
-        <p class="centered-text">Juhatuse liige</p>
-        <p class="centered-text">Ürituste juht</p>
-        <p>E-post: <a href="mailto:hanno.vene@lapikud.ee">asko.narep@lapikud.ee</a></p>
-        <p>Telefon: <a href="tel:+37256236649">+372 56 236 649</a></p>
-      </div>
+      {% endfor %}
     </div>
   </div>
   <div id="contact-main">

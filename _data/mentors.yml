@@ -1,0 +1,38 @@
+# Mentors: example dataset
+
+
+- name: Maa Lapik
+  age: 2018
+  photo: https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2018/06/15/09/fe.jpg
+  specialty: kettaheide
+  term: 4
+  teams:  ['üritused', 'turundus']
+  phone: +372 12345678
+  email: lappes@lapikud.ee
+  description: Vali mind, kui sind huvitab lapiku maa teooria.
+  activities: Pöörlemine, tiirlemine, päikesevalguse peegeldamine.
+
+
+- name: Maa Lapik
+  age: 2018
+  photo: https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2018/06/15/09/fe.jpg
+  specialty: kettaheide
+  term: 4
+  teams:  ['üritused', 'turundus']
+  phone: +372 12345678
+  email: lappes@lapikud.ee
+  description: Vali mind, kui sind huvitab lapiku maa teooria.
+  activities: Pöörlemine, tiirlemine, päikesevalguse peegeldamine.
+
+
+- name: Maa Lapik
+  age: 2018
+  photo: https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2018/06/15/09/fe.jpg
+  specialty: kettaheide
+  term: 4
+  teams:  ['üritused', 'turundus']
+  phone: +372 12345678
+  email: lappes@lapikud.ee
+  description: Vali mind, kui sind huvitab lapiku maa teooria.
+  activities: Pöörlemine, tiirlemine, päikesevalguse peegeldamine.
+

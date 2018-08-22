@@ -25,13 +25,13 @@
 
 #contact-management {
 
-  #contact-management-container {
+  #container {
     display         : flex;
     flex-direction  : row;
     flex-wrap       : wrap;
     justify-content : center;
 
-    .contact-management-person {
+    .person {
       margin-left   : 2rem;
       margin-right  : 2rem;
       margin-bottom : 5rem;
@@ -42,7 +42,17 @@
         height  : auto;
       }
 
+      * {
+        margin: 0.2rem 0;
+      }
     }
+
+  }
+}
+
+#contact-main {
+  * {
+    margin: 0.2rem 0;
   }
 }
 

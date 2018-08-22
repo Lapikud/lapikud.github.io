@@ -1,25 +1,25 @@
 ---
 layout: default
 ---
-<div class="page">
+<div class="page" id="helpdesk-page">
 
   <div id="helpdesk-banner">
-    <div id="banner-image">
-      <img id="helpdesk-banner-logo" src="/assets/helpdesk-on-black.png">
+    <div id="helpdesk-logo-container">
+      <img id="helpdesk-logo" src="/assets/helpdesk-on-black.png">
     </div>
     <div id="banner-text">
-      <h3>
+      <h1>
         Anname sinu arvutile <span class="emphasis-text-color">uue elu</span>!
-      </h3>
-      <h5>
+      </h1>
+      <h3>
         <span class="emphasis-text-bold">HELPDESK</span> lahendab probleemid seoses arvuti ja muu elektroonikaga.
-      </h5>
+      </h3>
     </div>
 
   </div>
 
   <div id="helpdesk-description">
-    <h3>Mis on HELPDESK?</h3>
+    <h1>Mis on HELPDESK?</h1>
     <p>
       HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning
       kõikidele huvilistele ka väljaspool TTÜ-d. Meie meeskond koosneb kogenud ja nutikatest TTÜ IT-tudengitest.
@@ -27,7 +27,7 @@ layout: default
   </div>
 
   <div id="helpdesk-services">
-    <h3>Mis teenuseid osutame?</h3>
+    <h1>Mis teenuseid osutame?</h1>
     <ul>
       <li>Arvuti riistvara diagnostika ja remont</li>
       <li>Arvuti riistvara hooldus</li>
@@ -37,8 +37,8 @@ layout: default
     </ul>
   </div>
 
-  <div id="helpdesk-pricing">
-    <h3>Hinnakiri</h3>
+  <div id="pricing">
+    <h1>Hinnakiri</h1>
     <table>
       <thead>
       <tr>
@@ -115,13 +115,13 @@ layout: default
     <p>Oma tudengisõbralike hindade ja personaalse lähenemisega pakume teenust, milles ei pea pettuma!</p>
   </div>
 
-  <div id="helpdesk-location">
+  <div id="location">
     <div>
-      <h3>Asukoht</h3>
+      <h1>Asukoht</h1>
       <h4>Akadeemia tee 5 ühiselamu</h4>
       <h4>ruum 008A</h4>
     </div>
-    <div id="helpdesk-location-mapstuff">
+    <div id="maparea">
       <div id="map"></div>
       <div class="siema">
         <img src="assets/carousel-images/1.jpg">
@@ -133,24 +133,26 @@ layout: default
     </div>
   </div>
 
-  <div id="helpdesk-contacts">
+  <div id="contact">
 
-    <div id="helpdesk-opening-times">
-      <h3>Lahtiolekuajad:</h3>
-      <h5>E – R 12-17*</h5>
-      <h6 class="subtext">* Tegu on ajaperioodiga, mil meid on kõige tõenäolisem tabada. Siiski ei saa garanteerida
-        kohalolekut.</h6>
+    <div id="opening-times">
+      <h2>Lahtiolekuajad:</h2>
+      <h3>E – R 12-17*</h3>
+      <h5 class="subtext">* Tegu on ajaperioodiga, mil meid on kõige tõenäolisem tabada. Siiski ei saa garanteerida
+        kohalolekut.</h5>
     </div>
 
-    <div id="helpdesk-contactssss">
-      <h3>Kontakt</h3>
+    <div id="contact-methods">
+      <h1>Kontakt</h1>
       <div>
-        <h4>E-mail: <a href="mailto:helpdesk@lapikud.ee">helpdesk@lapikud.ee</a></h4>
-        <h4>Telefon: <a href="tel:+37258160799">+372 581 607 99</a></h4>
+        <h4>E-mail: </h4>
+        <a href="mailto:helpdesk@lapikud.ee"><h4>helpdesk@lapikud.ee</h4></a>
+        <h4>Telefon: </h4>
+        <a href="tel:+37258160799"><h4>+372 581 607 99</h4></a>
       </div>
     </div>
 
-    <div class="fb-page" data-href="https://www.facebook.com/lapikudhelpdesk" data-width="300" data-small-header="false"
+    <div class="fb-page" data-href="https://www.facebook.com/lapikudhelpdesk" data-width="260" data-small-header="false"
          data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false">
       <blockquote cite="https://www.facebook.com/lapikudhelpdesk" class="fb-xfbml-parse-ignore"><a
           href="https://www.facebook.com/lapikudhelpdesk">Lapikud Helpdesk</a></blockquote>
@@ -184,7 +186,7 @@ layout: default
         crossorigin=""></script>
 
 <script>
-    var map = L.map('map').setView([59.396342, 24.668718], 19);
+    var map = L.map('map').setView([59.396342, 24.668718], 16);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

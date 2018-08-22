@@ -1,112 +1,42 @@
 ---
 layout: default
 ---
-<div class="page">
+<div class="page" id="mentors">
   <h1>Mentorid</h1>
+  <h3>Siin on meie mentorid. Kui leiad kellegi, kellega huvid kattuvad, võta temaga julgelt ühendust!</h3>
 
+  {% for mentor in site.data.mentors %}
 
-  <div class="mentor-info">
-    <img
-        src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OS81OTgvb3JpZ2luYWwvZmxhdC1lYXJ0aC1OTy1SRVVTRS5qcGc=">
-
-    <div class="mentor-info-text">
-      <h3>Maa Lapik</h3>
-
-      <div class="row">
-        <div>
-          <p>Vanus: 2018</p>
-          <p>Eriala: kettaheide</p>
-          <p>Kursus: jah</p>
-          <p>Tiimid:</p>
-          <ul>
-            <li>Turundus</li>
-            <li>Üritused</li>
-          </ul>
-          <p>Kontakt:</p>
-          <p>Telefon: +372 12345678</p>
-          <p>E-mail: lappes@lapikud.ee</p>
-        </div>
-
-        <div>
-          <h4>Miks peaksid valima minu enda mentoriks?</h4>
-          <p>Vali mind, kui sind huvitab lapiku maa teooria.</p>
-          <h4>Millega tegelen väljaspool Lapikuid?</h4>
-          <p>Pöörlemine, tiirlemine, päikesevalguse peegeldamine.</p>
-        </div>
+  <div class="mentor">
+    <div class="photo-container">
+      <img src="{{ mentor.photo }}">
+    </div>
+    <div class="description">
+      <div class="general">
+        <h1>{{ mentor.name }}</h1>
+        <p>Vanus: {{ mentor.age }}</p>
+        <p>Eriala: {{ mentor.specialty }}</p>
+        <p>Kursus: {{ mentor.term }}</p>
+        <p>Tiimid:</p>
+        <ul>
+          {% for team in mentor.teams %}
+          <li>{{ team }}</li>
+          {% endfor %}
+        </ul>
+        <p>Telefon: <a href="tel:{{ mentor.phone }}">{{ mentor.phone }}</a></p>
+        <p>E-mail: <a href="mailto: {{ mentor.email }}">{{ mentor.email }}</a></p>
       </div>
 
-    </div>
-
-  </div>
-
-
-  <div class="mentor-info">
-    <img
-        src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OS81OTgvb3JpZ2luYWwvZmxhdC1lYXJ0aC1OTy1SRVVTRS5qcGc=">
-
-    <div class="mentor-info-text">
-      <h3>Maa Lapik</h3>
-
-      <div class="row">
-        <div>
-          <p>Vanus: 2018</p>
-          <p>Eriala: kettaheide</p>
-          <p>Kursus: jah</p>
-          <p>Tiimid:</p>
-          <ul>
-            <li>Turundus</li>
-            <li>Üritused</li>
-          </ul>
-          <p>Kontakt:</p>
-          <p>Telefon: +372 12345678</p>
-          <p>E-mail: lappes@lapikud.ee</p>
-        </div>
-
-        <div>
-          <h4>Miks peaksid valima minu enda mentoriks?</h4>
-          <p>Vali mind, kui sind huvitab lapiku maa teooria.</p>
-          <h4>Millega tegelen väljaspool Lapikuid?</h4>
-          <p>Pöörlemine, tiirlemine, päikesevalguse peegeldamine.</p>
-        </div>
+      <div class="varia">
+        <h4>Miks peaksid valima minu enda mentoriks?</h4>
+        <p>{{ mentor.description }}</p>
+        <h4>Millega tegelen väljaspool Lapikuid?</h4>
+        <p>{{ mentor.activities }}</p>
       </div>
-
     </div>
-
   </div>
 
+  {% endfor %}
 
-  <div class="mentor-info">
-    <img
-        src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OS81OTgvb3JpZ2luYWwvZmxhdC1lYXJ0aC1OTy1SRVVTRS5qcGc=">
-
-    <div class="mentor-info-text">
-      <h3>Maa Lapik</h3>
-
-      <div class="row">
-        <div>
-          <p>Vanus: 2018</p>
-          <p>Eriala: kettaheide</p>
-          <p>Kursus: jah</p>
-          <p>Tiimid:</p>
-          <ul>
-            <li>Turundus</li>
-            <li>Üritused</li>
-          </ul>
-          <p>Kontakt:</p>
-          <p>Telefon: +372 12345678</p>
-          <p>E-mail: lappes@lapikud.ee</p>
-        </div>
-
-        <div>
-          <h4>Miks peaksid valima minu enda mentoriks?</h4>
-          <p>Vali mind, kui sind huvitab lapiku maa teooria.</p>
-          <h4>Millega tegelen väljaspool Lapikuid?</h4>
-          <p>Pöörlemine, tiirlemine, päikesevalguse peegeldamine.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
 
 </div>

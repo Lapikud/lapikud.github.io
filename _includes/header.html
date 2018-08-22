@@ -1,7 +1,7 @@
 <!-- header.scss -->
 <nav class="navigation">
   <a href="/" {% if page.url == '/' %}style="display: none;"{% endif %}>
-	<img class="logo" src="{{ "/assets/logo.svg " | relative_url }}">
+	<img id="header-logo" class="logo" src="{{ "/assets/logo.svg " | relative_url }}">
   </a>
 
   <div class="menu">
