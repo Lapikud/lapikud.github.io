@@ -1,72 +1,75 @@
-.centered-text {
-  text-align: center;
-}
+#contact {
 
-#contact-helpdesk {
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-
-  #contact-helpdesk-banner-container {
-    background : black;
-    padding    : 3rem;
+  h2 {
+    margin-top : 1.5rem;
   }
 
-  #contact-helpdesk-banner {
-    display : block;
-    width   : 100%;
-    height  : auto;
-  }
-  #contact-helpdesk-banner-container, #contact-helpdesk-info {
-    flex   : 1;
-    margin : 0 2rem;
-  }
-}
-
-#contact-management {
-
-  #container {
+  #helpdesk {
     display         : flex;
-    flex-direction  : row;
-    flex-wrap       : wrap;
     justify-content : center;
+    align-items     : center;
 
-    .person {
-      margin-left   : 2rem;
-      margin-right  : 2rem;
-      margin-bottom : 5rem;
-
-      img {
-        display : block;
-        width   : 100%;
-        height  : auto;
-      }
-
-      * {
-        margin: 0.2rem 0;
-      }
+    #helpdesk-banner-container {
+      background : black;
+      padding    : 3rem;
     }
 
+    #helpdesk-banner {
+      display : block;
+      width   : 100%;
+      height  : auto;
+    }
+    #helpdesk-banner-container, #helpdesk-info {
+      flex   : 1;
+      margin : 0 2rem;
+    }
   }
-}
 
-#contact-main {
-  margin: 2rem 0;
-  p {
-    margin: 0.2rem 0;
+  #management {
+
+    #container {
+      display         : flex;
+      flex-direction  : row;
+      flex-wrap       : wrap;
+      justify-content : center;
+
+      .person {
+        margin-left   : 2rem;
+        margin-right  : 2rem;
+        margin-bottom : 5rem;
+
+        img {
+          display : block;
+          width   : 100%;
+          height  : auto;
+        }
+
+        * {
+          margin : 0.2rem 0;
+        }
+      }
+
+    }
   }
-}
 
+  #main {
+    margin : 2rem 0;
+  }
+  * {
+    margin : 0.2rem 0;
+  }
+
+}
 
 @media (max-width : 900px) {
 
-  #contact-helpdesk {
-    flex-direction : column;
+  #contact {
+    #helpdesk {
+      flex-direction : column;
 
-    #contact-helpdesk-banner-container, #contact-helpdesk-info {
-      margin : 0;
+      #helpdesk-banner-container, #helpdesk-info {
+        margin : 0;
+      }
     }
   }
-
-
 }

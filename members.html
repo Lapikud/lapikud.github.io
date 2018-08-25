@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="page" id="members">
+  <h3 class="centered-text">Tahad, et ka sinu nimi ilmuks siia?</h3>
+  <a href="/student" id="banner-container-link">
+    <h3 class="centered-text banner">
+      Tule liitu meiega!
+    </h3>
+  </a>
+
+  <div class="members-container">
+    <h3 class="centered-text">MTÜ Lapikud noorliikmed:</h3>
+    <ul>
+      {% for member in site.data.members.junior%}
+      <li>{{ member }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="members-container">
+    <h3 class="centered-text">MTÜ Lapikud vanemliikmed:</h3>
+    <ul>
+      {% for member in site.data.members.senior %}
+      <li>{{ member }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="members-container">
+    <h3 class="centered-text">Lapikute vilistlased:</h3>
+    <ul>
+      {% for member in site.data.members.graduates %}
+      <li>{{ member }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>

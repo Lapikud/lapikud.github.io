@@ -1,0 +1,34 @@
+#members {
+  #banner-container-link {
+    margin : 0 auto;
+
+    h3 {
+      padding : 1rem 4rem;
+    }
+  }
+
+  .members-container {
+    ul {
+      columns : 4;
+    }
+  }
+}
+
+@media (max-width : 900px) {
+  #members {
+    #banner-container-link {
+      margin : unset;
+
+      h3 {
+        padding : 1rem 0;
+      }
+    }
+
+    .members-container {
+      ul {
+        columns : 1;
+      }
+    }
+  }
+
+}
