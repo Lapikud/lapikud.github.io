@@ -1,0 +1,35 @@
+- name: Tehnopol
+  image: tehnopollogo.png
+  url: https://www.tehnopol.ee/
+  additionalText:
+
+
+- name: TTÜ
+  image: tty_logo_2.png
+  url: https://www.ttu.ee/
+  additionalText:
+
+- name: Skeemipesa
+  image: skeemipesa_logo.png
+  url: http://www.skeemipesa.ee/
+  additionalText:
+
+
+- name: TTÜ Robotiklubi
+  image: robotiklubi_logo.png
+  url: https://www.robotiklubi.ee/
+  additionalText:
+
+
+
+- name: TTÜ Infotehnoloogia teaduskond
+  image: IT_teaduskond_logo.gif
+  url: https://www.ttu.ee/teaduskond/infotehnoloogia-teaduskond/
+  additionalText:
+
+
+- name: Koopia Niini & Rauam
+  image: koopia_niini_rauam.png
+  url: https://www.koopia.ee/
+  additionalText: Tule köida oma lõputöö SIIN!
+

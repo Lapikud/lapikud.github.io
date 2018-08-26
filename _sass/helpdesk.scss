@@ -56,6 +56,20 @@
       height     : 60vh;
       max-height : 300px;
     }
+
+    .siema {
+      .carousel-image-container {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        img {
+          max-height : 300px;
+          width      : 100%;
+          height     : auto;
+          object-fit : scale-down;
+        }
+      }
+    }
   }
 
   #pricing {
