@@ -23,11 +23,11 @@ title: Tehtud tööd - Lapikud
       </div>
       {% if work.url == null %}
       <div class="thumbnail">
-        <img src="{{ "/assets/ourwork-images/" | append: work.photo }}" alt="{{ work.title }}">
+        <img src="{{ "/assets/ourwork-images/optimised/" | append: work.photo }}" alt="{{ work.title }}">
       </div>
       {% else %}
         <a class="thumbnail" href="{{ work.url }}" target="_blank" rel="noopener noreferrer">
-          <img src="{{ "/assets/ourwork-images/" | append: work.photo }}" alt="{{ work.title }}">
+          <img src="{{ "/assets/ourwork-images/optimised/" | append: work.photo }}" alt="{{ work.title }}">
         </a>
       {% endif %}
     </div>

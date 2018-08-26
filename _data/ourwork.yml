@@ -1,12 +1,12 @@
 # Our work
 #
 - title: TTÜ Muuseumi eksponaadid
-  photo: ttu_muusem_placeholder.png
+  photo: ttu_muusem_placeholder.jpg
   url:
   description: Valmib september 2018.
 
 - title: ENLi koduleht
-  photo: eesti_noorteühenduste_liit.png
+  photo: eesti_noorteühenduste_liit.jpg
   url: http://enl.ee/
   description: Tegime Eesti Noorteühenduste Liidule uue landing lehe, samuti tegime pluginatega seotud parandusi.
 
@@ -23,37 +23,37 @@
 #  description: Tartus toimus IRL Hitmani mäng mille veebirakenduse me valmistasime
 
 - title: Taksod.net Android äpp
-  photo: taksod-net-android.png
+  photo: taksod-net-android.jpg
   url: https://play.google.com/store/apps/details?id=net.taksod.android
   description: Androidi äpp, milles on võimalik taksofirma otsida ning läbi äpi kohe helistada ja takso tellida.
 
 - title: Taksod.net iOS äpp
-  photo: taksod-net-ios.png
+  photo: taksod-net-ios.jpg
   url:  https://itunes.apple.com/ee/app/taksod-net/id1230208509?mt=8
   description: iOS äpp, milles on võimalik taksofirma otsida ning läbi äpi kohe helistada ja takso tellida.
 
 - title: Osaluskogud Eestis
-  photo: osaluskogud_eestis.png
+  photo: osaluskogud_eestis.jpg
   url: http://noortekogud.ee/
   description: Teostasime lehel täiendusi.
 
 - title: Tallinna Tehnikaülikooli Puhkpilliorkester
-  photo: orkester.png
+  photo: orkester.jpg
   url: http://orkester.ee
   description: Andsime lehele kaasaegse väljanägemise.
 
 - title: TTÜ Studentlife
-  photo: studentlife.png
+  photo: studentlife.jpg
   url: http://studentlife.ee
   description: Arendasime WordPressi platvormil kliendi ettenägemise järgi uue keskkonna, kus tudengid saavad blogipostitusi kirjutada/lugeda ning ka tulevaste ürituste ja organisatsioonide tegevustega kursis olla. Aegajalt viime lehel ka läbi uuendustöid.
 
 - title: Eesti Üliõpilasesinduse Liit
-  photo: sallivkool.png
+  photo: sallivkool.jpg
   url: http://sallivkool.ee/
   description:
 
 - title: ISIC
-  photo: isic.png
+  photo: isic.jpg
   url: http://www.isic.ee
   description: WordPressi platvormil arendatud veebileht, kust leiab kõik vajaliku info ISIC kaardi kohta (soodustused, tellimine jpm). Teostame lehel ka uuendusi.
 
