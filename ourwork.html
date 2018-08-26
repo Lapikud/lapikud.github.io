@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Tehtud tööd - Lapikud
 ---
 <div class="page">
   <div id="ourwork-banner">
@@ -18,14 +19,17 @@ layout: default
     <div class="work-item">
       <div class="description">
         <h2>{{ work.title }}</h2>
-        <a href="{{ work.url }}">
-          <h3>{{ work.url }}</h3>
-        </a>
         <p>{{ work.description }}</p>
       </div>
-      <a class="thumbnail" href="{{ work.url }}">
+      {% if work.url == null %}
+      <div class="thumbnail">
         <img src="{{ "/assets/ourwork-images/" | append: work.photo }}" alt="{{ work.title }}">
-      </a>
+      </div>
+      {% else %}
+        <a class="thumbnail" href="{{ work.url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ "/assets/ourwork-images/" | append: work.photo }}" alt="{{ work.title }}">
+        </a>
+      {% endif %}
     </div>
     {% endfor %}
 

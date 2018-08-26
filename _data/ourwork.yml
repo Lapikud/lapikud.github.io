@@ -1,54 +1,56 @@
 # Our work
 #
 - title: TTÜ Muuseumi eksponaadid
-  photo: 
-  url: 
-  description: teeme artiga pildid kui asjad üleval on, hetkel käib muuseumis setup, need oleks ägedad asjad mis lehele ülesse panna. 
-  
-- title: ENLi kodulehe uus landing page ja timmimine
-  photo: 
+  photo: ttu_muusem_placeholder.png
+  url:
+  description: Valmib september 2018.
+
+- title: ENLi koduleht
+  photo: eesti_noorteühenduste_liit.png
   url: http://enl.ee/
-  description: Tegime neile uue landing page, timmisime veits pluginaid
+  description: Tegime Eesti Noorteühenduste Liidule uue landing lehe, samuti tegime pluginatega seotud parandusi.
 
-- title: Koduleht firmale tuumfilm
-  photo: kertult saab pilte küsida nkn
-  url: 
-  description: Valmistasime väiksele filmi ja montaaži firmale kodulehe
-  
-- title: Hitmani mäng tudengipäevadel
-  photo: edgarilt saab prolly, kirjutasin
-  url: 
-  description: Tartus toimus IRL Hitmani mäng mille veebirakenduse me valmistasime
+# TODO site is gone, need pics
+#- title: Koduleht firmale tuumfilm
+#  photo: kertult saab pilte küsida nkn
+#  url:
+#  description: Valmistasime väiksele filmi ja montaaži firmale kodulehe
 
-- title: Taksod.net Android ja IOS äpid
-  photo: 
-  url: https://play.google.com/store/apps/details?id=net.taksod.android / https://itunes.apple.com/ee/app/taksod-net/id1230208509?mt=8
-  description: Tegime Androidil ja IOSile eraldi äpid, milles on võimalik taksofirma otsida ning läbi äpi kohe helistada ja takso tellida.
-  
+# TODO get pics
+#- title: Hitmani mäng tudengipäevadel
+#  photo: edgarilt saab prolly, kirjutasin
+#  url:
+#  description: Tartus toimus IRL Hitmani mäng mille veebirakenduse me valmistasime
+
+- title: Taksod.net Android äpp
+  photo: taksod-net-android.png
+  url: https://play.google.com/store/apps/details?id=net.taksod.android
+  description: Androidi äpp, milles on võimalik taksofirma otsida ning läbi äpi kohe helistada ja takso tellida.
+
+- title: Taksod.net iOS äpp
+  photo: taksod-net-ios.png
+  url:  https://itunes.apple.com/ee/app/taksod-net/id1230208509?mt=8
+  description: iOS äpp, milles on võimalik taksofirma otsida ning läbi äpi kohe helistada ja takso tellida.
 
 - title: Osaluskogud Eestis
-  photo: 
+  photo: osaluskogud_eestis.png
   url: http://noortekogud.ee/
-  description: Teostasime lehel täiendusi. Hiljem ...
-
+  description: Teostasime lehel täiendusi.
 
 - title: Tallinna Tehnikaülikooli Puhkpilliorkester
-  photo: 
+  photo: orkester.png
   url: http://orkester.ee
   description: Andsime lehele kaasaegse väljanägemise.
-
 
 - title: TTÜ Studentlife
   photo: studentlife.png
   url: http://studentlife.ee
   description: Arendasime WordPressi platvormil kliendi ettenägemise järgi uue keskkonna, kus tudengid saavad blogipostitusi kirjutada/lugeda ning ka tulevaste ürituste ja organisatsioonide tegevustega kursis olla. Aegajalt viime lehel ka läbi uuendustöid.
 
-
 - title: Eesti Üliõpilasesinduse Liit
   photo: sallivkool.png
   url: http://sallivkool.ee/
   description:
-
 
 - title: ISIC
   photo: isic.png
