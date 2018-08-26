@@ -1,11 +1,28 @@
 # Our work
 #
 
+- title: Taksod.net Android ja IOS äpid
+  photo: 
+  url: https://play.google.com/store/apps/details?id=net.taksod.android / https://itunes.apple.com/ee/app/taksod-net/id1230208509?mt=8
+  description: Tegime Androidil ja IOSile eraldi äpid, milles on võimalik taksofirma otsida ning läbi äpi kohe helistada ja takso tellida.
+  
+
+- title: Osaluskogud Eestis
+  photo: 
+  url: http://noortekogud.ee/
+  description: Teostasime lehel täiendusi. Hiljem ...
+
+
+- title: Tallinna Tehnikaülikooli Puhkpilliorkester
+  photo: 
+  url: http://orkester.ee
+  description: Andsime lehele kaasaegse väljanägemise.
+
 
 - title: TTÜ Studentlife
   photo: studentlife.png
   url: http://studentlife.ee
-  description: Tegime ja lahe oli ja oli lahe ja lahe oli ja oli lahe ja lahe oli ja oli lahe ja lahe oli ja oli lahe
+  description: Arendasime WordPressi platvormil kliendi ettenägemise järgi uue keskkonna, kus tudengid saavad blogipostitusi kirjutada/lugeda ning ka tulevaste ürituste ja organisatsioonide tegevustega kursis olla. Aegajalt viime lehel ka läbi uuendustöid.
 
 
 - title: Eesti Üliõpilasesinduse Liit
@@ -14,10 +31,10 @@
   description:
 
 
-- title: Eesti Üliõpilaskondade Liit
+- title: ISIC
   photo: isic.png
   url: http://www.isic.ee
-  description:
+  description: WordPressi platvormil arendatud veebileht, kust leiab kõik vajaliku info ISIC kaardi kohta (soodustused, tellimine jpm). Teostame lehel ka uuendusi.
 
 
 - title: Eesti Jalgratta Virtuaalmuuseum
