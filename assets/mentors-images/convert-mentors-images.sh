@@ -2,7 +2,7 @@ mkdir -p optimised
 for file in original/*; do
     echo $file
     base_name=$(basename $file)
-    if [[ $base_name = *"airiin"* ]]; then
+    if [[ $base_name = *"airiin"* ]] || [[ $base_name = *"lembitu"* ]] ; then
         gravity=north
     else
         gravity=center

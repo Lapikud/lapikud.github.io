@@ -189,3 +189,18 @@
   description: Aitan huvilisi veebiprogrammeerimise poole pealt. Soovi ja tahte korral kuni tööle saamiseni välja.
   activities: Ega väga palju aega töö, Lapikute ja kooli kõrvalt üle ei jäägi. Oma vaba aega sisustan uute veebitehnoloogiate õppimise, arvutimängude ja filmidega. Kui ma aga arvuti juurest eemale saan, siis meeldib loodust nautida ning uusi kohti avastada.
 
+
+- name: Lembitu Valdmets
+  age: 24
+  photo: lembitu_valdmets_mentor.jpg
+  specialty: Arvutisüsteemid
+  term: 5
+  teams: ['Helpdesk']
+  contactMethods:
+  - name: Telefon
+    value: +372 55693479
+  - name: E-mail
+    value: lembitu.valdmets@gmail.com
+  description: Kui sind huvitav arvutite remont, diagnostika ja arvuti riistvara, siis oskan viia huvi ja teadmisi järgmisele tasemele. Tean VHDL'i Verilog'i, C, C++ ja C#'i ning oskan ka nendes abi pakkuda.
+  activities: Mudellennundusega, autoremondiga, mängin ka erinevaid arvutimänge, mõnikord uurin ka elektroonilisi seadmeid.
+
