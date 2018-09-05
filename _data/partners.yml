@@ -11,7 +11,7 @@
 
 - name: Skeemipesa
   image: skeemipesa_logo.png
-  url: http://www.skeemipesa.ee/
+  url: https://www.skeemipesa.ee/
   additionalText:
 
 

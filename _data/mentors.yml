@@ -79,7 +79,7 @@
 - name: Arti Zirk
   age: 23
   photo: arti_zirk_mentor.jpg
-  specialty: IT süsteemide srendus
+  specialty: IT süsteemide arendus
   term: 4
   teams: ['Tarkvara', 'Helpdesk', 'Üritused','Turundus']
   contactMethods:
