@@ -13,6 +13,13 @@
     </a>
 
     <ul id="main-menu">
+
+      {% if page.language == "ee" %}
+      <a href="{{site.data.i18n.pages.other.en.home.url}}">In English</a>
+      {% elsif page.language == "en" %}
+      <a href="{{site.data.i18n.pages.other.ee.home.url}}">Eesti keeles</a>
+      {% endif %}
+
       {% include main_nav.html %}
     </ul>
   </div>
