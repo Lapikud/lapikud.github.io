@@ -47,6 +47,19 @@
                         padding: 1rem 2rem;
                     }
                 }
+                .flag {
+                    display: block;
+                    text-align  : center;
+                    width       : auto;
+                    height      : auto;
+                    margin-left : 0;
+                }
+                #flag-en {
+                    background: none;
+                }
+                #flag-ee {
+                    background: none;
+                }
             }
 
             &:hover ul {
@@ -64,13 +77,16 @@
             #main-menu-button:active svg {
                 fill: $color-primary;
             }
+
         }
         .flag {
-            display         : inline-block;
-            width           : 32px;
-            height          : 32px;
-            margin-left     : 1rem;
-            vertical-align  : middle;
+            display             : inline-block;
+            width               : 32px;
+            height              : 32px;
+            margin-left         : 1rem;
+            vertical-align      : middle;
+            background          : no-repeat;
+            font-size: 0;
         }
         #flag-en {
             background-image: url("/assets/en.svg");

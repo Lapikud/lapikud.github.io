@@ -15,9 +15,9 @@
     <ul id="main-menu">
       {% include main_nav.html %}
       {% if page.language == "ee" %}
-      <li><a class="flag" id="flag-en" href="{{ pages.en[page.tag].url }}"></a></li>
+      <li><a class="flag" id="flag-en" href="{{ pages.en[page.tag].url }}">In English</a></li>
       {% elsif page.language == "en" %}
-      <li><a class="flag" id="flag-ee" href="{{pages.ee[page.tag].url}}"></a></li>
+      <li><a class="flag" id="flag-ee" href="{{pages.ee[page.tag].url}}">Eesti keeles</a></li>
       {% endif %}
     </ul>
   </div>
