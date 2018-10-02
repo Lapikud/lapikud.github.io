@@ -13,23 +13,29 @@ all:
       name  : "Liikmed"
       url   : "/members/"
     student:
-      name: "Tudengile"
-      url:  "/student/"
+      name  : "Tudengile"
+      url   : "/student/"
     mentors:
-      name: "Mentorid"
-      url:  "/mentors/"
+      name  : "Mentorid"
+      url   : "/mentors/"
     helpdesk:
-      name: "Helpdesk"
-      url:  "/helpdesk/"
+      name  : "Helpdesk"
+      url   : "/helpdesk/"
     ourwork:
-      name: "Ettevõttele"
-      url:  "/ourwork/"
+      name  : "Ettevõttele"
+      url   : "/ourwork/"
     aboutus:
-      name: "Lapikutest"
-      url:  "/aboutus/"
+      name  : "Lapikutest"
+      url   : "/aboutus/"
     contact:
-      name: "Kontakt"
-      url:  "/contact/"
+      name  : "Kontakt"
+      url   : "/contact/"
+    404:
+      url   : "/404"
+    striim:
+      name  : "Striim"
+      url   : "/striim/"
+
   en:
     home:
       name  : "Front page"
@@ -43,24 +49,30 @@ all:
     members:
       name  : "Members"
       url   : "/en/members/"
-    student:
-      name: "For students"
-      url:  "/en/student/"
+    student :
+      name  : "For students"
+      url   : "/en/student/"
     mentors:
-      name: "Mentors"
-      url:  "/en/mentors/"
+      name  : "Mentors"
+      url   : "/en/mentors/"
     helpdesk:
-      name: "Helpdesk"
-      url:  "/en/helpdesk/"
+      name  : "Helpdesk"
+      url   : "/en/helpdesk/"
     ourwork:
-      name: "For businesses"
-      url:  "/en/ourwork/"
+      name  : "For businesses"
+      url   : "/en/ourwork/"
     aboutus:
-      name: "About us"
-      url:  "/en/aboutus/"
+      name  : "About us"
+      url   : "/en/aboutus/"
     contact:
-      name: "Contact"
-      url:  "/en/contact/"
+      name  : "Contact"
+      url   : "/en/contact/"
+    404:
+      url   :  "/en/404"
+    striim:
+      name  : "Striim"
+      url   : "/en/striim/"
+
 
 # For iterating through and populating navbar
 nav:
