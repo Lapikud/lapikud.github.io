@@ -1,3 +1,68 @@
+all:
+  ee:
+    home:
+      name  : "Esileht"
+      url   : "/"
+    statute:
+      name  : "Põhikiri"
+      url   : "/statute/"
+    history:
+      name  : "Ajalugu"
+      url   : "/history/"
+    members:
+      name  : "Liikmed"
+      url   : "/members/"
+    student:
+      name: "Tudengile"
+      url:  "/student/"
+    mentors:
+      name: "Mentorid"
+      url:  "/mentors/"
+    helpdesk:
+      name: "Helpdesk"
+      url:  "/helpdesk/"
+    ourwork:
+      name: "Ettevõttele"
+      url:  "/ourwork/"
+    aboutus:
+      name: "Lapikutest"
+      url:  "/aboutus/"
+    contact:
+      name: "Kontakt"
+      url:  "/contact/"
+  en:
+    home:
+      name  : "Front page"
+      url   : "/en/"
+    statute:
+      name  : "Statute"
+      url   : "/en/statute/"
+    history:
+      name  : "History"
+      url   : "/en/history/"
+    members:
+      name  : "Members"
+      url   : "/en/members/"
+    student:
+      name: "For students"
+      url:  "/en/student/"
+    mentors:
+      name: "Mentors"
+      url:  "/en/mentors/"
+    helpdesk:
+      name: "Helpdesk"
+      url:  "/en/helpdesk/"
+    ourwork:
+      name: "For businesses"
+      url:  "/en/ourwork/"
+    aboutus:
+      name: "About us"
+      url:  "/en/aboutus/"
+    contact:
+      name: "Contact"
+      url:  "/en/contact/"
+
+# For iterating through and populating navbar
 nav:
   ee:
     student:
@@ -37,31 +102,3 @@ nav:
     contact:
       name  : "Contact"
       url   :  "/en/contact/"
-
-other:
-  ee:
-    home:
-      name  : "Esileht"
-      url   : "/"
-    statute:
-      name  : "Põhikiri"
-      url   : "/statute/"
-    history:
-      name  : "Ajalugu"
-      url   : "/history/"
-    members:
-      name  : "Liikmed"
-      url   : "/members/"
-  en:
-    home:
-      name  : "Front page"
-      url   : "/en/"
-    statute:
-      name  : "Statute"
-      url   : "/en/statute/"
-    history:
-      name  : "History"
-      url   : "/en/history/"
-    members:
-      name  : "Members"
-      url   : "/en/members/"
