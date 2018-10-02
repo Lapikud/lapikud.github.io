@@ -1,0 +1,70 @@
+{% assign locale = site.data.i18n.mentors[page.language] %}
+
+<div class="page" id="mentors">
+    <h1>{{ locale.mentors_PageHeading }}</h1>
+    <h3>{{ locale.mentors_PageDesc }}</h3>
+
+    {% for mentor in site.data.mentors %}
+
+    <div class="mentor">
+        <div class="photo-container">
+            <img src="{{ "/assets/mentors-images/optimised/" | append: mentor.photo }}" alt="{{ mentor.name }}">
+        </div>
+        <div class="description">
+            <div class="general">
+                <h1>{{ mentor.name }}</h1>
+                <p>{{ locale.mentors_MentorAge }}{{ mentor.age }}</p>
+
+                {% if mentor.specialty != null %}
+                <p>{{ locale.mentors_MentorSpecialty }}{{ mentor.specialty }}</p>
+                {% endif %}
+
+                {% if mentor.term != null %}
+                <p>{{ locale.mentors_MentorTerm }}{{ mentor.term }}</p>
+                {% endif %}
+
+                <p>{{ locale.mentors_MentorTeams }}</p>
+                <ul>
+                    {% for team in mentor.teams %}
+                    <li>{{ team }}</li>
+                    {% endfor %}
+                </ul>
+
+                {% if mentor.contactMethods != null %}
+                <p>{{ locale.mentors_MentorContacts }}</p>
+                {% endif %}
+
+                {% for contactMethod in mentor.contactMethods %}
+
+                {% if contactMethod.name == 'Telefon' %}
+                <p>{{ locale.mentors_MentorPhone }} <a href="tel:{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
+                {% endif %}
+
+                {% if contactMethod.name == 'E-mail' %}
+                <p>E-mail: <a href="mailto: {{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
+                {% endif %}
+
+                {% if contactMethod.name == 'Messenger' %}
+                <p>Messenger <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
+                {% endif %}
+
+                {% if contactMethod.name == 'other' %}
+                <p>{{ contactMethod.value }}</p>
+                {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+            <div class="varia">
+                <h4>{{ locale.mentors_VariaWhyMe }}</h4>
+                <p>{{ mentor.description }}</p>
+                <h4>{{ locale.mentors_VariaInterests }}</h4>
+                <p>{{ mentor.activities }}</p>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>

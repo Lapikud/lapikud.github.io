@@ -1,42 +1,6 @@
 ---
 layout: default
-title: Tehtud tööd - Lapikud
+title: Previous works - Lapikud
 language: en
 ---
-{% assign locale = site.data.localisation.ourwork[page.language] %}
-{% assign works = site.data.ourwork[page.language] %}
-
-<div class="page">
-    <div id="ourwork-banner">
-        <h1 class="centered-text">{{ locale.ourwork_BannerHeading }}</h1>
-        <a href="/contact">
-            <h1 class="centered-text banner">
-                {{ locale.ourwork_BannerButton }}
-            </h1>
-        </a>
-
-    </div>
-    <h1 class="centered-text">{{ locale.ourwork_DoneWorks }}</h1>
-    <div id="ourwork-done">
-
-        {% for work in works %}
-        <div class="work-item">
-            <div class="description">
-                <h2>{{ work.title }}</h2>
-                <p>{{ work.description }}</p>
-            </div>
-            {% if work.url == null %}
-            <div class="thumbnail">
-                <img src="{{ "/assets/ourwork-images/optimised/" | append: work.photo }}" alt="{{ work.title }}">
-            </div>
-            {% else %}
-            <a class="thumbnail" href="{{ work.url }}" target="_blank" rel="noopener noreferrer">
-                <img src="{{ "/assets/ourwork-images/optimised/" | append: work.photo }}" alt="{{ work.title }}">
-            </a>
-            {% endif %}
-        </div>
-        {% endfor %}
-
-    </div>
-
-</div>
+{% include pages/ourwork.html %}

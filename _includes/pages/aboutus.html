@@ -1,0 +1,27 @@
+{% assign locale = site.data.i18n.aboutus[page.language] %}
+{% assign subpages = site.data.i18n.pages.other[page.language] %}
+
+<div class="page">
+    <h1>MTÜ Lapikud</h1>
+    <!-- three icons -->
+    <div class="row">
+        <div class="column">
+            <div>
+                <h3>{{ locale.aboutus_StatuteHeading }}</h3>
+                <p><a href="/statute/">{{ locale.aboutus_StatuteLink }}</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <div>
+                <h3>{{ locale.aboutus_MembersHeading }}</h3>
+                <p><a href="{{ subpages.members.url }}">{{ locale.aboutus_MembersLink }}</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <div>
+                <h3>{{ locale.aboutus_HistoryHeading }}</h3>
+                <p><a href="{{ subpages.history.url }}">{{ locale.aboutus_HistoryLink }}</a></p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,31 +3,5 @@ layout: default
 title: About us - Lapikud
 language: en
 ---
-{% assign locale = site.data.localisation.aboutus[page.language] %}
 
-<div class="page">
-
-    <h1>MTÜ Lapikud</h1>
-    <!-- three icons -->
-    <div class="row">
-        <div class="column">
-            <div>
-                <h3>{{ locale.aboutus_StatuteHeading }}</h3>
-                <p><a href="/statute">{{ locale.aboutus_StatuteLink }}</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <div>
-                <h3>{{ locale.aboutus_MembersHeading }}</h3>
-                <p><a href="/members">{{ locale.aboutus_MembersLink }}</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <div>
-                <h3>{{ locale.aboutus_HistoryHeading }}</h3>
-                <p><a href="/history">{{ locale.aboutus_HistoryLink }}</a></p>
-            </div>
-        </div>
-    </div>
-
-</div>
+{% include pages/aboutus.html %}

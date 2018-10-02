@@ -1,0 +1,19 @@
+en:
+  contact_ContactHeading    : "Contact"
+  contact_ContactMail       : "E-Mail:"
+  contact_ContactPhone      : "Phone:"
+  contact_ContactAddress    : "Address: Akadeemia tee 5, Tallinn, Estonia"
+  contact_ContactRegCode    : "Reg. code: 801 67 145"
+  contact_BoardHeading      : "Management"
+  contact_BoardPhone        : "Phone:"
+  contact_BoardMail         : "E-mail:"
+
+ee:
+  contact_ContactHeading    : "Kontakt"
+  contact_ContactMail       : "E-Mail:"
+  contact_ContactPhone      : "Telefon:"
+  contact_ContactAddress    : "Aadress: Akadeemia tee 5, Tallinn, Eesti"
+  contact_ContactRegCode    : "Reg. kood: 801 67 145"
+  contact_BoardHeading      : "Juhatus"
+  contact_BoardPhone        : "Telefon:"
+  contact_BoardMail         : "E-post:"

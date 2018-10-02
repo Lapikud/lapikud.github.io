@@ -69,7 +69,7 @@
     #map {
       width      : 100%;
       float      : right;
-      margin     : 0px auto;
+      margin     : 0 auto;
       height     : 60vh;
       max-height : 300px;
     }
@@ -96,7 +96,10 @@
     #helpdesk {
       flex-direction : column;
 
-      #helpdesk-banner-container, #helpdesk-info {
+      #helpdesk-banner-container {
+        margin : 1rem 0 0 0;
+      }
+      #helpdesk-info{
         margin : 0;
       }
     }

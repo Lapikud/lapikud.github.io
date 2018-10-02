@@ -1,6 +1,7 @@
 <!-- header.scss -->
+
 <nav class="navigation">
-  <a href="/" {% if page.url == '/' %}style="display: none;"{% endif %}>
+  <a href="{{site.data.i18n.pages.other[page.language].home.url}}" {% if page.url == '/' or page.url == '/en/' %}style="display: none;"{% endif %}>
 	<img id="header-logo" class="logo" src="{{ "/assets/logo.svg " | relative_url }}">
   </a>
 

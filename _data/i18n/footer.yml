@@ -1,0 +1,19 @@
+ee:
+  footer_ContactAddress       : "Aadress: Akadeemia tee 5, Tallinn, Eesti"
+  footer_ContactMail          : "E-post: "
+  footer_ContactPhone         : "Telefon: "
+  footer_ContactRegCode       : "Reg. kood: 801 67 145"
+
+  footer_NavigationHeading    : "Navigatsioon"
+  footer_NavigationFrontPage  : "Esileht"
+  footer_FollowUsHeading      : "Jälgi meid!"
+
+en:
+  footer_ContactAddress       : "Address: Akadeemia tee 5, Tallinn, Estonia"
+  footer_ContactMail          : "E-mail: "
+  footer_ContactPhone         : "Phone "
+  footer_ContactRegCode       : "Reg. code: 801 67 145"
+
+  footer_NavigationHeading    : "Navigation"
+  footer_NavigationFrontPage  : "Front page"
+  footer_FollowUsHeading      : "Follow us!"
