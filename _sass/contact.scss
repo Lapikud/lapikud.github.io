@@ -52,11 +52,38 @@
     }
   }
 
-  #main {
-    margin : 2rem 0;
+  #main-wrapper {
+    width           : 100%;
+    margin-top      : 40px;
+    display         : flex;
+    flex-direction  : row;
+    flex-wrap       : wrap;
   }
+
+  #maparea {
+    margin        : 0 20px 0px auto;
+    min-width     : 50%;
+    flex          : 1;
+
+    #map {
+      width      : 100%;
+      margin     : 0px auto;
+      height     : 60vh;
+      max-height : 300px;
+    }
+  }
+
+  #main {
+    margin            : 2rem 0;
+    padding-right     : 40px;
+
+    p{
+      padding-bottom  : 5px;
+    }
+  }
+
   * {
-    margin : 0.2rem 0;
+    margin            : 0.2rem 0;
   }
 
 }
