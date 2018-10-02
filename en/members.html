@@ -1,0 +1,43 @@
+---
+layout: default
+title: Members - Lapikud
+language: en
+---
+{% assign locale = site.data.localisation[page.language] %}
+
+<div class="page" id="members">
+    <h3 class="centered-text">{{ locale.members_MembersHeading }}</h3>
+    <a href="/student" id="banner-container-link">
+        <h3 class="centered-text banner">
+            {{ locale.members_MembersJoin }}
+        </h3>
+    </a>
+
+    <div class="members-container">
+        <h3 class="centered-text">{{ locale.members_JuniorsHeading }}</h3>
+        <ul>
+            {% for member in site.data.members.junior%}
+            <li>{{ member }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="members-container">
+        <h3 class="centered-text">{{ locale.members_SeniorsHeading }}</h3>
+        <ul>
+            {% for member in site.data.members.senior %}
+            <li>{{ member }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="members-container">
+        <h3 class="centered-text">{{ locale.members_AlumniHeading }}</h3>
+        <ul>
+            {% for member in site.data.members.graduates %}
+            <li>{{ member }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>

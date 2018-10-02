@@ -1,0 +1,31 @@
+---
+layout: default
+title: History - Lapikud
+language: en
+---
+{% assign locale = site.data.localisation[page.language] %}
+
+<div class="page" id="history">
+    <h1>{{ locale.history_HistoryHeading }}</h1>
+    <p>{{ locale.history_HistoryParagraph }}</p>
+
+    <h1 class="centered-text">{{ locale.history_HistoryPrevBoards }}</h1>
+
+    {% for management in site.data.past_management %}
+    <div class="management-for-year">
+        <h2 class="centered-text">{{management.year}}</h2>
+        <div class="year">
+            {% for member in management.members %}
+            <div class="person">
+                <div class="img-container">
+                    <img src="{{ "/assets/past-management-images/optimised/" | append: member.image }}" alt="{{ member.name }}">
+                </div>
+                <h5 class="centered-text">{{ member.name }}</h5>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+

@@ -101,11 +101,10 @@ en:
   student_WhatYouDoDesc3    : "Joining the developers team you get practice which is not offered in the school.
                               You get to learn everything regarding software under our senior members,
                               not to mention experience in teamwork and a check in your CV."
-  student_WhatYouDoDesc4    : "In Helpdesk's team you can repair and build PC's and work with other electronics."
+  student_WhatYouDoDesc4    : "In Helpdesk's team you can repair and build PCs and work with other electronics."
   student_WhatYouDoDesc5    : "Events and marketing teams respectively are responsible for events and their marketing in Lapikud,
                               but also with some greater events (e.g. <a href=\"https://laphack.eu/\">LAPhack</a>)."
   student_WhatYouDoJoin     : "Join!"
-
   student_MentorsHeading    : "Mentors"
 
   # V grammatically correct ??? V
@@ -119,6 +118,30 @@ en:
   ourwork_BannerButton      : "Contact us !"
   ourwork_DoneWorks         : "Previous solutions:"
 
+  # aboutus.html
+  aboutus_StatuteHeading    : "Statute"
+  aboutus_StatuteLink       : "Our statute which should be read by all our members."
+  aboutus_MembersHeading    : "Members"
+  aboutus_MembersLink       : "All who are and all who have been members of Lapikud."
+  aboutus_HistoryHeading    : "History"
+  aboutus_HistoryLink       : "Check out our history!"
+
+  # history.html
+  history_HistoryHeading    : "History"
+  history_HistoryParagraph  : "MTÜ Lapikud was established in 2002 23. February. Organisation was created by a fellowship of
+                              computer science students who liked to get together and dilly-dally. Reason why we were created a MTÜ ( nonprofit organization )
+                              was to get a .ee domain. The name \"Lapikud\" comes from times when computer science specialty's identification code was \"LAP\".
+                              Back in 2002 til 2010 the organization's goal was simply to fill IT students' time and support their studies.
+                              Since 2011 Lapikud titled themselves a Software development club and focused on involving students in development projects.
+                              In Spring 2012 a first ever thesis hatched from Lapikud was defended and graded 5."
+  history_HistoryPrevBoards : "Previous managers of Lapikud"
+
+  # members.html
+  members_MembersHeading    : "Want to see your name here?"
+  members_MembersJoin       : "Come and join us !"
+  members_JuniorsHeading    : "Junior members of MTÜ Lapikud:"
+  members_SeniorsHeading    : "Senior members of MTÜ Lapikud:"
+  members_AlumniHeading     : "Graduates of MTÜ Lapikud:"
 ee:
 
   # index.html
