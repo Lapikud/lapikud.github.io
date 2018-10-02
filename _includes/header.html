@@ -13,13 +13,12 @@
     </a>
 
     <ul id="main-menu">
-      {% if page.language == "ee" %}
-      <a href="{{ pages.en[page.tag].url }}">In English</a>
-      {% elsif page.language == "en" %}
-      <a href="{{pages.ee[page.tag].url}}">Eesti keeles</a>
-      {% endif %}
-
       {% include main_nav.html %}
+      {% if page.language == "ee" %}
+      <li><a class="flag" id="flag-en" href="{{ pages.en[page.tag].url }}"></a></li>
+      {% elsif page.language == "en" %}
+      <li><a class="flag" id="flag-ee" href="{{pages.ee[page.tag].url}}"></a></li>
+      {% endif %}
     </ul>
   </div>
 

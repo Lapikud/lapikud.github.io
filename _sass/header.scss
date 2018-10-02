@@ -65,6 +65,19 @@
                 fill: $color-primary;
             }
         }
+        .flag {
+            display         : inline-block;
+            width           : 32px;
+            height          : 32px;
+            margin-left     : 1rem;
+            vertical-align  : middle;
+        }
+        #flag-en {
+            background-image: url("/assets/en.svg");
+        }
+        #flag-ee {
+            background-image: url("/assets/est.svg");
+        }
     }
 
     @media (min-width: 40.1rem) {

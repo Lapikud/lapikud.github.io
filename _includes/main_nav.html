@@ -1,8 +1,4 @@
 
-<!--
-    This iterates through navbar pages in current language
-    and gets url and name for navbar.
--->
 {% for menu in site.data.i18n.pages.nav[page.language] %}
     <li><a href="{{ menu[1].url}}">{{menu[1].name }}</a> </li>
 {% endfor %}
