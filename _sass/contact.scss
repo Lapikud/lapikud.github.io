@@ -54,7 +54,6 @@
 
   #main-wrapper {
     width           : 100%;
-    margin-top      : 2rem;
     display         : flex;
     flex-direction  : row;
     flex-wrap       : wrap;
@@ -70,17 +69,17 @@
     #map {
       width      : 100%;
       float      : right;
-      margin     : 0px auto;
+      margin     : 0 auto;
       height     : 60vh;
       max-height : 300px;
     }
   }
 
   #main {
-    margin            : 2rem 0;
-    padding-right     : 40px;
+    margin            : 0 2rem;
 
-    p{
+
+    h4{
       padding-bottom  : 5px;
     }
   }
@@ -90,7 +89,6 @@
   }
 
 }
-
 @media (max-width : 900px) {
 
   #contact {
