@@ -27,7 +27,6 @@ en:
   index_Partners            : "Our partners"
 
   # helpdesk.html
-
   helpdesk_BannerHeading1    : "We'll give your computer "
   helpdesk_BannerHeading2    : "a new life"
   helpdesk_BannerSubHeading  : " solves problems involving PCs and other electronics."
@@ -78,27 +77,36 @@ en:
   helpdesk_ContactMail      : "E-mail"
   helpdesk_ContactPhone     : "Phone"
 
+  # contact.html
+  contact_ContactHeading    : "Contact"
+  contact_ContactMail       : "E-Mail:"
+  contact_ContactPhone      : "Phone:"
+  contact_ContactAddress    : "Adress: Akadeemia tee 5, Tallinn, Estonia"
+  contact_ContactRegCode    : "Reg.nr: 801 67 145"
+
+  contact_BoardHeading      : "Management"
+
 ee:
 
   # index.html
-  index_ForStudentHeading    : "Tudengile"
+  index_ForStudentHeading   : "Tudengile"
   index_ForStudentDesc      : "Tule arenda oma oskuseid ja saa ägedaid sõpru"
   index_ForStudentLink      : "Uuri edasi meie tegevuste kohta ->"
 
-  index_HelpdeskHeading      : "Helpdesk"
+  index_HelpdeskHeading     : "Helpdesk"
   index_HelpdeskDesc        : "Tudengisõbralik arvutiparandus!"
   index_HelpdeskLink        : "Tööde hinnakiri ->"
 
-  index_ForBusinessesHeading : "Ettevõttele"
+  index_ForBusinessesHeading: "Ettevõttele"
   index_ForBusinessesDesc   : "Aitame sinu ideed ellu viia!"
   index_ForBusinessesLink   : "Tehtud tööd ->"
 
-  index_WhoWeHeading         : "Kes me oleme?"
+  index_WhoWeHeading        : "Kes me oleme?"
   index_WhoWeDesc           : "MTÜ Lapikud on TTÜ Tarkvaraarendusklubi, mis ühendab endisi ja praegusi IT huvilisi tudengeid.
                               Organisatsioon loodi 2002. aastal informaatika tudengite poolt, kelle erialatunnuseks oli “LAP”.
                               Targad mehed otsustasid, et järelikult on nad “Lapikud”."
 
-  index_WhatDoHeading        : "Millega tegeleme?"
+  index_WhatDoHeading       : "Millega tegeleme?"
   index_WhatDoDesc          : "Meie põhieesmärgiks on TTÜ IT tudengite erialase lisandväärtuse loomine.
                                Kaasame tudengeid huvitavatesse IT projektidesse ning anname tudengitele võimaluse midagi reaalset oma käega midagi ära teha.
                                Meie projektidest kooruvad välja huvitavad ja tarvilikud lõputööd.
