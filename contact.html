@@ -1,7 +1,11 @@
 ---
 layout: default
 title: Kontakt - Lapikud
+language: ee
 ---
+{% assign locale = site.data.localisation[page.language] %}
+{% assign mgmt = site.data.management[page.language] %}
+
 <div class="page" id="contact">
   <h1>Kontakt</h1>
 
@@ -35,7 +39,7 @@ title: Kontakt - Lapikud
   <div id="management">
     <h2>Juhatus</h2>
     <div id="container">
-      {% for person in site.data.management %}
+      {% for person in mgmt %}
       <div class="person">
         <img src="{{ "/assets/management-images/" | append: person.photo }}" alt="{{ person.name }}">
         <h4 class="centered-text">{{ person.name }}</h4>

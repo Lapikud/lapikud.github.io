@@ -14,7 +14,7 @@ en:
   index_ForBusinessesLink   : "Previous works ->"
 
   index_WhoWeHeading        : "Who are we?"
-  index_WhoWeDesc           : "MTÜ Lapikud ( nonprofit organisation ) is a TUT software developement club, which combines former and current students interested in IT.
+  index_WhoWeDesc           : "MTÜ Lapikud ( nonprofit organisation ) is a TUT software development club, which combines former and current students interested in IT.
                               The organization was established in 2002 by computer science students whose speciality's identification code was \"LAP\".
                               The wise men then decided that henceforth they are to be called \"Lapikud\"."
 
@@ -90,14 +90,14 @@ en:
   student_WhatWeDoHeading   : "What do we do ?"
   student_WhatWeDoDesc1     : "The main goal of Lapikud is to connect IT students to together develop software projects
                               and give students extra experience in addition to what they learn in university.
-                              For that purpose we have a software developement team which deals with both inside and external projects.
+                              For that purpose we have a software development team which deals with both inside and external projects.
                               Helpdesk works on everything hardware and offers computer repair services."
   student_WhatWeDoDesc2     : "In addition we organize events and gatherings and otherwise spend fun times together."
 
   student_WhatYouDoHeading  : "What can you do?"
   student_WhatYouDoDesc1    : "Join us !"
   student_WhatYouDoDesc2    : "There are several ways to contribute to our cause if you wish.
-                              We have four teams: software developement, Helpdesk, marketing and events"
+                              We have four teams: software development, Helpdesk, marketing and events"
   student_WhatYouDoDesc3    : "Joining the developers team you get practice which is not offered in the school.
                               You get to learn everything regarding software under our senior members,
                               not to mention experience in teamwork and a check in your CV."
@@ -113,6 +113,12 @@ en:
                               who'll help you to get rolling initially. Upon joining you'll get a mentor who'll introduce each team
                               and members of Lapikud to you and helps you with your first assignments."
   student_MentorsMeet       : "Meet our mentors !"
+
+  # ourwork.html
+  ourwork_BannerHeading     : "Are you in need of a high quality software solution ?"
+  ourwork_BannerButton      : "Contact us !"
+  ourwork_DoneWorks         : "Previous solutions:"
+
 ee:
 
   # index.html

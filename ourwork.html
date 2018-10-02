@@ -1,7 +1,11 @@
 ---
 layout: default
 title: Tehtud tööd - Lapikud
+language: ee
 ---
+{% assign locale = site.data.localisation[page.language] %}
+{% assign works = site.data.ourwork[page.language] %}
+
 <div class="page">
   <div id="ourwork-banner">
     <h1 class="centered-text">Vajad head, kvaliteetset arendusteenust?</h1>
@@ -15,7 +19,7 @@ title: Tehtud tööd - Lapikud
   <h1 class="centered-text">Tehtud tööd:</h1>
   <div id="ourwork-done">
 
-    {% for work in site.data.ourwork %}
+    {% for work in works %}
     <div class="work-item">
       <div class="description">
         <h2>{{ work.title }}</h2>
