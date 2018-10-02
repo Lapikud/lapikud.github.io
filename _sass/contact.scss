@@ -54,19 +54,21 @@
 
   #main-wrapper {
     width           : 100%;
-    margin-top      : 40px;
     display         : flex;
     flex-direction  : row;
     flex-wrap       : wrap;
+    justify-content : center;
+    align-items     : center;
   }
 
   #maparea {
-    margin        : 0 20px 0px auto;
+    margin        : 0 2rem 0 2rem;
     min-width     : 50%;
     flex          : 1;
 
     #map {
       width      : 100%;
+      float      : right;
       margin     : 0px auto;
       height     : 60vh;
       max-height : 300px;
@@ -74,10 +76,10 @@
   }
 
   #main {
-    margin            : 2rem 0;
-    padding-right     : 40px;
+    margin            : 0 2rem;
 
-    p{
+
+    h4{
       padding-bottom  : 5px;
     }
   }

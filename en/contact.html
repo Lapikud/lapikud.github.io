@@ -3,7 +3,7 @@ layout: default
 title: Contact - Lapikud
 language: en
 ---
-{% assign locale = site.data.localisation[page.language] %}
+{% assign locale = site.data.localisation.contact[page.language] %}
 {% assign mgmt = site.data.management[page.language] %}
 
 <div class="page" id="contact">
@@ -11,24 +11,25 @@ language: en
 
     <h2>Helpdesk</h2>
     <div id="helpdesk">
-        <a id="helpdesk-banner-container" href="/helpdesk">
-            <img id="helpdesk-banner" src="/assets/helpdesk-on-black.png">
-        </a>
         <div id="helpdesk-info">
             <h4>{{ locale.contact_ContactMail }} <a href="mailto:helpdesk@lapikud.ee">helpdesk@lapikud.ee</a></h4>
             <h4>{{ locale.contact_ContactPhone }} <a href="tel:+37258160799">+372 581 607 99</a></h4>
             <h4>Facebook: <a href="https://www.facebook.com/lapikudhelpdesk/">Lapikud Helpdesk</a></h4>
         </div>
+        <a id="helpdesk-banner-container" href="/helpdesk">
+            <img id="helpdesk-banner" src="/assets/helpdesk-on-black.png">
+        </a>
     </div>
 
+    <h2>MTÜ Lapikud</h2>
     <div id="main-wrapper">
         <div id="main">
-            <h2>MTÜ Lapikud</h2>
-            <p>{{ locale.contact_ContactAddress }}</p>
-            <p>{{ locale.contact_ContactMail }} <a href="mailto:lapikud@lapikud.ee">lapikud@lapikud.ee</a></p>
-            <p>{{ locale.contact_ContactPhone }} <a href="tel:+372 58 160 799">+372 58 160 799</a></p>
-            <p>{{ locale.contact_ContactRegCode }}</p>
-            <p>Swedbank EE812200221019551756</p>
+
+            <h4>{{ locale.contact_ContactAddress }}</h4>
+            <h4>{{ locale.contact_ContactMail }} <a href="mailto:lapikud@lapikud.ee">lapikud@lapikud.ee</a></h4>
+            <h4>{{ locale.contact_ContactPhone }} <a href="tel:+372 58 160 799">+372 58 160 799</a></h4>
+            <h4>{{ locale.contact_ContactRegCode }}</h4>
+            <h4>Swedbank EE812200221019551756</h4>
         </div>
         <div id="maparea">
             <div id="map"></div>
