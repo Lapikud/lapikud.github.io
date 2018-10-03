@@ -35,6 +35,9 @@ all:
     striim:
       name  : "Striim"
       url   : "/striim/"
+    join:
+      name  : "Liitu"
+      url   : "/join/"
 
   en:
     home:
@@ -72,6 +75,9 @@ all:
     striim:
       name  : "Striim"
       url   : "/en/striim/"
+    join:
+      name  : "Join"
+      url   : "/en/join/"
 
 
 # For iterating through and populating navbar
