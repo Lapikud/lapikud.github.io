@@ -7,24 +7,30 @@ title: Kontakt - Lapikud
 
   <h2>Helpdesk</h2>
   <div id="helpdesk">
-    <a id="helpdesk-banner-container" href="/helpdesk">
-      <img id="helpdesk-banner" src="/assets/helpdesk-on-black.png">
-    </a>
     <div id="helpdesk-info">
       <h4>E-mail: <a href="mailto:helpdesk@lapikud.ee">helpdesk@lapikud.ee</a></h4>
       <h4>Telefon: <a href="tel:+37258160799">+372 581 607 99</a></h4>
       <h4>Facebook: <a href="https://www.facebook.com/lapikudhelpdesk/">Lapikud Helpdesk</a></h4>
     </div>
+    <a id="helpdesk-banner-container" href="/helpdesk">
+      <img id="helpdesk-banner" src="/assets/helpdesk-on-black.png">
+    </a>
   </div>
 
-  <div id="main">
-    <h2>MTÜ Lapikud</h2>
-    <p>Aadress: Akadeemia tee 5, Tallinn, Eesti</p>
-    <p>E-post: <a href="mailto:lapikud@lapikud.ee">lapikud@lapikud.ee</a></p>
-    <p>Telefon: <a href="tel:+372 58 160 799">+372 58 160 799</a></p>
-    <p>Reg. kood: 801 67 145</p>
-    <p>Swedbank EE812200221019551756</p>
+  <h2>MTÜ Lapikud</h2>
+  <div id="main-wrapper">
+    <div id="main">
+      <h4>Aadress: Akadeemia tee 5, Tallinn, Eesti</h4>
+      <h4>E-post: <a href="mailto:lapikud@lapikud.ee">lapikud@lapikud.ee</a></h4>
+      <h4>Telefon: <a href="tel:+372 58 160 799">+372 58 160 799</a></h4>
+      <h4>Reg. kood: 801 67 145</h4>
+      <h4>Swedbank EE812200221019551756</h4>
+    </div>
+    <div id="maparea">
+      <div id="map"></div>
+    </div>
   </div>
+
 
   <div id="management">
     <h2>Juhatus</h2>
@@ -44,3 +50,20 @@ title: Kontakt - Lapikud
     </div>
   </div>
 </div>
+
+
+<!-- leafletjs map styles -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+
+<script>
+    var map = L.map('map').setView([59.396342, 24.668718], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([59.396342, 24.668718]).addTo(map)
+        .openPopup();
+</script>
