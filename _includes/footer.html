@@ -1,23 +1,25 @@
+{% assign locale = site.data.i18n.footer[page.language] %}
+{% assign home = site.data.i18n.pages.all[page.language].home %}
 <footer class="main-footer">
   <section class="container">
     <div class="row">
       <div class="column footer-contact">
         <h3>MTÜ Lapikud</h3>
-          <p>Aadress: Akadeemia tee 5, Tallinn, Eesti</p>
-          <p>E-post: <a href="mailto:lapikud@lapikud.ee">lapikud@lapikud.ee</a></p>
-          <p>Telefon: <a href="tel:+372 58 160 799">+372 58 160 799</a></p>
-          <p>Reg. kood: 801 67 145</p>
+          <p>{{ locale.footer_ContactAddress }}</p>
+          <p>{{ locale.footer_ContactMail }}<a href="mailto:lapikud@lapikud.ee">lapikud@lapikud.ee</a></p>
+          <p>{{ locale.footer_ContactPhone }}<a href="tel:+372 58 160 799">+372 58 160 799</a></p>
+          <p>{{ locale.footer_ContactRegCode }}</p>
         <p>Swedbank EE812200221019551756</p>
       </div>
       <div class="column footer-nav">
-        <h3>Navigatsioon</h3>
+        <h3>{{ locale.footer_NavigationHeading }}</h3>
         <ul>
-          <li><a href="/">Esileht</a></li>
+          <li><a href="{{ home.url }}">{{ home.name }}</a></li>
           {% include main_nav.html %}
         </ul>
       </div>
       <div class="column footer-nav">
-        <h3>Jälgi meid!</h3>
+        <h3>{{ locale.footer_FollowUsHeading }}</h3>
         <ul>
           <li><a href="https://www.instagram.com/lapikud/">Instagram</a></li>
           <li><a href="https://www.facebook.com/Lapikud/">Facebook</a></li>
@@ -28,7 +30,7 @@
     </div>
     <div class="row">
       <div class="column footer-copyright">
-        <a href="https://lapikud.ee">&copy; 2018 MTÜ Lapikud</a>
+        <a href="{{ home.url }}">&copy; 2018 MTÜ Lapikud</a>
       </div>
     </div>
   </section>

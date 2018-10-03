@@ -1,0 +1,27 @@
+ee:
+  mentors_PageHeading     : "Mentorid"
+  mentors_PageDesc        : "Siin on meie mentorid. Kui leiad kellegi, kellega huvid kattuvad, võta temaga julgelt ühendust!"
+
+  mentors_MentorAge       : "Vanus: "
+  mentors_MentorSpecialty : "Eriala: "
+  mentors_MentorTerm      : "Kursus: "
+  mentors_MentorTeams     : "Tiimid:"
+  mentors_MentorContacts  : "Kontaktid:"
+  mentors_MentorPhone     : "Telefon: "
+
+  mentors_VariaWhyMe      : "Miks peaksid valima minu enda mentoriks?"
+  mentors_VariaInterests  : "Millega tegelen väljaspool Lapikuid?"
+
+en:
+  mentors_PageHeading     : "Mentors"
+  mentors_PageDesc        : "These are our mentors. If you find someone with whom you have something in common, get into contact!"
+
+  mentors_MentorAge       : "Age: "
+  mentors_MentorSpecialty : "Specialty: "
+  mentors_MentorTerm      : "Term: "
+  mentors_MentorTeams     : "Teams:"
+  mentors_MentorContacts  : "Contact:"
+  mentors_MentorPhone     : "Phone: "
+
+  mentors_VariaWhyMe      : "Why you should pick me as your mentor?"
+  mentors_VariaInterests  : "What I do in my free time aside from Lapikud?"

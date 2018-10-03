@@ -1,0 +1,50 @@
+en:
+  student_WhatWeDoHeading   : "What do we do?"
+  student_WhatWeDoDesc1     : "The main goal of Lapikud is to connect IT students to together develop software projects
+                              and give students extra experience in addition to what they learn in university.
+                              For that purpose we have a software development team which deals with both inside and external projects.
+                              Helpdesk works on everything hardware and offers computer repair services."
+  student_WhatWeDoDesc2     : "In addition we organize events and gatherings and otherwise spend fun times together."
+
+  student_WhatYouDoHeading  : "What can you do?"
+  student_WhatYouDoDesc1    : "Join us!"
+  student_WhatYouDoDesc2    : "There are several ways to contribute to our cause if you wish.
+                              We have four teams: software development, Helpdesk, marketing and events"
+  student_WhatYouDoDesc3    : "Joining the developers team you get practice which is not offered in the school.
+                              You get to learn everything regarding software under our senior members,
+                              not to mention experience in teamwork and a check in your CV."
+  student_WhatYouDoDesc4    : "In Helpdesk's team you can repair and build PCs and work with other electronics."
+  student_WhatYouDoDesc5    : "Events and marketing teams respectively are responsible for events and their marketing in Lapikud,
+                              but also with some greater events (e.g. <a href=\"https://laphack.eu/\">LAPhack</a>)."
+  student_WhatYouDoJoin     : "Join!"
+  student_MentorsHeading    : "Mentors"
+
+  # V grammatically correct ??? V
+  student_MentorsDesc       : "If you want to join our organisation then fear not for you are helped by our experienced mentors
+                              who'll help you to get rolling initially. Upon joining you'll get a mentor who'll introduce each team
+                              and members of Lapikud to you and helps you with your first assignments."
+  student_MentorsMeet       : "Meet our mentors!"
+
+ee:
+  student_WhatWeDoHeading   : "Mida me teeme?"
+  student_WhatWeDoDesc1     : "Lapikute põhieesmärk on ühendada IT tudengeid, et üheskoos tegeleda tarkvaraprojektidega ja anda tudengile kooli kõrvalt lisakogemust.
+                              Selleks on meil tarkvara tiim, mis tegeleb organisatsiooni siseste ja väliste projektidega.
+                              Riistvara poolt on olemas Helpdesk, mis pakub tudengitele arvutiremonditeenust."
+  student_WhatWeDoDesc2     : "Peale selle korraldame ühiseid üritusi ja koosviibimisi ning veedame koos toredalt aega."
+
+  student_WhatYouDoHeading  : "Mida saad sina teha?"
+  student_WhatYouDoDesc1    : "Meiega liituda!"
+  student_WhatYouDoDesc2    : "Kui tunned, et tahad panustada meie organisatsiooni, siis on selleks mitu valikut.
+                              Meil on neli meeskonda: tarkvara, Helpdesk, turundus ja üritused."
+  student_WhatYouDoDesc3    : "Tarkvara tiimiga liitudes saad praktikat, mida koolis ei pakuta.
+                              Lisaks saad kogenud vanemliikme käe all õppida kõike tarkvara hoomavat,
+                              rääkimata meeskonnatöö oskustest ja ilusast märkest CVsse."
+  student_WhatYouDoDesc4    : "Helpdeski meeskonnas on võimalik omal käel parandada ja komplekteerida arvuti riistvara ning teha palju muudki tehnikaga seonduvat."
+  student_WhatYouDoDesc5    : "Ürituste ja turundustiim tegelevad vastavalt Lapikute siseürituste korraldamise ja nende turundamisega,
+                              lisaks ka mõne suurüritusega (näiteks <a href=\"https://laphack.eu/\">LAPhack</a>)."
+  student_WhatYouDoJoin     : "Liitu!"
+  student_MentorsHeading    : "Mentorid"
+  student_MentorsDesc       : "Kui tahad meie organisatsiooniga liituda, siis pole midagi karta, sest algset sisseelamist abistavad mentorid.
+                              Liitudes saad omale mentori, kes räägib täpsemalt, mida iga tiim teeb,
+                              tutvustab sind teistele Lapikutele ja aitab esimeste ülesannetega."
+  student_MentorsMeet       : "Tutvu meie mentoritega!"

@@ -1,0 +1,33 @@
+{% assign locale = site.data.i18n.striim[page.language] %}
+
+<section class="container">
+    <h1>{{ locale.striim_StreamHeading }}</h1>
+</section>
+<section class="stream">
+    <div style="display:flex; flex-wrap:wrap;">
+        <a href="http://193.40.243.200:8888/striim.html?action=stream" class="video">
+            <img src="http://193.40.243.200:8887/striim.html?action=stream" alt="video0" style="width:100%;"/>
+        </a>
+
+        <a href="http://193.40.243.200:9999/striim.html?action=stream" class="video">
+            <img src="http://193.40.243.200:9998/striim.html?action=stream" alt="video1" style="width:100%;"/>
+        </a>
+
+        <a href="http://193.40.243.200:7777/striim.html?action=stream" class="video">
+            <img src="http://193.40.243.200:7776/striim.html?action=stream" alt="video2" style="width:100%;"/>
+        </a>
+    </div>
+
+    <div style="display: flex;align-items: center; text-align: center; margin: 0 auto; flex-direction: column">
+        <p>
+            <a href="http://kahtlane.eu/">Kahtlane FM</a> {{ locale.striim_RadioDesc }}
+        </p>
+        <br>
+        <audio style="display:block;" controls="controls" preload="none" id="kahtlane"><source src="http://kahtlane.eu:8000/live" type="application/ogg" /></audio>
+    </div>
+
+    <script>
+        var audio = document.getElementById("kahtlane");
+        audio.volume = 0.5;
+    </script>
+</section>

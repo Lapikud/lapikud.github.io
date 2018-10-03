@@ -1,6 +1,6 @@
 # Management contact info
 
-
+ee:
 - name: Hanno Vene
   photo: hanno_vene.jpg
   role: Juhatuse esimees
@@ -36,3 +36,38 @@
   email: asko.narep@lapikud.ee
   phone: +372 56 236 649
 
+en:
+- name: Hanno Vene
+  photo: hanno_vene.jpg
+  role: Chairman of the board
+  subrole: Our great bossman
+  email: hanno.vene@lapikud.ee
+  phone: +372 56 247 690
+
+- name: Kaarel Pärtel
+  photo: kaarel_pärtel.jpg
+  role: Member of the board
+  subrole: Head of Helpdesk
+  email: kaarel.partel@lapikud.ee
+  phone: +372 53 665 368
+
+- name: Martin Oblikas
+  photo: martin_oblikas.jpg
+  role: Member of the board
+  subrole: Head of Developement
+  email: martin.oblikas@lapikud.ee
+  phone: +372 50 70 459
+
+- name: Risto Leesmäe
+  photo: risto_leesmäe.jpg
+  role: Member of the board
+  subrole: Head of Marketing
+  email: risto.leesmae@lapikud.ee
+  phone: +372 53 269 529
+
+- name: Asko Närep
+  photo: asko_närep.jpg
+  role: Member of the board
+  subrole: Head of Events
+  email: asko.narep@lapikud.ee
+  phone: +372 56 236 649

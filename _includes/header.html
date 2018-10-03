@@ -1,6 +1,7 @@
 <!-- header.scss -->
+{% assign pages = site.data.i18n.pages.all %}
 <nav class="navigation">
-  <a href="/" {% if page.url == '/' %}style="display: none;"{% endif %}>
+  <a href="{{site.data.i18n.pages.all[page.language].home.url}}" {% if page.url == '/' or page.url == '/en/' %}style="display: none;"{% endif %}>
 	<img id="header-logo" class="logo" src="{{ "/assets/logo.svg " | relative_url }}">
   </a>
 
@@ -13,6 +14,11 @@
 
     <ul id="main-menu">
       {% include main_nav.html %}
+      {% if page.language == "ee" %}
+      <li><a class="flag" id="flag-en" href="{{ pages.en[page.tag].url }}">In English</a></li>
+      {% elsif page.language == "en" %}
+      <li><a class="flag" id="flag-ee" href="{{pages.ee[page.tag].url}}">Eesti keeles</a></li>
+      {% endif %}
     </ul>
   </div>
 

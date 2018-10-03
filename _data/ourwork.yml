@@ -1,3 +1,4 @@
+ee:
 # Our work
 #
 - title: TTÜ Muuseumi eksponaadid
@@ -92,3 +93,101 @@
   photo: sporditrennid.jpg
   url:
   description: Tänaseks on portaali omanikud selle sulgenud.
+
+en:
+# Our work
+#
+- title: TUT museum exhibits
+  photo: ttu_muusem_placeholder.jpg
+  url:
+  description: To be completed September 2018
+
+- title: ENL home page
+  photo: eesti_noorteühenduste_liit.jpg
+  url: http://enl.ee/
+  description: We made a new landing page for Eesti Noorteühenduste Liit and made improvements regarding plugins.
+
+# TODO site is gone, need pics
+#- title: Homepage for TuumFilm
+#  photo: kertult saab pilte küsida nkn
+#  url:
+#  description: Made a homepage for small movie and montage business.
+
+# TODO get pics
+#- title: A Hitman game for Student days
+#  photo: edgarilt saab prolly, kirjutasin
+#  url:
+#  description: We made a web application for IRL Hitman game that took place in Tartu.
+
+- title: Taksod.net Android app
+  photo: taksod-net-android.jpg
+  url: https://play.google.com/store/apps/details?id=net.taksod.android
+  description: Android app in which you can search for suitable taxi service providers and call them through the app and order a taxi.
+
+- title: Taksod.net iOS app
+  photo: taksod-net-ios.jpg
+  url:  https://itunes.apple.com/ee/app/taksod-net/id1230208509?mt=8
+  description: iOS app in which you can search for suitable taxi service providers and call them through the app and order a taxi.
+
+- title: Osaluskogud Eestis
+  photo: osaluskogud_eestis.jpg
+  url: http://noortekogud.ee/
+  description: Page improvements
+
+- title: TUT brass band
+  photo: orkester.jpg
+  url: http://orkester.ee
+  description: Gave the page a contemporary look.
+
+- title: TUT Studentlife
+  photo: studentlife.jpg
+  url: http://studentlife.ee
+
+  description: Developed a new environment on WordPress according to clients vision where students can read/write blog posts and be up to date with upcoming events and activities of student organisations. Every now and then we do updates on said page.
+
+- title: Eesti Üliõpilasesinduse Liit
+  photo: sallivkool.jpg
+  url: http://sallivkool.ee/
+  description:
+
+- title: ISIC
+  photo: isic.jpg
+  url: http://www.isic.ee
+
+  description: Webpage developed on WordPress platform where you can find necessary information about ISIC card (discounts, ordering etc.). We do updates on this page.
+
+
+- title: Virtual Museum of an Estonian Bicycle Museum
+  photo: jalgrattaveeb.jpg
+  url: http://www.velomuseum.ee/
+  description:
+
+
+- title: Job search portal for sailors
+  photo: nauticalcrew.jpg
+  url:
+  description: Owners have now closed this portal
+
+
+- title: Võti Tulevikku 2013 information page
+  photo: votitulevikku.jpg
+  url:
+  description:
+
+
+- title: Ukseproff
+  photo: ukseproff.jpg
+  url: http://www.ukseproff.ee/
+  description:
+
+
+- title: Nõmme Tennis Club homepage
+  photo: nommetenniseklubi.jpg
+  url: http://www.nommetennis.ee/
+  description:
+
+
+- title: Sporditrennid.ee search portal for sports classes
+  photo: sporditrennid.jpg
+  url:
+  description: Owners have now closed this portal

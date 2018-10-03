@@ -1,0 +1,52 @@
+en:
+  index_ForStudentHeading   : "For Student"
+  index_ForStudentDesc      : "Come develop your skills and meet cool people"
+  index_ForStudentLink      : "Learn more about our activites ->"
+
+  index_HelpdeskHeading     : "Helpdesk"
+  index_HelpdeskDesc        : "Student-friendly PC repair"
+  index_HelpdeskLink        : "Pricelist ->"
+
+  index_ForBusinessesHeading: "For Businesses"
+  index_ForBusinessesDesc   : "We'll help to bring your ideas into reality"
+  index_ForBusinessesLink   : "Previous works ->"
+
+  index_WhoWeHeading        : "Who are we?"
+  index_WhoWeDesc           : "MTÜ Lapikud ( nonprofit organisation ) is a TUT software development club, which combines former and current students interested in IT.
+                              The organization was established in 2002 by computer science students whose speciality's identification code was \"LAP\".
+                              The wise men then decided that henceforth they are to be called \"Lapikud\"."
+
+  index_WhatDoHeading       : "What are we up to?"
+  index_WhatDoDesc          : "Our main goal is to complement TUT's IT students studies with relevant experience.
+                              We involve students in interesting IT themed projects and give them an opportunity to finish something meaningful on their own.
+                              Our projects often turn into compelling and useful theses. We offer clever students a chance to get their first work experience.
+                              Lapikud is not only a IT student organization - we also try to involve economics students in our projects so also business side would be represented."
+
+  index_Partners            : "Our partners"
+
+ee:
+  index_ForStudentHeading   : "Tudengile"
+  index_ForStudentDesc      : "Tule arenda oma oskuseid ja saa ägedaid sõpru"
+  index_ForStudentLink      : "Uuri edasi meie tegevuste kohta ->"
+
+  index_HelpdeskHeading     : "Helpdesk"
+  index_HelpdeskDesc        : "Tudengisõbralik arvutiparandus!"
+  index_HelpdeskLink        : "Tööde hinnakiri ->"
+
+  index_ForBusinessesHeading: "Ettevõttele"
+  index_ForBusinessesDesc   : "Aitame sinu ideed ellu viia!"
+  index_ForBusinessesLink   : "Tehtud tööd ->"
+
+  index_WhoWeHeading        : "Kes me oleme?"
+  index_WhoWeDesc           : "MTÜ Lapikud on TTÜ Tarkvaraarendusklubi, mis ühendab endisi ja praegusi IT huvilisi tudengeid.
+                              Organisatsioon loodi 2002. aastal informaatika tudengite poolt, kelle erialatunnuseks oli “LAP”.
+                              Targad mehed otsustasid, et järelikult on nad “Lapikud”."
+
+  index_WhatDoHeading       : "Millega tegeleme?"
+  index_WhatDoDesc          : "Meie põhieesmärgiks on TTÜ IT tudengite erialase lisandväärtuse loomine.
+                               Kaasame tudengeid huvitavatesse IT projektidesse ning anname tudengitele võimaluse midagi reaalset oma käega midagi ära teha.
+                               Meie projektidest kooruvad välja huvitavad ja tarvilikud lõputööd.
+                               Pakume nutikatele tudengitele võimalust saada meie juures esimene töökogemus.
+                               Lapikud ei ole ainult IT tudengite organisatsioon – püüame kaasata oma tegevusse ka majandusteaduskonna tudengeid, et projektides oleks esindatud ka äriline pool."
+
+  index_Partners            : "Koostööpartnerid"
