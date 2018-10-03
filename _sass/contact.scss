@@ -62,8 +62,8 @@
   }
 
   #maparea {
-    margin        : 0 2rem 0 2rem;
-    min-width     : 50%;
+    margin        : 0 2rem;
+    min-width     : 44.55%;
     flex          : 1;
 
     #map {
@@ -102,5 +102,12 @@
         margin : 0;
       }
     }
+    #main-wrapper{
+      #maparea{
+        flex-direction: column;
+        margin: 2rem;
+      }
+    }
   }
 }
+
