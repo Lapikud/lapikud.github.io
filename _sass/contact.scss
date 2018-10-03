@@ -48,7 +48,6 @@
           margin : 0.2rem 0;
         }
       }
-
     }
   }
 
@@ -62,8 +61,8 @@
   }
 
   #maparea {
-    margin        : 0 2rem 0 2rem;
-    min-width     : 50%;
+    margin        : 0 2rem;
+    min-width     : 44.55%;
     flex          : 1;
 
     #map {
@@ -78,7 +77,6 @@
   #main {
     margin            : 0 2rem;
 
-
     h4{
       padding-bottom  : 5px;
     }
@@ -89,7 +87,6 @@
   }
 
 }
-
 @media (max-width : 900px) {
 
   #contact {
@@ -99,9 +96,17 @@
       #helpdesk-banner-container {
         margin : 2rem 0;
       }
-      #helpdesk-info{
+      #helpdesk-info {
         margin : 0;
+      }
+    }
+
+    #main-wrapper{
+      #maparea{
+        flex-direction: column;
+        margin: 2rem;
       }
     }
   }
 }
+
