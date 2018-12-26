@@ -2,6 +2,9 @@
 layout: default
 ---
 
-<section class="container post">
+<div class="page">
+    {%- assign date_format = "%F" -%}
+    <h1>{{ page.title | escape }}</h1>
+    <h5> {{ page.date | date: date_format }}</h5>
   {{ content }}
-</section>
+</div>
