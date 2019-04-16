@@ -19,7 +19,7 @@ Uusaasta sai vastu võetud suure võileivalaua buffeega. Käisime ka Nõmme mäe
 
 ![Toidulaud enne](https://i.imgur.com/IB5ZZ8F.png "Toidulaud enne") ![Toidulaud pärast](https://i.imgur.com/xcwKLlW.png "Toidulaud pärast")
 
-23. Veebruari õhtul pidasid Lapikud oma sünnipäeva, seekord saime 17 aastaseks. Pidu möödus lõbusalt, saime kinke nii BESTi, T-Teatri, Eelmise juhatuse, Robotiklubi kui ka DigiTechi poolt. Ametlik osa lõppes musikaalse etteastega mõndade andekate liikmete poolt ning Live muusika saatel rahvatantsuga. Järgmisel hommikul läksime nagu igal aastal Toompeale Tipikate marsile.
+23. Veebruari õhtul pidasid Lapikud oma sünnipäeva, seekord saime 17 aastaseks. Pidu möödus lõbusalt, saime kinke nii BESTi, T-Teatri, eelmise juhatuse, Robotiklubi kui ka DigiTechi poolt. Ametlik osa lõppes musikaalse etteastega mõndade andekate liikmete poolt ning Live muusika saatel rahvatantsuga. Järgmisel hommikul läksime nagu igal aastal Toompeale Tipikate marsile.
 
 ![Tuleshow](https://i.imgur.com/xOUHo6w.jpg "Tuleshow") ![Heade mõtete purk](https://i.imgur.com/BioJajO.jpg "Heade mõtete purk")
 
@@ -38,7 +38,7 @@ Peale päriselu pildistamise õppisime ka Laura Leoni käe läbi UI koolitusel i
 
 ![Turunduse bowling](https://i.imgur.com/o5envGN.png "Turunduse bowling")
 
-Samuti käis meil külas Aive Uus, kes rääkis IT-inimeste jaoks väga huvitaval ja vajalikul teemal - kuidas inimeste mõistmine. Saime väärtuslikke teadmisi sellest, kuidas erinevatest inimestest aru saada ja kuidas neid tõeliselt kuulata.
+Samuti käis meil külas Aive Uus, kes rääkis IT-inimeste jaoks väga huvitaval ja vajalikul teemal - kuidas inimesi mõista. Saime väärtuslikke teadmisi sellest, kuidas erinevatest inimestest aru saada ja kuidas neid tõeliselt kuulata.
 
 ![Koolitus](https://i.imgur.com/ZsWIIcS.jpg "Koolitus kuidas erinevaid inimesi mõista ning tõeliselt kuulata")
 
