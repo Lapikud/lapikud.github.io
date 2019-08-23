@@ -1,3 +1,22 @@
+- year: 2019
+  members:
+    - name: Risto Leesmäe
+      image: risto_leesmäe.jpg
+
+    - name: Lembitu Valdmets
+      image: lembitu_valdmets.jpg
+
+    - name: Hanno Vene
+      image: hanno_vene.jpg
+
+    - name: Peter-Sten Annus
+      image: peter-sten_annus.jpg
+
+    - name: Roosi-Ann Tõlgu
+      image: roosi-ann_tõlgu.jpg
+
+
+
 - year: 2018
   members:
   - name: Hanno Vene

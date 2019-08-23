@@ -41,6 +41,11 @@ Fork this repo to your own account and create a pull request for changes you hav
         cd lapikud.github.io
         jekyll serve --host 0.0.0.0
 
+5. Image converter usage (requires imagemagick)
+
+        sudo apt-get install imagemagick
+        sh convert-past-management-images.sh
+
 # Deploy (TODO)
 
         jekyll build

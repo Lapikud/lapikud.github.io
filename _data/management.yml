@@ -1,38 +1,38 @@
 # Management contact info
 
 
-- name: Hanno Vene
-  photo: hanno_vene.jpg
-  role: Juhatuse esimees
-  subrole: Meie suur juht
-  email: hanno.vene@lapikud.ee
-  phone: +372 56 247 690
-
-- name: Kaarel Pärtel
-  photo: kaarel_pärtel.jpg
-  role: Juhatuse liige
-  subrole: Helpdeski juht
-  email: kaarel.partel@lapikud.ee
-  phone: +372 53 665 368
-
-- name: Martin Oblikas
-  photo: martin_oblikas.jpg
-  role: Juhatuse liige
-  subrole: Tarkvara juht
-  email: martin.oblikas@lapikud.ee
-  phone: +372 50 70 459
-
 - name: Risto Leesmäe
   photo: risto_leesmäe.jpg
-  role: Juhatuse liige
-  subrole: Turunduse juht
+  role: Juhatuse esimees
+  subrole: Meie suur juht
   email: risto.leesmae@lapikud.ee
-  phone: +372 53 269 529
+  phone: +372 5326 9529
 
-- name: Asko Närep
-  photo: asko_närep.jpg
+- name: Lembitu Valdmets
+  photo: lembitu_valdmets.jpg
   role: Juhatuse liige
-  subrole: Ürituste juht
-  email: asko.narep@lapikud.ee
-  phone: +372 56 236 649
+  subrole: Helpdeski juht
+  email: lembitu@lapikud.ee
+  phone: +372 5569 3479
+
+- name: Hanno Vene
+  photo: hanno_vene.jpg
+  role: Juhatuse liige
+  subrole: Tarkvara valdkonna juht
+  email: hanno.vene@lapikud.ee
+  phone: +372 50 70 459
+
+- name: Peter-Sten Annus
+  photo: peter-sten_annus.jpg
+  role: Juhatuse liige
+  subrole: Ürituste valdkonna juht
+  email: peter@lapikud.ee
+  phone: +372 5834 3848
+
+- name: Roosi-Ann Tõlgu
+  photo: roosi-ann_tõlgu.jpg
+  role: Juhatuse liige
+  subrole: Turunduse valdkonna juht
+  email: roosi-ann@lapikud.ee
+  phone: +372 5197 8024
 
