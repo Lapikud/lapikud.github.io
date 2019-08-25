@@ -1,206 +1,106 @@
 # Mentors: example dataset
 
 
-- name: Rasmus Koit
-  age: 22
-  photo: rasmus_koit_mentor.jpg
-  specialty: IT süsteemide administreerimine
-  term: 2
+- name: Kertu Nurmberg
+  age: 25
+  photo: kertu_nurmberg_mentor.jpg
+  specialty: IT süsteemide arendus (bakalaureus)
+  term:
   teams:  ['Tarkvara', 'Üritused']
   contactMethods:
-  - name: E-mail
-    value: rasmuskoit@gmail.com
-  - name: Telefon
-    value: +372 53008755
   - name: Messenger
-    value: https://m.me/rasmuskoit
-  description: Olen tudeng Kohilast, kellele meeldib tegeleda graafilise disaini, lauatennise, arvutimängude, programmeerimise (C, Java, Python, PHP, HTML, ReactJS) ja e-spordiga.
-  activities: Enamasti tegelengi disaini, mängimise või programmeerimisega. Laiskadel päevadel käin väljas või vaatan filmi :)
+    value: https://m.me/kertu.nurmberg
+  - name: Telegram
+    value: '@knurm'
+  description: Oma piksliteks ootan inimesi, kellele minust kõige rohkem kasu. Ehk siis inimesed, kes tahavad väga lapikuks saada või ennast lihtsalt inimesena arendada.
+  activities: Olen sõbralik, enamjaolt rõõmsameelne ja avatud mõtlemisega.
 
-- name: Asko Närep
-  age: 20
-  photo: asko_narep_mentor.png
-  specialty: Avalik haldus ja riigiteadused
-  term: bakalaureus
-  teams:  ['Juhatus', 'Üritused']
+- name: Kärte Pärend
+  age: 22
+  photo: karte_parend_mentor.JPG
+  specialty: Informaatika (bakalaureus), Küberkaitse (magister)
+  term: 1
+  teams:  ['Turundus']
   contactMethods:
-  - name: E-mail
-    value: asko.narep@lapikud.ee
-  - name: Telefon
-    value: +372 56236649
-  - name: other
-    value: Messenger/Facebook
-  description: Vali mind mentoriks, kui oled sotsiaalne või omapärane inimene. Oskan näidata, mis ürituste valdkond endast kujutab Lapikutes ja vastata kooliga seotud küsimustele.
-  activities: Ma vabal ajal tegelen spordiga ja meelelahutusega. Olen professionaalne püromaan  (neelan ja puhun tuld), lisaks olen musta huumori spetsialist. Meeldib käia metsas, mahajäetud kohtades ja imala võitu kookosvett juua. *Laughs in coconut*
-
-- name: Martin Väljaots
-  age: 24
-  photo: martin_väljaots_mentor.jpeg
-  specialty: Arvutisüsteemid (bakalaureus), informaatika (magister)
-  term: 5
-  teams:  ['Tarkvara', 'Üritused']
-  contactMethods:
-  - name: other
-    value: Facebook
-  description: Olen läbinud Tallinna Tehnikaülikooli kadalipu ning sooritanud need ained, mis sul kohe tulemas on. Töötan igapäevaselt põhiliselt Javaga, aga ka muude tehnoloogiatega. Vali mind mentoriks, kui sind huvitab, milline näeb välja tarkvaraarendaja töö. P.S niisama võib ka minuga kõigest rääkida. Olen, khm, chill.
-  activities: Vabal ajal parandan oma semi-parsat autot, mängin kitarri, vaatan sarju, üritan mingit uut suvalist oskust omandada või olen mingisuguste shenanigansidega seotud.
-
-
+    - name: Messenger
+      value: https://m.me/karte.park
+  description: Õppimisele orienteeritud ja sõbralikke piksleid
+  activities: Olen õppimisele orienteeritud ja kohusetundlik. Vabal ajal meeldib tennist mängida.
 
 - name: Laura Leisberg
-  age: 19
+  age: 20
   photo: laura_leisberg_mentor.jpg
-  specialty: Informaatika
-  term: 2
-  teams: ['Üritused']
-  contactMethods:
-  - name: other
-    value: facebook/messenger
-  description: Vali mind mentoriks kui sind huvitab proge. Tean natuke pythonit ja javat ning saan seega aidata kui vaja. Võid mind ka valida kui sind vaevavad teised elulised mured, nt kooli sisse elamine.
-  activities: Väljaspool Lapikuid meeldib mulle käia jalutamas nii, et ei tea kuhu lähen ja lihtsalt naudin. Kasutan snapchati päris palju, üritan seal naljakas olla.
-
-
-- name: Enola Sander
-  age: 19
-  photo: enola_sander_mentor.jpg
-  specialty: IT süsteemide arendus
-  term:
-  teams: ['Üritused']
-  contactMethods:
-  - name: E-mail
-    value: enola1998@gmail.com
-  - name: Telefon
-    value: +372 59066682
-  - name: other
-    value: Messenger
-  description: Olen täpselt aasta aega lapikutes pesitsenud. Umbes-täpselt tean kelle poole pöörduda, kui ise aidata ei oska. Mul on mingid teadmised Pythonis, Javas ja Reactis.
-  activities: Vahepeal käin praktikal, vahepeal leiab mind lapikute kontorist niisama vedelemast, kuid enamjaolt olen koduloom. Vabal ajal meeldib mulle raamatuid lugeda, jalutada, oma kassist rääkida, muusikat kuulata ning arvuti taga istuda ja aega surnuks lüüa.
-
-- name: Arti Zirk
-  age: 23
-  photo: arti_zirk_mentor.jpg
-  specialty: IT süsteemide arendus
-  term: 4
-  teams: ['Tarkvara', 'Helpdesk', 'Üritused','Turundus']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/artizirk95
-  description: Tegelen Lapikutes natuke kõigega. Olen õppinud Pythonit, Javat ja natuke muid keeli. Õhtuti olen üsna tihti Lapikutes figureerimas.
-  activities: Väljaspool Lapikuid käin koolis ja töötan Milrem Robotics ettevõttes tarkvara arendajana.
-
-
-- name: Airiin Kadakmaa
-  age: 25
-  photo: airiin_kadakmaa_mentor.png
-  specialty: IT süsteemide arendus
-  term: 2
-  teams: ['Tarkvara', 'Üritused']
-  contactMethods:
-  - name: E-mail
-    value: airiin.has.mail@gmail.com
-  - name: other
-    value: Facebook
-  description: Vali mind mentoriks, kui sulle sobib rahumeelne, mitte eriti tõsine ja pigem tagaplaanil olemist nautiv mitmekülgne isiksus. Olen läbinud Pythoni, Java ja HTML/CSS ained ning valdan erinevaid arvutigraafikaprogramme arvestataval tasemel. Loodan ka ise tarkvara tiimis oma programmeerimisoskusi edasi arendada. Mind võib Lapikute kontorist küllaltki tihti leida, kas niisama tšillimas või kodutöid tegemas. Olen meelsasti abiks kui on segadust ja oskan aidata, kuid üldiselt peab oma kodutööd ise ära tegema. Vahel, kuid mitte terve päeva kaupa, löön kaasa ka multiplayer mängudes jms
-  activities: Vabal ajal eelistan, kas millegagi loova või praktilisega tegeleda või näiteks eriskummalistes kohtades looduses liikuda. Varasemalt olen tegelenud aikidoga ja käinud mitmes kohas välismaal. Olen osalenud erinevatel projektidel ja koolitustel. Väldin alkoholi, suitsu ja suuri pidusid
-
-
-
-- name: Peter-Sten Annus
-  age: 21
-  photo: peter-sten_annus_mentor.JPG
-  specialty: Informaatika
-  term: 2
-  teams: ['Turundus', 'Olin ürituste tiimis, ilmselt aitan ka seekord LAPhacki korraldada']
-  contactMethods:
-  description: Küsi Pythoni, Java või JavaScripti kohta, kuid ei luba, et oskan alati midagi väärtuslikku vastuseks anda. Võin jagada ka paar näpunäidet disaini kohta.
-  activities: Mängud, street workout, autod, elektroonika - olenevalt päevast ja tujust :D
-
-
-- name: Laura Olek
-  age: 20
-  photo: laura_olek_mentor.JPG
-  specialty: IT süsteemide arendus
-  term: 2
-  teams: ['Tarkvara']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/lauraolek3
-  description: Oskan enam-vähem Ago kursuste tasemel Pythonit ja Javat, ka Androidi ja veebiga võin mingit algelist tuge pakkuda
-  activities: Ilukirjandus (sh fanfiction) on elu!! Vabal ajal chillin ühikas / maal pere juures / OMA keskuses. Mõnikord adopteerin selliseid keskmisest suuremaid lapsi
-
-
-- name: Erlis Liiva
-  age: 20
-  photo: erlis_liiva_mentor.png
-  specialty: IT süsteemide arendus
-  term: 2
-  teams: ['Üritused']
-  contactMethods:
-  - name: other
-    value: Messenger
-  description: Kui vajad täiendavat abi ülikooliellu sisselamisel, vali mind oma mentoriks.
-  activities: Väljaspool Lapikuid tegelen spordiga arendan oma muusikalisi oskusi ning aegajalt täiendan oma teadmisi ka front-end keeltes.
-
-
-
-- name: Reivo Türnpuu
-  age: 21
-  photo: reivo_türnpuu_mentor.jpg
-  specialty:
-  term:
-  teams: ['Tarkvara', 'Helpdesk ka aegajalt']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/reivo.turnpuu
-  description: Oskan HTML, CSS, C ja C# arvestataval tasemel. Olen kergelt kokkupuutunud ka Pythoni, Java ja Javascriptiga. Olen ka Helpdeskis päris mitu taski teinud.
-  activities: Vabal ajal mängin arvutimänge ja olen viimased kaks aastat Gamelabiga neid ka teha proovinud.
-
-
-
-- name: Pearu Pung
-  age: 19
-  photo: pearu_pung_mentor.jpg
-  specialty: IT-süsteemide arendus
-  term: 2
-  teams: ['Tarkvara']
-  contactMethods:
-  - name: Telefon
-    value: +372 58530620
-  - name: E-mail
-    value: pungpearu@gmail.com
-  - name: other
-    value: FB on ka olemas, nimekaime pole.
-  - name: other
-    value: Postiaadressi saavad vaid lähedasemad inimesed.
-  description: Python on mu lemmik, oskan Javat ja Linuxil oskan samuti miskit korda saata. Kui  veebis häda on, siis olen ka nõus koodi siluma.
-  activities: Torupill, viiul ja koorilaul, meeldib ka jalgrattaga sõita (kuigi oleks vist uut tarvis). Olen pärimustantsudes suts käpp, pillilugudest rääkimata, neid saab ikka tantsida ja kuulda, kui aega ja tahtmist on.
-
-
-
-- name: Tõnn Vaher
-  age: 24
-  photo: tõnn_vaher_mentor.jpg
-  specialty: IT süsteemide arendus
+  specialty: Informaatika (bakalaureus)
   term: 3
-  teams: ['Tarkvara']
+  teams:  ['Tarkvara', 'Turundus', 'Üritused']
   contactMethods:
-  - name: Messenger
-    value: https://m.me/tonn.vaher
-  description: Aitan huvilisi veebiprogrammeerimise poole pealt. Soovi ja tahte korral kuni tööle saamiseni välja.
-  activities: Ega väga palju aega töö, Lapikute ja kooli kõrvalt üle ei jäägi. Oma vaba aega sisustan uute veebitehnoloogiate õppimise, arvutimängude ja filmidega. Kui ma aga arvuti juurest eemale saan, siis meeldib loodust nautida ning uusi kohti avastada.
-
+    - name: Messenger
+      value: https://m.me/laura.leisberg
+    - name: Snapchat/Instagram
+      value: laurake111
+  description: Kui tahad rahulikult Lapikutesse sisse sulanduda. Kui kardad, et tarkvara teadmised on liiga kesised, et lapikutega liituda või kui koolis on liiga raske (mu esimene aasta oli põrgu, so i know all about it).
+  activities: Ma olen väga sõbralik, suudan kõigiga millestki rääkida, kuulan muresid ja räägin ise palju lugusid, kuigi olen introvertne. Im the mom friend. Üldjuhul räägin alati huumoriga, oskan naerma ajada. Oskan nii mõndagi tarkvara poole pealt, olen Ericssonis töötanud ja tegelen front endi arendusega vabal ajal. Tean javat, c# (.net), angulari, node.js, pythonit.
 
 - name: Lembitu Valdmets
-  age: 24
+  age: 25
   photo: lembitu_valdmets_mentor.jpg
-  specialty: Arvutisüsteemid
-  term: 5
-  teams: ['Helpdesk']
+  specialty: Arvutisüsteemid (bakalaureus), Arvutisüsteemid (magister)
+  term: 2
+  teams:  ['Helpdesk']
   contactMethods:
-  - name: Telefon
-    value: +372 55693479
-  - name: E-mail
-    value: lembitu.valdmets@gmail.com
-  description: Kui sind huvitav arvutite remont, diagnostika ja arvuti riistvara, siis oskan viia huvi ja teadmisi järgmisele tasemele. Tean VHDL'i Verilog'i, C, C++ ja C#'i ning oskan ka nendes abi pakkuda.
-  activities: Mudellennundusega, autoremondiga, mängin ka erinevaid arvutimänge, mõnikord uurin ka elektroonilisi seadmeid.
+    - name: Facebook
+      value: https://www.facebook.com/lemps.valdmets
+    - name: Discord
+      value: LempsPC#4375
+    - name: Telefon
+      value: +372 5569 3479
+  description: Ole mu piksel, kui sind huvitrav arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
+  activities: Olen pigem tagasihoidlik, kuid asjalik vanem liige, kes soovib enim, et Lapikutel hästi läheks. Olen ka jutukas ning abivalmis.
 
+- name: Martin Oblikas
+  age: 22
+  photo: martin_oblikas_mentor.jpg
+  specialty: IT süsteemide arendus (bakalaureus)
+  term: 3
+  teams:  ['Tarkvara', 'Turundus', 'Üritused']
+  contactMethods:
+    - name: Facebook
+      value: https://www.facebook.com/martin.oblikas
+    - name: Discord
+      value: TheAngryDuck#0959
+    - name: Steam
+      value: the angry duck
+    - name: Telefon
+      value: +372 5070 459
+  description: Inimesi, kellel on endal soov ennast arendada. Kedagi ma ise sundida ei saa.
+  activities: Muusik ja mängur. Tegelen mänguarendusega. DnD DM. Pigem rahulik. Meeldib jutustada lugusi läbi muusika, mängude ja kõige muu, mis kätte satub.
+
+- name: Sander Kornet
+  age: 21
+  photo: sander_kornet_mentor.jpg
+  specialty: Informaatika (bakalaureus)
+  term: 2
+  teams:  ['Tarkvara']
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/sander.kornet
+    - name: Discord
+      value: TankerElite#9764
+    - name: Telegram
+      value: "@TankerElite"
+    - name: Instagram
+      value: thtankerelite
+  description: Kui sa tahad quick and dirty crash course-i ülikooliellu vennalt, kes tegeleb kooliga palju vähem kui ta võiks ja palju rohkem kui ta peaks, kui Püüton meenutab sulle rohkem ussi kui programmeerimiskeelt aga Ago meil on juba postkastis või kui Monster segatud kangema joogipoolisega ära ei hirmuta, oled leidnud õige mentori.
+  activities: Kõige ohtlikumad joogid peol, kõige riskantsemad õppimismeetodid siinpool SOC maja, kõige suurem Deadlift koheselt peale rangluumurdu, kõige uskumatum unegraafik, kõik selle nimel, et oleks lõbus, saaks stippi, ja asjad saaks tehtud.
+
+- name: Terje Russka
+  age: 22
+  photo: terje_russka_mentor.jpg
+  specialty: Informaatika (bakalaureus), Küberkaitse (magister)
+  term: 1
+  teams:  ['Tarkvara', 'Turundus', 'Helpdesk']
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/terje.russka
+  description: Kui sa esimese nädala jooksul tunned, et Ago-chan tahab sind progeülesannetega mättasse lüüa ja sa oled juba TEISEL Google search lehel, siis just sina oled see kangekaelne piksel, kellega ma *dab* relate-ida saan.
+  activities: "OSRS F2P fishing 99. Likes to click circles. Lapikute 'Memelord' tiitli hoidja. Olen väga vastutustundlik, kool ja töö on alati minu prioriteediks. Sellegipoolest olen Lapikutes heavy support rollis ning panustan igasuguste tehniliste ülesannete lahendamisesse, olgu siis selleks videote monteerimine, disaini loomine, lapikute- ja laphacki lehe haldamine ning kõige tähtsam, koristusmeemide loomine."

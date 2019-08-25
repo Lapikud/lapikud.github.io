@@ -50,18 +50,21 @@ title: Mentorid - Lapikud
         <p>Messenger <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
         {% endif %}
 
-        {% if contactMethod.name == 'other' %}
-        <p>{{ contactMethod.value }}</p>
+        {% if contactMethod.name == 'Facebook' %}
+        <p>Facebook <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
+        {% endif %}
+
+        {% if contactMethod.name != 'Telefon' and contactMethod.name != 'E-mail' and contactMethod.name != 'Messenger' and contactMethod.name != 'Facebook' %}
+        <p>{{ contactMethod.name }} {{ contactMethod.value }}</p>
         {% endif %}
 
         {% endfor %}
-
       </div>
 
       <div class="varia">
-        <h4>Miks peaksid valima minu enda mentoriks?</h4>
+        <h4>Milliseid inimesi ootan oma piksliteks?</h4>
         <p>{{ mentor.description }}</p>
-        <h4>Millega tegelen väljaspool Lapikuid?</h4>
+        <h4>Milline Lapik olen ise?</h4>
         <p>{{ mentor.activities }}</p>
       </div>
     </div>
