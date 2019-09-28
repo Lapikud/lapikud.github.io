@@ -28,13 +28,15 @@
     align-items     : flex-start;
     margin          : 0;
     margin-top      : 4rem;
-    .column {
-      display         : flex;
+    display:flex;
+
+    a {
       flex-direction  : row;
       justify-content : center;
       align-items     : center;
       align-content   : flex-start;
       text-align      : left;
+      flex   : 2;
 
       .lg-icon {
         fill   : #f0941d;
@@ -43,10 +45,11 @@
         flex   : 1;
       }
 
-      div {
-        flex : 2;
+      .regularText {
+        color: #1e1e1e;
       }
     }
+
     @media (min-width : 40.0rem) {
       .column {
         flex-direction  : column;
