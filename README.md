@@ -46,7 +46,9 @@ Fork this repo to your own account and create a pull request for changes you hav
         sudo apt-get install imagemagick
         sh convert-past-management-images.sh
 
-# Deploy (TODO)
+# Deploy
 
-        jekyll build
-        rsync -av _site/. TODO FIXME
+Push to master branch and wait for deployment, it could take up to 2h for the page to update.
+You can check the progress by clicking on the [environment](https://github.com/Lapikud/lapikud.github.io/deployments) link
+
+![Deployments link](https://i.imgur.com/26jnh6k.png)
