@@ -1,94 +1,130 @@
 # Mentors: example dataset
 
 
-- name: Kertu Nurmberg
-  age: 25
-  photo: kertu_nurmberg_mentor.jpg
-  specialty: IT süsteemide arendus (bakalaureus)
-  term:
-  teams:  ['Tarkvara', 'Üritused']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/kertu.nurmberg
-  - name: Telegram
-    value: '@knurm'
-  description: Oma piksliteks ootan inimesi, kellele minust kõige rohkem kasu. Ehk siis inimesed, kes tahavad väga lapikuks saada või ennast lihtsalt inimesena arendada.
-  activities: Olen sõbralik, enamjaolt rõõmsameelne ja avatud mõtlemisega.
-
-- name: Kärte Pärend
-  age: 22
-  photo: karte_parend_mentor.JPG
-  specialty: Informaatika (bakalaureus), Küberkaitse (magister)
-  term: 1
-  teams:  ['Turundus']
-  contactMethods:
-    - name: Messenger
-      value: https://m.me/karte.park
-  description: Õppimisele orienteeritud ja sõbralikke piksleid
-  activities: Olen õppimisele orienteeritud ja kohusetundlik. Vabal ajal meeldib tennist mängida.
-
-- name: Laura Leisberg
-  age: 20
-  photo: laura_leisberg_mentor.jpg
-  specialty: Informaatika (bakalaureus)
-  term: 3
-  teams:  ['Tarkvara', 'Turundus', 'Üritused']
-  contactMethods:
-    - name: Messenger
-      value: https://m.me/laura.leisberg
-    - name: Snapchat/Instagram
-      value: laurake111
-  description: Kui tahad rahulikult Lapikutesse sisse sulanduda. Kui kardad, et tarkvara teadmised on liiga kesised, et lapikutega liituda või kui koolis on liiga raske (mu esimene aasta oli põrgu, so i know all about it).
-  activities: Ma olen väga sõbralik, suudan kõigiga millestki rääkida, kuulan muresid ja räägin ise palju lugusid, kuigi olen introvertne. Im the mom friend. Üldjuhul räägin alati huumoriga, oskan naerma ajada. Oskan nii mõndagi tarkvara poole pealt, olen Ericssonis töötanud ja tegelen front endi arendusega vabal ajal. Tean javat, c# (.net), angulari, node.js, pythonit.
-
 - name: Lembitu Valdmets
-  age: 25
+  age: 26
   photo: lembitu_valdmets_mentor.jpg
   specialty: Arvutisüsteemid (bakalaureus), Arvutisüsteemid (magister)
-  term: 2
-  teams:  ['Helpdesk']
+  term: Värske vilistlane
+  teams: ['Helpdesk']
   contactMethods:
-    - name: Facebook
-      value: https://www.facebook.com/lemps.valdmets
-    - name: Discord
-      value: LempsPC#4375
-    - name: Telefon
-      value: +372 5569 3479
-  description: Ole mu piksel, kui sind huvitrav arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
+  - name: Facebook
+    value: https://www.facebook.com/lemps.valdmets
+  - name: Discord
+    value: LempsPC#4375
+  - name: Telefon
+    value: +372 5569 3479
+  description: Ole mu piksel, kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
   activities: Olen pigem tagasihoidlik, kuid asjalik vanem liige, kes soovib enim, et Lapikutel hästi läheks. Olen ka jutukas ning abivalmis.
 
-- name: Martin Oblikas
-  age: 22
-  photo: martin_oblikas_mentor.jpg
-  specialty: IT süsteemide arendus (bakalaureus)
-  term: 3
-  teams:  ['Tarkvara', 'Turundus', 'Üritused']
-  contactMethods:
-    - name: Facebook
-      value: https://www.facebook.com/martin.oblikas
-    - name: Discord
-      value: TheAngryDuck#0959
-    - name: Steam
-      value: the angry duck
-    - name: Telefon
-      value: +372 5070 459
-  description: Inimesi, kellel on endal soov ennast arendada. Kedagi ma ise sundida ei saa.
-  activities: Muusik ja mängur. Tegelen mänguarendusega. DnD DM. Pigem rahulik. Meeldib jutustada lugusi läbi muusika, mängude ja kõige muu, mis kätte satub.
-
 - name: Sander Kornet
-  age: 21
+  age: 22
   photo: sander_kornet_mentor.jpg
   specialty: Informaatika (bakalaureus)
-  term: 2
-  teams:  ['Tarkvara']
+  term: 3
+  teams:  ['Üritused']
   contactMethods:
     - name: Messenger
       value: https://m.me/sander.kornet
     - name: Discord
       value: TankerElite#9764
     - name: Telegram
-      value: "@TankerElite"
+      value: TankerElite
     - name: Instagram
       value: thtankerelite
-  description: Kui sa tahad quick and dirty crash course-i ülikooliellu vennalt, kes tegeleb kooliga palju vähem kui ta võiks ja palju rohkem kui ta peaks, kui Püüton meenutab sulle rohkem ussi kui programmeerimiskeelt aga Ago meil on juba postkastis või kui Monster segatud kangema joogipoolisega ära ei hirmuta, oled leidnud õige mentori.
-  activities: Kõige ohtlikumad joogid peol, kõige riskantsemad õppimismeetodid siinpool SOC maja, kõige suurem Deadlift koheselt peale rangluumurdu, kõige uskumatum unegraafik, kõik selle nimel, et oleks lõbus, saaks stippi, ja asjad saaks tehtud.
+  description: Läbi minu saad tasemel insider infot informaatiku elust, hot seat-i Lapikute melu ja elu kogema, parimad energiajoogi + kangema joogipoolise retseptid ning päriselt lõpuks teada, what is it based on? Kui mõni eelmainitud aspekt huvi pakub, oled leidnud õige mentori.
+  activities: Füüsikareegleid narriv unegraafik, "pressure makes diamonds" õppimisstiil ja tulisus igas aspektis teevad huvitava kaaslase ja kasuliku liitlase.
+
+- name: Henri Helisma
+  age: 21
+  photo: henri_helisma_mentor.jpg
+  specialty: Informaatika (bakalaureus)
+  term: 2
+  teams: ['Üritused', 'Tarkvara']
+  contactMethods:
+  - name: Messenger
+    value: https://m.me/hhelisma
+  - name: Discord
+    value: Herrior#8987
+  description: Mulle meeldiks suhelda pikslitega, kellel on minuga sarnased huvid. Mu enda hobide hulka kuuluvad üldiselt mängimine, anime vaatamine ja dnd. Põhiliselt olen osa üritustetiimist ja arvan, et õppimine on suhteliselt tähtis. Kui 1 või rohkem nendest asjadest käib ka sinu kohta, siis anna teada.
+  activities: Pean ennast üldiselt suht rahulikuks inimeseks. Üritan alati suhtuda teistesse sõbralikult ja tolerantselt. Arvan, et õppimine on tähtis, aga samas peaks võimalusel ka sotsiaalseid tutvusi looma. (nt lapikuna :D)
+
+- name: Kristjan Kõiv
+  age: 20
+  photo: kristjan_koiv_mentor.png
+  specialty: Informaatika (bakalaureus)
+  term: 2
+  teams: ['Tarkvara', 'Üritused']
+  contactMethods:
+  - name: Messenger
+    value: https://m.me/kristjan.koiv.3
+  - name: Snapchat
+    value: matageenijuss
+  - name: Discord
+    value: Kristjan#3611
+  description: Kui arvad, et progemine ja kangem joogipoolis sobivad kokku sama hästi kui kohv ja jäätis, siis oled leidnud õige mentori. Huvilistele pikslitele korraldan ka tasuta Linuxi koolituse :D
+  activities: Vabal ajal mängin tihti lauamänge (tehniliselt Eesti meister Ticket to Ride-s) ning tegelen progemisega mitu korda rohkem kui peaks kuid mitte pooltki nii palju kui võiks.
+
+- name: Oliver Ilp
+  age: 20
+  photo: oliver_ilp_mentor.jpg
+  specialty: Informaatika (bakalaureus)
+  term: 2
+  teams: ['Tarkvara', 'Turundus']
+  contactMethods:
+  - name: Messenger
+    value: https://m.me/oliver.ilp
+  - name: Discord
+    value: offichat#9600
+  description: Vali mind mentoriks, kui sa oled huvitatud progemisest või turundusest. Samuti kui on nt Ago Püütoniga mingeid probleeme või lihtsalt soovid täiendavat abi ülikooli sisseelamiseks, siis ilmselt oskan ka sellega aidata.
+  activities: Oma vaba aega meeldib mulle sisustada arvuti- ja lauamänge mängides ning sarju vaadates. Aeg-ajalt tegelen ka millegi loova või praktilisega, nt graafilise disainiga, hobiprojektide progemisega või lihtsalt üritan mingit uut oskust omandada.
+
+- name: Ingrid-Regina Vähi
+  age: 21
+  photo: ingrid_regina_vahi_mentor.jpeg
+  specialty: Tarkvaraarendaja (bakalaureus) (Tallinna Polütehnikum)
+  term: 2
+  teams: ['Üritused']
+  contactMethods:
+  - name: Messenger
+    value: https://m.me/ingrid.v2hi
+  - name: Snapchat
+    value: varbavahearst
+  - name: Instagram
+    value: centered_gravity
+  - name: Discord
+    value: centered_gravity#7180
+  - name: Telegram
+    value: '@centered_gravity'
+  description: Ootan chille, avatud maailmavaatega piksleid, kes viitsivad kohal käia rohkem kui ühe korra ja kes ei karda võtta enda tudengiorganisatsiooni mentoriks inimest, kes pole ise kordagi jalga ülikooli tõstnud.
+  activities: ['"Weird, but in a good way" on lause mida liiga tihti uute inimestega tutvudes enda kohta kuulen. Oskan teeselda, et tean midagi arvuti-/videomängudest, sest olen mingi kolme(okei veits rohkem) mängu mänginud. Muidu meeldib igast lauamänge ja seltskonnamänge mängida, kuulan rokki/metalit/alternatiivi. Olen õppinud multimeediat/veebidisaini ning hetkel õpin tarkvaraarendajaks. Tööalaselt tegelen veebiarendusega, seega võib minult nõu küsida HTML, CSS, PHP, JS, WordPress jms osas.', '', 'Paari Lapiku arvustused ka minu kohta, sest why not:', '"Ingrid on cool, andis mulle peol õlle kui mul otsas oli, pole unustanud seda heategu"', '"Minu poolt ka head sõnad, aitas mind CSS-iga peol"', '"Ingrid on selline inimene, et kui midagi on vaja ära teha, siis ta teeb ära"']
+
+- name: Karel Vuks
+  age: 22
+  photo: karel_vuks_mentor.JPG
+  specialty: IT-süsteemide arendus (bakalaureus)
+  term: 3
+  teams: ['Turundus', 'Üritused']
+  contactMethods:
+  - name: Facebook
+    value: https://www.facebook.com/karel.vuks/
+  - name: Discord
+    value: Karel#4972
+  description: Inimesi, kes soovivad ennast arendada. 
+  activities: Vabal ajal käin matkamas, vaatan sarju, loen raamatuid või üritan uusi oskuseid omandada.
+
+- name: Andrei Gužovski
+  age: 21
+  photo: andrei_guzovski_mentor.png
+  specialty: IT-süsteemide arendus (bakalaureus)
+  term: 3
+  teams: ['Helpdesk']
+  contactMethods:
+  - name: Messenger
+    value: https://m.me/andguzovski
+  - name: Telegram
+    value: '@xguztx'
+  - name: VKontakte
+    value: https://vk.com/andguz
+  description: Kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid ja mängud siis ootan sind. Aga tõepoolest ootan kõiki, kes tahavad uusi sõpru leida. :)
+  activities: Ma olen sõbralik ja avatud introvert, kes suutis üle saada häbelikkusest ja suhtlemise hirmust. Mulle meeldivad kitarri mängimine ja muusika kuulamine, arvuti- ja lauamängud, matkamine, filmid ja filosoofia. Ma alati vaatan maailma liiga optimistlikult.

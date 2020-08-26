@@ -65,7 +65,17 @@ title: Mentorid - Lapikud
         <h4>Milliseid inimesi ootan oma piksliteks?</h4>
         <p>{{ mentor.description }}</p>
         <h4>Milline Lapik olen ise?</h4>
-        <p>{{ mentor.activities }}</p>
+        {% if mentor.activities.first %}
+          {% for activitiesLine in mentor.activities %}
+            {% if activitiesLine == '' %}
+              <br>
+            {% else %}
+              <p>{{ activitiesLine }}</p>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <p>{{ mentor.activities }}</p>
+        {% endif %}
       </div>
     </div>
   </div>
