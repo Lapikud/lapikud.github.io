@@ -43,6 +43,10 @@ Fork this repo to your own account and create a pull request for changes you hav
 
 5. Image converter usage (requires imagemagick)
 
+    No one wants to download 5MB images that are then shown in a 100x100px box.
+
+    **Always resize images before commiting them!**
+
         sudo apt-get install imagemagick
         sh convert-past-management-images.sh
 
