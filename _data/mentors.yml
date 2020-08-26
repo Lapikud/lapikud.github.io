@@ -35,6 +35,20 @@
   description: Läbi minu saad tasemel insider infot informaatiku elust, hot seat-i Lapikute melu ja elu kogema, parimad energiajoogi + kangema joogipoolise retseptid ning päriselt lõpuks teada, what is it based on? Kui mõni eelmainitud aspekt huvi pakub, oled leidnud õige mentori.
   activities: Füüsikareegleid narriv unegraafik, "pressure makes diamonds" õppimisstiil ja tulisus igas aspektis teevad huvitava kaaslase ja kasuliku liitlase.
 
+- name: Helena Grete Lillepalu
+  age: 20
+  photo: helena_grete_lillepalu_mentor.jpg
+  specialty: Rakendusfüüsika (bakalaureus)
+  term: 2
+  teams: ['Üritused']
+  contactMethods:
+  - name: Facebook
+    value: https://m.me/helenagrete.lillepalu
+  - name: Instagram
+    value: mutriv6ti
+  description: ['Vali mind (xd):', 'Kui tunned, et võiks pigem abi vaja minna füüsika/mata kui IT-ga.', 'Kui oleks tahtnud varem sündida, et saada osa üritustest nagu Live Aid.', 'Kui soovid, et su mentor oleks kohal peaaegu igal peol/üritusel.']
+  activities: Meeldib taga leinata kuldset rocki-perioodi (mida ma ilmselgelt kogenudki pole), mängida strateegilisi lauamänge (teen joogi välja kui suudad mind võita 7 Wondersis või Terraforming Marsis), karaoket laulda (väga ei oska), IT-teaduskonnast aineid võtta (lõpetamise kohta data puudub) ja vahel liigutan ka ennast (jooks, rühmatrennid ja erinevad 2- kuni 8-rattalised kergliiklusvahendid).
+
 - name: Henri Helisma
   age: 21
   photo: henri_helisma_mentor.jpg
@@ -58,8 +72,6 @@
   contactMethods:
   - name: Messenger
     value: https://m.me/kristjan.koiv.3
-  - name: Snapchat
-    value: matageenijuss
   - name: Discord
     value: Kristjan#3611
   description: Kui arvad, et progemine ja kangem joogipoolis sobivad kokku sama hästi kui kohv ja jäätis, siis oled leidnud õige mentori. Huvilistele pikslitele korraldan ka tasuta Linuxi koolituse :D
@@ -82,7 +94,7 @@
 - name: Ingrid-Regina Vähi
   age: 21
   photo: ingrid_regina_vahi_mentor.jpeg
-  specialty: Tarkvaraarendaja (bakalaureus) (Tallinna Polütehnikum)
+  specialty: Tarkvaraarendaja (Tallinna Polütehnikum)
   term: 2
   teams: ['Üritused']
   contactMethods:

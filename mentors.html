@@ -63,7 +63,17 @@ title: Mentorid - Lapikud
 
       <div class="varia">
         <h4>Milliseid inimesi ootan oma piksliteks?</h4>
-        <p>{{ mentor.description }}</p>
+        {% if mentor.description.first %}
+          {% for descriptionLine in mentor.description %}
+            {% if descriptionLine == '' %}
+              <br>
+            {% else %}
+              <p>{{ descriptionLine }}</p>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <p>{{ mentor.description }}</p>
+        {% endif %}
         <h4>Milline Lapik olen ise?</h4>
         {% if mentor.activities.first %}
           {% for activitiesLine in mentor.activities %}
