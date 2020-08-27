@@ -46,7 +46,7 @@
     value: https://m.me/helenagrete.lillepalu
   - name: Instagram
     value: mutriv6ti
-  description: ['Vali mind (xd):', 'Kui tunned, et võiks pigem abi vaja minna füüsika/mata kui IT-ga.', 'Kui oleks tahtnud varem sündida, et saada osa üritustest nagu Live Aid.', 'Kui soovid, et su mentor oleks kohal peaaegu igal peol/üritusel.']
+  description: ['Olen sobiv mentor:', 'Kui tunned, et võiks pigem abi vaja minna füüsika/mata kui IT-ga.', 'Kui oleks tahtnud varem sündida, et saada osa üritustest nagu Live Aid.', 'Kui soovid, et su mentor oleks kohal peaaegu igal peol/üritusel.']
   activities: Meeldib taga leinata kuldset rocki-perioodi (mida ma ilmselgelt kogenudki pole), mängida strateegilisi lauamänge (teen joogi välja kui suudad mind võita 7 Wondersis või Terraforming Marsis), karaoket laulda (väga ei oska), IT-teaduskonnast aineid võtta (lõpetamise kohta data puudub) ja vahel liigutan ka ennast (jooks, rühmatrennid ja erinevad 2- kuni 8-rattalised kergliiklusvahendid).
 
 - name: Henri Helisma
@@ -62,6 +62,20 @@
     value: Herrior#8987
   description: Mulle meeldiks suhelda pikslitega, kellel on minuga sarnased huvid. Mu enda hobide hulka kuuluvad üldiselt mängimine, anime vaatamine ja dnd. Põhiliselt olen osa üritustetiimist ja arvan, et õppimine on suhteliselt tähtis. Kui 1 või rohkem nendest asjadest käib ka sinu kohta, siis anna teada.
   activities: Pean ennast üldiselt suht rahulikuks inimeseks. Üritan alati suhtuda teistesse sõbralikult ja tolerantselt. Arvan, et õppimine on tähtis, aga samas peaks võimalusel ka sotsiaalseid tutvusi looma. (nt lapikuna :D)
+
+- name: Ragnar Kaseorg
+  age: 29
+  photo: ragnar_kaseorg_mentor.png
+  specialty: Integrated engineering
+  term: 3
+  teams: ['Helpdesk', 'Üritused']
+  contactMethods:
+  - name: Facebook
+    value: https://www.facebook.com/ragnar.kaseorg
+  - name: Email
+    value: ragnar.kaseorg@gmail.com
+  description: Kõiki. Limiidiks, olen üks inimene.
+  activities: Tahan aidata, kui saan, ja kui ei oska, tahan proovida. Kooli suhtes oskan hästi 3D-d, olen väga huvitatud tehnoloogiast ja filosoofiast. 
 
 - name: Kristjan Kõiv
   age: 20
