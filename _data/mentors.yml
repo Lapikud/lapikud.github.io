@@ -63,20 +63,6 @@
   description: Mulle meeldiks suhelda pikslitega, kellel on minuga sarnased huvid. Mu enda hobide hulka kuuluvad üldiselt mängimine, anime vaatamine ja dnd. Põhiliselt olen osa üritustetiimist ja arvan, et õppimine on suhteliselt tähtis. Kui 1 või rohkem nendest asjadest käib ka sinu kohta, siis anna teada.
   activities: Pean ennast üldiselt suht rahulikuks inimeseks. Üritan alati suhtuda teistesse sõbralikult ja tolerantselt. Arvan, et õppimine on tähtis, aga samas peaks võimalusel ka sotsiaalseid tutvusi looma. (nt lapikuna :D)
 
-- name: Ragnar Kaseorg
-  age: 29
-  photo: ragnar_kaseorg_mentor.png
-  specialty: Integrated engineering
-  term: 3
-  teams: ['Helpdesk', 'Üritused']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/ragnar.kaseorg
-  - name: Email
-    value: ragnar.kaseorg@gmail.com
-  description: Kõiki. Limiidiks, olen üks inimene.
-  activities: Tahan aidata, kui saan, ja kui ei oska, tahan proovida. Kooli suhtes oskan hästi 3D-d, olen väga huvitatud tehnoloogiast ja filosoofiast. 
-
 - name: Kristjan Kõiv
   age: 20
   photo: kristjan_koiv_mentor.png
