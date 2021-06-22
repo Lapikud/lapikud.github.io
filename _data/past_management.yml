@@ -1,3 +1,19 @@
+- year: 2020
+  members:
+    - name: Liisa Heinla
+      image: liisa_heinla.jpg
+
+    - name: Andrei Gužovski
+      image: andrei_guzovski.jpg
+
+    - name: Mattias Vahtra
+      image: mattias_vahtra.jpg
+
+    - name: Sander Kornet
+      image: sander_kornet.jpg
+
+
+
 - year: 2019
   members:
     - name: Risto Leesmäe
