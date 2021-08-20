@@ -43,35 +43,24 @@ title: Mentorid - Lapikud
           <li>
             Telefon: <a href="tel:{{ contactMethod.value }}">{{ contactMethod.value }}</a>
           </li>
-          {% endif %}
-
-          {% if contactMethod.name == 'E-mail' %}
+          {% elsif contactMethod.name == 'E-mail' %}
           <li>
             E-mail: <a href="mailto: {{ contactMethod.value }}">{{ contactMethod.value }}</a>
           </li>
-          {% endif %}
-
-          {% if contactMethod.name == 'Messenger' %}
+          {% elsif contactMethod.name == 'Messenger' %}
           <li>
             Messenger: <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a>
           </li>
-          {% endif %}
-
-          {% if contactMethod.name == 'Telegram' %}
+          {% elsif contactMethod.name == 'Telegram' %}
           <li>
             Telegram: <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a>
           </li>
-          {% endif %}
-
-          {% if contactMethod.name == 'Facebook' %}
+          {% elsif contactMethod.name == 'Facebook' %}
           <!--<p>Facebook <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>-->
           <li>
             <a href="{{ contactMethod.value }}">Facebook</a>
           </li>
-          {% endif %}
-
-          {% if contactMethod.name != 'Telefon' and contactMethod.name != 'E-mail' and contactMethod.name != 'Messenger'
-          and contactMethod.name != 'Facebook' and contactMethod.name != 'Telegram' %}
+          {% else %}
           <li>
             {{ contactMethod.name }}: {{ contactMethod.value }}
           </li>
