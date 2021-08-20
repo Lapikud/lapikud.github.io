@@ -70,7 +70,7 @@
     value: https://m.me/oliver.ilp
   - name: Discord
     value: offichat#9600
-  description: Vali mind mentoriks, kui sa oled huvitatud progemisest või turundusest. Samuti kui on nt Ago Püütoniga mingeid probleeme või lihtsalt soovid täiendavat abi ülikooli sisseelamiseks, siis ilmselt oskan ka sellega aidata.
+  description: Vali mind mentoriks, kui sa oled huvitatud progemisest või turundusest. Samuti kui on nt progemisega mingeid probleeme või lihtsalt soovid täiendavat abi ülikooli sisseelamiseks, siis ilmselt oskan ka sellega aidata.
   activities: Oma vaba aega meeldib mulle sisustada arvuti- ja lauamänge mängides ning sarju vaadates. Aeg-ajalt tegelen ka millegi loova või praktilisega, nt graafilise disainiga, hobiprojektide progemisega või lihtsalt üritan mingit uut oskust omandada.
 
 - name: Ingrid-Regina Vähi
@@ -102,10 +102,12 @@
   contactMethods:
   - name: Facebook
     value: https://www.facebook.com/karel.vuks/
+  - name: Messenger
+    value:  https://m.me/karel.vuks
   - name: Discord
     value: Karel#4972
-  description: Inimesi, kes soovivad ennast arendada. 
-  activities: Vabal ajal käin matkamas, vaatan sarju, loen raamatuid või üritan uusi oskuseid omandada.
+  description: Tule minu piksliks, kui naudid looduses jalutamist/jooksmist, IT või ajalugu.  Samuti inimest, kellel on soov ennast arendada.
+  activities: Olen rahulik ja abivalmis isik. Kellele meeldib loodust nautida,  raamatuid lugeda, kui ka uusi kogemusi omandada. 
 
 - name: Argo Tammemäe
   age: 21
@@ -150,7 +152,7 @@
   activities: Kui minuga väikses seltskonnas random stuffi teha, siis avastad, et ma üks veidramaid inimesi, keda kunagi näinud oled.
 
 - name: Ragnar Kaseorg
-  age: 28
+  age: 29
   photo: ragnar_kaseorg_mentor.png
   specialty: Integrated Engineering
   term: null
