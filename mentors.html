@@ -6,7 +6,8 @@ title: Mentorid - Lapikud
   <h1>Mentorid</h1>
   <h3>Siin on meie mentorid. Kui leiad kellegi, kellega huvid kattuvad, võta temaga julgelt ühendust!</h3>
 
-  {% for mentor in site.data.mentors %}
+  {% assign sorted_mentors = site.data.mentors | sort: 'name' %}
+  {% for mentor in sorted_mentors %}
 
   <div class="mentor">
     <div class="photo-container">
@@ -35,62 +36,69 @@ title: Mentorid - Lapikud
         {% if mentor.contactMethods != null %}
         <p>Kontaktid:</p>
         {% endif %}
+        <ul>
+          {% for contactMethod in mentor.contactMethods %}
 
-        {% for contactMethod in mentor.contactMethods %}
+          {% if contactMethod.name == 'Telefon' %}
+          <li>
+            Telefon: <a href="tel:{{ contactMethod.value }}">{{ contactMethod.value }}</a>
+          </li>
+          {% elsif contactMethod.name == 'E-mail' %}
+          <li>
+            E-mail: <a href="mailto: {{ contactMethod.value }}">{{ contactMethod.value }}</a>
+          </li>
+          {% elsif contactMethod.name == 'Messenger' %}
+          <li>
+            Messenger: <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a>
+          </li>
+          {% elsif contactMethod.name == 'Telegram' %}
+          <li>
+            Telegram: <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a>
+          </li>
+          {% elsif contactMethod.name == 'Facebook' %}
+          <!--<p>Facebook <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>-->
+          <li>
+            <a href="{{ contactMethod.value }}">Facebook</a>
+          </li>
+          {% else %}
+          <li>
+            {{ contactMethod.name }}: {{ contactMethod.value }}
+          </li>
+          {% endif %}
 
-        {% if contactMethod.name == 'Telefon' %}
-        <p>Telefon: <a href="tel:{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
-        {% endif %}
-
-        {% if contactMethod.name == 'E-mail' %}
-        <p>E-mail: <a href="mailto: {{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
-        {% endif %}
-
-        {% if contactMethod.name == 'Messenger' %}
-        <p>Messenger <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
-        {% endif %}
-
-        {% if contactMethod.name == 'Facebook' %}
-        <p>Facebook <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>
-        {% endif %}
-
-        {% if contactMethod.name != 'Telefon' and contactMethod.name != 'E-mail' and contactMethod.name != 'Messenger' and contactMethod.name != 'Facebook' %}
-        <p>{{ contactMethod.name }} {{ contactMethod.value }}</p>
-        {% endif %}
-
-        {% endfor %}
+          {% endfor %}
+        </ul>
       </div>
 
       <div class="varia">
         <h4>Milliseid inimesi ootan oma piksliteks?</h4>
         {% if mentor.description.first %}
-          {% for descriptionLine in mentor.description %}
-            {% if descriptionLine == '' %}
-              <br>
-            {% else %}
-              <p>{{ descriptionLine }}</p>
-            {% endif %}
-          {% endfor %}
+        {% for descriptionLine in mentor.description %}
+        {% if descriptionLine == '' %}
+        <br>
         {% else %}
-          <p>{{ mentor.description }}</p>
+        <p>{{ descriptionLine }}</p>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <p>{{ mentor.description }}</p>
         {% endif %}
         <h4>Milline Lapik olen ise?</h4>
         {% if mentor.activities.first %}
-          {% for activitiesLine in mentor.activities %}
-            {% if activitiesLine == '' %}
-              <br>
-            {% else %}
-              <p>{{ activitiesLine }}</p>
-            {% endif %}
-          {% endfor %}
+        {% for activitiesLine in mentor.activities %}
+        {% if activitiesLine == '' %}
+        <br>
         {% else %}
-          <p>{{ mentor.activities }}</p>
+        <p>{{ activitiesLine }}</p>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <p>{{ mentor.activities }}</p>
         {% endif %}
       </div>
     </div>
   </div>
 
   {% endfor %}
-
 
 </div>
