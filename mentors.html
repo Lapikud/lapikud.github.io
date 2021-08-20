@@ -2,8 +2,7 @@
 layout: default
 title: Mentorid - Lapikud
 ---
-<div class="page"
-     id="mentors">
+<div class="page" id="mentors">
   <h1>Mentorid</h1>
   <h3>Siin on meie mentorid. Kui leiad kellegi, kellega huvid kattuvad, võta temaga julgelt ühendust!</h3>
 
@@ -12,13 +11,7 @@ title: Mentorid - Lapikud
 
   <div class="mentor">
     <div class="photo-container">
-      <img src="{{ "
-           /assets/mentors-images/optimised/"
-           |
-           append:
-           mentor.photo
-           }}"
-           alt="{{ mentor.name }}">
+      <img src="{{ "/assets/mentors-images/optimised/" | append: mentor.photo }}" alt="{{ mentor.name }}">
     </div>
     <div class="description">
       <div class="general">
