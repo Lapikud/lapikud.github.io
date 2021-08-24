@@ -218,8 +218,8 @@
   term: 2
   teams: ['Turundus', 'Tarkvara']
   contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/karel.vuks/
+  - name: Messenger
+    value: m.me/marcuspruks
   - name: Discord
     value: TehCreepahKiller#4269
   - name: Instagram
