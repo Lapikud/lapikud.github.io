@@ -153,7 +153,7 @@
 
 - name: Ragnar Kaseorg
   age: 29
-  photo: ragnar_kaseorg_mentor.png
+  photo: ragnar_kaseorg_mentor.JPG
   specialty: Integrated Engineering
   term: null
   teams: ['Helpdesk', 'Üritused']
@@ -210,3 +210,34 @@
     value: Mattias#1501
   description: Kui sulle meeldib kassipilte näha, siis hmu. Lisaks olen valmis abistama kooli, lapikute, meeskoori või muude eluga seotud küsimustega.
   activities: Olen iseloomult suhteliselt rahulik inimene. Mulle meeldib see, kui ma saan kellelegi abiks olla ja see on ka üks põhjustest, miks ma mentor olen. Vaba aega sisustan arvuti- ja lauamänge (ja natuke ka DnD) mängides ning muudel viisidel sõprade ja lähedastega aega veetes. Tavaliselt ei hõlma see klubisid või suuri pidusid, need mulle väga peale ei lähe. Lisaks käin meeskooris. Mulle meeldivad väga ka loomad (eriti kassid).
+
+- name: Marcus Pruks
+  age: 21
+  photo: marcus_pruks_mentor.JPG
+  specialty: Informaatika (bakalaureus)
+  term: 2
+  teams: ['Turundus', 'Tarkvara']
+  contactMethods:
+  - name: Facebook
+    value: https://www.facebook.com/karel.vuks/
+  - name: Discord
+    value: TehCreepahKiller#4269
+  - name: Instagram
+    value: marcuspruks
+  description: ['Tule minu tiiva alla, kui oled huvitatud disainist, turundusest või soovid niisama pelada.',  'Boonuseks võid saada ka head toitu või random pilte minu kassist.']
+  activities: Inimesena olen rahulik ning introvertne, kuid sellele vaatamata on mul juuksed olnud värvilisemad kui vikerkaar. Vaba aega sisustan sõpradega lauamänge või arvutimänge mängides. Mulle meeldib kokata ja kiisudega mängida. Enne TalTechi tulemist õppisin EKA-s disaini, kuid nüüd kasutan seda ära olles turundusjuht. 
+
+- name: Siim Oselein
+  age: 25
+  photo: siim_oselein_mentor.jpg
+  specialty: IT süsteemide administreerimine
+  term: null
+  teams: ['Üritused']
+  contactMethods:
+  - name: Messenger
+    value:  https://m.me/siim.oselein
+  - name: Telegram
+    value: https://t.me/siimoselein
+  description: Ootan huviga kõiksuguseid. Võib olla keegi kellele meeldib erinevatel teemadel diskuteerida. Võib olla keegi kellele meeldib chillida lauamängude taga. Võib olla keegi kellele meeldib end aktiivsena hoida.
+  activities: ['Olen igivana lapik. Ehe näide sellest, kui hea seltskond meil LAPis koos on, mida on raske selja taha jätta.',
+'Vabal ajal meeldib muusikat kuulata, lauamänge mängida, joosta või rattaga sõita, bowlingut mängida ning kui aega jääb üle siis kodust serverit edasi arendada.']
