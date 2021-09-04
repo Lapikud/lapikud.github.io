@@ -151,22 +151,6 @@
   description: Selliseid piksleid kes tahavad sotsialiseeruda mu teiste pikslitega väikeses grupis. 
   activities: Kui minuga väikses seltskonnas random stuffi teha, siis avastad, et ma üks veidramaid inimesi, keda kunagi näinud oled.
 
-- name: Ragnar Kaseorg
-  age: 29
-  photo: ragnar_kaseorg_mentor.JPG
-  specialty: Integrated Engineering
-  term: null
-  teams: ['Helpdesk', 'Üritused']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/ragnar.kaseorg
-  - name: E-mail
-    value: Ragnar.kaseorg@gmail.com
-  - name: Telefon
-    value: +372 5237688
-  description: Kõiki, kes sõpra tahaksid saada. Tahan aidata ja kui ei oska, tahan aidata leida lahenduse.
-  activities: Olen abivalmis, suure kujutlusvõime- ja tahtejõuga inimene. Meeldib aidata, mõelda ja rääkida filosoofilistest asjadest, teha asju koos, lahendada probleeme, mängida, muusikat kuulda, kujundada asju 3d-s (oskan Solidworksi) ja 2d-s (olen õppinud kasutama Illustratorit ja Photoshopi), vaadata filme, videosi ja sarje.
-
 - name: Jose Daniel Morales Sööt
   age: 21
   photo: jose_daniel_morales_soot_mentor.jpg
