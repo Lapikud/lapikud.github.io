@@ -5,7 +5,7 @@ date:   2022-03-28 16:45:31 +0200
 categories: blog
 ---
 
-19\. märtsil toimus Mektorys ASI Karika (https://asikarikas.ee/) finaalvoor. ASI karikas on kooliõpilastele suunatud programmeerimisvõistlus, mille viisid ühiselt läbi TalTechi tudengiorganisatsioon Lapikud ning Arvutisüsteemide Instituut (ASI).
+19\. märtsil toimus Mektorys ASI Karika [(asikarikas.ee)](https://asikarikas.ee/) finaalvoor. ASI karikas on kooliõpilastele suunatud programmeerimisvõistlus, mille viisid ühiselt läbi TalTechi tudengiorganisatsioon Lapikud ning Arvutisüsteemide Instituut (ASI).
 
 Eelvoor toimus novembrist veebruarini virtuaalselt - võistlejad said eelvooru ülesandeid mugavalt kodus lahendada ning need seejärel korraldajatele saata.
 Eelvoorust kutsuti finaali Tallinna Tehnikagümnaasiumi ning Tartu Jaan Poska gümnaasiumi võistkonnad. Nii nagu on traditsiooniks kujunenud, osales ka sel aastal võistluse finaalis TalTechi I kursuse tudengitest koosnev meeskond. Tudengimeeskonda küll kohtade jagamisel arvesse ei võeta, kuid võistlejad saavad nendega mõõtu võtta ning nende abil tudengieluga lähemalt tutvuda.
