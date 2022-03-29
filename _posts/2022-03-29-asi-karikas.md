@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ASI Karikas 2022"
-date:   2022-03-29 16:45:31 +0200
+date:   2022-03-28 16:45:31 +0200
 categories: blog
 ---
 
