@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ASI Karikas 2022"
-date:   2022-03-28 16:45:31 +0200
+date:   2022-03-30 16:45:31 +0200
 categories: blog
 ---
 
@@ -18,6 +18,6 @@ Tallinna Tehnikagümnaasium on ASI Karikal edukalt osalenud juba mitu aastat, se
 
 ![ASI Karikas 2022 karikas ja diplom](https://i.imgur.com/tMQCzWI.jpg "ASI Karikas 2022 karikas ja diplom")
 
-Selleaastase finaalvooru toimumist toetasid mitmed sponsorid - Tallinna Tehnikaülikooli Ametiliit, Baskin-Robbins, Zone, ERPLY ning Mektory - tegu oli siiani kõige rohkem sponsoreid kogunud ASI karika finaaliga. Oleme väga tänulikud kõigile sponsoritele, kes enda panuse andsid. Võistlejate lemmikuks sponsoriks kujunes ilmselt Baskin-Robbins oma jäätistega - igal vabal hetkel käidi jäätisetopse haaramas. Toredat elamust pakkus ka Starshipi robot, kes võistluse korraldajatele toidu kohale tõi.
+Selleaastase finaalvooru toimumist toetasid mitmed sponsorid - Tallinna Tehnikaülikooli Ametiliit, Baskin-Robbins, Zone, ERPLY ning Mektory - tegu oli siiani kõige rohkem sponsoreid kogunud ASI karika finaaliga. Oleme väga tänulikud kõigile sponsoritele, kes enda panuse andsid. Võistlejate lemmikuks sponsoriks kujunes ilmselt Baskin-Robbins oma jäätistega - igal vabal hetkel käidi jäätisetopse haaramas. Eriti kasulikuks auhinnaks oli diskreetse matemaatika õpik, mille autoriks on TalTechi enda õppejõud - Harri Lensen ja Margus Kruus. Raamatu esilehte ilmestas Margus Kruusi kirjutatud pühendus. Toredat elamust pakkus ka Starshipi robot, kes võistluse korraldajatele toidu kohale tõi.
 
 Peale neljatunnist ajude ragistamist viis tudengite meeskond võistlejad ringkäigule mööda Mektoryt ning TalTechi Infotehnoloogia Maja, et leevendada tulemuste ootusärevust ning mõistusele pisut puhkust anda. Võistlejad jäid üritusega igati rahule ning peale paarikuulist puhkust saab korraldusmeeskond teha algust ASI Karikas 2023 võistlusega.
