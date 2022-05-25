@@ -1,3 +1,20 @@
+- year: 2021
+  members:
+    - name: Carina Ruut
+      image: carina_ruut.jpg
+
+    - name: Andrei Gužovski
+      image: andrei_guzovski.jpg
+
+    - name: Kristjan Kõiv
+      image: kristjan_koiv.png
+
+    - name: Ingrid-Regina Vähi
+      image: ingrid_regina_vahi.jpg
+    
+    - name: Marcus Pruks
+      image: coming-soon.jpg
+
 - year: 2020
   members:
     - name: Liisa Heinla
