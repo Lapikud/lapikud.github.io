@@ -3,7 +3,7 @@
 
 - name: Sander Kornet
   age: 24
-  photo: sander_kornet.jpg
+  photo: sander_kornet_mentor.jpg
   specialty: Informaatika (Lõpetanud), Masinõpe
   teams:  ['Üritused', 'Endine Juhatus']
   term: null
@@ -21,7 +21,7 @@
 
 - name: Mihkel Koks
   age: 26
-  photo: mihkel_koks.jpg
+  photo: mihkel_koks_mentor.jpg
   specialty: It süsteemide arendus, salastatud lapitegevused.
   teams:  ['Tarkvara', 'salastatud tiimis']
   term: 5
