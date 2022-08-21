@@ -1,227 +1,35 @@
 # Mentors: example dataset
 
 
-- name: Lembitu Valdmets
-  age: 27
-  photo: lembitu_valdmets_mentor.jpg
-  specialty: Arvutisüsteemide projekteerimine lõpetanud magistris. Hetkel teadustöötaja arvutiteaduste instituudis.
-  term: Värske vilistlane
-  teams: ['Helpdesk']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/lemps.valdmets
-  - name: Discord
-    value: LempsPC#4375
-  - name: Telefon 
-    value: +372 54210164
-  description: Ole mu piksel, kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
-  activities: Olen pigem tagasihoidlik, kuid asjalik vanem liige, kes soovib enim, et Lapikutel hästi läheks. Käin täiskohaga tööl ning oman veel palju hobisid lisaks lapikutele - minuga igav ei hakka. Olen ka jutukas ning abivalmis.
-
-- name: Madis Rohtla
-  age: 22
-  photo: madis_rohtla_mentor.jpg
-  specialty: Küberturbe tehnoloogiad, jätsin pooleli.
-  term: võimalik eriala vahetus
-  teams:  ['Helpdesk']
-  contactMethods:
-    - name: Facebook
-      value: https://www.facebook.com/madis.rohtla
-  description: Huviga aktsepteeriks piksleid, kellel on huvitavad hobid, kes on avara maailm vaatega, meeldib reisida ning ka sotsiaalseid mänge mängida. 
-  activities: Võrdlemisi kerge olemusega, sõbralik noormees. Kõige kauakestvam hobi on olnud DnD(ligikaudu 9 aastat DM olnud) ning peale seda huvitab IT, füüsika ja meditsiin.
-
-- name: Helena Grete Lillepalu
-  age: 21
-  photo: helena_grete_lillepalu_mentor.png
-  specialty: Rakendusfüüsika (bakalaureus)
-  term: 3
-  teams: ['Üritused']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/helenagrete.lillepalu
-  - name: Discord
-    value: singularity#5925
-  - name: Instagram
-    value: mutriv6ti
-  description: ['Olen sobiv mentor, kui samastud vähemalt mõne punktiga järgnevast:', 'Oled seltskondlik ja huvitatud ürituste korraldamisest.', 'Tunned, et võiks pigem abi vaja minna füüsika/mata kui IT-ga (tänu kõrvalerialale suudan siiski ka mingil tasemel Pythoni, Java ja C++ -ga aidata).', 'Oleks tahtnud varem sündida, et saada osa maailmast, kus võidutses rock-muusika.', 'Eelistad lauamänge arvutimängudele.', 'Sul on hea sobivus lõvi tähtkujuga (jk).']
-  activities: Kooli kõrvalt olen praktikal KBFI-s ja tegutsen peale Lapikute ka LÜK-is. Meeldib kuulata rocki (eriti alt ja proge) ja metalit, mängida strateegilisi lauamänge, vahel jooksmas ja rühmatreeningutes käia ning karaoket laulda.
-
-- name: Kristjan Kõiv
-  age: 21
-  photo: kristjan_koiv_mentor.png
-  specialty: Informaatika (bakalaureus)
-  term: 3
-  teams: ['Tarkvara', 'Üritused']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/kristjan.koiv.3
-  - name: Discord
-    value: Kristjan#3611
-  description: Kui arvad, et progemine ja kangem joogipoolis sobivad kokku sama hästi kui kohv ja jäätis, siis oled leidnud õige mentori. Huvilistele pikslitele korraldan ka tasuta Linuxi koolituse :D
-  activities: Vabal ajal mängin tihti lauamänge (tehniliselt Eesti meister Ticket to Ride-s) ning tegelen progemisega mitu korda rohkem kui peaks kuid mitte pooltki nii palju kui võiks.
-
-- name: Oliver Ilp
-  age: 21
-  photo: oliver_ilp_mentor.jpg
-  specialty: Informaatika (bakalaureus)
-  term: 3
-  teams: ['Tarkvara', 'Turundus', 'Üritused']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/oliver.ilp
-  - name: Discord
-    value: offichat#9600
-  description: Vali mind mentoriks, kui sa oled huvitatud progemisest või turundusest. Samuti kui on nt progemisega mingeid probleeme või lihtsalt soovid täiendavat abi ülikooli sisseelamiseks, siis ilmselt oskan ka sellega aidata.
-  activities: Oma vaba aega meeldib mulle sisustada arvuti- ja lauamänge mängides ning sarju vaadates. Aeg-ajalt tegelen ka millegi loova või praktilisega, nt graafilise disainiga, hobiprojektide progemisega või lihtsalt üritan mingit uut oskust omandada.
-
-- name: Ingrid-Regina Vähi
-  age: 22
-  photo: ingrid_regina_vahi_mentor.jpg
-  specialty: Tallinna Polütehnikumis veebiarendus(vilistlane) ja tarkvaraarendus
-  term: 2
-  teams: ['Üritused']
-  contactMethods:
-  - name: Messenger
-    value: https://m.me/ingrid.v2hi
-  - name: Snapchat
-    value: varbavahearst
-  - name: Instagram
-    value: centered_gravity
-  - name: Discord
-    value: centered_gravity#7180
-  - name: Telegram
-    value: '@centered_gravity'
-  description: Minu ideaalne piksel on chill, avatud maailmavaatega ja naudib musta huumorit.
-  activities: '"Weird, but in a good way" on lause, mida liiga tihti enda kohta kuulen. Töötan Front End arendajana ja vabal ajal võid mind lisaks Lapile leida näiteks raamatu, lauamängu või pliidi tagant. Vahel üritan sporti ka teha :^)'
-
-- name: Karel Vuks
-  age: 23
-  photo: karel_vuks_mentor.JPG
-  specialty: IT-süsteemide arendus (bakalaureus)
-  term: 3
-  teams: ['Turundus', 'Üritused']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/karel.vuks/
-  - name: Messenger
-    value:  https://m.me/karel.vuks
-  - name: Discord
-    value: Karel#4972
-  description: Tule minu piksliks, kui naudid looduses jalutamist/jooksmist, IT või ajalugu.  Samuti inimest, kellel on soov ennast arendada.
-  activities: Olen rahulik ja abivalmis isik. Kellele meeldib loodust nautida,  raamatuid lugeda, kui ka uusi kogemusi omandada. 
-
-- name: Argo Tammemäe
-  age: 21
-  photo: argo_tammemae_mentor.jpg
-  specialty: Rakenduskeemia
-  term: 2
-  teams: ['Üritused']
-  contactMethods:
-  - name: Discord
-    value: Argo#8912
-  - name: Messenger
-    value: https://m.me/argo.tammemae.1
-  description: Tahan näidata, et Lapikud ei ole koht ainult progemiseks, siin leidub korralikult IT-välist tegevusi igale maitsele. Ootangi just sellise mõtteviisiga piksleid, kes seda avastada soovivad. 
-  activities: Olen Lapikutes selline odd one out, kes ei jaga tarkvaraarendusest ega informaatikast midagi. See-eest aitan üritusi korraldada ja laiendada LAPi mulli IT-st väljapoole. Vabal ajal olen passive gamer ja anime enjoyer, aga väga agressiivne shitposter (LAPi meme kanalit on vaja elus hoida).
-
-- name: Rasmus Koit
-  age: 25
-  photo: rasmus_koit_mentor.jpg
-  specialty: IT Süsteemide Administeerimine
-  term: vilistlane
-  teams: ['Üritused']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/rasmus.koit/
-  - name: Telegram
-    value: https://t.me/rasmuskoit
-  description: Ootan IT huvilisi piksleid, ei ole selle koha pealt väga valiv. Meeldib üldiselt inimestega suhelda, kes julgevad küsida palju ja on huvitatud programmeerimisest või üldisest ülikooli elust pärast tunde
-  activities: ['Mind on iseloomustatud järgmiselt:', '"Viskab nalja ning leiab lahedaid lahendusi keerulistele olukordadele/probleemidele. Väga pühendunud ja osav oma valdkonnas, samal ajal panustades väga palju inimestevahelistele suhetele. Oskab tükeldada keerulisi probleeme nii, et isegi siilile on selge."', '"Elurõõmus süsteemiadministraator, kellel alati mõni jutt või nali varuks. Ekstensiivsed teadmised nii oma erialast kui ka lõbusasti aega veetmisest - ükski sekund pole selle mehega igav."', '"Sa oled see vend, kes helistab sulle ja kutsub sind kuskile täpselt siis kui sul on midagi vaja ära teha ja sa ei saa "ei" ka öelda."', '"Rasmus on väga konkreetne, mingit ümbernurga juttu ta ei aja ja kõik tema soovid ja tahtmised on kõigile selgelt arusaadavad. Rasmus on ka väga heatahtlik ja südamlik ning imekombel ta näitab seda välja ka, mitte lihtsalt ei ela mõttes kaasa. Rasmus oskab oma suhteliselt hästi oma tähelepanu jagada erinevate inimeste vahel. Ma olen seda pidudel märganud, et ta üritab mitte unustada inimesi, et keegi ei tunneks end väljajäetuna."']
-
-- name: Gregor Kaljulaid
-  age: 20
-  photo: gregor_kaljulaid_mentor.jpg
-  specialty: IT-süsteemide arendus (bakalaureus)
-  term: 3
-  teams: ['Tarkvara']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/gkaljulaid 
-  - name: Discord
-    value: Mephiles#1547
-  description: Selliseid piksleid kes tahavad sotsialiseeruda mu teiste pikslitega väikeses grupis. 
-  activities: Kui minuga väikses seltskonnas random stuffi teha, siis avastad, et ma üks veidramaid inimesi, keda kunagi näinud oled.
-
-- name: Jose Daniel Morales Sööt
-  age: 21
-  photo: jose_daniel_morales_soot_mentor.jpg
-  specialty: Rakenduskeemia(bakalaureus)
-  term: 5
-  teams: ['Tarkvara', 'Helpdesk']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/JoseDanielMoralesSoot
-  - name: Discord
-    value:  Recurring Nightmare#2305
-  description: Piksleid, kellel on abi vaja keemiaga. Piksleid, kellele meeldivad lauamängud, sealhulgas ttrpgd nagu DnD, Starfinder, Call of Cthulhu. Piksleid, kes mängivad ka arvutis mingeid mänge peale FPS-de. Piksleid, kellele lihtsalt meeldib juttu ajada.
-  activities: ['Põhikoolis juba teadsin, et saan keemikuks. Ma olen õppelaboris, kus proovin ligniinist midagi kasulikku saada. Ma kuulan vanemat rokk muusikat ja bände, kes ei mahu ühte konkreetsesse žanri. Mängin arvutis liiga palju mänge ja mängin liiga palju ttrpg-si. Olen extrovertne introvert. Mulle meeldib laulda. Olen karsklane.',  'Mul on 2 motot:",  "Keemiku pea ei ole prügikast" ja "Tööta targalt mitte raskelt".']
-
-- name: Liisa Heinla
-  age: 20
-  photo: liisa_heinla_mentor.jpg
-  specialty: IT-süsteemide arendus (bakalaureus)
-  term: 3
-  teams: ['Turundus']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/profile.php?id=100013642713427
-  - name: Discord
-    value: Liisa#4658
-  - name: Instagram
-    value: liisaheinla
-  description: Ootan enda piksliteks chille inimesi, kes tahavad ülikooliellu korralikult sisse elada ning toredaid sõpru ja tuttavaid leida. Samuti ka inimesi, kellega saan vabalt vahvaid asju ette võtta.
-  activities: Olen loomult rahulik ja sõbralik. Armastan inimestega suhtlemist, kuid olen ikkagi pigem introvert. Vabal ajal meeldib mulle raamatuid lugeda, ebatervislikult palju koera- ja kassivideoid tarbida, kokata/küpsetada ja maailma üle arutleda. Enda meelest teen ma häid nalju ka. Kui keegi minu naljade üle ei naera, siis mina ikka naeran.
-
-- name: Mattias Vahtra
-  age: 26
-  photo: mattias_vahtra_mentor.jpg
-  specialty: IT-süsteemide arendus (bakalaureus)
-  term: 3
-  teams: ['Tarkvara', 'Turundus']
-  contactMethods:
-  - name: Facebook
-    value: https://www.facebook.com/mattias.vahtra.5/
-  - name: Discord
-    value: Mattias#1501
-  description: Kui sulle meeldib kassipilte näha, siis hmu. Lisaks olen valmis abistama kooli, lapikute, meeskoori või muude eluga seotud küsimustega.
-  activities: Olen iseloomult suhteliselt rahulik inimene. Mulle meeldib see, kui ma saan kellelegi abiks olla ja see on ka üks põhjustest, miks ma mentor olen. Vaba aega sisustan arvuti- ja lauamänge (ja natuke ka DnD) mängides ning muudel viisidel sõprade ja lähedastega aega veetes. Tavaliselt ei hõlma see klubisid või suuri pidusid, need mulle väga peale ei lähe. Lisaks käin meeskooris. Mulle meeldivad väga ka loomad (eriti kassid).
-
-- name: Marcus Pruks
-  age: 21
-  photo: marcus_pruks_mentor.JPG
-  specialty: Informaatika (bakalaureus)
-  term: 2
-  teams: ['Turundus', 'Tarkvara']
-  contactMethods:
-  - name: Messenger
-    value: m.me/marcuspruks
-  - name: Discord
-    value: TehCreepahKiller#4269
-  - name: Instagram
-    value: marcuspruks
-  description: ['Tule minu tiiva alla, kui oled huvitatud disainist, turundusest või soovid niisama pelada.',  'Boonuseks võid saada ka head toitu või random pilte minu kassist.']
-  activities: Inimesena olen rahulik ning introvertne, kuid sellele vaatamata on mul juuksed olnud värvilisemad kui vikerkaar. Vaba aega sisustan sõpradega lauamänge või arvutimänge mängides. Mulle meeldib kokata ja kiisudega mängida. Enne TalTechi tulemist õppisin EKA-s disaini, kuid nüüd kasutan seda ära olles turundusjuht. 
-
-- name: Siim Oselein
-  age: 25
-  photo: siim_oselein_mentor.jpg
-  specialty: IT süsteemide administreerimine
+- name: Sander Kornet
+  age: 24
+  photo: sander_kornet.jpg
+  specialty: Informaatika (Lõpetanud), Masinõpe
+  teams:  ['Üritused', 'Endine Juhatus']
   term: null
-  teams: ['Üritused']
   contactMethods:
-  - name: Messenger
-    value:  https://m.me/siim.oselein
-  - name: Telegram
-    value: https://t.me/siimoselein
-  description: Ootan huviga kõiksuguseid. Võib olla keegi kellele meeldib erinevatel teemadel diskuteerida. Võib olla keegi kellele meeldib chillida lauamängude taga. Võib olla keegi kellele meeldib end aktiivsena hoida.
-  activities: ['Olen igivana lapik. Ehe näide sellest, kui hea seltskond meil LAPis koos on, mida on raske selja taha jätta.',
-'Vabal ajal meeldib muusikat kuulata, lauamänge mängida, joosta või rattaga sõita, bowlingut mängida ning kui aega jääb üle siis kodust serverit edasi arendada.']
+    - name: Messenger
+      value: https://m.me/sander.kornet
+    - name: Discord
+      value: TankerElite#9764
+    - name: Telegram
+      value: "@TankerElite"
+    - name: Instagram
+      value: thtankerelite
+  description: null
+  activities: Ümbertegemata Informaatika eriala veteran, kes praegu tegeleb kõrgetasemelise masinõppega ning leiab vahepeal aega ka banger ürituse (või mõnekümne) korraldamiseks.
+
+- name: Mihkel Koks
+  age: 26
+  photo: mihkel_koks.jpg
+  specialty: It süsteemide arendus, salastatud lapitegevused.
+  teams:  ['Tarkvara', 'salastatud tiimis']
+  term: 5
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/mihkel.koks
+    - name: Discord
+      value: Mihkel/ Oakzi#7556
+  description: null
+  activities: Kui ma ei õpi või viska asju läbi rõnga, siis ilmselt olen lapis peol.
+  
