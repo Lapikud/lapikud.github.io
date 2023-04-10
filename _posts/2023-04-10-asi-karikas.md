@@ -5,15 +5,13 @@ date:   2023-04-10 +0200
 categories: blog
 ---
 
-Talvel toimus iga-aastane Lapikute korraldatav programmeerimisvõistlus ASI Karikas
-
 Möödunud talve jooksul toimus tarkvaraarenduse klubi Lapikud ja Tallinna Tehnikaülikooli Arvutisüsteemide
 Instituudi
 koostöös korraldatud programmeerimisvõistlus ASI Karikas, mis on juba mitmendat aastat kutsunud kooliõpilasi üle
 Eesti
 võistu programmeerima.
 
-![ASI Karikas 2022 osalejad ja korraldajad](../assets/asi-karikas-2023-images/group_picture.jpeg "ASI Karikas 2022 osalejad ja korraldajad")
+![ASI Karikas 2022 osalejad ja korraldajad](/assets/asi-karikas-2023-images/group_picture.jpeg "ASI Karikas 2022 osalejad ja korraldajad")
 
 Mitu aastat on Lapikute korraldatud üritustest olnud ASI Karikas neist üks kõige suuremaid. Lapikute eesmärgiks
         on
@@ -31,7 +29,7 @@ Võistlus koosneb kahest voorust. Esimeses voorus töötavad õpilased koos kasv
         ülikooli
         õppejõudude Margus Kruusi ja Harri Lenseni kirjutatud diskreetse matemaatika õpik.
 
-![Miina Härma tiim](../assets/asi-karikas-2023-images/miina_harma.jpeg "Miina Härma tiim") ![Tallinna Ühisgümnaasiumi tiim](../assets/asi-karikas-2023-images/tallinna_yhisgymnaasium.jpeg "Tallinna Ühisgümnaasiumi tiim") ![Etalontiim](../assets/asi-karikas-2023-images/etalontiim.jpeg "Etalontiim")
+![Miina Härma tiim](/assets/asi-karikas-2023-images/miina_harma.jpeg "Miina Härma tiim") ![Tallinna Ühisgümnaasiumi tiim](/assets/asi-karikas-2023-images/tallinna_yhisgymnaasium.jpeg "Tallinna Ühisgümnaasiumi tiim") ![Etalontiim](/assets/asi-karikas-2023-images/etalontiim.jpeg "Etalontiim")
 
 <font size=2>Võistluse finaalvoorus osalenud tiimid. Vasakult paremale: Miina Härma Gümnaasiumi, Tallinna Ühisgümnaasiumi ja
         etalonvõistkond.</font>
