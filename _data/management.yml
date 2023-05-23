@@ -1,37 +1,36 @@
 # Management contact info
 
 
-- name: Carina Ruut
-  photo: carina_ruut.jpg
+- name: Lembitu Valdmets
+  photo: lembitu_valdmets.jpg
   role: Juhatuse esimees
   subrole: Meie suur juht
-  email: carina.ruut@lapikud.ee
-  phone: +372 555 25 897
+  email: lembitu@lapikud.ee
+  phone: +372 556 93 479
 
-- name: Karl Eric Mõttus
-  photo: karl_eric_mottus.jpg
+- name: Ott-Eerik Õun
+  photo: ott-eerik_oun.jpg
   role: Juhatuse liige
   subrole: Helpdeski juht
-  email: mottus.karleric@lapikud.ee
-  phone: +372 535 54 634
+  email: ott@lapikud.ee
+  phone: +372 568 84 720
 
-- name: Laura Anni
-  photo: laura_anni.jpg
+- name: Andree Uuetoa
+  photo: andree_uuetoa.jpg
   role: Juhatuse liige
   subrole: Tarkvara valdkonna juht
-  email: laura@lapikud.ee
-  phone: +372 556 85 715
+  email: andree@lapikud.ee
+  phone: +372 533 22 022
 
-- name: Anet Mitt
-  photo: anet_mitt.jpg
+- name: Pearu Vaalma
+  photo: siinus.jpg
   role: Juhatuse liige
   subrole: Ürituste valdkonna juht
-  email: anet@lapikud.ee
-  phone: +372 569 41 489
+  email: siinus@lapikud.ee
 
-- name: Taeri Saar
-  photo: taeri_saar.jpg
+- name: Karina Reisel
+  photo: karina_reisel.jpg
   role: Juhatuse liige
   subrole: Turunduse valdkonna juht
-  email: taeri@lapikud.ee
-  phone: +372 584 40 037
+  email: karina@lapikud.ee
+  phone: +372 529 84 02
