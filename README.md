@@ -22,9 +22,9 @@ Windows:
 
 0. Install the Windows Subsystem for Linux
 
-   Install Ubuntu
+    Install Ubuntu
 
-   https://docs.microsoft.com/en-us/windows/wsl/install-win10
+    https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 1. Install Ruby
 
@@ -45,9 +45,9 @@ Windows:
 
 5. Image converter usage (requires imagemagick)
 
-   No one wants to download 5MB images that are then shown in a 100x100px box.
+    No one wants to download 5MB images that are then shown in a 100x100px box.
 
-   **Always resize images before committing them!**
+    **Always resize images before committing them!**
 
         sudo apt-get install imagemagick
         sh convert-past-management-images.sh
@@ -60,25 +60,25 @@ MacOS:
 
         /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-   1. Install the latest stable version of Ruby
+1. Install the latest stable version of Ruby
 
-            brew install ruby
+        brew install ruby
 
-       Also configure your shell environment.
-       If you're using Bash, replace `.zshrc` with `.bash_profile`.
+    Also configure your shell environment.
+    If you're using Bash, replace `.zshrc` with `.bash_profile`.
     
-           if [ -d "/usr/local/opt/ruby/bin" ]; then
-           export PATH=/usr/local/opt/ruby/bin:$PATH
-           export PATH=`gem environment gemdir`/bin:$PATH
-           fi
+        if [ -d "/usr/local/opt/ruby/bin" ]; then
+        export PATH=/usr/local/opt/ruby/bin:$PATH
+        export PATH=`gem environment gemdir`/bin:$PATH
+        fi
 
-       Check that Ruby is working.
-    
-            ruby -v
+    Check that Ruby is working.
+
+        ruby -v
 
 2. Install the latest Jekyll gem
 
-         sudo gem install jekyll
+        sudo gem install jekyll
 
 3. Clone repo
 
