@@ -68,8 +68,8 @@ MacOS:
     If you're using Bash, replace `.zshrc` with `.bash_profile`.
     
         if [ -d "/usr/local/opt/ruby/bin" ]; then
-        export PATH=/usr/local/opt/ruby/bin:$PATH
-        export PATH=`gem environment gemdir`/bin:$PATH
+            export PATH=/usr/local/opt/ruby/bin:$PATH
+            export PATH=`gem environment gemdir`/bin:$PATH
         fi
 
     Check that Ruby is working.
