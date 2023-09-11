@@ -95,7 +95,7 @@ MacOS:
     
     **Always resize images before committing them!**
     
-        sudo apt-get install imagemagick
+        brew install imagemagick
         sh convert-past-management-images.sh
 
 # Deploy
