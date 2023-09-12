@@ -20,10 +20,10 @@
   teams: ['Üritused']
   term: null
   contactMethods:
-    - name: Telegram
-      value: t.me/caruut
     - name: Facebook
       value: https://www.facebook.com/carinaruut/
+    - name: Telegram
+      value: t.me/caruut
   description: >
     Ootan oma piksliteks vahvaid ja toredaid inimesi, 
     kes ei karda suhelda ega ei karda ka uusi väljakutseid. 
@@ -150,7 +150,7 @@
   activities: Julgen öelda, et olen hea suhtleja ja erinevate küsimuste korral peaksin suutma leida vastuse või tean, kes võiks teada vastust.
 
 - name: Aimar Tuul
-  age: 27
+  age: 26
   photo: aimar_tuul_mentor.jpg
   specialty: IT-süsteemide arendus
   teams:  ['Tarkvara']
@@ -158,8 +158,14 @@
   contactMethods:
     - name: Messenger
       value: https://m.me/aimar.tuul
-  description:
-  activities:
+    - name: Discord
+      value: aimar5749
+  description: Kõik kellel on tahtmist mind mentoriks ja kes ei karda rahulikkumat tüüpi. :)
+  activities: >
+    Tarkvara huvi on mul suur, eriti programmeerimise. Proge kogemust olen enamuses saanud nii palju kui koolis olen õppinud või veidi siit-sealt.
+    Nagu öeldud sai, olen pigem rahulik, aga avatud ka suhtlema. Võib-olla kui keegi saab tuttavamaks, võib saada osa minu huvitavast huumorist. 😄 Muidu olen sõbralik tüüp.
+    Vabal ajal veidi loen, jooksen, ujun, teen muusikat. Armastan lauamänge.
+    Lapikutes tegutsen kolmandat aastat.
 
 - name: Markus Renser
   age: 21
