@@ -64,16 +64,20 @@
     valmis hädast välja aitama :).
 
 - name: Andres Kase
-  age:
+  age: 23
   photo: andres_kase_mentor.jpg
-  specialty:
-  teams: ['Helpdesk']
-  term:
+  specialty: Mehhatroonika
+  teams: ['Helpdesk', 'Mentorite juht']
+  term: 3
   contactMethods:
-    - name:
-      value:
-  description:
-  activities:
+    - name: Facebook
+      value: Andres Kase
+    - name: Discord
+      value: hawx11#6234
+  description: Ma ootan peamiselt tehnika huvilisi piksleid, kuid iga piksel on hea piksel.
+  activities: >
+    Üldiselt tagasihoidlik, kuid abivalmis ja kohati jutukas. 
+    Keskmine mehaaniliste lahenduste disainimise nautleja ja elektroonika huviline.
 
 - name: Lembitu Valdmets
   age: null
