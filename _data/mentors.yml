@@ -118,7 +118,7 @@
   photo: karina_reisel_mentor.jpg
   specialty: Riistvara arendus ja programmeerimine
   teams: ['Turundus', 'Juhatus']
-  term: null
+  term: 2
   contactMethods:
     - name: Discord
       value: rinsan5781
