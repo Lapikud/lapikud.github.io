@@ -122,11 +122,7 @@
   photo: karina_reisel_mentor.jpg
   specialty: Riistvara arendus ja programmeerimine
   teams: ['Turundus', 'Juhatus']
-<<<<<<< HEAD
   term: 2
-=======
-  term: null
->>>>>>> 171a732 (Mentors for 2023 WIP)
   contactMethods:
     - name: Discord
       value: rinsan5781
