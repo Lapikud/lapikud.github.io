@@ -134,3 +134,19 @@
     Tegelen fotograafiaga, filmindusega, joonistamisega. Tegin mitmeid otseülekandeid. 
     Võin õpetada kogu stuffi. Ma suhtlen inimestega suht palju. Peoloomaks ennast ei nimetaks. 
     Aga kui tahad leida head sõpra, siis tule, ajame juttu.
+
+- name: Markus Renser
+  age: 21
+  photo: markus_renser_mentor.jpg
+  specialty: IT-süsteemide arendus
+  teams: ['Tarkvara']
+  term: 2
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/markus.renser
+  description: >
+    Ootan selliseid piksleid, kes on õpihimulised ja tarkvarahuvilised.
+  activities: >
+    Olen rahulik, abivalmis ja sõbralik Lapikute tarkvara tiimi liige ja IADB-tudeng.
+    Läheb nüüd teine aasta, nii et võin vabalt anda nõu ja pakkuda juhiseid, kuidas koolis paremini hakkama saada.
+    Endale meeldib trenni teha, progeda või niisama pelada.
