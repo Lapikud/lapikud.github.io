@@ -9,7 +9,7 @@
   term: 2
   contactMethods:
     - name: Messenger
-      value: Ott Eerik Õun
+      value: https://m.me/ott.eerik.oun
   description: Jutukaid ja huvi omavaid piksleid
   activities: Meeldib tehnika kallal nokitseda ja möla ajada :D
 
@@ -20,10 +20,10 @@
   teams: ['Üritused']
   term: null
   contactMethods:
-    - name: Telegram
-      value: t.me/caruut
     - name: Facebook
       value: https://www.facebook.com/carinaruut/
+    - name: Telegram
+      value: t.me/caruut
   description: >
     Ootan oma piksliteks vahvaid ja toredaid inimesi, 
     kes ei karda suhelda ega ei karda ka uusi väljakutseid. 
@@ -49,7 +49,7 @@
   term: 3
   contactMethods:
     - name: Messenger
-      value: Anet Mitt
+      value: https://m.me/anet.mitt
   description: Ole ükskõik milline :D
   activities: >
     Olen sõbralik krussis juustega lapik, kelle poole võib alati pöörduda oma murede ja rõõmudega <3. 
@@ -87,7 +87,7 @@
   term: null
   contactMethods:
     - name: Messenger
-      value: Lemps Valdmets
+      value: https://m.me/lemps.valdmets
     - name: Discord
       value: lempspc
   description: Ole mu piksel, kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
@@ -104,7 +104,7 @@
   term: 3
   contactMethods:
     - name: Facebook
-      value: Argo Tammemäe
+      value: https://www.facebook.com/argo.tammemae.1
     - name: Discord
       value: argot1122
   description: >
@@ -134,6 +134,38 @@
     Tegelen fotograafiaga, filmindusega, joonistamisega. Tegin mitmeid otseülekandeid. 
     Võin õpetada kogu stuffi. Ma suhtlen inimestega suht palju. Peoloomaks ennast ei nimetaks. 
     Aga kui tahad leida head sõpra, siis tule, ajame juttu.
+
+- name: Mihkel Koks
+  age: 27
+  photo: mihkel_koks_mentor.jpeg
+  specialty: IT-süsteemide arendus
+  teams:  ['Üritused']
+  term: 6
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/mihkel.koks
+    - name: Discord
+      value: Oakzi/mihkel
+  description: Enamasti aktiivseid, kes tunnevad, et tahavad osaleda Lapikute tegemistes.
+  activities: Julgen öelda, et olen hea suhtleja ja erinevate küsimuste korral peaksin suutma leida vastuse või tean, kes võiks teada vastust.
+
+- name: Aimar Tuul
+  age: 26
+  photo: aimar_tuul_mentor.jpg
+  specialty: IT-süsteemide arendus
+  teams:  ['Tarkvara']
+  term: 4
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/aimar.tuul
+    - name: Discord
+      value: aimar5749
+  description: Kõik kellel on tahtmist mind mentoriks ja kes ei karda rahulikkumat tüüpi. :)
+  activities: >
+    Tarkvara huvi on mul suur, eriti programmeerimise. Proge kogemust olen enamuses saanud nii palju kui koolis olen õppinud või veidi siit-sealt.
+    Nagu öeldud sai, olen pigem rahulik, aga avatud ka suhtlema. Võib-olla kui keegi saab tuttavamaks, võib saada osa minu huvitavast huumorist. 😄 Muidu olen sõbralik tüüp.
+    Vabal ajal veidi loen, jooksen, ujun, teen muusikat. Armastan lauamänge.
+    Lapikutes tegutsen kolmandat aastat.
 
 - name: Markus Renser
   age: 21
