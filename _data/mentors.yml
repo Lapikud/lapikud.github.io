@@ -23,7 +23,7 @@
     - name: Facebook
       value: https://www.facebook.com/carinaruut/
     - name: Telegram
-      value: t.me/caruut
+      value: https://t.me/caruut
   description: >
     Ootan oma piksliteks vahvaid ja toredaid inimesi, 
     kes ei karda suhelda ega ei karda ka uusi väljakutseid. 
