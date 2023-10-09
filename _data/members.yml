@@ -1,19 +1,5 @@
 junior:
-  - Allan Lip
-  - Anton Kolisnetšenko
-  - Inno Tõlgu
-  - Jan Ulrich Sütt
-  - Kadri Kaus
-  - Karina Reisel
-  - Karl Müllerbeck
-  - Kirke Tammpere
-  - Kristiina Šamanina
-  - Kristopher Härm
-  - Kätlin Kergand
-  - Marcus Bindevald
-  - Markus Renser
   - Meelimari Aljasmäe
-  - Ott-Eerik Õun
   
   
 senior:
@@ -23,60 +9,37 @@ senior:
   - Andres Aleksander Kase
   - Anet Mitt
   - Argo Tammemäe
-  - Artjom Protski
   - Brigite Kerge
   - Carina Ruut
   - Carmen Unt
-  - Diana Christine Tarro
-  - Emil Marvin Mikk
-  - Gleb Engalychev
-  - Gregor Kaljulaid
   - Hanno Vene
-  - Helena Grete Lillepalu
   - Henri Helisma
-  - Henrik Hansson
-  - Jan-Markus Üprus
-  - Jolanta Rudus
   - Jose Daniel Morales Sööt
   - Jürjo Eibak
+  - Kadri Kaus
   - Karel Vuks
+  - Karina Reisel
   - Karl Eric Mõttus
-  - Karl Raud
-  - Karl Markus Tarre
+  - Karl Müllerbeck
   - Karoliina Rebane
   - Kirill Demishin
-  - Kristjan Kõiv
-  - Konstantin Donets
+  - Kirke Tammpere
   - Laura Anni
   - Lembitu Valdmets
-  - Liisa Heinla
-  - Madis Rohtla
-  - Marcus Pruks
-  - Maria Jerilova
-  - Mart Kaasik
-  - Martin Meinhart Meindorf
+  - Marcus Bindevald
+  - Markus Renser
   - Martin Perman
   - Mati Pearu Vaalma
   - Mattias Vahtra
   - Mihkel Koks
-  - Mihkel Õun
-  - Mikkel Paat
-  - Nelli-Anett Klippberg
-  - Norman Garder
   - Oliver Ilp
-  - Oskar Voorel
+  - Ott-Eerik Õun
   - Priit Roosiväli
-  - Raido Leilop
   - Ragnar Kaseorg
   - Reivo Türnpuu
   - Robin Väli
-  - Romet Tony Jõenurm
   - Sander Kornet
   - Siret Sillar
-  - Taavi Nõlvak
-  - Taeri Saar
-  - Tamor Haabmets
-  - Viktor Ustitš
 
 
 graduates: 
@@ -103,8 +66,10 @@ graduates:
   - Anneli Tuisk
   - Annely Välik
   - Anti Räis
+  - Anton Kolisnetšenko
   - Arti Zirk
   - Artjom Juškov
+  - Artjom Protski
   - Artur Rauk
   - Arvo Bendi
   - Asko Närep
@@ -123,6 +88,7 @@ graduates:
   - Daniel Raissar
   - Deivid Drekhan
   - Denry Aron
+  - Diana Christine Tarro
   - Diana Rand
   - Edgar Miadzieles
   - Eero Ringmäe
@@ -133,6 +99,7 @@ graduates:
   - Elis-Christina Kuuse
   - Elisa Tamm
   - Elo Pelovas
+  - Emil Marvin Mikk
   - Enola Sander
   - Enrico Kaasik
   - Eret Rääk
@@ -146,6 +113,8 @@ graduates:
   - Erlis Liiva
   - Ethel Voites
   - Eve Timmerman
+  - Gleb Engalychev
+  - Gregor Kaljulaid
   - Hannes Pahapill
   - Hanno Särg
   - Hans Kõll
@@ -156,11 +125,13 @@ graduates:
   - Helen Ertis
   - Helen Tiitma
   - Helen Vaupere
+  - Helena Grete Lillepalu
   - Helena Lissenko
   - Hendrik Õunapuu
   - Henri Hallik
   - Henri Johann Norden
   - Henri Kelder
+  - Henrik Hansson
   - Henrik Tomson
   - Herman Õunapuu
   - Ilmar Lõhmus
@@ -171,12 +142,14 @@ graduates:
   - Ingrid Vuks
   - Ingrid-Regina Vähi
   - Innar Liiv
+  - Inno Tõlgu
   - Ivo Müürsepp
   - Jaak Lember
   - Jaan Lehismets
   - Jaan Sarv
   - Jaan Sepp
   - Jaanika Metsnik
+  - Jan-Markus Üprus
   - Jane Tamm
   - Janika Leisalu
   - Janita Raudsepp
@@ -184,6 +157,7 @@ graduates:
   - Janno Tetsmann
   - Jarek Jannait
   - Joel Timmerman
+  - Jolanta Rudus
   - Joonas Vali
   - Joosep Franz Alviste
   - Joosep Noorväli
@@ -194,7 +168,9 @@ graduates:
   - Kairit Pajula
   - Kairit Sirts
   - Karl Lõoväli
+  - Karl Markus Tarre
   - Karl Martin Miil
+  - Karl Raud
   - Karl Ruusmaa
   - Karli Oruste
   - Kärte Pärend
@@ -209,11 +185,14 @@ graduates:
   - Kertu Pikk
   - Kevin Guljajev
   - Kevin Laanemägi
+  - Konstantin Donets
   - Krista Kippar
   - Krista Kolk
   - Kristel Goldsmidt
   - Kristel Tarend
   - Kristina Krist
+  - Kristiina Šamanina
+  - Kristjan Kõiv
   - Kristjan Haavik
   - Kristjan Noode
   - Kristjan Oja
@@ -233,6 +212,7 @@ graduates:
   - Liina Lakur
   - Liina Pirsi
   - Liina Põlluäär
+  - Liisa Heinla
   - Liisu Miller
   - Lukas Pertel
   - Madis Eensoo
@@ -240,6 +220,7 @@ graduates:
   - Madis Kõosaar
   - Madis Müil
   - Madis Puju
+  - Madis Rohtla
   - Madis Seppam
   - Madis-Siim Rull
   - Magnus Mihkel Peterson
@@ -247,18 +228,22 @@ graduates:
   - Mai-Liis Hütt
   - Mai-Liis Valdvee
   - Mailis Terno
+  - Marcus Pruks
   - Marek Rei
   - Maret Kaadu
   - Margo Sall
   - Margus Mahler
   - Margus Rannakivi
+  - Maria Jerilova
   - Maria Kert
   - Mari-Liis Oldja
   - Mari-Liis Põrk
   - Maris Terno
   - Maris Truuväärt
   - Marius Andra
+  - Mart Kaasik
   - Martin Lausmaa
+  - Martin Meinhart Meindorf
   - Martin Mägar
   - Martin Oblikas
   - Martin Väljaots
@@ -273,17 +258,22 @@ graduates:
   - Mihkel Kanarik
   - Mihkel Kiil
   - Mihkel Nõmmik
+  - Mihkel Õun
   - Mikk Kärner
+  - Mikkel Paat
   - Märt Lepik
   - Märten Juhari
   - Marten Tikman
   - Märten Vuks
   - Nansy Ly Endma
   - Natalja R??ova
+  - Nelli-Anett Klippberg
+  - Norman Garder
   - Olga Korovina
   - Oliver Vaga
   - Oole Tuurmaa
   - Oskar Oidsalu
+  - Oskar Voorel
   - Ott Kändra
   - Ott Lints
   - Paavo Pudan
@@ -297,6 +287,7 @@ graduates:
   - Pirgit Kasemets
   - Priit Kirss
   - Priit Lepp
+  - Raido Leilop
   - Rait Liiv
   - Rait Maltsaar
   - Rasmus Koit
@@ -315,6 +306,7 @@ graduates:
   - Robert Rosimannus
   - Roel Rahkema
   - Roger Kerse
+  - Romet Tony Jõenurm
   - Roosi-Ann Tõlgu
   - Sander Aasaväli
   - Sander Roosik
@@ -338,7 +330,10 @@ graduates:
   - Taaniel Sepp
   - Taavi Drenkhan
   - Taavi Kalle Kiisler
+  - Taavi Nõlvak
   - Taavi Tali
+  - Taeri Saar
+  - Tamor Haabmets
   - Tanel Saar
   - Taniel Tari
   - Targo Nõmmik
@@ -369,4 +364,5 @@ graduates:
   - Valli Rennig
   - Veiko Soomets
   - Venno Viinapuu
+  - Viktor Ustitš
   - Virgo Lepp
