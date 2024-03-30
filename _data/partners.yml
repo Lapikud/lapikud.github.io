@@ -5,7 +5,7 @@
 
 
 - name: Tallinna Tehnikaülikool
-  image: taltech_logo.jpg
+  image: taltech_logo.png
   url: https://www.ttu.ee/
   additionalText:
 
