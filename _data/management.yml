@@ -1,32 +1,33 @@
 # Management contact info
 
 
-- name: Lembitu Valdmets
+- name: Eva-Marie Alasi
   photo: lembitu_valdmets.jpg
   role: Juhatuse esimees
-  subrole: Meie suur juht
-  email: lembitu@lapikud.ee
-  phone: +372 556 93 479
+  subrole: Meie suur ema
+  email: evamarie@lapikud.ee
+  phone: +372 5341 4614
 
-- name: Ott-Eerik Õun
+- name: Erki Lasberg
   photo: ott-eerik_oun.jpg
   role: Juhatuse liige
   subrole: Helpdeski juht
-  email: ott@lapikud.ee
-  phone: +372 568 84 720
+  email: erki@lapikud.ee
+  phone: +372 5907 9190
 
-- name: Andree Uuetoa
+- name: Rene Arumetsa
   photo: andree_uuetoa.jpg
   role: Juhatuse liige
   subrole: Tarkvara valdkonna juht
-  email: andree@lapikud.ee
-  phone: +372 533 22 022
+  email: rene@lapikud.ee
+  phone: +372 5690 7656
 
-- name: Pearu Vaalma
+- name: Christopher Rammul
   photo: siinus.jpg
   role: Juhatuse liige
   subrole: Ürituste valdkonna juht
-  email: siinus@lapikud.ee
+  email: christopher@lapikud.ee
+  phone: +372 555 00 221
 
 - name: Karina Reisel
   photo: karina_reisel.jpg
