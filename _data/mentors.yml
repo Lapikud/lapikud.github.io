@@ -5,7 +5,7 @@
   age: 23
   photo: ott-eerik_oun_mentor.jpg
   specialty: IT-süsteemide arendus
-  teams: ['Helpdesk', 'Juhatus']
+  teams: ['Helpdesk']
   term: 2
   contactMethods:
     - name: Messenger
@@ -80,10 +80,10 @@
     Keskmine mehaaniliste lahenduste disainimise nautleja ja elektroonika huviline.
 
 - name: Lembitu Valdmets
-  age: 29
+  age: 30
   photo: lembitu_valdmets_mentor.jpg
   specialty: Arvutisüsteemid (Lõpetanud)
-  teams: ['Helpdesk', 'Juhatus']
+  teams: ['Helpdesk']
   term: null
   contactMethods:
     - name: Messenger
