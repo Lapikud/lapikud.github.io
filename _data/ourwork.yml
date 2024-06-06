@@ -34,8 +34,8 @@
 
 - title: Osaluskogud Eestis
   photo: osaluskogud_eestis.jpg
-  url: http://noortekogud.ee/
-  description: Teostasime lehel täiendusi.
+  url:
+  description: Teostasime lehel täiendusi. Tänaseks on portaali omanikud selle sulgenud.
 
 - title: Tallinna Tehnikaülikooli Puhkpilliorkester
   photo: orkester.jpg
@@ -44,18 +44,18 @@
 
 - title: Tallinna Tehnikaülikooli Studentlife
   photo: studentlife.jpg
-  url: http://studentlife.ee
-  description: Arendasime WordPressi platvormil kliendi ettenägemise järgi uue keskkonna, kus tudengid saavad blogipostitusi kirjutada/lugeda ning ka tulevaste ürituste ja organisatsioonide tegevustega kursis olla. Aegajalt viime lehel ka läbi uuendustöid.
+  url:
+  description: Arendasime WordPressi platvormil kliendi ettenägemise järgi uue keskkonna, kus tudengid saavad blogipostitusi kirjutada/lugeda ning ka tulevaste ürituste ja organisatsioonide tegevustega kursis olla. Aegajalt viime lehel ka läbi uuendustöid. Tänaseks on portaali omanikud selle sulgenud.
 
 - title: Eesti Üliõpilasesinduse Liit
   photo: sallivkool.jpg
-  url: http://sallivkool.ee/
+  url:
   description:
 
 - title: ISIC
   photo: isic.jpg
-  url: http://www.isic.ee
-  description: WordPressi platvormil arendatud veebileht, kust leiab kõik vajaliku info ISIC kaardi kohta (soodustused, tellimine jpm). Teostame lehel ka uuendusi.
+  url:
+  description: WordPressi platvormil arendatud veebileht, kust leiab kõik vajaliku info ISIC kaardi kohta (soodustused, tellimine jpm).
 
 
 - title: Eesti Jalgratta Virtuaalmuuseum
@@ -78,8 +78,8 @@
 
 - title: Ukseproff
   photo: ukseproff.jpg
-  url: http://www.ukseproff.ee/
-  description:
+  url:
+  description: Tänaseks on portaali omanikud selle sulgenud.
 
 
 - title: Nõmme Tenniseklubi koduleht
