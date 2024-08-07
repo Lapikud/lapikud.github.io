@@ -3,7 +3,6 @@
   url: https://www.tehnopol.ee/
   additionalText:
 
-
 - name: Tallinna Tehnikaülikool
   image: taltech_logo.jpg
   url: https://www.ttu.ee/
@@ -14,15 +13,17 @@
   url: https://eyl.ee/
   additionalText:
 
-
 - name: Tallinna Tehnikaülikooli Robotiklubi
   image: robotiklubi_logo.png
   url: https://www.robotiklubi.ee/
   additionalText:
 
-
-
 - name: Tallinna Tehnikaülikooli Infotehnoloogia teaduskond
   image: taltech_IT_teaduskond_logo.png
   url: https://taltech.ee/et/infotehnoloogia-teaduskond
+  additionalText:
+
+- name: HexTech Solutions
+  image: hextech_logo.png
+  url: https://hextech.ee/
   additionalText:
