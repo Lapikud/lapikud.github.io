@@ -130,7 +130,7 @@
 
 - name: Erki Lasberg
   age: 22
-  photo: 
+  photo: erki_lasberg_mentor_jpg 
   speciality: IT süsteemide administreerimine
   teams: ['Helpdesk', 'Juhatus']
   term: 2 
