@@ -7,5 +7,5 @@ for file in original/*; do
     else
         gravity=center
     fi    
-    convert ${file} -resize "300x300^>" -gravity $gravity -extent 300x300  optimised/${base_name%}
+    magick ${file} -resize "300x300^>" -gravity $gravity -extent 300x300  optimised/${base_name%}
 done
