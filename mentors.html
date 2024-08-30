@@ -6,8 +6,7 @@ title: Mentorid - Lapikud
   <h1>Mentorid</h1>
   <h3>Siin on meie 2024. aasta mentorid. Nemad on õiged inimesed, kelle poole pöörduda küsimuste tekkimisel seoses liitumise või Lapikutega üldiselt! </h3>
 
-  {% assign sorted_mentors = site.data.mentors | sort: 'name' %}
-  {% for mentor in sorted_mentors %}
+  {% for mentor in site.data.mentors %}
 
   <div class="mentor">
     <div class="photo-container">
