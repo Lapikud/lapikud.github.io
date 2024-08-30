@@ -15,7 +15,7 @@
     - name: email
       value: ema@lapikud.ee
     - name: telefoninumber
-      value: +3725351614 
+      value: '+3725351614' 
   description: Jutukaid ja huvi omavaid piksleid
   activities: >
     Olen ambitsioonikas, kuid veidi tagasihoidlik tüdruk.
@@ -95,42 +95,9 @@
     Olen 3. kursuse IADB tudeng ja töötan kooli kõrvalt tarkvara konsultantina. Olen rõõmsameelne, sõbralik ja mõistev inimene. Harrastan jõu- ja vastupidavustreeningut.
     Vabal ajal loen huvitavaid raamatuid või mängin strateegiamänge arvutis. 
 
-# - name: Rainis Randmaa
-#   age: 20
-#   photo:
-#   speciality: Riistvara ja programmeerimine
-#   teams: ['Tarkvara'] 
-#   term: 3
-#   contactMethods:
-#     - name: Messenger
-#       value: https://m.me/rainis.randmaa
-#     - value: Telefoninumber
-#       value: +372 5843 8184 
-#   description: >
-#     Otsin ambitsioonikaid tarkvara huvilisi kellel on huvi ennast arendada ning iseseisvalt challangeid lahendada
-#   activities: >
-#     Olen full-stack ja embedded arendaja ning samuti olen ettevõtja, kaasasutanud kaks ettevõtet
-        
-# - name: Christopher Rammul
-#   age: 22
-#   photo:
-#   speciality: Mehhatroonika
-#   teams: ['Üritused', 'Juhatus']
-#   contactMethods:
-#     - name: Messenger
-#       value: https://m.me/
-#     - name: Discord
-#       value: lummarc
-#   description: >
-#     Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava 
-#     LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada.
-#     Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.   
-#   activities: >
-#     Olen 4. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
-
 - name: Erki Lasberg
   age: 22
-  photo: erki_lasberg_mentor_jpg 
+  photo: erki_lasberg_mentor.jpg 
   speciality: IT süsteemide administreerimine
   teams: ['Helpdesk', 'Juhatus']
   term: 2 
@@ -159,7 +126,7 @@
     Olen aktiivne suhtleja ning alati valmis aitama. 
 
 - name: Agnes Triin Saga
-  vanus: 27
+  age: 27
   photo: agnes_triin_saga_mentor.jpg
   speciality: Süsteemi administaator
   teams: ['Helpdesk']
@@ -173,7 +140,7 @@
     Abivalmis, nõus töötama nõu ja jõuga
     
 - name: Rene Arumetsa
-  vanus: 28
+  age: 28
   photo: rene_arumetsa_mentor.jpg
   speciality: it süsteemide administeerimine
   teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
@@ -184,7 +151,7 @@
     - name: Discord
       value: renxik
     - name: Telefoninumber
-      value: +372 5690 7656 
+      value: '+372 5690 7656'
     - name: Telegram
       value: https://t.me/Renkarus  
   description: >
@@ -193,7 +160,7 @@
     Olen rahulik, vaikne lapik. Meeldib asjade kallal nokitseda. Abivalmis olen, et kui mõnes aines raskusi siis üritan aidata. 
 
 - name: Jürjo Eibak
-  vanus: 26
+  age: 26
   photo: jürjo_eibak_mentor.jpg
   speciality: salastatud
   teams: ['Üritused']
@@ -206,7 +173,7 @@
     Minu pikselile meeldib Lapikute kontoris sotsialiseerida ja tegevuste kõrvale külma õlut nautida.
     Üheskoos filmide vaatamine, lauamängude, arvutimängude ja DnD mängimine on alati meelepärane viis üksikute õhtute sisustamiseks. 
   activities:
-    Lapikute liikmetega olen seltskondlik ja jutukas. Meeldib kõigiga kontori ruumides filme vaadata ja erinevaid mänge mängida.
+    Lapikute liikmetega olen seltskondlik ja jutukas. Meeldib kõigiga kontori ruumides filme vaadata ja erievaid mänge mängida.
     Nende seast on alati kõige huvitavamad DnD kampaaniaid. Olen juba mitu aastat dungeon masteri rolli kandnud ja olen selles päris osav. Kõik minu pikslid on oodatud minu kampaaniatega liituma ;)  
 
     Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks. 
