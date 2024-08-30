@@ -4,7 +4,7 @@
 - name: Eva-Marie Alasi 
   age: 26
   photo: eva_marie_alasi_mentor.jpg
-  specialty: IT-süsteemide administreemine
+  speciality: IT-süsteemide administreemine
   teams: ['Juhatus','Helpdesk','Üritused']
   term: 2 
   contactMethods:
@@ -27,7 +27,7 @@
 - name: Andres Kase
   age: 24
   photo: andres_kase_mentor.jpg
-  specialty: Mehhatroonika
+  speciality: Mehhatroonika
   teams: ['Helpdesk', 'Mentorite juht']
   term: 3
   contactMethods:
@@ -43,7 +43,7 @@
 - name: Karina Reisel
   age: 21
   photo: karina_reisel_mentor.jpg
-  specialty: Riistvara arendus ja programmeerimine
+  speciality: Riistvara arendus ja programmeerimine
   teams: ['Turundus', 'Juhatus']
   term: 3 
   contactMethods:
@@ -63,7 +63,7 @@
 - name: Aimar Tuul
   age: 26
   photo: aimar_tuul_mentor.jpg
-  specialty: IT-süsteemide arendus
+  speciality: IT-süsteemide arendus
   teams:  ['Tarkvara']
   term: 4
   contactMethods:
@@ -81,7 +81,7 @@
 - name: Markus Renser
   age: 22
   photo: markus_renser_mentor.jpg
-  specialty: IT-süsteemide arendus
+  speciality: IT-süsteemide arendus
   teams: ['Tarkvara']
   term: 3 
   contactMethods:
