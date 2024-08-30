@@ -104,7 +104,7 @@
   contactMethods:
     - name: Messenger
       value: https://m.me/erki.lasberg 
-      name: Discord 
+    - name: Discord 
       value: the_legend_27 
   description: >
     Ma ootan piksliteks inimesi kellel lööb silma särama kui nad katkist tehnikat näevad.   
