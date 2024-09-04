@@ -61,11 +61,11 @@
     Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms. 
 
 - name: Aimar Tuul
-  age: 26
+  age: 27
   photo: aimar_tuul_mentor.jpg
   speciality: IT-süsteemide arendus
   teams:  ['Tarkvara']
-  term: 4
+  term: 5 
   contactMethods:
     - name: Messenger
       value: https://m.me/aimar.tuul
@@ -76,7 +76,7 @@
     Tarkvara huvi on mul suur, eriti programmeerimise. Proge kogemust olen enamuses saanud nii palju kui koolis olen õppinud või veidi siit-sealt.
     Nagu öeldud sai, olen pigem rahulik, aga avatud ka suhtlema. Võib-olla kui keegi saab tuttavamaks, võib saada osa minu huvitavast huumorist. 😄 Muidu olen sõbralik tüüp.
     Vabal ajal veidi loen, jooksen, ujun, teen muusikat. Armastan lauamänge.
-    Lapikutes tegutsen kolmandat aastat.
+    Lapikutes tegutsen neljandat aastat.
 
 - name: Markus Renser
   age: 22
