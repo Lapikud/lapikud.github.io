@@ -193,3 +193,18 @@
     Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.
   activities:
     Olen 4. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
+
+- name: Lembitu Valdmets
+  age: 30
+  photo: lembitu_valdmets_mentor.jpg
+  speciality:  Arvutisüsteemid, magistri vilistlane
+  teams: ['Helpdesk']
+  contactMethods: 
+    - name: Discord
+      value: lempspc
+    - name: Messenger 
+      value: https://m.me/lemps.valdmets 
+  description: >
+    Ole mu piksel, kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
+  activities:
+    Olen hetkel pikima staažiga Lapik, kes on näinud mitmeid juhatusi ja pikaaegselt aidanud kaasa Lapikute edendamisele. Kui soovid coach'ingut selles osas, kuidas ka ise juhatuse liikmeks saada, võid minuga ühendust võtta.
