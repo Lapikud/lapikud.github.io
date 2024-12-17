@@ -27,3 +27,8 @@
   image: hextech_logo.svg
   url: https://hextech.ee/
   additionalText:
+
+- name: EAS & MKM
+  image: eas.svg
+  url: https://eis.ee/
+  additionalText:
