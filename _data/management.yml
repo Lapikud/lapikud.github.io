@@ -1,12 +1,11 @@
 # Management contact info
 
-
-- name: Eva-Marie Alasi
-  photo: Eva-Marie_Alasi.jpg
+- name: Christopher Rammul
+  photo: Christopher_Rammul.jpg
   role: Juhatuse esimees
-  subrole: Meie suur ema
-  email: evamarie@lapikud.ee
-  phone: +372 5341 4614
+  subrole: Meie suur isa
+  email: christopher@lapikud.ee
+  phone: +372 555 00 221
 
 - name: Erki Lasberg
   photo: Erki_Lasberg.jpg
@@ -22,16 +21,9 @@
   email: rene@lapikud.ee
   phone: +372 5690 7656
 
-- name: Christopher Rammul
-  photo: Christopher_Rammul.jpg
+- name: Hanno Vene
+  photo: Hanno_Vene.jpg
   role: Juhatuse liige
   subrole: Ürituste valdkonna juht
-  email: christopher@lapikud.ee
-  phone: +372 555 00 221
-
-- name: Karina Reisel
-  photo: Karina_Reisel_2024_2025.jpg
-  role: Juhatuse liige
-  subrole: Turunduse valdkonna juht
-  email: karina@lapikud.ee
-  phone: +372 529 84 02
+  email: hanno@lapikud.ee
+  phone: +372 5624 7690
