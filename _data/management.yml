@@ -14,16 +14,23 @@
   email: erki@lapikud.ee
   phone: +372 5907 9190
 
+- name: Kerdo Käärma
+  photo: Kerdo_Kaarma.jpg
+  role: Juhatuse liige
+  subrole: Tarkvaravaldkonna juht
+  email: kerdo@lapikud.ee
+  phone: +372 5807 2867
+
+- name: Reio Opromei
+  photo: Reio_Opromei.jpg
+  role: Juhatuse liige
+  subrole: Kultuurivaldkonna juht
+  email: reio@lapikud.ee
+  phone: +372 5315 8489
+
 - name: Rene Arumetsa
   photo: Rene_Arumetsa.jpg
   role: Juhatuse liige
-  subrole: Tarkvara valdkonna juht
+  subrole: Finantsjuht
   email: rene@lapikud.ee
   phone: +372 5690 7656
-
-- name: Hanno Vene
-  photo: Hanno_Vene.jpg
-  role: Juhatuse liige
-  subrole: Ürituste valdkonna juht
-  email: hanno@lapikud.ee
-  phone: +372 5624 7690
