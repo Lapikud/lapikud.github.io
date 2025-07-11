@@ -1,5 +1,26 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-.idea
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Bun
+bun.lock
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

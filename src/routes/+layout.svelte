@@ -33,20 +33,20 @@
 	{/if}
 	<div class="flex gap-x-4 text-xl z-20">
 		<Dropdown name="Meist">
-			<a href="/meist" class="block px-4 py-2 hover:bg-[#f0941d]">Mis teeme?</a>
-			<a href="/meist#liitu" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><Bot />Liitu meiega</a>
-			<a href="/mentorid" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><HandHeart />Mentorid</a>
-			<a href="/juhatus" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><Lectern />Juhatus</a>
+			<a href="/meist" class="block px-4 py-2 hover:bg-[#ffa80d]">Mis teeme?</a>
+			<a href="/meist#liitu" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><Bot />Liitu meiega</a>
+			<a href="/mentorid" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><HandHeart />Mentorid</a>
+			<a href="/juhatus" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><Lectern />Juhatus</a>
 		</Dropdown>
 		<Dropdown name="Üritused">
-			<a href="/kalender" class="flex gap-2 items-center px-4 py-2 border-b-[1px] hover:bg-[#f0941d]"><CalendarClock />Ürituste kalender</a>
-			<a href="https://asikarikas.ee/" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><Trophy />ASI karikas</a>
-			<a href="/koolitused" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><Presentation />Koolitused</a>
-			<a href="/rebased" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><Swords />Rebaste ristimine</a>
-			<a href="/remondikohvik" class="flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d]"><Coffee />Remondikohvik</a>
+			<a href="/kalender" class="flex gap-2 items-center px-4 py-2 border-b-1 border-black/5 hover:bg-[#ffa80d]"><CalendarClock />Ürituste kalender</a>
+			<a href="https://asikarikas.ee/" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><Trophy />ASI karikas</a>
+			<a href="/koolitused" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><Presentation />Koolitused</a>
+			<a href="/rebased" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><Swords />Rebaste ristimine</a>
+			<a href="/remondikohvik" class="flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d]"><Coffee />Remondikohvik</a>
 		</Dropdown>
-		<a class="w-auto px-4 py-2 hover:bg-[#f0941d] rounded-md" href="/kontakt">Kontakt</a>
-		<a class="w-auto flex gap-2 items-center px-4 py-2 hover:bg-[#f0941d] rounded-md" href="/helpdesk">Helpdesk</a>
+		<a class="w-auto px-4 py-2 hover:bg-[#ffa80d] hover:ring-1 hover:ring-black/5 rounded-md" href="/kontakt">Kontakt</a>
+		<a class="w-auto flex gap-2 items-center px-4 py-2 hover:bg-[#ffa80d] hover:ring-1 hover:ring-black/5 rounded-md" href="/helpdesk">Helpdesk</a>
 	</div>
 </nav>
 
