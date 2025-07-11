@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Enterprise Estonia",
+    "url": "https://eis.ee/",
+    "logopath": "src/lib/assets/partners/eis.svg",
+    "alt": "Enterprise Estonia logopath",
+    "sizeClass": "h-20"
+  },
+  {
+    "name": "Eesti Üliõpilaskondade Liit",
+    "url": "https://www.eyl.ee",
+    "logopath": "src/lib/assets/partners/eul.jpg",
+    "alt": "Eesti Üliõpilaskondade Liit logopath",
+    "sizeClass": "h-14"
+  },
+  {
+    "name": "Hextech",
+    "url": "https://hextech.ee",
+    "logopath": "src/lib/assets/partners/hextech_logo.svg",
+    "alt": "Hextech logopath",
+    "sizeClass": "h-28"
+  },
+  {
+    "name": "TalTechi IT-teaduskonna üliõpilaskogu",
+    "url": "https://ituk.ee/",
+    "logopath": "src/lib/assets/partners/ituk.svg",
+    "alt": "ITÜK logopath",
+    "sizeClass": "h-14"
+  },
+  {
+    "name": "Tallinna Tehnikaülikooli robotiklubi",
+    "url": "https://www.robotiklubi.ee",
+    "logopath": "src/lib/assets/partners/robotiklubi.png",
+    "alt": "Tallinna Tehnikaülikooli robotiklubi logopath",
+    "sizeClass": "h-24"
+  },
+  {
+    "name": "Tallinna Tehnikaülikooli (TalTech)",
+    "url": "https://taltech.ee",
+    "logopath": "src/lib/assets/partners/taltech_logo.png",
+    "alt": "Tallinna Tehnikaülikooli (TalTech) logopath",
+    "sizeClass": "h-32"
+  },
+  {
+    "name": "Tallinna Tehnikaülikooli (TalTech) infotehnoloogia teaduskond",
+    "url": "https://taltech.ee/infotehnoloogia-teaduskond",
+    "logopath": "src/lib/assets/partners/taltech_it_teaduskond_logo.png",
+    "alt": "Tallinna Tehnikaülikooli (TalTech) infotehnoloogia teaduskonna logopath",
+    "sizeClass": "h-32"
+  },
+  {
+    "name": "Technopol",
+    "url": "https://tehnopol.ee/",
+    "logopath": "src/lib/assets/partners/tehnopollogo.png",
+    "alt": "Technopol logopath",
+    "sizeClass": "h-20"
+  }
+]

@@ -1,0 +1,468 @@
+[
+    {
+        "year": 2023,
+        "members": [
+            {
+                "name": "Lembitu Valdmets",
+                "image": "lembitu_valdmets2.jpg"
+            },
+            {
+                "name": "Ott-Eerik Õun",
+                "image": "ott-eerik_oun.jpg"
+            },
+            {
+                "name": "Andree Uuetoa",
+                "image": "andree_uuetoa.jpg"
+            },
+            {
+                "name": "Pearu Vaalma",
+                "image": "siinus.jpg"
+            },
+            {
+                "name": "Karina Reisel",
+                "image": "karina_reisel.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2022,
+        "members": [
+            {
+                "name": "Carina Ruut",
+                "image": "carina_ruut.jpg"
+            },
+            {
+                "name": "Karl Eric Mõttus",
+                "image": "karl_eric_mottus.jpg"
+            },
+            {
+                "name": "Laura Anni",
+                "image": "laura_anni.jpg"
+            },
+            {
+                "name": "Anet Mitt",
+                "image": "anet_mitt.jpg"
+            },
+            {
+                "name": "Taeri Saar",
+                "image": "taeri_saar.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2021,
+        "members": [
+            {
+                "name": "Carina Ruut",
+                "image": "carina_ruut.jpg"
+            },
+            {
+                "name": "Andrei Gužovski",
+                "image": "andrei_guzovski.jpg"
+            },
+            {
+                "name": "Kristjan Kõiv",
+                "image": "kristjan_koiv.png"
+            },
+            {
+                "name": "Ingrid-Regina Vähi",
+                "image": "ingrid_regina_vahi.jpg"
+            },
+            {
+                "name": "Marcus Pruks",
+                "image": "marcus_pruks.JPG"
+            }
+        ]
+    },
+    {
+        "year": 2020,
+        "members": [
+            {
+                "name": "Liisa Heinla",
+                "image": "liisa_heinla.jpg"
+            },
+            {
+                "name": "Andrei Gužovski",
+                "image": "andrei_guzovski.jpg"
+            },
+            {
+                "name": "Mattias Vahtra",
+                "image": "mattias_vahtra.jpg"
+            },
+            {
+                "name": "Sander Kornet",
+                "image": "sander_kornet.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2019,
+        "members": [
+            {
+                "name": "Risto Leesmäe",
+                "image": "risto_leesmäe.jpg"
+            },
+            {
+                "name": "Lembitu Valdmets",
+                "image": "lembitu_valdmets.jpg"
+            },
+            {
+                "name": "Hanno Vene",
+                "image": "hanno_vene.jpg"
+            },
+            {
+                "name": "Peter-Sten Annus",
+                "image": "peter-sten_annus.jpg"
+            },
+            {
+                "name": "Roosi-Ann Tõlgu",
+                "image": "roosi-ann_tõlgu.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2018,
+        "members": [
+            {
+                "name": "Hanno Vene",
+                "image": "hanno_vene.jpg"
+            },
+            {
+                "name": "Kaarel Pärtel",
+                "image": "kaarel_pärtel.jpg"
+            },
+            {
+                "name": "Martin Oblikas",
+                "image": "martin_oblikas.jpg"
+            },
+            {
+                "name": "Risto Leesmäe",
+                "image": "risto_leesmäe.jpg"
+            },
+            {
+                "name": "Asko Närep",
+                "image": "asko_närep.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2017,
+        "members": [
+            {
+                "name": "Kertu Nurmberg",
+                "image": "kertu_nurmberg.jpg"
+            },
+            {
+                "name": "Tõnis Piirits",
+                "image": "tõnis_piirits.jpg"
+            },
+            {
+                "name": "Lembitu Valdmets",
+                "image": "lembitu_valdmets.jpg"
+            },
+            {
+                "name": "Rasmus Koit",
+                "image": "rasmus_koit.jpg"
+            },
+            {
+                "name": "Sigrid Kirss",
+                "image": "sigrid_kirss.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2016,
+        "members": [
+            {
+                "name": "Kertu Pikk",
+                "image": "kertu_pikk_2016.jpg"
+            },
+            {
+                "name": "Kertu Nurmberg",
+                "image": "kertu_nurmberg.jpg"
+            },
+            {
+                "name": "Lembitu Valdmets",
+                "image": "lembitu_valdmets.jpg"
+            },
+            {
+                "name": "Nansy Ly Endma",
+                "image": "nansy_ly_endma.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2015,
+        "members": [
+            {
+                "name": "Berta Härsing",
+                "image": "berta_harsing.jpg"
+            },
+            {
+                "name": "Ann-Claire Utt",
+                "image": "ann-claire_utt.jpg"
+            },
+            {
+                "name": "Oole Tuurmaa",
+                "image": "oole_tuurmaa.png"
+            },
+            {
+                "name": "Pärlin Luhila",
+                "image": "pärlin_luhila.png"
+            },
+            {
+                "name": "Kertu Pikk",
+                "image": "kertu_pikk_2015.png"
+            }
+        ]
+    },
+    {
+        "year": 2014,
+        "members": [
+            {
+                "name": "Karli Oruste",
+                "image": "karli_oruste.jpg"
+            },
+            {
+                "name": "Berta Härsing",
+                "image": "berta_harsing.jpg"
+            },
+            {
+                "name": "Siim Talts",
+                "image": "siim_talts.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2013,
+        "members": [
+            {
+                "name": "Märt Lepik",
+                "image": "märt_lepik.jpg"
+            },
+            {
+                "name": "Karli Oruste",
+                "image": "karli_oruste.jpg"
+            },
+            {
+                "name": "Aleksandr Požidajev",
+                "image": "aleksandr_požidajev.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2012,
+        "members": [
+            {
+                "name": "Märt Lepik",
+                "image": "märt_lepik.jpg"
+            },
+            {
+                "name": "Helen Tiitma",
+                "image": "helen_tiitma.jpg"
+            },
+            {
+                "name": "Raul Aassalu",
+                "image": "raul_aassalu.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2011,
+        "members": [
+            {
+                "name": "Märt Lepik",
+                "image": "märt_lepik.jpg"
+            },
+            {
+                "name": "Risto Maasing",
+                "image": "risto_maasing.jpg"
+            },
+            {
+                "name": "Roel Rahkema",
+                "image": "roel_rahkema.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2010,
+        "members": [
+            {
+                "name": "Margus Mahler",
+                "image": "margus_mahler.jpg"
+            },
+            {
+                "name": "Janne Raudsepp",
+                "image": "janne_raudsepp.jpg"
+            },
+            {
+                "name": "Tõnis Märtmaa",
+                "image": "tõnis_märtmaa.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2009,
+        "members": [
+            {
+                "name": "Margus Mahler",
+                "image": "margus_mahler.jpg"
+            },
+            {
+                "name": "Risto Maasing",
+                "image": "risto_maasing.jpg"
+            },
+            {
+                "name": "Tõnis Trumaa",
+                "image": "tõnis_trumaa.jpg"
+            },
+            {
+                "name": "Tõnis Märtmaa",
+                "image": "tõnis_märtmaa.jpg"
+            },
+            {
+                "name": "Janne Raudsepp",
+                "image": "janne_raudsepp.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2008,
+        "members": [
+            {
+                "name": "Tõnis Märtmaa",
+                "image": "tõnis_märtmaa.jpg"
+            },
+            {
+                "name": "Kristjan Haavik",
+                "image": "kristjan_haavik_2008.jpg"
+            },
+            {
+                "name": "Risto Maasing",
+                "image": "risto_maasing.jpg"
+            },
+            {
+                "name": "Karin Viil",
+                "image": "karin_viil.jpg"
+            },
+            {
+                "name": "Petri Behm",
+                "image": "petri_behm.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2007,
+        "members": [
+            {
+                "name": "Kristjan Haavik",
+                "image": "kristjan_haavik_2007.jpg"
+            },
+            {
+                "name": "Priit Lepp",
+                "image": "priit_lepp.jpg"
+            },
+            {
+                "name": "Ave Tarend",
+                "image": "ave_tarend.jpg"
+            },
+            {
+                "name": "Õnne Laanmets",
+                "image": "õnne_laanmets.jpg"
+            },
+            {
+                "name": "Tõnis Märtmaa",
+                "image": "tõnis_märtmaa.jpg"
+            },
+            {
+                "name": "Margus Mahler",
+                "image": "margus_mahler.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2006,
+        "members": [
+            {
+                "name": "Aive Uus",
+                "image": "aive_uus.jpg"
+            },
+            {
+                "name": "Margus Mahler",
+                "image": "margus_mahler.jpg"
+            },
+            {
+                "name": "Kristjan Haavik",
+                "image": "kristjan_haavik_2007.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2005,
+        "members": [
+            {
+                "name": "Aive Uus",
+                "image": "aive_uus.jpg"
+            },
+            {
+                "name": "Eret Rääk",
+                "image": "eret_rääk.jpg"
+            },
+            {
+                "name": "Kristjan Haavik",
+                "image": "kristjan_haavik_2007.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2004,
+        "members": [
+            {
+                "name": "Aive Uus",
+                "image": "aive_uus.jpg"
+            },
+            {
+                "name": "Eret Rääk",
+                "image": "eret_rääk.jpg"
+            },
+            {
+                "name": "Kristjan Haavik",
+                "image": "kristjan_haavik_2007.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2003,
+        "members": [
+            {
+                "name": "Aive Uus",
+                "image": "aive_uus.jpg"
+            },
+            {
+                "name": "Jaak Lember",
+                "image": "jaak_lember.jpg"
+            },
+            {
+                "name": "Siim Valgeväli",
+                "image": "siim_valgeväli.jpg"
+            }
+        ]
+    },
+    {
+        "year": 2002,
+        "members": [
+            {
+                "name": "Lauri Till",
+                "image": "lauri_till.jpg"
+            },
+            {
+                "name": "Jaak Lember",
+                "image": "jaak_lember.jpg"
+            },
+            {
+                "name": "Meelik Gornoi",
+                "image": "meelik_gornoi.jpg"
+            }
+        ]
+    }
+]

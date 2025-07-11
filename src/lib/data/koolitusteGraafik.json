@@ -1,0 +1,25 @@
+{
+    "plannedEvents": [
+        {
+            "eventName": "Suhtlemiskoolitus",
+            "date": "2025-03-12",
+            "time": "18:30 - 19:30",
+            "location": "Akadeemia tee 5, Tallinn",
+            "collaborator": "T-teater"
+        },
+        {
+            "eventName": "DnD väljaõpetus",
+            "date": "2025-03-25",
+            "time": "19:00 - 23:00",
+            "location": "Akadeemia tee 5, Tallinn",
+            "collaborator": ""
+        },
+        {
+            "eventName": "Andmebaasi workshop",
+            "date": "2025-03-26",
+            "time": "-",
+            "location": "Akadeemia tee 5, Tallinn",
+            "collaborator": ""
+        }
+    ]
+}
