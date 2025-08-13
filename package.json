@@ -11,17 +11,18 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^4.0.0",
-		"@sveltejs/kit": "^2.22.5",
-		"@sveltejs/vite-plugin-svelte": "^5.1.0",
+		"@sveltejs/kit": "^2.29.0",
+		"@sveltejs/vite-plugin-svelte": "^5.1.1",
 		"autoprefixer": "^10.4.21",
-		"svelte": "^5.35.5",
+		"svelte": "^5.38.1",
 		"svelte-adapter-bun": "^0.5.2",
-		"svelte-check": "^4.2.2",
+		"svelte-check": "^4.3.1",
 		"tailwindcss": "^4.1.11",
 		"vite": "^6.3.5"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.11",
-		"lucide-svelte": "^0.474.0"
+		"lucide-svelte": "^0.474.0",
+		"svelte-maplibre": "^1.2.0"
 	}
 }
