@@ -71,9 +71,14 @@
         </div>
     </div>
     <h2 class="text-3xl font-light pb-2 pt-8">Asukoht</h2>
-    <p class="pb-4 opacity-60">
-        Saab 11, 37, 83, 91 bussiga Keemia peatusest või Tehnikaülikool
-        peatusest 10, 27, 33, 36, 45 bussiga.
+    <p class="pb-4 text-neutral-500">
+        Saab <span class="text-[#E69635]"
+            >11, 37, 83, 91 bussiga Keemia peatusest</span
+        >
+        või
+        <span class="text-[#E69635]"
+            >Tehnikaülikool peatusest 10, 27, 33, 36, 45 bussiga.</span
+        >
     </p>
     <div class="w-full h-96 rounded-lg overflow-hidden">
         <MapLibre
