@@ -71,7 +71,7 @@
         </div>
     </div>
     <h2 class="text-3xl font-light pb-2 pt-8">Asukoht</h2>
-    <p class="pb-4 text-neutral-500">
+    <p class="pb-4 text-neutral-500 text-lg">
         Saab <span class="text-[#E69635]"
             >11, 37, 83, 91 bussiga Keemia peatusest</span
         >
