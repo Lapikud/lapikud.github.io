@@ -38,7 +38,7 @@
             </p>
         </div>
         <div>
-            <h2 class="text-3xl pb-4">Mittetulundusühing Lapikud</h2>
+            <h2 class="text-3xl pb-4">MTÜ Lapikud</h2>
 
             <p class="text-xl font-medium pb-2">
                 Aadress: <span class="text-[#E69635] font-normal"
@@ -71,7 +71,7 @@
         </div>
     </div>
     <h2 class="text-3xl font-light pb-2 pt-8">Asukoht</h2>
-    <p class="pb-4 text-neutral-500 text-lg">
+    <p class="pb-4 text-lg">
         Saab <span class="text-[#E69635]"
             >11, 37, 83, 91 bussiga Keemia peatusest</span
         >

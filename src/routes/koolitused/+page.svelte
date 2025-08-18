@@ -25,7 +25,7 @@
 </div>
 <div class="max-w-[96rem] mx-auto flex flex-col py-4 px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 py-16">
-        <div class="flex flex-col">
+        <div class="flex-col hidden">
             <h2 class="text-4xl font-light pb-4">Mis on plaanis?</h2>
             <ul class="space-y-4">
                 {#each uritused as uritus}
@@ -71,6 +71,28 @@
                 esindatud äriline kui ka praktiline pool. Meie koolitused ja üritused
                 on suurepärane võimalus kohtuda sarnaselt mõtlevate inimestega, luua
                 uusi kontakte ja saada osa meie aktiivsest ja toetavast kogukonnast.
+            </p>
+        </div>
+        <div class="flex flex-col">
+            <h2 class="text-4xl font-light pb-4">Mida pakkume?</h2>
+            <p class="text-lg">
+                Meie koolitused katavad IT-valdkonna olulisimaid tööriistu ja
+                oskusi. Tutvustame <strong class="text-[#f0941d]">Git</strong>
+                versioonihaldust, mis on arendaja ning haldaja igapäevase töö kasuks,
+                ning
+                <strong class="text-[#f0941d]">Python</strong>
+                ja <strong class="text-[#f0941d]">Java</strong>
+                programmeerimiskeeli, mis annavad tugeva aluse algkursustel ning
+                edasiseks karjääriks IT-sektoris.
+                <br /><br />
+                Lisaks tehnilisele poolele pöörame tähelepanu ka karjääri ehitamisele
+                - õpetame koostama muljetavaldavat
+                <strong class="text-[#f0941d]">CV-d</strong>
+                ja jagame praktilisi nõuandeid
+                <strong class="text-[#f0941d]">tööotsinguks</strong>. Meie
+                eesmärk on anda tudengitele kõik vajalikud tööriistad, et nad
+                saaksid edukalt siseneda IT-tööturule ja alustada oma karjääri.
+                <br /><br />
             </p>
         </div>
     </div>

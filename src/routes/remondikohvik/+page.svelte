@@ -37,7 +37,7 @@
         />
     </div>
     <div class="max-w-[96rem] mx-auto flex flex-col py-16 px-8">
-        <div class="grid lg:grid-cols-2 gap-0 lg:gap-16">
+        <div class="grid lg:grid-cols-2 gap-16">
             <div class="flex flex-col">
                 <h2 class="text-4xl font-light pb-4">Mis on remondikohvik?</h2>
                 <p class="text-lg">
@@ -69,7 +69,7 @@
             </div>
         </div>
         <div>
-            <h1 class="text-4xl font-light pb-4">Koostööpartnerid</h1>
+            <h1 class="text-4xl font-light pb-4 pt-16">Koostööpartnerid</h1>
             <div class="flex flex-row gap-x-4">
                 <div class="flex justify-center items-center">
                     <a href="https://www.tthk.ee/">

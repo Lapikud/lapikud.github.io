@@ -1,24 +1,24 @@
 <script>
-	// Importing dropdown component	
-	import Dropdown from '$lib/dropdown.svelte';
+    // Importing dropdown component
+    import Dropdown from "$lib/dropdown.svelte";
 
-	// Importing page store
-	import { page } from '$app/stores';
+    // Importing page store
+    import { page } from "$app/stores";
 
-	import '../app.css';
-	import logo from '$lib/assets/logo.svg';
+    import "../app.css";
+    import logo from "$lib/assets/logo.svg";
 
-	// Icon imports (Lucide)
-	import Coffee from 'lucide-svelte/icons/coffee';
-	import CalendarClock from 'lucide-svelte/icons/calendar-clock';
-	import Presentation from 'lucide-svelte/icons/presentation';
-	import Swords from 'lucide-svelte/icons/swords';
-	import Lectern from 'lucide-svelte/icons/lectern';
-	import Bot from 'lucide-svelte/icons/bot';
-	import HandHeart from 'lucide-svelte/icons/hand-heart';
-	import Trophy from 'lucide-svelte/icons/trophy';
+    // Icon imports (Lucide)
+    import Coffee from "lucide-svelte/icons/coffee";
+    import CalendarClock from "lucide-svelte/icons/calendar-clock";
+    import Presentation from "lucide-svelte/icons/presentation";
+    import Swords from "lucide-svelte/icons/swords";
+    import Lectern from "lucide-svelte/icons/lectern";
+    import Bot from "lucide-svelte/icons/bot";
+    import HandHeart from "lucide-svelte/icons/hand-heart";
+    import Trophy from "lucide-svelte/icons/trophy";
 
-	let { children } = $props();
+    let { children } = $props();
 </script>
 
 <nav class="w-full fixed z-20 inline-flex items-center h-32 p-8 justify-evenly bg-white">
@@ -51,24 +51,30 @@
 </nav>
 
 <div class="pt-32">
-	{@render children()}
+    {@render children()}
 </div>
 
 <footer class="w-full bg-black text-[#f0941d] text-center p-8">
-	<div class="grid grid-cols-2 max-w-[64rem] mx-auto">
-		<div class="text-left">
-			<h3 class="pb-4 text-2xl">MTÜ Lapikud</h3>
-			<p>Aadress: Akadeemia tee 5, 12616 Tallinn, Eesti</p>
-			<p>E-post: +372 58 160 799</p>
-			<p>Messenger: m.me/Lapikud</p>
-			<p>Reg. kood: 801 67 145</p>
-			<p>Swedbank: EE812200221019551756</p>
-		</div>
-		<div class="text-left">
-			<h3 class="pb-4 text-2xl">Meie sotsiaalid!</h3>
-			<p>Facebook: <a href="https://www.facebook.com/Lapikud">Lapikud</a></p>
-			<p>Instagram: <a href="https://www.instagram.com/lapikud/">@Lapikud</a></p>
-		</div>
-	</div>
-	<p class="py-8">&copy; 2025 MTÜ Lapikud</p>
+    <div class="grid grid-cols-2 max-w-[64rem] mx-auto">
+        <div class="text-left">
+            <h3 class="pb-4 text-2xl">MTÜ Lapikud</h3>
+            <p>Aadress: Akadeemia tee 5, 12616 Tallinn, Eesti</p>
+            <p>E-post: +372 58 160 799</p>
+            <p>Messenger: m.me/Lapikud</p>
+            <p>Reg. kood: 801 67 145</p>
+            <p>Swedbank: EE812200221019551756</p>
+        </div>
+        <div class="text-left">
+            <h3 class="pb-4 text-2xl">Meie sotsiaalid!</h3>
+            <p>
+                Facebook: <a href="https://www.facebook.com/Lapikud">Lapikud</a>
+            </p>
+            <p>
+                Instagram: <a href="https://www.instagram.com/lapikud/"
+                    >@Lapikud</a
+                >
+            </p>
+        </div>
+    </div>
+    <p class="py-8">&copy; 2025 MTÜ Lapikud</p>
 </footer>
