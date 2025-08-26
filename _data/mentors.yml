@@ -1,44 +1,69 @@
 # Mentors
 
+- name: Agnes Triin Saga
+  age: 27
+  photo: agnes_triin_saga_mentor.jpg
+  speciality: Süsteemi administaator
+  teams: ['Helpdesk']
+  term: 2
+  contactMethods:
+    - name: Discord
+      value: dragons4president
+  description: >
+    Arvuti huvilisi ja motiveeritud inimesi 
+  activities:
+    Abivalmis, nõus töötama nõu ja jõuga
 
-- name: Eva-Marie Alasi 
-  age: 26
-  photo: eva_marie_alasi_mentor.jpg
-  speciality: IT-süsteemide administreemine
-  teams: ['Helpdesk','Üritused']
+- name: Christopher Rammul
+  age: 23
+  photo: christopher_rammul_mentor.jpg
+  speciality: Mehhatroonika 
+  teams: ['Üritused', 'Juhatus']
+  contactMethods: 
+    - name: Discord
+      value: lummarc 
+    - name: Facebook 
+      value: https://www.facebook.com/profile.php?id=100009719855131 
+  description: >
+    Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada. 
+    Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.
+  activities:
+    Olen 4. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
+
+- name: Erki Lasberg
+  age: 22
+  photo: erki_lasberg_mentor.jpg 
+  speciality: IT süsteemide administreerimine
+  teams: ['Helpdesk', 'Juhatus']
   term: 2 
   contactMethods:
     - name: Messenger
-      value: https://m.me/eva.alasi
-    - name: discord
-      value: ultimate_evamarie 
-    - name: email
-      value: ema@lapikud.ee
-    - name: telefoninumber
-      value: '+3725351614' 
-  description: Jutukaid ja huvi omavaid piksleid
-  activities: >
-    Olen ambitsioonikas, kuid veidi tagasihoidlik tüdruk.
-    Minuga ei ole kunagi igav, sest kui selline tunne tekib teen kohe kino õhtu või lihtsalt chilli.
-    Olen ka alati kõigi jaoks olemas, sest veedan suure osa oma päevast Lapikutes.
-    Vajadusel aitan ka kodutöödega, kui oskan. Minu suurimad plussid on ambitsioon, lahkus, usaldusväärsus ja pealehakkamine.
-    Oskan ka hästi laulda, seega mind sa karaokes ei võida 😄
-
-- name: Andres Kase
-  age: 24
-  photo: andres_kase_mentor.jpg
-  speciality: Mehhatroonika
-  teams: ['Helpdesk', 'Mentorite juht']
-  term: 3
-  contactMethods:
-    - name: Facebook
-      value: https://www.facebook.com/sass.kase
+      value: https://m.me/erki.lasberg 
+    - name: Discord 
+      value: the_legend_27__ 
+  description: >
+    Ma ootan piksliteks inimesi kellel lööb silma särama kui nad katkist tehnikat näevad.   
+  activities:
+    Ma olen väga hands on inimene kes püüab probleemidele läheneda mitmel erineval viisil ja ei anna alla kui mõni nendest viisidest ei tööta.   
+  
+- name: Jürjo Eibak
+  age: 26
+  photo: jürjo_eibak_mentor.jpg
+  speciality: Salastatud
+  teams: ['Üritused']
+  contactMethods: 
     - name: Discord
-      value: hawx11#6234
-  description: Ma ootan peamiselt tehnika huvilisi piksleid, kuid iga piksel on hea piksel.
-  activities: >
-    Üldiselt tagasihoidlik, kuid abivalmis ja kohati jutukas. 
-    Keskmine mehaaniliste lahenduste disainimise nautleja ja elektroonika huviline.
+      value: edgar5407
+    - name: Messenger
+      value: https://m.me/jürjo.eibak 
+  description: >
+    Minu pikselile meeldib Lapikute kontoris sotsialiseerida ja tegevuste kõrvale külma õlut nautida.
+    Üheskoos filmide vaatamine, lauamängude, arvutimängude ja DnD mängimine on alati meelepärane viis üksikute õhtute sisustamiseks. 
+  activities:
+    Lapikute liikmetega olen seltskondlik ja jutukas. Meeldib kõigiga kontori ruumides filme vaadata ja erinevaid mänge mängida.
+    Nende seast on alati kõige huvitavamad DnD kampaaniaid. Olen juba mitu aastat dungeon masteri rolli kandnud ja olen selles päris osav. Kõik minu pikslid on oodatud minu kampaaniatega liituma ;)  
+
+    Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks. 
 
 - name: Karina Reisel
   age: 21
@@ -60,91 +85,44 @@
     Ma olen jube tegus inimene. Tõenäoliselt näed sa mind tihti ülikooli ja Lapi üritustel 🤟
     Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms. 
 
-- name: Aimar Tuul
-  age: 27
-  photo: aimar_tuul_mentor.jpg
-  speciality: IT-süsteemide arendus
-  teams:  ['Tarkvara']
-  term: 5
+- name: Katri Lotamõis
+  age: 
+  photo: katri_lotamõis_mentor.jpg
+  speciality: 
+  teams: ['Kultuur', 'Tarkvara']
+  term:  
   contactMethods:
-    - name: Messenger
-      value: https://m.me/aimar.tuul
     - name: Discord
-      value: aimar5749
-  description: Kõik kellel on tahtmist mind mentoriks ja kes ei karda rahulikkumat tüüpi. :)
+      value: swagmuffin88
+    - name: Messenger
+      value: 
+  description: >
+    write your description 
   activities: >
-    Tarkvara huvi on mul suur, eriti programmeerimise. Proge kogemust olen enamuses saanud nii palju kui koolis olen õppinud või veidi siit-sealt.
-    Nagu öeldud sai, olen pigem rahulik, aga avatud ka suhtlema. Võib-olla kui keegi saab tuttavamaks, võib saada osa minu huvitavast huumorist. 😄 Muidu olen sõbralik tüüp.
-    Vabal ajal veidi loen, jooksen, ujun, teen muusikat. Armastan lauamänge.
-    Lapikutes tegutsen neljandat aastat.
+    write your activities 
 
-- name: Markus Renser
+- name: Kerdo Käärma
   age: 22
-  photo: markus_renser_mentor.jpg
-  speciality: IT-süsteemide arendus
-  teams: ['Tarkvara']
-  term: 3 
-  contactMethods:
-    - name: Messenger
-      value: https://m.me/markus.renser
-    - name: Discord
-      value: kanelmo 
-  description: >
-    Kui oled huvitatud tarkvaraarendusest ning otsid kedagi, kes juhendaks ja suunaks ning vajadusel ka kooli asjadega aitaks, siis olen sinu jaoks olemas. 🙂
-  activities: >
-    Olen 3. kursuse IADB tudeng ja töötan kooli kõrvalt tarkvara konsultantina. Olen rõõmsameelne, sõbralik ja mõistev inimene. Harrastan jõu- ja vastupidavustreeningut.
-    Vabal ajal loen huvitavaid raamatuid või mängin strateegiamänge arvutis. 
-
-- name: Erki Lasberg
-  age: 22
-  photo: erki_lasberg_mentor.jpg 
-  speciality: IT süsteemide administreerimine
-  teams: ['Helpdesk', 'Juhatus']
-  term: 2 
-  contactMethods:
-    - name: Messenger
-      value: https://m.me/erki.lasberg 
-    - name: Discord 
-      value: the_legend_27__ 
-  description: >
-    Ma ootan piksliteks inimesi kellel lööb silma särama kui nad katkist tehnikat näevad.   
-  activities:
-    Ma olen väga hands on inimene kes püüab probleemidele läheneda mitmel erineval viisil ja ei anna alla kui mõni nendest viisidest ei tööta.   
-   
-- name: Kadri Kaus
-  age: 20
-  photo: kadri_kaus_mentor.jpg
-  speciality: it sys admin
-  teams: ['Turundus']
-  term: 3 
-  contactMethods:
-    - name: Messenger
-      value: https://me.m/kadrikaus.k
-  description: >
-    Ootan oma piksliteks inimesi, kes on pigem iseloomult rahulikud. 
-  activities: >
-    Olen aktiivne suhtleja ning alati valmis aitama. 
-
-- name: Agnes Triin Saga
-  age: 27
-  photo: agnes_triin_saga_mentor.jpg
-  speciality: Süsteemi administaator
-  teams: ['Helpdesk']
-  term: 2
+  photo: kerdo_käärma_mentor.jpg
+  speciality: IT süsteemide arendus
+  teams: ['Tarkvara', 'Kultuur', 'Juhatus']
+  term: 3
   contactMethods:
     - name: Discord
-      value: dragons4president
+      value: .kroles
+    - name: Messenger
+      value: 
   description: >
-    Arvuti huvilisi ja motiveeritud inimesi 
-  activities:
-    Abivalmis, nõus töötama nõu ja jõuga
-    
+    write your description 
+  activities: >
+    write your activities 
+
 - name: Rene Arumetsa
-  age: 28
+  age: 29
   photo: rene_arumetsa_mentor.jpg
   speciality: it süsteemide administeerimine
   teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
-  term: 2
+  term: 3
   contactMethods:
     - name: Messenger
       value: https://m.me/rene.arumetsa
@@ -155,41 +133,7 @@
     - name: Telegram
       value: https://t.me/Renkarus  
   description: >
-    Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigega läbi 
+    Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigiga läbi 
   activities:
     Olen rahulik, vaikne lapik. Meeldib asjade kallal nokitseda. Abivalmis olen, et kui mõnes aines raskusi siis üritan aidata. 
 
-- name: Jürjo Eibak
-  age: 26
-  photo: jürjo_eibak_mentor.jpg
-  speciality: Salastatud
-  teams: ['Üritused']
-  contactMethods: 
-    - name: Discord
-      value: edgar5407
-    - name: Messenger
-      value: https://m.me/jürjo.eibak 
-  description: >
-    Minu pikselile meeldib Lapikute kontoris sotsialiseerida ja tegevuste kõrvale külma õlut nautida.
-    Üheskoos filmide vaatamine, lauamängude, arvutimängude ja DnD mängimine on alati meelepärane viis üksikute õhtute sisustamiseks. 
-  activities:
-    Lapikute liikmetega olen seltskondlik ja jutukas. Meeldib kõigiga kontori ruumides filme vaadata ja erinevaid mänge mängida.
-    Nende seast on alati kõige huvitavamad DnD kampaaniaid. Olen juba mitu aastat dungeon masteri rolli kandnud ja olen selles päris osav. Kõik minu pikslid on oodatud minu kampaaniatega liituma ;)  
-
-    Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks. 
-
-- name: Christopher Rammul
-  age: 22
-  photo: christopher_rammul_mentor.jpg
-  speciality: Mehhatroonika 
-  teams: ['Üritused', 'Juhatus']
-  contactMethods: 
-    - name: Discord
-      value: lummarc 
-    - name: Facebook 
-      value: https://www.facebook.com/profile.php?id=100009719855131 
-  description: >
-    Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada. 
-    Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.
-  activities:
-    Olen 4. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
