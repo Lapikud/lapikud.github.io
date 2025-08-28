@@ -11,14 +11,14 @@
       value: dragons4president
   description: >
     Arvuti huvilisi ja motiveeritud inimesi 
-  activities:
+  activities: >
     Abivalmis, nõus töötama nõu ja jõuga
 
 - name: Christopher Rammul
   age: 23
   photo: christopher_rammul_mentor.jpg
   speciality: Mehhatroonika 
-  teams: ['Üritused', 'Juhatus']
+  teams: ['Kultuur', 'Juhatus']
   contactMethods: 
     - name: Discord
       value: lummarc 
@@ -27,7 +27,7 @@
   description: >
     Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada. 
     Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.
-  activities:
+  activities: >
     Olen 4. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
 
 - name: Erki Lasberg
@@ -35,22 +35,22 @@
   photo: erki_lasberg_mentor.jpg 
   speciality: IT süsteemide administreerimine
   teams: ['Helpdesk', 'Juhatus']
-  term: 2 
+  term: 3
   contactMethods:
-    - name: Messenger
-      value: https://m.me/erki.lasberg 
     - name: Discord 
       value: the_legend_27__ 
+    - name: Messenger
+      value: https://m.me/erki.lasberg 
   description: >
     Ma ootan piksliteks inimesi kellel lööb silma särama kui nad katkist tehnikat näevad.   
-  activities:
+  activities: >
     Ma olen väga hands on inimene kes püüab probleemidele läheneda mitmel erineval viisil ja ei anna alla kui mõni nendest viisidest ei tööta.   
   
 - name: Jürjo Eibak
   age: 26
   photo: jürjo_eibak_mentor.jpg
   speciality: Salastatud
-  teams: ['Üritused']
+  teams: ['Kultuur']
   contactMethods: 
     - name: Discord
       value: edgar5407
@@ -59,17 +59,17 @@
   description: >
     Minu pikselile meeldib Lapikute kontoris sotsialiseerida ja tegevuste kõrvale külma õlut nautida.
     Üheskoos filmide vaatamine, lauamängude, arvutimängude ja DnD mängimine on alati meelepärane viis üksikute õhtute sisustamiseks. 
-  activities:
+  activities: >
     Lapikute liikmetega olen seltskondlik ja jutukas. Meeldib kõigiga kontori ruumides filme vaadata ja erinevaid mänge mängida.
     Nende seast on alati kõige huvitavamad DnD kampaaniaid. Olen juba mitu aastat dungeon masteri rolli kandnud ja olen selles päris osav. Kõik minu pikslid on oodatud minu kampaaniatega liituma ;)  
 
     Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks. 
 
 - name: Karina Reisel
-  age: 21
+  age: 22
   photo: karina_reisel_mentor.jpg
   speciality: Riistvara arendus ja programmeerimine
-  teams: ['Turundus']
+  teams: ['Kultuur']
   term: 3 
   contactMethods:
     - name: Discord
@@ -105,7 +105,7 @@
   age: 22
   photo: kerdo_käärma_mentor.jpg
   speciality: IT süsteemide arendus
-  teams: ['Tarkvara', 'Kultuur', 'Juhatus']
+  teams: ['Kultuur', 'Tarkvara', 'Juhatus']
   term: 3
   contactMethods:
     - name: Discord
@@ -113,9 +113,29 @@
     - name: Messenger
       value: 
   description: >
-    write your description 
+    Minu piksel on huvitatud nii enda kui ka tarkvara arendamisest. 
+    Ta julgeb tunnistada enda vigu ja ei karda juurde õppida seda, mis esmapilgul tundub võõras.
+    Ta esitab küsimusi, kui ei saa aru, ning ei anna alla, kui tekib ootamatuid takistusi.
   activities: >
-    write your activities 
+    Olen alati valmis aitama. Olgu küsimus ülikooli, Lapikute või millegi muuga seoses, küll koos leiame vastused.
+    Meeldib metsas jalutamas käia, jõusaalis raskuseid ringi liigutada ja sulgpalli mängida. Mind huvitab ka filosoofia.
+    FromSoftware fanboy ja anime enjoyer.
+
+- name: Reio Opromei
+  age: 24
+  photo: reio_opromei_mentor.jpg
+  speciality: IT süsteemide arendus
+  teams: ['Kultuur', 'Juhatus']
+  term: 
+  contactMethods:
+    - name: Discord
+      value: vispel
+    - name: Messenger
+      value: 
+  description: >
+    
+  activities: >
+     
 
 - name: Rene Arumetsa
   age: 29
@@ -124,16 +144,16 @@
   teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
   term: 3
   contactMethods:
-    - name: Messenger
-      value: https://m.me/rene.arumetsa
     - name: Discord
       value: renxik
+    - name: Messenger
+      value: https://m.me/rene.arumetsa
     - name: Telefoninumber
       value: '+372 5690 7656'
     - name: Telegram
       value: https://t.me/Renkarus  
   description: >
     Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigiga läbi 
-  activities:
+  activities: >
     Olen rahulik, vaikne lapik. Meeldib asjade kallal nokitseda. Abivalmis olen, et kui mõnes aines raskusi siis üritan aidata. 
 
