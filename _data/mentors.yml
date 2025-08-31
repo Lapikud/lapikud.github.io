@@ -10,7 +10,7 @@
     - name: Discord
       value: dragons4president
   description: >
-    Arvuti huvilisi ja motiveeritud inimesi 
+    Arvuti huvilisi ja motiveeritud inimesi.
   activities: >
     Abivalmis, nõus töötama nõu ja jõuga.
     Mulle meeldib star trek ja üldiselt sci-fi ning fantaasia, mind huvitavad reisimine, viipekeel ja strateegilised lauamängud. Tegelenud põhiliselt windowsi süsteemide (administreerimisega).
@@ -89,14 +89,12 @@
 - name: Katri Lotamõis
   age: 29
   photo: katri_lotamõis_mentor.jpg
-  speciality: 
+  speciality: Tarkvaraarendus
   teams: ['Kultuur', 'Tarkvara']
   term:  
   contactMethods:
     - name: Discord
       value: swagmuffin88
-    - name: Messenger
-      value: 
   description: >
     write your description 
   activities: >
