@@ -110,7 +110,7 @@
   term: 3
   contactMethods:
     - name: Discord
-      value: .kroles
+      value: krooles
     - name: Messenger
       value: https://m.me/kerdo.kaarma
   description: >
