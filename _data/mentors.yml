@@ -4,13 +4,13 @@
   age: 28
   photo: agnes_triin_saga_mentor.jpg
   speciality: Süsteemi administaator
-  teams: ['Helpdesk']
+  teams: ["Helpdesk"]
   term: 3
   contactMethods:
     - name: Discord
       value: dragons4president
   description: >
-    Arvuti huvilisi ja motiveeritud inimesi 
+    Arvuti huvilisi ja motiveeritud inimesi
   activities: >
     Abivalmis, nõus töötama nõu ja jõuga.
     Mulle meeldib star trek ja üldiselt sci-fi ning fantaasia, mind huvitavad reisimine, viipekeel ja strateegilised lauamängud. Tegelenud põhiliselt windowsi süsteemide (administreerimisega).gi
@@ -18,60 +18,60 @@
 - name: Christopher Rammul
   age: 23
   photo: christopher_rammul_mentor.jpg
-  speciality: Mehhatroonika 
-  teams: ['Kultuur', 'Juhatus']
-  contactMethods: 
+  speciality: Mehhatroonika
+  teams: ["Kultuur", "Juhatus"]
+  contactMethods:
     - name: Discord
-      value: lummarc 
-    - name: Facebook 
-      value: https://www.facebook.com/profile.php?id=100009719855131 
+      value: lummarc
+    - name: Facebook
+      value: https://www.facebook.com/profile.php?id=100009719855131
   description: >
-    Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada. 
+    Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada.
     Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.
   activities: >
     Olen 5. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
 
 - name: Erki Lasberg
   age: 23
-  photo: erki_lasberg_mentor.jpg 
+  photo: erki_lasberg_mentor.jpg
   speciality: IT süsteemide administreerimine
-  teams: ['Helpdesk', 'Juhatus']
+  teams: ["Helpdesk", "Juhatus"]
   term: 3
   contactMethods:
-    - name: Discord 
-      value: the_legend_27__ 
+    - name: Discord
+      value: the_legend_27__
     - name: Messenger
-      value: https://m.me/erki.lasberg 
+      value: https://m.me/erki.lasberg
   description: >
-    Ma ootan piksliteks inimesi kellel lööb silma särama kui nad katkist tehnikat näevad.   
+    Ma ootan piksliteks inimesi kellel lööb silma särama kui nad katkist tehnikat näevad.
   activities: >
-    Ma olen väga hands on inimene kes püüab probleemidele läheneda mitmel erineval viisil ja ei anna alla kui mõni nendest viisidest ei tööta.   
-  
+    Ma olen väga hands on inimene kes püüab probleemidele läheneda mitmel erineval viisil ja ei anna alla kui mõni nendest viisidest ei tööta.
+
 - name: Jürjo Eibak
   age: 26
   photo: jürjo_eibak_mentor.jpg
   speciality: Salastatud
-  teams: ['Kultuur']
-  contactMethods: 
+  teams: ["Kultuur"]
+  contactMethods:
     - name: Discord
       value: edgar5407
     - name: Messenger
-      value: https://m.me/jürjo.eibak 
+      value: https://m.me/jürjo.eibak
   description: >
     Minu pikselile meeldib Lapikute kontoris sotsialiseerida ja tegevuste kõrvale külma õlut nautida.
-    Üheskoos filmide vaatamine, lauamängude, arvutimängude ja DnD mängimine on alati meelepärane viis üksikute õhtute sisustamiseks. 
+    Üheskoos filmide vaatamine, lauamängude, arvutimängude ja DnD mängimine on alati meelepärane viis üksikute õhtute sisustamiseks.
   activities: >
     Lapikute liikmetega olen seltskondlik ja jutukas. Meeldib kõigiga kontori ruumides filme vaadata ja erinevaid mänge mängida.
-    Nende seast on alati kõige huvitavamad DnD kampaaniaid. Olen juba mitu aastat dungeon masteri rolli kandnud ja olen selles päris osav. Kõik minu pikslid on oodatud minu kampaaniatega liituma ;)  
+    Nende seast on alati kõige huvitavamad DnD kampaaniaid. Olen juba mitu aastat dungeon masteri rolli kandnud ja olen selles päris osav. Kõik minu pikslid on oodatud minu kampaaniatega liituma ;)
 
-    Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks. 
+    Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks.
 
 - name: Karina Reisel
   age: 22
   photo: karina_reisel_mentor.jpg
   speciality: Riistvara arendus ja programmeerimine
-  teams: ['Kultuur', 'Tarkvara']
-  term: 4 
+  teams: ["Kultuur", "Tarkvara"]
+  term: 4
   contactMethods:
     - name: Discord
       value: rinsan5781
@@ -81,32 +81,32 @@
     Ootan ägedaid pixleid. Kes soovivad lapi ürituste turundamisega tegutseda.
     Kirjanikud, disainerid, fotograafid jne. Õpihimulised.
     Lapiga liitumiseks ei ole tarvis olla proff.
-    Ootan kõiki, kes tahavad aktiivselt Lapis tegutseda. 
+    Ootan kõiki, kes tahavad aktiivselt Lapis tegutseda.
   activities: >
     Ma olen jube tegus inimene. Tõenäoliselt näed sa mind tihti ülikooli ja Lapi üritustel 🤟
-    Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms. 
+    Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms.
 
 - name: Katri Lotamõis
   age: 29
   photo: katri_lotamõis_mentor.jpg
-  speciality: 
-  teams: ['Kultuur', 'Tarkvara']
-  term:  
+  speciality:
+  teams: ["Kultuur", "Tarkvara"]
+  term:
   contactMethods:
     - name: Discord
       value: swagmuffin88
     - name: Messenger
-      value: 
+      value:
   description: >
-    write your description 
+    write your description
   activities: >
-    write your activities 
+    write your activities
 
 - name: Kerdo Käärma
   age: 22
   photo: kerdo_käärma_mentor.jpg
   speciality: IT süsteemide arendus
-  teams: ['Kultuur', 'Tarkvara', 'Juhatus']
+  teams: ["Kultuur", "Tarkvara", "Juhatus"]
   term: 3
   contactMethods:
     - name: Discord
@@ -114,7 +114,7 @@
     - name: Messenger
       value: https://m.me/kerdo.kaarma
   description: >
-    Minu piksel on huvitatud nii enda kui ka tarkvara arendamisest. 
+    Minu piksel on huvitatud nii enda kui ka tarkvara arendamisest.
     Ta julgeb tunnistada enda vigu ja ei karda juurde õppida seda, mis esmapilgul tundub võõras.
     Ta esitab küsimusi, kui ei saa aru, ning ei anna alla, kui tekib ootamatuid takistusi.
   activities: >
@@ -126,8 +126,8 @@
   age: 24
   photo: reio_opromei_mentor.jpg
   speciality: IT süsteemide arendus
-  teams: ['Kultuur', 'Juhatus']
-  term: 
+  teams: ["Kultuur", "Juhatus"]
+  term:
   contactMethods:
     - name: Discord
       value: vispel
@@ -137,13 +137,12 @@
     Kõige mugavam on minuga iseseisvatel pikslitel, kes tahavad veits hullu panna.
   activities: >
     Kultuuritiimi "patrioot", diplomiga täiskohaga arendaja
-     
 
 - name: Rene Arumetsa
   age: 29
   photo: rene_arumetsa_mentor.jpg
   speciality: IT süsteemide administeerimine
-  teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
+  teams: ["Helpdesk", "Tarkvara", "Juhatus"]
   term: 3
   contactMethods:
     - name: Discord
@@ -151,11 +150,10 @@
     - name: Messenger
       value: https://m.me/rene.arumetsa
     - name: Telefoninumber
-      value: '+372 5690 7656'
+      value: "+372 5690 7656"
     - name: Telegram
-      value: https://t.me/Renkarus  
+      value: https://t.me/Renkarus
   description: >
-    Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigiga läbi 
+    Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigiga läbi
   activities: >
-    Olen rahulik, vaikne lapik. Meeldib asjade kallal nokitseda. Abivalmis olen, et kui mõnes aines raskusi siis üritan aidata. 
-
+    Olen IT-entusiast, kelle igapäev möödub Helpdeski tööde, LAN-ürituste korraldamise ja aeg-ajalt ka veebilehtede arendamisega. Olen olnud abiõppejõud operatsioonisüsteemide aines, tunnen end koduselt Linuxi maailmas ning vabal ajal naudin mängimist – viimasel ajal peamiselt Path of Exile’i – ja praktiliste projektide ehitamist.
