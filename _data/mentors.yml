@@ -1,18 +1,19 @@
 # Mentors
 
 - name: Agnes Triin Saga
-  age: 27
+  age: 28
   photo: agnes_triin_saga_mentor.jpg
   speciality: Süsteemi administaator
   teams: ['Helpdesk']
-  term: 2
+  term: 3
   contactMethods:
     - name: Discord
       value: dragons4president
   description: >
     Arvuti huvilisi ja motiveeritud inimesi 
   activities: >
-    Abivalmis, nõus töötama nõu ja jõuga
+    Abivalmis, nõus töötama nõu ja jõuga.
+    Mulle meeldib star trek ja üldiselt sci-fi ning fantaasia, mind huvitavad reisimine, viipekeel ja strateegilised lauamängud. Tegelenud põhiliselt windowsi süsteemide (administreerimisega).
 
 - name: Christopher Rammul
   age: 23
@@ -28,10 +29,10 @@
     Ootan endale piksleid, kes on rohkem aktiivsed ja tahaksid teha tegevusi ka väljaspool tava LAP-i üritusi. Minu pikslitel võiks olla ka tahtmine edasi areneda ja üksteist vajadusel aidata ja toetada. 
     Olgu su huvid õppimisele keskendunud või otsid lihtsalt head seltskonda, minu piksel leiab alati viisi, kuidas elu nauditavaks muuta.
   activities: >
-    Olen 4. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
+    Olen 5. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
 
 - name: Erki Lasberg
-  age: 22
+  age: 23
   photo: erki_lasberg_mentor.jpg 
   speciality: IT süsteemide administreerimine
   teams: ['Helpdesk', 'Juhatus']
@@ -69,8 +70,8 @@
   age: 22
   photo: karina_reisel_mentor.jpg
   speciality: Riistvara arendus ja programmeerimine
-  teams: ['Kultuur']
-  term: 3 
+  teams: ['Kultuur', 'Tarkvara']
+  term: 4 
   contactMethods:
     - name: Discord
       value: rinsan5781
@@ -86,7 +87,7 @@
     Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms. 
 
 - name: Katri Lotamõis
-  age: 
+  age: 29
   photo: katri_lotamõis_mentor.jpg
   speciality: 
   teams: ['Kultuur', 'Tarkvara']
@@ -111,7 +112,7 @@
     - name: Discord
       value: .kroles
     - name: Messenger
-      value: 
+      value: https://m.me/kerdo.kaarma
   description: >
     Minu piksel on huvitatud nii enda kui ka tarkvara arendamisest. 
     Ta julgeb tunnistada enda vigu ja ei karda juurde õppida seda, mis esmapilgul tundub võõras.
@@ -131,16 +132,17 @@
     - name: Discord
       value: vispel
     - name: Messenger
-      value: 
+      value: https://m.me/reio.opromei
   description: >
-    
+    Kõige mugavam on minuga iseseisvatel pikslitel, kes tahavad veits hullu panna.
   activities: >
+    Kultuuritiimi "patrioot", diplomiga täiskohaga arendaja
      
 
 - name: Rene Arumetsa
   age: 29
   photo: rene_arumetsa_mentor.jpg
-  speciality: it süsteemide administeerimine
+  speciality: IT süsteemide administeerimine
   teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
   term: 3
   contactMethods:
