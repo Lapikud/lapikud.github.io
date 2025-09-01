@@ -4,15 +4,14 @@ title: Mentorid - Lapikud
 ---
 <div class="page" id="mentors">
   <h1>Mentorid</h1>
-  <h3>2025. aasta mentorid ilmuvad lähipäevil</h3>
-  <!--
-  <h3>Siin on meie 2024. aasta mentorid. Nemad on õiged inimesed, kelle poole pöörduda küsimuste tekkimisel seoses liitumise või Lapikutega üldiselt! </h3>
+  
+  <h3>Siin on meie 2025. aasta mentorid. Nemad on õiged inimesed, kelle poole pöörduda küsimuste tekkimisel seoses liitumise või Lapikutega üldiselt! </h3>
 
   {% for mentor in site.data.mentors %}
 
   <div class="mentor">
     <div class="photo-container">
-      <img src="{{ '/assets/mentors-images/optimised/' | append: mentor.photo }}" alt="{{ mentor.name }}">
+      <img src="{{ '/assets/mentors-images/optimised/' | append: mentor.photo | relative_url }}" alt="{{ mentor.name }}">
     </div>
     <div class="description">
       <div class="general">
@@ -33,8 +32,7 @@ title: Mentorid - Lapikud
           <li>{{ team }}</li>
           {% endfor %}
         </ul>
--->
-  <!--
+  
         {% if mentor.contactMethods != null %}
         <p>Kontaktid:</p>
         {% endif %}
@@ -59,9 +57,9 @@ title: Mentorid - Lapikud
           </li>
           {% elsif contactMethod.name == 'Facebook' %}
 
-        -->
+      
           <!--<p>Facebook <a href="{{ contactMethod.value }}">{{ contactMethod.value }}</a></p>-->
-  <!--        
+        
   <li>
             <a href="{{ contactMethod.value }}">Facebook</a>
           </li>
@@ -105,6 +103,5 @@ title: Mentorid - Lapikud
   </div>
 
   {% endfor %}
-  -->
 
 </div>
