@@ -157,3 +157,22 @@
     Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigiga läbi.
   activities: >
     Olen IT-entusiast, kelle igapäev möödub Helpdeski tööde, LAN-ürituste korraldamise ja aeg-ajalt ka veebilehtede arendamisega. Olen olnud abiõppejõud operatsioonisüsteemide aines, tunnen end koduselt Linuxi maailmas ning vabal ajal naudin mängimist – viimasel ajal peamiselt Path of Exile’i – ja praktiliste projektide ehitamist.
+
+
+- name: Lembitu Valdmets
+  age: 30
+  photo: lembitu_valdmets_mentor.jpg
+  speciality: Arvutisüsteemid (Lõpetanud)
+  teams: ['Helpdesk']
+  term: null
+  contactMethods:
+    - name: Messenger
+      value: https://m.me/lemps.valdmets
+    - name: Discord
+      value: lempspc
+  description: >
+    Ole mu piksel, kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
+  activities: >
+    Olen hetkel pikima staažiga Lapik, kes on näinud mitmeid juhatusi ja 
+    pikaaegselt aidanud kaasa Lapikute edendamisele. Kui soovid coach'ingut selles osas, 
+    kuidas ka ise juhatuse liikmeks saada, võid minuga ühendust võtta.
