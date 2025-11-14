@@ -1,3 +1,35 @@
+- year: 2025 (talv, kevad)
+  members:
+    - name: Christopher Rammul
+      image: christopher_rammul.jpg
+
+    - name: Erki Lasberg
+      image: erki_lasberg.jpg
+
+    - name: Rene Arumetsa
+      image: rene_arumetsa.jpg
+
+    - name: Hanno Vene
+      image: hanno_vene2.jpg
+
+
+- year: 2024 (suvi, sügis, talv)
+  members:
+    - name: Eva-Marie Alasi
+      image: eva-marie_alasi.jpg
+
+    - name: Erki Lasberg
+      image: erki_lasberg.jpg
+
+    - name: Rene Arumetsa
+      image: rene_arumetsa.jpg
+
+    - name: Christopher Rammul
+      image: christopher_rammul.jpg
+
+    - name: Karina Reisel
+      image: karina_reisel.jpg
+
 - year: 2023
   members:
     - name: Lembitu Valdmets
