@@ -1,106 +1,43 @@
-# Lapikute väliveeb
+# Svelte + Vite
 
-Tegu on [Jekyll](https://jekyllrb.com/) peale ehitatud uhiuue lehega
+This template should help get you started developing with Svelte in Vite.
 
-# Development plan
+## Recommended IDE Setup
 
-Materials are on `Google Drive > Lapikud > Tarkvara > Väliveeb`
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
-# Contribution guide
+## Need an official Svelte framework?
 
-## 1. Create Issues
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
-Easiest way to help would be to create issues about things that are missing and wrong
+## Technical considerations
 
-## 2. Fork this repo and create a pull request
+**Why use this over SvelteKit?**
 
-Fork this repo to your own account and create a pull request for changes you have done in there
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
 
-# How to setup development environment
+This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
 
-Windows:
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
-0. Install the Windows Subsystem for Linux
+**Why include `.vscode/extensions.json`?**
 
-    Install Ubuntu
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
 
-    https://docs.microsoft.com/en-us/windows/wsl/install-win10
+**Why enable `checkJs` in the JS template?**
 
-1. Install Ruby
+It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
 
-        sudo apt install build-essential ruby ruby-dev dh-autoreconf
+**Why is HMR not preserving my local component state?**
 
-2. Install Jekyll
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
 
-        sudo gem install jekyll
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
 
-3. Clone repo
-
-        git clone https://github.com/Lapikud/lapikud.github.io.git
-
-4. Serve the page (Use bash if on Windows)
-
-        cd lapikud.github.io
-        jekyll serve --host 0.0.0.0
-
-5. Image converter usage (requires imagemagick)
-
-    No one wants to download 5MB images that are then shown in a 100x100px box.
-
-    **Always resize images before committing them!**
-
-        sudo apt-get install imagemagick
-        sh convert-past-management-images.sh
-
-MacOS:
-
-0. Install Homebrew if you don't have it already
-
-    If you're using Bash, write `/bin/bash` instead of `/bin/zsh`.
-
-        /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-1. Install the latest stable version of Ruby
-
-        brew install ruby
-
-    Also configure your shell environment.
-    If you're using Bash, replace `.zshrc` with `.bash_profile`.
-    
-        if [ -d "/usr/local/opt/ruby/bin" ]; then
-            export PATH=/usr/local/opt/ruby/bin:$PATH
-            export PATH=`gem environment gemdir`/bin:$PATH
-        fi
-
-    Check that Ruby is working.
-
-        ruby -v
-
-2. Install the latest Jekyll gem
-
-        sudo gem install jekyll
-
-3. Clone repo
-
-        git clone https://github.com/Lapikud/lapikud.github.io.git
-
-4. Serve the page
-
-        cd lapikud.github.io
-        jekyll serve --host 0.0.0.0
-
-5. Image converter usage (requires imagemagick)
-
-    No one wants to download 5MB images that are then shown in a 100x100px box.
-    
-    **Always resize images before committing them!**
-    
-        brew install imagemagick
-        sh convert-past-management-images.sh
-
-# Deploy
-
-Push to master branch and wait for deployment, it could take up to 2h for the page to update.
-You can check the progress by clicking on the [environment](https://github.com/Lapikud/lapikud.github.io/deployments) link
-
-![Deployments link](https://i.imgur.com/26jnh6k.png)
+```js
+// store.js
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
+```

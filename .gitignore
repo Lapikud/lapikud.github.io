@@ -1,26 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 node_modules
+dist
+dist-ssr
+*.local
 
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
-
-# OS
+# Editor directories and files
+.vscode/
+.idea
 .DS_Store
-Thumbs.db
-
-# Env
-.env
-.env.*
-!.env.example
-!.env.test
-
-# Bun
-bun.lock
-
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
