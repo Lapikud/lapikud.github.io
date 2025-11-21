@@ -44,12 +44,13 @@ Fork this repo to your own account and create a pull request for changes you hav
    npm run dev
 ```
 
-### Optional (secretly required): Image optimization
-
 > [!WARNING]
+>
+> ### Optional (secretly required): Image optimization
+>
 > No one wants to download 5MB images that are then shown in a 100x100px box.
-
-**Always optimize images before committing them!**
+>
+> **Always optimize images before committing them!**
 
 <details>
 <summary>Linux/Windows (WSL/Ubuntu)</summary>
