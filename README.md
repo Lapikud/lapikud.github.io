@@ -122,16 +122,9 @@ ffmpeg -i input -vf scale=1920:-1 output.jpg
 
 </details>
 
-## Build for production
-
-```bash
-npm run build
-```
-
-Built files will be in the `dist/` folder.
-
 ## Deploy
 
-Push to the `main` branch and GitHub Actions will automatically build and deploy to GitHub Pages.
+> [!NOTE]  
+> Github will build build and deploy the website automatically on every push to the `main` branch. You don't need to do anything manually.
 
 Deployment typically takes 2-5 minutes. You can check the progress in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).
