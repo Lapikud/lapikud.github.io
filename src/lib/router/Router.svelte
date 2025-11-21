@@ -2,6 +2,11 @@
 <!-- unless the router is broken 👉👈 -->
 
 <script>
+  export function routeTo(path) {
+    window.history.pushState({}, "", path);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  }
+
   let { routes } = $props();
 
   let currentPath = $state(window.location.pathname);

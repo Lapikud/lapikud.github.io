@@ -3,14 +3,11 @@
 /* Design tokens & theme variables (light defaults) */
 :root {
   /* color tokens (light defaults) */
-  --color-bg: #ffffff;
-  --color-surface: #f7f8fb;
-  --color-text: #0f1720;
-  --color-muted: #6b7280;
-  --color-primary: #4f46e5;
-  --color-primary-600: #4338ca;
-  --color-border: rgba(15, 23, 32, 0.08);
-  --color-danger: #ef4444;
+  --orange: #f0941d;
+  --black: #000000;
+  --off-black: #0d0d0d;
+  --white: #ffffff;
+  --off-white: #fffdfa;
 
   /* layout tokens */
   --site-padding: clamp(1rem, 2vw, 2rem); /* horizontal page padding */
@@ -31,7 +28,8 @@
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
-  --shadow-1: 0 1px 2px rgba(2, 6, 23, 0.06), 0 1px 3px rgba(2, 6, 23, 0.04);
+  --shadow-1: 0 1px 2px rgba(240, 148, 29, 0.2),
+    0 1px 3px rgba(240, 148, 29, 0.12);
 
   /* breakpoints */
   --bp-sm: 480px;
@@ -57,31 +55,6 @@
     rgba(255, 255, 255, 0.96)
   );
   --accent: var(--color-primary);
-}
-
-/* Dark theme overrides: set document.documentElement.dataset.theme = "dark" */
-[data-theme="dark"] {
-  --color-bg: #0b1220;
-  --color-surface: #0f1724;
-  --color-text: #e6eef8;
-  --color-muted: #9aa5b2;
-  --color-primary: #7c6cff;
-  --color-primary-600: #6d5cff;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --button-bg: #0f1724;
-  --card-bg: linear-gradient(
-    180deg,
-    rgba(18, 20, 28, 0.9),
-    rgba(15, 17, 24, 0.85)
-  );
-}
-
-/* let the browser apply native form rendering for color-scheme */
-:root {
-  color-scheme: light;
-}
-[data-theme="dark"] {
-  color-scheme: dark;
 }
 
 /* Global box sizing & accessible defaults */

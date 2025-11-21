@@ -12,7 +12,6 @@
     color: var(--black);
     border-radius: 8px;
     border: 1.5px solid transparent;
-    border-color: var(--orange);
     padding: 0.6em 1.2em;
     font-weight: 500;
     cursor: pointer;
