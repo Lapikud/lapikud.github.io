@@ -18,7 +18,7 @@
   --nav-height: 64px;
   --footer-height: 80px;
 
-  /* spacing scale (use --space-#) */
+  /* spacing scale */
   --space-0: 0px;
   --space-1: 4px;
   --space-2: 8px;
@@ -27,7 +27,7 @@
   --space-5: 32px;
   --space-6: 48px;
 
-  /* radii / shadows */
+  /* radius / shadows */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
