@@ -6,7 +6,7 @@
 </script>
 
 {#if $text.nav}
-  <!--<Navbar /> Ära vaata seda faili!! -->
+  <Navbar />
   <Router {routes} />
   <Footer />
 {/if}

@@ -6,7 +6,7 @@
     Card,
     Stack,
     Grid,
-  } from "@/components/index.js";
+  } from "$components";
 </script>
 
 <Container>

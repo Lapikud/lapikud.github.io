@@ -1,11 +1,10 @@
 <script>
   import {
     Button,
-    ButtonBorderless,
     Dropdown,
     Grid,
-  } from "@/components/index.js";
-  import Center from "./Center.svelte";
+    Center,
+  } from "$components";
   import { navigate, getPath, currentLang, text, switchLang } from "$lib";
 
   // Icon imports (Lucide)
@@ -20,46 +19,49 @@
 </script>
 
 <Grid>
-  <nav class="w-full h-16">
+  <nav class="w-full h-32">
     <Center gapClass="gap-4">
-      <Button onClick={() => navigate("/")}>Home</Button>
-      <ButtonBorderless onClick={() => navigate("/about")}
-        >About</ButtonBorderless
-      >
       <Dropdown name={$text.nav.about} variant="borderless">
-        <ButtonBorderless onClick={() => navigate("/mis-teeme")}
-          >{$text.nav.aboutPages.info}</ButtonBorderless
+        <Button onClick={() => navigate("/mis-teeme")}
+          >{$text.nav.aboutPages.info}</Button
         >
-        <ButtonBorderless onClick={() => navigate("/liitu-meiega")}
-          ><Bot />{$text.nav.aboutPages.join}</ButtonBorderless
+        <Button onClick={() => navigate("/liitu-meiega")}
+          ><Bot />{$text.nav.aboutPages.join}</Button
         >
-        <ButtonBorderless onClick={() => navigate("/mentorid")}
-          ><HandHeart />{$text.nav.aboutPages.mentors}</ButtonBorderless
+        <Button onClick={() => navigate("/mentorid")}
+          ><HandHeart />{$text.nav.aboutPages.mentors}</Button
         >
-        <ButtonBorderless onClick={() => navigate("/juhatus")}
-          ><Lectern />{$text.nav.aboutPages.board}</ButtonBorderless
+        <Button onClick={() => navigate("/juhatus")}
+          ><Lectern />{$text.nav.aboutPages.board}</Button
         >
       </Dropdown>
       <Dropdown name={$text.nav.events} variant="borderless">
-        <ButtonBorderless onClick={() => navigate("/kalender")}
-          ><CalendarClock />{$text.nav.eventsPages.calendar}</ButtonBorderless
+        <Button onClick={() => navigate("/kalender")}
+          ><CalendarClock />{$text.nav.eventsPages.calendar}</Button
         >
-        <ButtonBorderless
+        <Button
           onClick={() => navigate("https://asikarikas.ee/", { external: true })}
-          ><Trophy />ASI Karikas</ButtonBorderless
+          ><Trophy />ASI Karikas</Button
         >
-        <ButtonBorderless onClick={() => navigate("/mentorid")}
-          ><Presentation />{$text.nav.eventsPages.workshops}</ButtonBorderless
+        <Button onClick={() => navigate("/mentorid")}
+          ><Presentation />{$text.nav.eventsPages.workshops}</Button
         >
-        <ButtonBorderless onClick={() => navigate("/rebased")}
-          ><Swords />{$text.nav.eventsPages.fresh}</ButtonBorderless
+        <Button onClick={() => navigate("/rebased")}
+          ><Swords />{$text.nav.eventsPages.fresh}</Button
         >
-        <ButtonBorderless
+        <Button
           onClick={() =>
             navigate("https://remondikohvik.lapikud.ee/", { external: true })}
-          ><Coffee />{$text.nav.eventsPages.repair}</ButtonBorderless
+          ><Coffee />{$text.nav.eventsPages.repair}</Button
         >
       </Dropdown>
+      <Button onClick={() => navigate("/kontakt")}
+        >{$text.nav.contact}
+      </Button>
+      <Button onClick={() => navigate("/helpdesk")}
+        >{$text.nav.helpdesk}
+      </Button>
     </Center>
   </nav>
 </Grid>
+
