@@ -2,12 +2,15 @@
 
 > [!TIP]
 > Don't take anything here too seriously and have fun experimenting!
-> You're here to learn after all :)
+>
+> > You're here to learn after all :)
 
 Running `npm run dev` starts a local development server with hot reloading (so you can see changes immediately as you edit files)
 
 > [!WARNING]  
-> This project uses custom router in `lib/Router.svelte` DO NOT TOUCH unless you know what you're doing! If you want to tinker, then do. When it breaks it just doesnt load any pages
+> This project uses custom router in `lib/Router.svelte`
+>
+> > DO NOT TOUCH unless you know what you're doing! If you want to tinker, then do. When it breaks it just doesnt load any pages
 
 ## Styling
 
