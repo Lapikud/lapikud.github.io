@@ -44,7 +44,7 @@ Fork this repo to your own account and create a pull request for changes you hav
    npm run dev
 ```
 
-> [!WARNING]
+> [!IMPORTANT]
 >
 > ### Optional (secretly required): Image optimization
 >
