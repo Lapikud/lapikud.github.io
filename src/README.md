@@ -10,7 +10,7 @@ Running `npm run dev` starts a local development server with hot reloading (so y
 > [!WARNING]  
 > This project uses custom router in `lib/Router.svelte`
 >
-> DO NOT TOUCH unless you know what you're doing! If you want to tinker, then do. When it breaks it just doesnt load any pages
+> DO NOT TOUCH unless you know what you're doing! If you want to tinker, then do. When it breaks it just doesn't load any pages
 
 ## Styling
 
