@@ -1,43 +1,136 @@
-# Svelte + Vite
+# Lapikud External Website
 
-This template should help get you started developing with Svelte in Vite.
+Built with [Svelte 5](https://svelte.dev/) and [Vite](https://vite.dev/).
 
-## Recommended IDE Setup
+## Development plan
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Materials are on `Google Drive > Lapikud > Tarkvara > Väliveeb`
 
-## Need an official Svelte framework?
+## Contribution guide
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+### 1. Create Issues
 
-## Technical considerations
+Easiest way to help would be to create issues about things that are missing and wrong
 
-**Why use this over SvelteKit?**
+### 2. Fork this repo and create a pull request
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+Fork this repo to your own account and create a pull request for changes you have done in there
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+## How to setup development environment
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+### Prerequisites
 
-**Why include `.vscode/extensions.json`?**
+- [Node.js](https://nodejs.org/) (v18 or higher. v20 is recommended)
+- npm (comes with Node.js)
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+### Installation
 
-**Why enable `checkJs` in the JS template?**
+1. **Clone the repository**
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```bash
+   git clone https://github.com/Lapikud/lapikud.github.io.git
+   cd lapikud.github.io
 ```
+
+2. **Install dependencies**
+
+```bash
+   npm install
+```
+
+3. **Start development server**
+
+```bash
+   npm run dev
+```
+
+### Optional (secretly required): Image optimization
+
+> [!WARNING]
+> No one wants to download 5MB images that are then shown in a 100x100px box.
+
+**Always optimize images before committing them!**
+
+<details>
+<summary>Linux/Windows (WSL/Ubuntu)</summary>
+
+```bash
+sudo apt install ffmpeg
+```
+
+```bash
+# For thumbnails/small images (100-300px display)
+ffmpeg -i input -vf scale=400:-1 output.jpg
+
+# For medium images (300-800px display)
+ffmpeg -i input -vf scale=1200:-1 output.jpg
+
+# For full-width hero images
+ffmpeg -i input -vf scale=1920:-1 output.jpg
+```
+
+</details>
+
+<details>
+<summary>Windows</summary>
+
+**Option 1: Using winget (Windows 11 or Windows 10 with App Installer)**
+
+```bash
+winget install ffmpeg
+```
+
+**Option 2: Manual installation**
+
+1. Download FFmpeg from [ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+2. Extract the archive
+3. Add the `bin` folder to your PATH environment variable
+
+**Usage:**
+
+```bash
+# For thumbnails/small images (100-300px display)
+ffmpeg -i input -vf scale=400:-1 output.jpg
+
+# For medium images (300-800px display)
+ffmpeg -i input -vf scale=1200:-1 output.jpg
+
+# For full-width hero images
+ffmpeg -i input -vf scale=1920:-1 output.jpg
+```
+
+</details>
+
+<details>
+<summary>MacOS</summary>
+
+```bash
+brew install ffmpeg
+```
+
+```bash
+# For thumbnails/small images (100-300px display)
+ffmpeg -i input -vf scale=400:-1 output.jpg
+
+# For medium images (300-800px display)
+ffmpeg -i input -vf scale=1200:-1 output.jpg
+
+# For full-width hero images
+ffmpeg -i input -vf scale=1920:-1 output.jpg
+```
+
+</details>
+
+## Build for production
+
+```bash
+npm run build
+```
+
+Built files will be in the `dist/` folder.
+
+## Deploy
+
+Push to the `main` branch and GitHub Actions will automatically build and deploy to GitHub Pages.
+
+Deployment typically takes 2-5 minutes. You can check the progress in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).
