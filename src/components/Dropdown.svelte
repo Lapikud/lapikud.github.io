@@ -1,10 +1,9 @@
 <script>
   import Button from "./Button.svelte";
-  import ButtonBorderless from "./ButtonBorderless.svelte";
 
   // Props
   export let name = "";
-  export let variant = "default"; // 'default' | 'borderless' aka 'Button' | 'ButtonBorderless'
+  export let border = false;
 
   let isOpen = false;
 
@@ -22,45 +21,24 @@
 </script>
 
 <div class="relative inline-block" on:focusout={handleFocusOut}>
-  {#if variant === "borderless"}
-    <ButtonBorderless onClick={toggle}>
-      {name}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        class="w-5 ml-2 mt-1 transition-transform inline-block"
-        style:transform={isOpen ? "rotate(180deg)" : "none"}
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="m19.5 8.25-7.5 7.5-7.5-7.5"
-        />
-      </svg>
-    </ButtonBorderless>
-  {:else}
-    <Button onClick={toggle}>
-      {name}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        class="w-5 ml-2 mt-1 transition-transform inline-block"
-        style:transform={isOpen ? "rotate(180deg)" : "none"}
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="m19.5 8.25-7.5 7.5-7.5-7.5"
-        />
-      </svg>
-    </Button>
-  {/if}
+  <Button onClick={toggle} border={border}>
+    {name}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="w-5 ml-2 mt-1 transition-transform inline-block"
+      style:transform={isOpen ? "rotate(180deg)" : "none"}
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  </Button>
 
   <div
     class="absolute mt-2 rounded-md shadow-lg bg-white ring-1 ring-black/5 overflow-hidden flex flex-col"

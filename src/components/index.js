@@ -5,5 +5,4 @@ export { default as Grid } from './layout/Grid.svelte'
 export { default as Center } from './layout/Center.svelte'
 
 export { default as Button } from './Button.svelte'
-export { default as ButtonBorderless } from './ButtonBorderless.svelte'
 export { default as Dropdown } from './Dropdown.svelte'

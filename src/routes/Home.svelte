@@ -1,7 +1,6 @@
 <script>
   import {
     Button,
-    ButtonBorderless,
     Container,
     Card,
     Stack,
@@ -19,9 +18,7 @@
         “Lapikud”.
       </p>
       <Button href="/docs/getting-started">Get Started</Button>
-      <ButtonBorderless href="/docs/components"
-        >Explore Components</ButtonBorderless
-      >
+      <Button href="/docs/components">Explore Components</Button>
     </Card>
 
     <Grid min="250px" gap="var(--space-4)">
