@@ -125,6 +125,6 @@ ffmpeg -i input -vf scale=1920:-1 output.jpg
 ## Deploy
 
 > [!NOTE]  
-> Github will build build and deploy the website automatically on every push to the `main` branch. You don't need to do anything manually.
+> Github will build and deploy the website automatically on every push to the `main` branch. You don't need to do anything manually.
 
 Deployment typically takes 2-5 minutes. You can check the progress in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).

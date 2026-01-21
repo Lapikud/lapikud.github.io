@@ -6,10 +6,18 @@
 :root {
   /* color tokens (light defaults) */
   --orange: #f0941d;
+  --orange-light: #ffa940;
+  --orange-dark: #d67d0a;
   --black: #000000;
   --off-black: #0d0d0d;
   --white: #ffffff;
   --off-white: #fffdfa;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-800: #262626;
+  --gray-900: #171717;
 
   /* layout tokens */
   --site-padding: clamp(1rem, 2vw, 2rem); /* horizontal page padding */
@@ -30,8 +38,12 @@
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
+  --radius-xl: 20px;
   --shadow-1: 0 1px 2px rgba(240, 148, 29, 0.2),
     0 1px 3px rgba(240, 148, 29, 0.12);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(240, 148, 29, 0.3);
 
   /* breakpoints */
   --bp-sm: 480px;
@@ -72,6 +84,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: var(--fs-base);
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -81,7 +94,8 @@ body {
   min-height: 100vh;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 160ms ease, color 160ms ease;
-  padding-top: 20px;
+  overflow-x: hidden;
+  font-size: var(--fs-lg);
 }
 
 /* Container pattern */
@@ -108,24 +122,6 @@ body {
   }
 }
 
-/* Headings & paragraph scale */
-h1 {
-  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
-  margin: 0 0 var(--space-3) 0;
-  line-height: 1.08;
-}
-h2 {
-  font-size: clamp(1.25rem, 2.1vw, 1.75rem);
-  margin: 0 0 var(--space-3) 0;
-}
-h3 {
-  font-size: var(--fs-lg);
-  margin: 0 0 var(--space-2) 0;
-}
-p {
-  margin: 0 0 var(--space-3) 0;
-  color: var(--color-text);
-}
 
 /* Basic link & button defaults that components inherit */
 a {

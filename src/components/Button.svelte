@@ -1,10 +1,17 @@
 <script>
-  // Handler and presentation props
   export let onClick = () => {};
   export let border = false;
+  export let textAlign = "left";
+  export let whiteSpace = "nowrap";
 </script>
 
-<button onclick={onClick} class="btn" class:borderless={!border} {...$$restProps}>
+<button 
+  onclick={onClick} 
+  class="btn" 
+  class:borderless={!border} 
+  style={`text-align: ${textAlign}; white-space: ${whiteSpace};`}
+  {...$$restProps}
+>
   <slot />
 </button>
 
