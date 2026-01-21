@@ -3,13 +3,14 @@
   export let border = false;
   export let textAlign = "left";
   export let whiteSpace = "nowrap";
+  export let borderRadius = "8px";
 </script>
 
 <button 
   onclick={onClick} 
   class="btn" 
   class:borderless={!border} 
-  style={`text-align: ${textAlign}; white-space: ${whiteSpace};`}
+  style={`text-align: ${textAlign}; white-space: ${whiteSpace}; border-radius: ${borderRadius};`}
   {...$$restProps}
 >
   <slot />
@@ -19,7 +20,6 @@
   .btn {
     background: var(--white);
     color: var(--black);
-    border-radius: 8px;
     border: 1.5px solid transparent;
     padding: 0.6em 1.2em;
     font-weight: 500;

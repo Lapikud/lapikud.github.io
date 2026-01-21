@@ -1,9 +1,9 @@
 <script>
   import Button from "./Button.svelte";
 
-  // Props
   export let name = "";
   export let border = false;
+  export let borderRadius = "8px";
 
   let isOpen = false;
 
@@ -21,7 +21,7 @@
 </script>
 
 <div class="relative inline-block" on:focusout={handleFocusOut}>
-  <Button onClick={toggle} border={border}>
+  <Button borderRadius={borderRadius} onClick={toggle} border={border}>
     {name}
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +42,7 @@
 
   <div
     class="absolute mt-2 rounded-md shadow-lg bg-white ring-1 ring-black/5 overflow-hidden flex flex-col"
+    style="border-radius: {borderRadius}"
     style:visibility={isOpen ? "visible" : "hidden"}
   >
     <slot />
