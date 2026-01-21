@@ -102,8 +102,7 @@ body {
 .container {
   width: 100%;
   max-width: var(--content-max);
-  margin-left: auto;
-  margin-right: auto;
+
   padding-left: var(--site-padding);
   padding-right: var(--site-padding);
 }

@@ -8,6 +8,7 @@
     FeatureCard,
   } from "$components";
   import { navigate } from "$lib";
+  import { onMount } from "svelte";
   
   // Import Lucide icons
   import Wrench from "lucide-svelte/icons/wrench";
@@ -16,15 +17,12 @@
   import ArrowRight from "lucide-svelte/icons/arrow-right";
 
   // Partners data
-  const partners = [
-    { name: "Tehnopol", image: "tehnopollogo.png", url: "https://www.tehnopol.ee/" },
-    { name: "Tallinna Tehnikaülikool", image: "taltech_logo.jpg", url: "https://www.ttu.ee/" },
-    { name: "Eesti Üliõpilaskondade Liit", image: "eyl_logo.png", url: "https://eyl.ee/" },
-    { name: "Tallinna Tehnikaülikooli Robotiklubi", image: "robotiklubi_logo.png", url: "https://www.robotiklubi.ee/" },
-    { name: "TalTech IT teaduskond", image: "taltech_IT_teaduskond_logo.png", url: "https://taltech.ee/et/infotehnoloogia-teaduskond" },
-    { name: "HexTech Solutions", image: "hextech_logo.svg", url: "https://hextech.ee/" },
-    { name: "EAS & MKM", image: "eas.svg", url: "https://eis.ee/" },
-  ];
+  let partners = [];
+  
+  onMount(async () => {
+    const response = await fetch('/assets/partners/partners.json');
+    partners = await response.json();
+  });
 </script>
 
 <!-- Header Section -->
@@ -134,9 +132,6 @@
     align-items: center;
     justify-content: center;
     padding: var(--space-3);
-    border-radius: var(--radius-md);
-    background: var(--white);
-    border: 1px solid var(--gray-200);
     transition: all 0.3s ease;
     text-decoration: none;
     width: 100%;
@@ -145,63 +140,18 @@
 
   a.partner-item:hover {
     transform: scale(1.05);
-    box-shadow: var(--shadow-2);
-    border-color: var(--orange);
   }
 
   .partner-item img {
     max-width: 100%;
     max-height: 60px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7;
     transition: all 0.3s ease;
-  }
-
-  a.partner-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
   }
 
   .partner-name {
     font-size: var(--fs-sm);
     font-weight: 600;
-    color: var(--gray-800);
     text-align: center;
   }
 </style>
-
-<!-- EIS Project Highlight -->
-<Section background="dark" padding="large">
-  <div class="text-center text-white">
-    <h2 class="mb-8 text-white">
-      EIS Projekt
-    </h2>
-    <p class="text-lg max-w-4xl mx-auto mb-8 leading-relaxed text-white/90">
-      MTÜ Lapikud projekti "Mobiilne Droonituvastussüsteem" rahastatakse riigieelarvest 
-      teadus- ja arendustegevuse rahastamise vahenditest 100 000 € ulatuses, eesmärgiga 
-      luua füüsilised droonituvastusseadmed, mis tagavad kasutajale droonialase olukorra teadlikkuse.
-    </p>
-    <p class="max-w-3xl mx-auto leading-relaxed text-white/80">
-      Projekti lõpptulemusena valmib kaks teineteisest eraldiseisvat seadet – 
-      spektrianalüüsi ning Direct Remote Identification tööpõhimõttel toimivad seadmed.
-    </p>
-  </div>
-</Section>
-
-<!-- CTA Section -->
-<Section background="gray" padding="large">
-  <div class="text-center">
-    <h2 class="mb-8">
-      Valmis liituma?
-    </h2>
-    <div class="flex gap-4 justify-center flex-wrap">
-      <Button onClick={() => navigate("/kontakt")} border>
-        Võta ühendust
-      </Button>
-      <Button onClick={() => navigate("/mis-teeme")} border>
-        Loe rohkem
-      </Button>
-    </div>
-  </div>
-</Section>
