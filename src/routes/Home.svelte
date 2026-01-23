@@ -1,13 +1,11 @@
 <script>
   import {
-    Button,
     Section,
     Grid,
     Card,
     Center,
-    FeatureCard,
+    Container,
   } from "$components";
-  import { navigate } from "$lib";
   import { onMount } from "svelte";
   
   // Import Lucide icons
@@ -40,55 +38,55 @@
 
 <Section>
   <Grid gap="var(--space-5)">
-    <FeatureCard
-      variant="bordered"
-      href="/liitu-meiega"
-      icon={Users}
-      iconColor="var(--orange)"
-      title="Tudengile"
-      description="Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest."
-    >
+    <Card variant="animated-neutral" href="/liitu-meiega">
+      <div class="feature-icon" style="color: var(--orange)">
+        <Users size={32} strokeWidth={1.5} />
+      </div>
+      <h3 class="feature-title">Tudengile</h3>
+      <p class="feature-description">
+        Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest.
+      </p>
       <div style="color: var(--orange)" class="mt-4 font-semibold flex items-center gap-2">
         Liitu meiega <ArrowRight size={16} />
       </div>
-    </FeatureCard>
+    </Card>
 
-    <FeatureCard
-      variant="bordered"
-      href="/helpdesk"
-      icon={Wrench}
-      iconColor="var(--orange)"
-      title="Helpdesk"
-      description="HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning kõikidele huvilistele."
-    >
+    <Card variant="animated-neutral" href="/helpdesk">
+      <div class="feature-icon" style="color: var(--orange)">
+        <Wrench size={32} strokeWidth={1.5} />
+      </div>
+      <h3 class="feature-title">Helpdesk</h3>
+      <p class="feature-description">
+        HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning kõikidele huvilistele.
+      </p>
       <div style="color: var(--orange)" class="mt-4 font-semibold flex items-center gap-2">
         Vaata teenuseid <ArrowRight size={16} />
       </div>
-    </FeatureCard>
+    </Card>
 
-    <FeatureCard
-      variant="bordered"
-      href="/ourwork"
-      icon={HeartHandshake}
-      iconColor="var(--orange)"
-      title="Ettevõttele"
-      description="Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima."
-    >
+    <Card variant="animated-neutral" href="/ourwork">
+      <div class="feature-icon" style="color: var(--orange)">
+        <HeartHandshake size={32} strokeWidth={1.5} />
+      </div>
+      <h3 class="feature-title">Ettevõttele</h3>
+      <p class="feature-description">
+        Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima.
+      </p>
       <div style="color: var(--orange)" class="mt-4 font-semibold flex items-center gap-2">
         Tehtud tööd <ArrowRight size={16} />
       </div>
-    </FeatureCard>
+    </Card>
   </Grid>
 </Section>
 
 <!-- What We Do Section -->
 <Section>
   <Grid gap="var(--space-4)">
-    <Card>
+    <Card variant="glass">
       <h2 class="pb-4 text-4xl font-bold">Mida me loome</h2>
       <p>Meie põhieesmärgiks on Tallinna Tehnikaülikooli IT tudengitele erialase lisandväärtuse loomine. Kaasame tudengeid praktilistesse lahendustesse, kus saab ideid reaalselt ellu viia ja oma oskusi päriselt kasutada. Meie projektidest kasvavad välja huvitavad ja tarvilikud lõputööd, millel on selge praktiline väärtus.</p>
     </Card>
-    <Card>
+    <Card variant="glass">
       <h2 class="pb-4 text-4xl font-bold">Keda ja kuidas kaasame</h2>
       <p>Pakume nutikatele ja motiveeritud tudengitele võimalust saada meie juures esimene töökogemus ning arendada end meeskonnas töötades. Lapikud ei ole ainult IT-tudengite organisatsioon, kaasame projektidesse ka majandusteaduskonna tudengeid, et tehniliste lahenduste kõrval oleks esindatud ka äriline vaade.</p>
     </Card>
@@ -98,12 +96,12 @@
 <!-- Partners Section -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-3xl">
+    <h2 class="text-5xl">
       Koostööpartnerid
     </h2>
   </div>
   
-  <Grid gap="var(--space-4)">
+  <Center className="flex-wrap">
     {#each partners as partner}
       {#if partner.url}
         <a href={partner.url} target="_blank" rel="noopener noreferrer" class="partner-item" title={partner.name}>
@@ -123,19 +121,36 @@
         </div>
       {/if}
     {/each}
-  </Grid>
+  </Center>
 </Section>
 
 <style>
+  .feature-icon {
+    margin-bottom: var(--space-3);
+    display: inline-flex;
+  }
+
+  .feature-title {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--black);
+  }
+
+  .feature-description {
+    color: var(--gray-800);
+    line-height: 1.6;
+    margin-bottom: var(--space-3);
+  }
+
   .partner-item {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     padding: var(--space-3);
     transition: all 0.3s ease;
-    text-decoration: none;
-    width: 100%;
-    height: 100px;
+    height: 170px;
   }
 
   a.partner-item:hover {
@@ -143,9 +158,9 @@
   }
 
   .partner-item img {
-    max-width: 100%;
-    max-height: 60px;
+    width: auto;
     object-fit: contain;
+    max-height: 150px;
     transition: all 0.3s ease;
   }
 

@@ -7,9 +7,9 @@
 
   const paddingClasses = {
     none: "py-0",
-    small: "py-section-sm",
-    normal: "py-section",
-    large: "py-section-lg",
+    small: "py-8",
+    normal: "py-12 max-md:py-8",
+    large: "py-[clamp(3rem,8vw,6rem)] max-md:py-12",
   };
 
   // Convert background to appropriate CSS value
@@ -26,59 +26,10 @@
 
 <section
   {id}
-  class={`section ${paddingClasses[padding]} ${className}`}
+  class="w-full relative {paddingClasses[padding]} {className}"
   style={backgroundStyle ? `background: ${backgroundStyle};` : ""}
 >
-  <div class="section-inner" class:full-width={fullWidth}>
+  <div class="{fullWidth ? '' : 'max-w-[1200px]'} mx-auto px-(--site-padding)">
     <slot />
   </div>
 </section>
-
-<style>
-  .section {
-    width: 100%;
-    position: relative;
-  }
-
-  .section-inner {
-    max-width: var(--content-max);
-    margin: 0 auto;
-    padding: 0 var(--site-padding);
-  }
-
-  .section-inner.full-width {
-    max-width: none;
-  }
-
-  .py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .py-section-sm {
-    padding-top: var(--space-5);
-    padding-bottom: var(--space-5);
-  }
-
-  .py-section {
-    padding-top: var(--space-6);
-    padding-bottom: var(--space-6);
-  }
-
-  .py-section-lg {
-    padding-top: clamp(3rem, 8vw, 6rem);
-    padding-bottom: clamp(3rem, 8vw, 6rem);
-  }
-
-  @media (max-width: 768px) {
-    .py-section {
-      padding-top: var(--space-5);
-      padding-bottom: var(--space-5);
-    }
-
-    .py-section-lg {
-      padding-top: var(--space-6);
-      padding-bottom: var(--space-6);
-    }
-  }
-</style>

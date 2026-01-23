@@ -18,47 +18,54 @@
   import Trophy from "lucide-svelte/icons/trophy";
 </script>
 
-<Section padding="small">
+<Section className="text-white" background="off-black" padding="small">
   <Grid>
     <nav class="z-10 flex gap-4 justify-end text-xl">
-        <Dropdown borderRadius="4px" name={$text.nav.about} variant="borderless">
-          <Button borderRadius="4px" onClick={() => navigate("/mis-teeme")}
+        <Dropdown
+          name={$text.nav.about}
+          buttonClass="rounded-[5px]"
+          buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+          panelClassName="bg-[var(--off-black)]"
+        >
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mis-teeme")}
             >{$text.nav.aboutPages.info}</Button
           >
-          <Button borderRadius="4px" onClick={() => navigate("/liitu-meiega")}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/liitu-meiega")}
             ><Bot />{$text.nav.aboutPages.join}</Button
           >
-          <Button borderRadius="4px" onClick={() => navigate("/mentorid")}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mentorid")}
             ><HandHeart />{$text.nav.aboutPages.mentors}</Button
           >
-          <Button borderRadius="4px" onClick={() => navigate("/juhatus")}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/juhatus")}
             ><Lectern />{$text.nav.aboutPages.board}</Button
           >
         </Dropdown>
-        <Dropdown borderRadius="4px" name={$text.nav.events} variant="borderless">
-          <Button borderRadius="4px" onClick={() => navigate("/kalender")}
+        <Dropdown
+          name={$text.nav.events}
+          buttonClass="rounded-[5px]"
+          buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+          panelClassName="bg-[var(--off-black)]"
+        >
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/kalender")}
             ><CalendarClock />{$text.nav.eventsPages.calendar}</Button
           >
-          <Button borderRadius="4px"
-            onClick={() => navigate("https://asikarikas.ee/", { external: true })}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
             ><Trophy />ASI Karikas</Button
           >
-          <Button borderRadius="4px" onClick={() => navigate("/mentorid")}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mentorid")}
             ><Presentation />{$text.nav.eventsPages.workshops}</Button
           >
-          <Button borderRadius="4px" onClick={() => navigate("/rebased")}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
             ><Swords />{$text.nav.eventsPages.fresh}</Button
           >
-          <Button borderRadius="4px"
-            onClick={() =>
-              navigate("https://remondikohvik.lapikud.ee/", { external: true })}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
             ><Coffee />{$text.nav.eventsPages.repair}</Button
           >
         </Dropdown>
-        <Button borderRadius="4px" onClick={() => navigate("/kontakt")}
+        <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/kontakt")}
           >{$text.nav.contact}
         </Button>
-        <Button borderRadius="4px" onClick={() => navigate("/helpdesk")}
+        <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/helpdesk")}
           >{$text.nav.helpdesk}
         </Button>
     </nav>

@@ -2,8 +2,9 @@
   import Button from "./Button.svelte";
 
   export let name = "";
-  export let border = false;
-  export let borderRadius = "8px";
+  export let buttonClass = "";
+  export let panelClassName = "";
+  export let buttonHoverStyle = "";
 
   let isOpen = false;
 
@@ -21,7 +22,7 @@
 </script>
 
 <div class="relative inline-block" on:focusout={handleFocusOut}>
-  <Button borderRadius={borderRadius} onClick={toggle} border={border}>
+  <Button onClick={toggle} class={buttonClass} {buttonHoverStyle}>
     {name}
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +42,11 @@
   </Button>
 
   <div
-    class="absolute mt-2 rounded-md shadow-lg bg-white ring-1 ring-black/5 overflow-hidden flex flex-col"
-    style="border-radius: {borderRadius}"
+    class="{panelClassName} absolute mt-2 rounded-md shadow-lg overflow-visible flex flex-col"
     style:visibility={isOpen ? "visible" : "hidden"}
   >
-    <slot />
+    <div>
+      <slot />
+    </div>
   </div>
 </div>

@@ -98,30 +98,6 @@ body {
   font-size: var(--fs-lg);
 }
 
-/* Container pattern */
-.container {
-  width: 100%;
-  max-width: var(--content-max);
-
-  padding-left: var(--site-padding);
-  padding-right: var(--site-padding);
-}
-
-/* Responsive helpers - mobile by default; desktop media queries adjust naturally */
-@media (min-width: 768px) {
-  .container {
-    padding-left: calc(var(--site-padding) * 1.2);
-    padding-right: calc(var(--site-padding) * 1.2);
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    padding-left: calc(var(--site-padding) * 1.5);
-    padding-right: calc(var(--site-padding) * 1.5);
-  }
-}
-
-
 /* Basic link & button defaults that components inherit */
 a {
   color: var(--color-primary);
@@ -152,30 +128,6 @@ button:active {
 button:focus {
   outline: 3px solid color-mix(in srgb, var(--color-primary) 14%, transparent);
   outline-offset: 2px;
-}
-
-/* Card pattern components can use .card */
-.card {
-  background: var(--card-bg);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-1);
-  border: 1px solid var(--color-border);
-  padding: var(--space-4);
-}
-
-/* Stacking helpers: use .stack to avoid writing margins for children */
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-.stack--tight {
-  gap: var(--space-2);
-}
-.inline {
-  display: inline-flex;
-  gap: var(--space-2);
-  align-items: center;
 }
 
 /* Simple responsive grid that adapts to available width */

@@ -1,39 +1,22 @@
 <script>
   export let onClick = () => {};
-  export let border = false;
-  export let textAlign = "left";
-  export let whiteSpace = "nowrap";
-  export let borderRadius = "8px";
+  export let buttonHoverStyle = "";
+
+  let isHovered = false;
 </script>
 
-<button 
-  onclick={onClick} 
-  class="btn" 
-  class:borderless={!border} 
-  style={`text-align: ${textAlign}; white-space: ${whiteSpace}; border-radius: ${borderRadius};`}
-  {...$$restProps}
+<button
+  on:click={onClick}
+  on:mouseenter={() => (isHovered = true)}
+  on:mouseleave={() => (isHovered = false)}
+  class={`btn border-[1.5px] px-5 py-2.5 font-medium cursor-pointer flex items-center gap-2 whitespace-nowrap ${$$restProps.class}`}
+  style={isHovered && buttonHoverStyle ? buttonHoverStyle : null}
 >
   <slot />
 </button>
 
 <style>
   .btn {
-    background: var(--white);
-    color: var(--black);
-    border: 1.5px solid transparent;
-    padding: 0.6em 1.2em;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
-
-  .btn:not(.borderless) {
-    border-color: var(--orange);
-  }
-
-  .btn:hover {
-    background: var(--orange);
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 </style>

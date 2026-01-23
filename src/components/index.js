@@ -4,8 +4,6 @@ export { default as Stack } from './layout/Stack.svelte'
 export { default as Grid } from './layout/Grid.svelte'
 export { default as Center } from './layout/Center.svelte'
 export { default as Section } from './layout/Section.svelte'
-export { default as FullWidthBanner } from './layout/FullWidthBanner.svelte'
 
 export { default as Button } from './Button.svelte'
 export { default as Dropdown } from './Dropdown.svelte'
-export { default as FeatureCard } from './FeatureCard.svelte'

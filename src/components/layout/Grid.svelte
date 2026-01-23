@@ -11,8 +11,8 @@ spacing. Content is projected into the default slot.
 </script>
 
 <div
-  class={`grid ${className}`}
-  style={`grid-template-columns: repeat(auto-fit, minmax(${min}, 1fr)); gap: ${gap};`}
+  class="grid {className}"
+  style="grid-template-columns: repeat(auto-fit, minmax({min}, 1fr)); gap: {gap};"
 >
   <slot />
 </div>
