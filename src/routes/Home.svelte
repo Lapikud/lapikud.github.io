@@ -7,6 +7,7 @@
     Container,
   } from "$components";
   import { onMount } from "svelte";
+  import yaml from 'js-yaml';
   
   // Import Lucide icons
   import Wrench from "lucide-svelte/icons/wrench";
@@ -18,8 +19,9 @@
   let partners = [];
   
   onMount(async () => {
-    const response = await fetch('/assets/partners/partners.json');
-    partners = await response.json();
+    const response = await fetch('/_data/partners.yml');
+    const yamlText = await response.text();
+    partners = yaml.load(yamlText);
   });
 </script>
 
@@ -38,7 +40,7 @@
 
 <Section>
   <Grid gap="var(--space-5)">
-    <Card variant="animated-neutral" href="/liitu-meiega">
+    <Card variant="animated-neutral" href="/tudengile">
       <div class="feature-icon" style="color: var(--orange)">
         <Users size={32} strokeWidth={1.5} />
       </div>
@@ -106,7 +108,7 @@
       {#if partner.url}
         <a href={partner.url} target="_blank" rel="noopener noreferrer" class="partner-item" title={partner.name}>
           {#if partner.image}
-            <img src="/assets/partners/{partner.image}" alt={partner.name} />
+            <img src={`/assets/partners_logos/${partner.image}`} alt={partner.name} />
           {:else}
             <span class="partner-name">{partner.name}</span>
           {/if}
@@ -114,7 +116,7 @@
       {:else}
         <div class="partner-item">
           {#if partner.image}
-            <img src="/assets/partners/{partner.image}" alt={partner.name} />
+            <img src={`/assets/partners_logos/${partner.image}`} alt={partner.name} />
           {:else}
             <span class="partner-name">{partner.name}</span>
           {/if}

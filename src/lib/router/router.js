@@ -1,14 +1,43 @@
+import { getTranslatedRoute, getLanguageFromRoute } from '../../routes';
+import { switchLang } from '../i18n.js';
+
 /**
  * Navigate to a path (internal or external)
  * @param {string} path - The path or URL to navigate to
- * @param {boolean} external - Whether this is an external link (default: false)
+ * @param {Object} options - Navigation options
+ * @param {boolean} options.external - Whether this is an external link
  */
-export function navigate(path, external = false) {
+export function navigate(path, options = {}) {
+    const { external = false } = options;
+    
     if (external) {
         window.location.href = path;
     } else {
         window.history.pushState({}, "", path);
         window.dispatchEvent(new PopStateEvent('popstate'));
+        
+        // Update language based on new route
+        const lang = getLanguageFromRoute(path);
+        if (lang) {
+            switchLang(lang);
+        }
+    }
+}
+
+/**
+ * Switch language and navigate to translated route
+ * @param {string} targetLang - Target language ('est' or 'en')
+ */
+export function switchLanguageRoute(targetLang) {
+    const currentPath = window.location.pathname;
+    const translatedPath = getTranslatedRoute(currentPath, targetLang);
+    
+    // Always update the language first
+    switchLang(targetLang);
+    
+    // Only navigate if the path is different
+    if (translatedPath !== currentPath) {
+        navigate(translatedPath);
     }
 }
 

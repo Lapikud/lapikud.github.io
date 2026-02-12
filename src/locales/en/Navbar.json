@@ -1,0 +1,18 @@
+{
+  "about": "About Us",
+  "aboutPages": {
+    "info": "What we're doing?",
+    "join": "Join Us",
+    "mentors": "Mentors",
+    "board": "Board"
+  },
+  "events": "Events",
+  "eventsPages": {
+    "calendar": "Events Calendar",
+    "workshops": "Workshops",
+    "fresh": "Freshmen Initiation",
+    "repair": "Repair Café"
+  },
+  "contact": "Contact",
+  "helpdesk": "Helpdesk"
+}

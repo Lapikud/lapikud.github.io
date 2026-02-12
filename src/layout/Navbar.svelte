@@ -5,7 +5,7 @@
     Section,
     Stack,
   } from "$components";
-  import { navigate, getPath, currentLang, text, switchLang } from "$lib";
+  import { navigate, getPath, currentLang, text, switchLanguageRoute } from "$lib";
   import { onDestroy } from "svelte";
 
   // Icon imports (Lucide)
@@ -58,6 +58,11 @@
     navigate(path, options);
     closeMobileMenu();
   }
+
+  function handleLanguageSwitch(lang) {
+    switchLanguageRoute(lang);
+    closeMobileMenu();
+  }
 </script>
 
 <style>
@@ -93,58 +98,69 @@
     <!-- Desktop Navigation -->
     <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
         <Dropdown
-          name={$text.nav.about}
+          name={$text.about}
           buttonClass="rounded-[5px]"
           buttonHoverStyle="background-color:var(--orange); color:var(--black)"
           panelClassName="bg-[var(--off-black)]"
         >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mis-teeme")}
-            >{$text.nav.aboutPages.info}</Button
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/lapikutest")}
+            >{$text.aboutPages.info}</Button
           >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/liitu-meiega")}
-            ><Bot />{$text.nav.aboutPages.join}</Button
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/tudengile")}
+            ><Bot />{$text.aboutPages.join}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mentorid")}
-            ><HandHeart />{$text.nav.aboutPages.mentors}</Button
+            ><HandHeart />{$text.aboutPages.mentors}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/juhatus")}
-            ><Lectern />{$text.nav.aboutPages.board}</Button
+            ><Lectern />{$text.aboutPages.board}</Button
           >
         </Dropdown>
         <Dropdown
-          name={$text.nav.events}
+          name={$text.events}
           buttonClass="rounded-[5px]"
           buttonHoverStyle="background-color:var(--orange); color:var(--black)"
           panelClassName="bg-[var(--off-black)]"
         >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/kalender")}
-            ><CalendarClock />{$text.nav.eventsPages.calendar}</Button
+            ><CalendarClock />{$text.eventsPages.calendar}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
-            ><Presentation />{$text.nav.eventsPages.workshops}</Button
+            ><Presentation />{$text.eventsPages.workshops}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
-            ><Swords />{$text.nav.eventsPages.fresh}</Button
+            ><Swords />{$text.eventsPages.fresh}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
             ><Trophy />ASI Karikas</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
-            ><Coffee />{$text.nav.eventsPages.repair}</Button
+            ><Coffee />{$text.eventsPages.repair}</Button
           >
         </Dropdown>
         <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/kontakt")}
-          >{$text.nav.contact}
+          >{$text.contact}
         </Button>
         <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/helpdesk")}
-          >{$text.nav.helpdesk}
+          >{$text.helpdesk}
+        </Button>
+        
+        <!-- Language Switcher -->
+        <Button 
+          class="rounded-[5px] px-3 py-1 text-sm ml-2"
+          style="color: var(--orange)"
+          buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+          onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
+        >
+          {$currentLang === 'est' ? 'EN' : 'EST'}
         </Button>
     </nav>
 
     <!-- Mobile Hamburger Button -->
     <Button
       onClick={toggleMobileMenu}
-      class="md:hidden ml-auto p-2 text-white hover:text-orange-500 transition-colors bg-transparent"
+      class="md:hidden ml-auto p-2 text-white transition-colors bg-transparent"
+      buttonHoverStyle="color: var(--orange)"
       style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
       aria-label="Toggle menu"
     >
@@ -164,87 +180,97 @@
       <div class="absolute top-8 right-0 px-(--site-padding)">
         <Button
           onClick={closeMobileMenu}
-          class="ml-auto p-2 hover:text-orange-500 transition-colors flex bg-transparent"
+          class="ml-auto p-2 transition-colors flex bg-transparent"
+          buttonHoverStyle="color: var(--orange)"
           aria-label="Close menu"
         >
-          <X size={32} color="white" class="hover:stroke-orange-500" />
+          <X size={32} color="white" />
         </Button>
       </div>
 
       <!-- Menu Content -->
       <Stack gap="var(--space-5)" className="flex-1 px-8 pb-8 text-white text-xl justify-center">
         <!-- About Section -->
-        <Stack gap="var(--space-3)" className="border-b border-gray-700 pb-4">
-          <h3 class="text-2xl font-bold text-orange-500">{$text.nav.about}</h3>
+        <Stack gap="var(--space-3)">
+          <h3 class="text-2xl font-bold" style="color: var(--orange)">{$text.about}</h3>
           <Stack gap="var(--space-2)" className="pl-4">
             <Button
-              onClick={() => handleNavigation("/mis-teeme")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              onClick={() => handleNavigation("/lapikutest")}
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
-              {$text.nav.aboutPages.info}
+              {$text.aboutPages.info}
             </Button>
             <Button
-              onClick={() => handleNavigation("/liitu-meiega")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              onClick={() => handleNavigation("/tudengile")}
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <Bot size={20} />
-              {$text.nav.aboutPages.join}
+              {$text.aboutPages.join}
             </Button>
             <Button
               onClick={() => handleNavigation("/mentorid")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <HandHeart size={20} />
-              {$text.nav.aboutPages.mentors}
+              {$text.aboutPages.mentors}
             </Button>
             <Button
-              onClick={() => handleNavigation("/juhatus")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              onClick={() => handleNavigation("/ettevottele")}
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <Lectern size={20} />
-              {$text.nav.aboutPages.board}
+              Ettevõttele
             </Button>
           </Stack>
         </Stack>
 
         <!-- Events Section -->
-        <Stack gap="var(--space-3)" className="border-b border-gray-700 pb-4">
-          <h3 class="text-2xl font-bold text-orange-500">{$text.nav.events}</h3>
+        <Stack gap="var(--space-3)" >
+          <h3 class="text-2xl font-bold" style="color: var(--orange)">{$text.events}</h3>
           <Stack gap="var(--space-2)" className="pl-4">
             <Button
               onClick={() => handleNavigation("/kalender")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <CalendarClock size={20} />
-              {$text.nav.eventsPages.calendar}
+              {$text.eventsPages.calendar}
             </Button>
             <Button
               onClick={() => handleNavigation("/mentorid")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <Presentation size={20} />
-              {$text.nav.eventsPages.workshops}
+              {$text.eventsPages.workshops}
             </Button>
             <Button
               onClick={() => handleNavigation("/rebased")}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <Swords size={20} />
-              {$text.nav.eventsPages.fresh}
+              {$text.eventsPages.fresh}
             </Button>
             <Button
               onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <Trophy size={20} />
               ASI Karikas
             </Button>
             <Button
               onClick={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
-              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent"
+              buttonHoverStyle="color: var(--orange)"
             >
               <Coffee size={20} />
-              {$text.nav.eventsPages.repair}
+              {$text.eventsPages.repair}
             </Button>
           </Stack>
         </Stack>
@@ -253,18 +279,31 @@
         <Stack gap="var(--space-3)">
           <Button
             onClick={() => handleNavigation("/kontakt")}
-            class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors bg-transparent"
+            class="text-left text-2xl font-semibold transition-colors bg-transparent"
+            buttonHoverStyle="color: var(--orange)"
           >
-            {$text.nav.contact}
+            {$text.contact}
           </Button>
           <Button
             onClick={() => handleNavigation("/helpdesk")}
-            class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors bg-transparent"
+            class="text-left text-2xl font-semibold transition-colors bg-transparent"
+            buttonHoverStyle="color: var(--orange)"
           >
-            {$text.nav.helpdesk}
+            {$text.helpdesk}
+          </Button>
+        </Stack>
+        <!-- Language Switcher -->
+        <Stack gap="var(--space-3)">
+          <Button 
+            class="w-full rounded-lg py-3 text-lg"
+            style="background-color: var(--orange); color: var(--black)"
+            onClick={() => handleLanguageSwitch($currentLang === 'est' ? 'en' : 'est')}
+          >
+            {$currentLang === 'est' ? 'English' : 'Eesti'}
           </Button>
         </Stack>
       </Stack>
     </Stack>
   </div>
 {/if}
+

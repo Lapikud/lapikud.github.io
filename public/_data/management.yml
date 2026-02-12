@@ -1,0 +1,39 @@
+# Management contact info
+
+- name: Christopher Rammul
+  photo: Christopher_Rammul.jpg
+  role:
+    est: Juhatuse esimees
+  subrole:
+    est: Meie suur isa
+  email: christopher@lapikud.ee
+  phone: +372 555 00 221
+
+- name: Erki Lasberg
+  photo: Erki_Lasberg.jpg
+  role:
+    est: Juhatuse liige
+  subrole:
+    est: Helpdeski juht
+  email: erki@lapikud.ee
+  phone: +372 5907 9190
+
+- name: Rene Arumetsa
+  photo: Rene_Arumetsa.jpg
+  role:
+    est: Juhatuse liige
+  subrole:
+    est: Tarkvara valdkonna juht
+  email: rene@lapikud.ee
+  phone: +372 5690 7656
+
+- name: Hanno Vene
+  photo: Hanno_Vene.jpg
+  role:
+    est: Juhatuse liige
+  subrole:
+    est: Ürituste valdkonna juht
+  email: hanno@lapikud.ee
+  phone: +372 5624 7690
+
+

@@ -1,0 +1,34 @@
+- name: Tehnopol
+  image: tehnopollogo.png
+  url: https://www.tehnopol.ee/
+  additionalText:
+
+- name: Tallinna Tehnikaülikool
+  image: taltech_logo.jpg
+  url: https://www.ttu.ee/
+  additionalText:
+
+- name: Eesti Üliõpilaskondade Liit
+  image: eyl_logo.png
+  url: https://eyl.ee/
+  additionalText:
+
+- name: Tallinna Tehnikaülikooli Robotiklubi
+  image: robotiklubi_logo.png
+  url: https://www.robotiklubi.ee/
+  additionalText:
+
+- name: Tallinna Tehnikaülikooli Infotehnoloogia teaduskond
+  image: taltech_IT_teaduskond_logo.png
+  url: https://taltech.ee/et/infotehnoloogia-teaduskond
+  additionalText:
+
+- name: HexTech Solutions
+  image: hextech_logo.svg
+  url: https://hextech.ee/
+  additionalText:
+
+- name: EAS & MKM
+  image: eas.svg
+  url: https://eis.ee/
+  additionalText:

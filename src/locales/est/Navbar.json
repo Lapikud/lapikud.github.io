@@ -1,0 +1,18 @@
+{
+  "about": "Meist",
+  "aboutPages": {
+    "info": "Mis Teeme?",
+    "join": "Liitu Meiega",
+    "mentors": "Mentorid",
+    "board": "Juhatus"
+  },
+  "events": "Üritused",
+  "eventsPages": {
+    "calendar": "Ürituste Kalender",
+    "workshops": "Koolitused",
+    "fresh": "Rebaste Ristimine",
+    "repair": "Remondikohvik"
+  },
+  "contact": "Kontakt",
+  "helpdesk": "Helpdesk"
+}
