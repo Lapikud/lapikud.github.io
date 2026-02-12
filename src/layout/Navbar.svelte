@@ -3,6 +3,7 @@
     Button,
     Dropdown,
     Section,
+    Stack,
   } from "$components";
   import { navigate, getPath, currentLang, text, switchLang } from "$lib";
   import { onDestroy } from "svelte";
@@ -119,14 +120,14 @@
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/kalender")}
             ><CalendarClock />{$text.nav.eventsPages.calendar}</Button
           >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
-            ><Trophy />ASI Karikas</Button
-          >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
             ><Presentation />{$text.nav.eventsPages.workshops}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
             ><Swords />{$text.nav.eventsPages.fresh}</Button
+          >
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
+            ><Trophy />ASI Karikas</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
             ><Coffee />{$text.nav.eventsPages.repair}</Button
@@ -141,127 +142,129 @@
     </nav>
 
     <!-- Mobile Hamburger Button -->
-    <button
-      on:click={toggleMobileMenu}
-      class="md:hidden ml-auto p-2 text-white hover:text-orange-500 transition-colors"
+    <Button
+      onClick={toggleMobileMenu}
+      class="md:hidden ml-auto p-2 text-white hover:text-orange-500 transition-colors bg-transparent"
       style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
       aria-label="Toggle menu"
     >
       <Menu size={32} />
-    </button>
+    </Button>
   </div>
 </Section>
 
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
   <div 
-    class="fixed inset-0 z-100 bg-(--off-black) md:hidden flex flex-col overflow-hidden"
+    class="fixed inset-0 z-100 bg-(--off-black) md:hidden overflow-hidden"
     class:menu-opening={!isClosing}
     class:menu-closing={isClosing}
   >
-    <div class="absolute top-8 right-0 px-(--site-padding)">
-      <button
-        on:click={closeMobileMenu}
-        class="ml-auto p-2 hover:text-orange-500 transition-colors flex"
-        aria-label="Close menu"
-      >
-        <X size={32} color="white" class="hover:stroke-orange-500" />
-      </button>
-    </div>
-
-    <!-- Menu Content -->
-    <nav class="flex-1 flex flex-col gap-6 px-8 pb-8 text-white text-xl justify-center">
-      <!-- About Section -->
-      <div class="border-b border-gray-700 pb-4">
-        <h3 class="text-2xl font-bold mb-4 text-orange-500">{$text.nav.about}</h3>
-        <div class="flex flex-col gap-3 pl-4">
-          <button
-            on:click={() => handleNavigation("/mis-teeme")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            {$text.nav.aboutPages.info}
-          </button>
-          <button
-            on:click={() => handleNavigation("/liitu-meiega")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <Bot size={20} />
-            {$text.nav.aboutPages.join}
-          </button>
-          <button
-            on:click={() => handleNavigation("/mentorid")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <HandHeart size={20} />
-            {$text.nav.aboutPages.mentors}
-          </button>
-          <button
-            on:click={() => handleNavigation("/juhatus")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <Lectern size={20} />
-            {$text.nav.aboutPages.board}
-          </button>
-        </div>
-      </div>
-
-      <!-- Events Section -->
-      <div class="border-b border-gray-700 pb-4">
-        <h3 class="text-2xl font-bold mb-4 text-orange-500">{$text.nav.events}</h3>
-        <div class="flex flex-col gap-3 pl-4">
-          <button
-            on:click={() => handleNavigation("/kalender")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <CalendarClock size={20} />
-            {$text.nav.eventsPages.calendar}
-          </button>
-          <button
-            on:click={() => handleNavigation("https://asikarikas.ee/", { external: true })}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <Trophy size={20} />
-            ASI Karikas
-          </button>
-          <button
-            on:click={() => handleNavigation("/mentorid")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <Presentation size={20} />
-            {$text.nav.eventsPages.workshops}
-          </button>
-          <button
-            on:click={() => handleNavigation("/rebased")}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <Swords size={20} />
-            {$text.nav.eventsPages.fresh}
-          </button>
-          <button
-            on:click={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
-            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
-          >
-            <Coffee size={20} />
-            {$text.nav.eventsPages.repair}
-          </button>
-        </div>
-      </div>
-
-      <!-- Direct Links -->
-      <div class="flex flex-col gap-4">
-        <button
-          on:click={() => handleNavigation("/kontakt")}
-          class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors"
+    <Stack className="h-full">
+      <div class="absolute top-8 right-0 px-(--site-padding)">
+        <Button
+          onClick={closeMobileMenu}
+          class="ml-auto p-2 hover:text-orange-500 transition-colors flex bg-transparent"
+          aria-label="Close menu"
         >
-          {$text.nav.contact}
-        </button>
-        <button
-          on:click={() => handleNavigation("/helpdesk")}
-          class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors"
-        >
-          {$text.nav.helpdesk}
-        </button>
+          <X size={32} color="white" class="hover:stroke-orange-500" />
+        </Button>
       </div>
-    </nav>
+
+      <!-- Menu Content -->
+      <Stack gap="var(--space-5)" className="flex-1 px-8 pb-8 text-white text-xl justify-center">
+        <!-- About Section -->
+        <Stack gap="var(--space-3)" className="border-b border-gray-700 pb-4">
+          <h3 class="text-2xl font-bold text-orange-500">{$text.nav.about}</h3>
+          <Stack gap="var(--space-2)" className="pl-4">
+            <Button
+              onClick={() => handleNavigation("/mis-teeme")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              {$text.nav.aboutPages.info}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("/liitu-meiega")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <Bot size={20} />
+              {$text.nav.aboutPages.join}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("/mentorid")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <HandHeart size={20} />
+              {$text.nav.aboutPages.mentors}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("/juhatus")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <Lectern size={20} />
+              {$text.nav.aboutPages.board}
+            </Button>
+          </Stack>
+        </Stack>
+
+        <!-- Events Section -->
+        <Stack gap="var(--space-3)" className="border-b border-gray-700 pb-4">
+          <h3 class="text-2xl font-bold text-orange-500">{$text.nav.events}</h3>
+          <Stack gap="var(--space-2)" className="pl-4">
+            <Button
+              onClick={() => handleNavigation("/kalender")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <CalendarClock size={20} />
+              {$text.nav.eventsPages.calendar}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("/mentorid")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <Presentation size={20} />
+              {$text.nav.eventsPages.workshops}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("/rebased")}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <Swords size={20} />
+              {$text.nav.eventsPages.fresh}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <Trophy size={20} />
+              ASI Karikas
+            </Button>
+            <Button
+              onClick={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
+              class="text-left hover:text-orange-500 transition-colors flex items-center gap-2 bg-transparent"
+            >
+              <Coffee size={20} />
+              {$text.nav.eventsPages.repair}
+            </Button>
+          </Stack>
+        </Stack>
+
+        <!-- Direct Links -->
+        <Stack gap="var(--space-3)">
+          <Button
+            onClick={() => handleNavigation("/kontakt")}
+            class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors bg-transparent"
+          >
+            {$text.nav.contact}
+          </Button>
+          <Button
+            onClick={() => handleNavigation("/helpdesk")}
+            class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors bg-transparent"
+          >
+            {$text.nav.helpdesk}
+          </Button>
+        </Stack>
+      </Stack>
+    </Stack>
   </div>
 {/if}
