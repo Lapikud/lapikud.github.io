@@ -33,7 +33,6 @@
     }
   }
 
-  // Cleanup on component destroy
   onDestroy(() => {
     if (typeof document !== 'undefined') {
       document.body.style.overflow = '';
@@ -51,7 +50,7 @@
     setTimeout(() => {
       mobileMenuOpen = false;
       isClosing = false;
-    }, 300); // Match animation duration
+    }, 300);
   }
 
   function handleNavigation(path, options = {}) {
@@ -123,7 +122,7 @@
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
             ><Trophy />ASI Karikas</Button
           >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mentorid")}
+          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
             ><Presentation />{$text.nav.eventsPages.workshops}</Button
           >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
@@ -156,12 +155,11 @@
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
   <div 
-    class="fixed inset-0 z-[100] bg-[var(--off-black)] md:hidden flex flex-col overflow-hidden"
+    class="fixed inset-0 z-100 bg-(--off-black) md:hidden flex flex-col overflow-hidden"
     class:menu-opening={!isClosing}
     class:menu-closing={isClosing}
   >
-    <!-- Fixed Close Button - positioned to match hamburger with Section padding -->
-    <div class="absolute top-8 right-0 px-[var(--site-padding)]">
+    <div class="absolute top-8 right-0 px-(--site-padding)">
       <button
         on:click={closeMobileMenu}
         class="ml-auto p-2 hover:text-orange-500 transition-colors flex"
