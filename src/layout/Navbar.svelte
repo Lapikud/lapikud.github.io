@@ -122,9 +122,6 @@
           buttonHoverStyle="background-color:var(--orange); color:var(--black)"
           panelClassName="bg-[var(--off-black)]"
         >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/kalender")}
-            ><CalendarClock />{$text.eventsPages.calendar}</Button
-          >
           <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
             ><Presentation />{$text.eventsPages.workshops}</Button
           >
@@ -232,14 +229,6 @@
         <Stack gap="var(--space-3)" >
           <h3 class="text-2xl font-bold" style="color: var(--orange)">{$text.events}</h3>
           <Stack gap="var(--space-2)" className="pl-4">
-            <Button
-              onClick={() => handleNavigation("/kalender")}
-              class="text-left transition-colors flex items-center gap-2 bg-transparent"
-              buttonHoverStyle="color: var(--orange)"
-            >
-              <CalendarClock size={20} />
-              {$text.eventsPages.calendar}
-            </Button>
             <Button
               onClick={() => handleNavigation("/mentorid")}
               class="text-left transition-colors flex items-center gap-2 bg-transparent"
