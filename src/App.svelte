@@ -5,7 +5,7 @@
   import Footer from "./layout/Footer.svelte";
 </script>
 
-{#if $text.nav}
+{#if $text && Object.keys($text).length > 0}
   <Navbar />
   <Router {routes} />
   <Footer />

@@ -94,11 +94,12 @@
 </style>
 
 <Section className="text-white" background="off-black" padding="small">
+  {#if $text && Object.keys($text).length > 0}
   <div class="flex items-center justify-end">
     <!-- Desktop Navigation -->
     <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
         <Dropdown
-          name={$text.about}
+          name={$text.about || 'Meist'}
           buttonClass="rounded-[5px]"
           buttonHoverStyle="background-color:var(--orange); color:var(--black)"
           panelClassName="bg-[var(--off-black)]"
@@ -164,6 +165,7 @@
       <Menu size={32} />
     </Button>
   </div>
+  {/if}
 </Section>
 
 <!-- Full Screen Mobile Menu -->
@@ -295,4 +297,3 @@
     </Stack>
   </div>
 {/if}
-
