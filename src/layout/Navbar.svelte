@@ -2,7 +2,6 @@
   import {
     Button,
     Dropdown,
-    Grid,
     Section,
   } from "$components";
   import { navigate, getPath, currentLang, text, switchLang } from "$lib";
@@ -21,18 +20,15 @@
   import X from "lucide-svelte/icons/x";
 
   let mobileMenuOpen = false;
+  let isClosing = false;
 
   // Reactively control body scroll
   $: if (typeof document !== 'undefined') {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
       document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
       document.documentElement.style.overflow = '';
     }
   }
@@ -41,18 +37,21 @@
   onDestroy(() => {
     if (typeof document !== 'undefined') {
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
       document.documentElement.style.overflow = '';
     }
   });
 
   function toggleMobileMenu() {
     mobileMenuOpen = !mobileMenuOpen;
+    isClosing = false;
   }
 
   function closeMobileMenu() {
-    mobileMenuOpen = false;
+    isClosing = true;
+    setTimeout(() => {
+      mobileMenuOpen = false;
+      isClosing = false;
+    }, 300); // Match animation duration
   }
 
   function handleNavigation(path, options = {}) {
@@ -61,8 +60,36 @@
   }
 </script>
 
+<style>
+  @keyframes expandFromButton {
+    from {
+      clip-path: circle(0px at calc(100% - 2rem) 2rem);
+    }
+    to {
+      clip-path: circle(150% at calc(100% - 2rem) 2rem);
+    }
+  }
+
+  @keyframes collapseToButton {
+    from {
+      clip-path: circle(150% at calc(100% - 2rem) 2rem);
+    }
+    to {
+      clip-path: circle(0px at calc(100% - 2rem) 2rem);
+    }
+  }
+
+  .menu-opening {
+    animation: expandFromButton 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .menu-closing {
+    animation: collapseToButton 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+</style>
+
 <Section className="text-white" background="off-black" padding="small">
-  <Grid>
+  <div class="flex items-center justify-end">
     <!-- Desktop Navigation -->
     <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
         <Dropdown
@@ -118,17 +145,21 @@
     <button
       on:click={toggleMobileMenu}
       class="md:hidden ml-auto p-2 text-white hover:text-orange-500 transition-colors"
-      class:hidden={mobileMenuOpen}
+      style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
       aria-label="Toggle menu"
     >
       <Menu size={32} />
     </button>
-  </Grid>
+  </div>
 </Section>
 
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
-  <div class="fixed inset-0 z-[100] bg-[var(--off-black)] md:hidden flex flex-col overflow-hidden">
+  <div 
+    class="fixed inset-0 z-[100] bg-[var(--off-black)] md:hidden flex flex-col overflow-hidden"
+    class:menu-opening={!isClosing}
+    class:menu-closing={isClosing}
+  >
     <!-- Fixed Close Button - positioned to match hamburger with Section padding -->
     <div class="absolute top-8 right-0 px-[var(--site-padding)]">
       <button
