@@ -6,6 +6,7 @@
     Section,
   } from "$components";
   import { navigate, getPath, currentLang, text, switchLang } from "$lib";
+  import { onDestroy } from "svelte";
 
   // Icon imports (Lucide)
   import Coffee from "lucide-svelte/icons/coffee";
@@ -16,11 +17,54 @@
   import Bot from "lucide-svelte/icons/bot";
   import HandHeart from "lucide-svelte/icons/hand-heart";
   import Trophy from "lucide-svelte/icons/trophy";
+  import Menu from "lucide-svelte/icons/menu";
+  import X from "lucide-svelte/icons/x";
+
+  let mobileMenuOpen = false;
+
+  // Reactively control body scroll
+  $: if (typeof document !== 'undefined') {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.documentElement.style.overflow = '';
+    }
+  }
+
+  // Cleanup on component destroy
+  onDestroy(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.documentElement.style.overflow = '';
+    }
+  });
+
+  function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+  }
+
+  function closeMobileMenu() {
+    mobileMenuOpen = false;
+  }
+
+  function handleNavigation(path, options = {}) {
+    navigate(path, options);
+    closeMobileMenu();
+  }
 </script>
 
 <Section className="text-white" background="off-black" padding="small">
   <Grid>
-    <nav class="z-10 flex gap-4 justify-end text-xl">
+    <!-- Desktop Navigation -->
+    <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
         <Dropdown
           name={$text.nav.about}
           buttonClass="rounded-[5px]"
@@ -69,5 +113,126 @@
           >{$text.nav.helpdesk}
         </Button>
     </nav>
+
+    <!-- Mobile Hamburger Button -->
+    <button
+      on:click={toggleMobileMenu}
+      class="md:hidden ml-auto p-2 text-white hover:text-orange-500 transition-colors"
+      class:hidden={mobileMenuOpen}
+      aria-label="Toggle menu"
+    >
+      <Menu size={32} />
+    </button>
   </Grid>
 </Section>
+
+<!-- Full Screen Mobile Menu -->
+{#if mobileMenuOpen}
+  <div class="fixed inset-0 z-[100] bg-[var(--off-black)] md:hidden flex flex-col overflow-hidden">
+    <!-- Fixed Close Button - positioned to match hamburger with Section padding -->
+    <div class="absolute top-8 right-0 px-[var(--site-padding)]">
+      <button
+        on:click={closeMobileMenu}
+        class="ml-auto p-2 hover:text-orange-500 transition-colors flex"
+        aria-label="Close menu"
+      >
+        <X size={32} color="white" class="hover:stroke-orange-500" />
+      </button>
+    </div>
+
+    <!-- Menu Content -->
+    <nav class="flex-1 flex flex-col gap-6 px-8 pb-8 text-white text-xl justify-center">
+      <!-- About Section -->
+      <div class="border-b border-gray-700 pb-4">
+        <h3 class="text-2xl font-bold mb-4 text-orange-500">{$text.nav.about}</h3>
+        <div class="flex flex-col gap-3 pl-4">
+          <button
+            on:click={() => handleNavigation("/mis-teeme")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            {$text.nav.aboutPages.info}
+          </button>
+          <button
+            on:click={() => handleNavigation("/liitu-meiega")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <Bot size={20} />
+            {$text.nav.aboutPages.join}
+          </button>
+          <button
+            on:click={() => handleNavigation("/mentorid")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <HandHeart size={20} />
+            {$text.nav.aboutPages.mentors}
+          </button>
+          <button
+            on:click={() => handleNavigation("/juhatus")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <Lectern size={20} />
+            {$text.nav.aboutPages.board}
+          </button>
+        </div>
+      </div>
+
+      <!-- Events Section -->
+      <div class="border-b border-gray-700 pb-4">
+        <h3 class="text-2xl font-bold mb-4 text-orange-500">{$text.nav.events}</h3>
+        <div class="flex flex-col gap-3 pl-4">
+          <button
+            on:click={() => handleNavigation("/kalender")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <CalendarClock size={20} />
+            {$text.nav.eventsPages.calendar}
+          </button>
+          <button
+            on:click={() => handleNavigation("https://asikarikas.ee/", { external: true })}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <Trophy size={20} />
+            ASI Karikas
+          </button>
+          <button
+            on:click={() => handleNavigation("/mentorid")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <Presentation size={20} />
+            {$text.nav.eventsPages.workshops}
+          </button>
+          <button
+            on:click={() => handleNavigation("/rebased")}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <Swords size={20} />
+            {$text.nav.eventsPages.fresh}
+          </button>
+          <button
+            on:click={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
+            class="text-left hover:text-orange-500 transition-colors flex items-center gap-2"
+          >
+            <Coffee size={20} />
+            {$text.nav.eventsPages.repair}
+          </button>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <div class="flex flex-col gap-4">
+        <button
+          on:click={() => handleNavigation("/kontakt")}
+          class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors"
+        >
+          {$text.nav.contact}
+        </button>
+        <button
+          on:click={() => handleNavigation("/helpdesk")}
+          class="text-left text-2xl font-semibold hover:text-orange-500 transition-colors"
+        >
+          {$text.nav.helpdesk}
+        </button>
+      </div>
+    </nav>
+  </div>
+{/if}
