@@ -12,7 +12,15 @@ spacing. Content is projected into the default slot.
 
 <div
   class="grid {className}"
-  style="grid-template-columns: repeat(auto-fit, minmax({min}, 1fr)); gap: {gap};"
+  style="--min: {min}; --gap: {gap}; grid-template-columns: 1fr; gap: var(--gap);"
 >
   <slot />
 </div>
+
+<style>
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr)) !important;
+    }
+  }
+</style>
