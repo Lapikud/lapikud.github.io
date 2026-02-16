@@ -108,9 +108,9 @@
 
 <Section className="text-white" background="off-black" padding="small">
   {#if $text && Object.keys($text).length > 0}
-    <div class="flex items-center w-full relative min-h-16 md:min-h-0">
+    <div class="flex items-center w-full relative min-h-16">
       <!-- Logo -->
-      {#if currentPath !== "/" && currentPath !== "/en"}
+      {#if currentPath !== "/"}
         <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
           <Button onClick={() => handleNavigation("/")}>
             <img src="assets/LapLogo_white_orange.png" alt="Lapikud Logo" class="h-16" />

@@ -36,6 +36,10 @@ export const routeMap = {
   // Contact/Kontakt
   '/kontakt': { est: '/kontakt', en: '/contact' },
   '/contact': { est: '/kontakt', en: '/contact' },
+
+  // Juhatus/Managment
+  '/juhatus': { est: '/juhatus', en: '/management' },
+  '/management': { est: '/juhatus', en: '/management' },
 };
 
 // Detect language from route
