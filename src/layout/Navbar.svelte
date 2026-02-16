@@ -10,7 +10,6 @@
 
   // Icon imports (Lucide)
   import Coffee from "lucide-svelte/icons/coffee";
-  import CalendarClock from "lucide-svelte/icons/calendar-clock";
   import Presentation from "lucide-svelte/icons/presentation";
   import Swords from "lucide-svelte/icons/swords";
   import Lectern from "lucide-svelte/icons/lectern";
@@ -20,19 +19,32 @@
   import Menu from "lucide-svelte/icons/menu";
   import X from "lucide-svelte/icons/x";
 
-  let mobileMenuOpen = false;
-  let isClosing = false;
+  let mobileMenuOpen = $state(false);
+  let isClosing = $state(false);
+  let currentPath = $state(getPath());
+
+  // Update currentPath when navigation occurs
+  $effect(() => {
+    const handleNavigation = () => {
+      currentPath = getPath();
+    };
+
+    window.addEventListener("popstate", handleNavigation);
+    return () => window.removeEventListener("popstate", handleNavigation);
+  });
 
   // Reactively control body scroll
-  $: if (typeof document !== 'undefined') {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
+  $effect(() => {
+    if (typeof document !== 'undefined') {
+      if (mobileMenuOpen) {
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+      }
     }
-  }
+  });
 
   onDestroy(() => {
     if (typeof document !== 'undefined') {
@@ -56,6 +68,7 @@
 
   function handleNavigation(path, options = {}) {
     navigate(path, options);
+    currentPath = getPath();
     closeMobileMenu();
   }
 
@@ -95,76 +108,87 @@
 
 <Section className="text-white" background="off-black" padding="small">
   {#if $text && Object.keys($text).length > 0}
-  <div class="flex items-center justify-end">
-    <!-- Desktop Navigation -->
-    <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
-        <Dropdown
-          name={$text.about || 'Meist'}
-          buttonClass="rounded-[5px]"
-          buttonHoverStyle="background-color:var(--orange); color:var(--black)"
-          panelClassName="bg-[var(--off-black)]"
-        >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/lapikutest")}
-            >{$text.aboutPages.info}</Button
+    <div class="flex items-center w-full relative min-h-16 md:min-h-0">
+      <!-- Logo -->
+      {#if currentPath !== "/" && currentPath !== "/en"}
+        <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
+          <Button onClick={() => handleNavigation("/")}>
+            <img src="assets/LapLogo_white_orange.png" alt="Lapikud Logo" class="h-16" />
+          </Button>
+        </div>
+      {/if}
+      
+      <div class="flex items-center justify-end ml-auto w-full md:w-auto">
+        <!-- Desktop Navigation -->
+        <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
+          <Dropdown
+            name={$text.about || 'Meist'}
+            buttonClass="rounded-[5px]"
+            buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+            panelClassName="bg-[var(--off-black)]"
           >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/tudengile")}
-            ><Bot />{$text.aboutPages.join}</Button
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/lapikutest")}
+              >{$text.aboutPages.info}</Button
+            >
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/tudengile")}
+              ><Bot />{$text.aboutPages.join}</Button
+            >
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mentorid")}
+              ><HandHeart />{$text.aboutPages.mentors}</Button
+            >
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/juhatus")}
+              ><Lectern />{$text.aboutPages.board}</Button
+            >
+          </Dropdown>
+          <Dropdown
+            name={$text.events}
+            buttonClass="rounded-[5px]"
+            buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+            panelClassName="bg-[var(--off-black)]"
           >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/mentorid")}
-            ><HandHeart />{$text.aboutPages.mentors}</Button
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
+              ><Presentation />{$text.eventsPages.workshops}</Button
+            >
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
+              ><Swords />{$text.eventsPages.fresh}</Button
+            >
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
+              ><Trophy />ASI Karikas</Button
+            >
+            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
+              ><Coffee />{$text.eventsPages.repair}</Button
+            >
+          </Dropdown>
+          <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/kontakt")}
+            >{$text.contact}
+          </Button>
+          <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/helpdesk")}
+            >{$text.helpdesk}
+          </Button>
+          
+          <!-- Language Switcher -->
+          <Button 
+            class="rounded-[5px] px-3 py-1 text-sm ml-2"
+            style="color: var(--orange)"
+            buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+            onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
           >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/juhatus")}
-            ><Lectern />{$text.aboutPages.board}</Button
-          >
-        </Dropdown>
-        <Dropdown
-          name={$text.events}
-          buttonClass="rounded-[5px]"
-          buttonHoverStyle="background-color:var(--orange); color:var(--black)"
-          panelClassName="bg-[var(--off-black)]"
-        >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
-            ><Presentation />{$text.eventsPages.workshops}</Button
-          >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
-            ><Swords />{$text.eventsPages.fresh}</Button
-          >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
-            ><Trophy />ASI Karikas</Button
-          >
-          <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
-            ><Coffee />{$text.eventsPages.repair}</Button
-          >
-        </Dropdown>
-        <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/kontakt")}
-          >{$text.contact}
-        </Button>
-        <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/helpdesk")}
-          >{$text.helpdesk}
-        </Button>
-        
-        <!-- Language Switcher -->
-        <Button 
-          class="rounded-[5px] px-3 py-1 text-sm ml-2"
-          style="color: var(--orange)"
-          buttonHoverStyle="background-color:var(--orange); color:var(--black)"
-          onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
-        >
-          {$currentLang === 'est' ? 'EN' : 'EST'}
-        </Button>
-    </nav>
+            {$currentLang === 'est' ? 'EN' : 'EST'}
+          </Button>
+      </nav>
 
-    <!-- Mobile Hamburger Button -->
-    <Button
-      onClick={toggleMobileMenu}
-      class="md:hidden ml-auto p-2 text-white transition-colors bg-transparent"
-      buttonHoverStyle="color: var(--orange)"
-      style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
-      aria-label="Toggle menu"
-    >
-      <Menu size={32} />
-    </Button>
-  </div>
+      <!-- Mobile Hamburger Button - Fixed position -->
+      <Button
+        onClick={toggleMobileMenu}
+        class="md:hidden p-2 text-white transition-colors bg-transparent absolute right-0"
+        buttonHoverStyle="color: var(--orange)"
+        style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
+        aria-label="Toggle menu"
+      >
+        <Menu size={32} />
+      </Button>
+    </div>
+    </div>
   {/if}
 </Section>
 

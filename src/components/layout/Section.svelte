@@ -7,7 +7,7 @@
 
   const paddingClasses = {
     none: "py-0",
-    small: "py-8",
+    small: "py-4 md:py-8",
     normal: "py-12 max-md:py-8",
     large: "py-[clamp(3rem,8vw,6rem)] max-md:py-12",
   };
@@ -26,7 +26,7 @@
 
 <section
   {id}
-  class="w-full relative {paddingClasses[padding]} {className}"
+  class="w-full {paddingClasses[padding]} {className}"
   style={backgroundStyle ? `background: ${backgroundStyle};` : ""}
 >
   <div class="{fullWidth ? '' : 'max-w-[1200px]'} mx-auto px-(--site-padding)">

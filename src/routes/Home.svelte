@@ -4,7 +4,6 @@
     Grid,
     Card,
     Center,
-    Container,
   } from "$components";
   import { onMount } from "svelte";
   import yaml from 'js-yaml';
@@ -29,7 +28,7 @@
 <Section background="orange">
   <Grid>
     <Center>
-      <img src="/assets/LAP_logo_v3_transp.png" alt="MTÜ Lapikud" class="max-w-md w-full h-auto" style="padding: var(--space-4);"/>
+      <img src="/assets/LapLogo_black_white.png" alt="MTÜ Lapikud" class="max-w-md w-full h-auto" style="padding: var(--space-4);"/>
     </Center>
     <p class="text-3xl leading-relaxed" style="padding: var(--space-4);">
       MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi 
