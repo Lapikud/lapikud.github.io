@@ -195,11 +195,11 @@
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
   <div 
-    class="fixed inset-0 z-100 bg-(--off-black) md:hidden overflow-hidden"
+    class="fixed inset-0 z-100 bg-(--off-black) md:hidden overflow-y-auto"
     class:menu-opening={!isClosing}
     class:menu-closing={isClosing}
   >
-    <Stack className="h-full">
+    <Stack className="min-h-full">
       <div class="absolute top-8 right-0 px-(--site-padding)">
         <Button
           onClick={closeMobileMenu}
@@ -212,7 +212,7 @@
       </div>
 
       <!-- Menu Content -->
-      <Stack gap="var(--space-5)" className="flex-1 px-8 pb-8 text-white text-xl justify-center">
+      <Stack gap="var(--space-5)" className="flex-1 px-8 pt-24 pb-12 text-white text-xl">
         <!-- About Section -->
         <Stack gap="var(--space-3)">
           <h3 class="text-2xl font-bold" style="color: var(--orange)">{$text.about}</h3>

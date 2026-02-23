@@ -171,7 +171,7 @@
   
   {#if members.senior && members.senior.length > 0}
     <div class="mb-12">
-      <h3 class="text-3xl font-bold mb-6 text-center">Senior liikmed</h3>
+      <h3 class="text-3xl font-bold mb-6 text-center">Vanemliikmed</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {#each members.senior as member}
           <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
@@ -184,7 +184,7 @@
 
   {#if members.junior && members.junior.length > 0}
     <div>
-      <h3 class="text-3xl font-bold mb-6 text-center">Junior liikmed</h3>
+      <h3 class="text-3xl font-bold mb-6 text-center">Noorliikmed</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {#each members.junior as member}
           <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">

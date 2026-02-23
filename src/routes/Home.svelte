@@ -39,7 +39,7 @@
 
 <Section>
   <Grid gap="var(--space-5)">
-    <Card variant="animated-neutral" href="/tudengile">
+    <Card variant="blur" href="/tudengile">
       <div class="feature-icon" style="color: var(--orange)">
         <Users size={32} strokeWidth={1.5} />
       </div>
@@ -52,7 +52,7 @@
       </div>
     </Card>
 
-    <Card variant="animated-neutral" href="/helpdesk">
+    <Card variant="blur" href="/helpdesk">
       <div class="feature-icon" style="color: var(--orange)">
         <Wrench size={32} strokeWidth={1.5} />
       </div>
@@ -65,7 +65,7 @@
       </div>
     </Card>
 
-    <Card variant="animated-neutral" href="/ourwork">
+    <Card variant="blur" href="/ourwork">
       <div class="feature-icon" style="color: var(--orange)">
         <HeartHandshake size={32} strokeWidth={1.5} />
       </div>
@@ -83,11 +83,11 @@
 <!-- What We Do Section -->
 <Section>
   <Grid gap="var(--space-4)">
-    <Card variant="glass">
+    <Card variant="blur">
       <h2 class="pb-4 text-4xl font-bold">Mida me loome</h2>
       <p>Meie põhieesmärgiks on Tallinna Tehnikaülikooli IT tudengitele erialase lisandväärtuse loomine. Kaasame tudengeid praktilistesse lahendustesse, kus saab ideid reaalselt ellu viia ja oma oskusi päriselt kasutada. Meie projektidest kasvavad välja huvitavad ja tarvilikud lõputööd, millel on selge praktiline väärtus.</p>
     </Card>
-    <Card variant="glass">
+    <Card variant="blur">
       <h2 class="pb-4 text-4xl font-bold">Keda ja kuidas kaasame</h2>
       <p>Pakume nutikatele ja motiveeritud tudengitele võimalust saada meie juures esimene töökogemus ning arendada end meeskonnas töötades. Lapikud ei ole ainult IT-tudengite organisatsioon, kaasame projektidesse ka majandusteaduskonna tudengeid, et tehniliste lahenduste kõrval oleks esindatud ka äriline vaade.</p>
     </Card>

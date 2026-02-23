@@ -1,6 +1,6 @@
 <script>
   export let href = "";
-  export let variant = "default"; // 'default' | 'animated' | 'animated-neutral' | 'glass'
+  export let variant = "default"; // 'default' | 'animated' | 'animated-neutral' | 'glass' | 'blur'
   export let className = "";
 
   const variantClasses = {
@@ -8,6 +8,7 @@
     animated: "card-animated",
     "animated-neutral": "card-animated-neutral",
     glass: "card-glass",
+    blur: "card-blur",
   };
 </script>
 
@@ -78,6 +79,35 @@
 
   .card-glass:hover {
     transform: none;
+  }
+
+  .card-blur {
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    isolation: isolate;
+  }
+
+  .card-blur::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border-radius: calc(var(--radius-lg) + 12px);
+    background: radial-gradient(
+      120% 120% at 50% 50%,
+      rgba(245, 245, 245, 0.95) 45%,
+      rgba(245, 245, 245, 0.55) 65%,
+      rgba(245, 245, 245, 0) 82%
+    );
+    filter: blur(10px);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .card-blur:hover {
+    background: rgba(255, 255, 255, 0.78);
   }
 
   @media (max-width: 768px) {
