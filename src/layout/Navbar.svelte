@@ -169,7 +169,6 @@
           <!-- Language Switcher -->
           <Button 
             class="rounded-[5px] px-3 py-1 text-sm ml-2"
-            style="color: var(--orange)"
             buttonHoverStyle="color:var(--white)"
             onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
           >
