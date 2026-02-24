@@ -11,7 +11,7 @@ export function navigate(path, options = {}) {
     const { external = false } = options;
     
     if (external) {
-        window.location.href = path;
+        window.open(path, '_blank', 'noopener,noreferrer');
     } else {
         window.history.pushState({}, "", path);
         window.dispatchEvent(new PopStateEvent('popstate'));

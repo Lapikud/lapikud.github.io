@@ -106,14 +106,14 @@
   }
 </style>
 
-<Section className="text-white" background="off-black" padding="small">
+<Section className="text-black" background="orange" padding="small">
   {#if $text && Object.keys($text).length > 0}
     <div class="flex items-center w-full relative min-h-16">
       <!-- Logo -->
       {#if currentPath !== "/"}
         <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
           <Button onClick={() => handleNavigation("/")}>
-            <img src="assets/LapLogo_white_orange.png" alt="Lapikud Logo" class="h-16" />
+            <img src="assets/LapLogo_black_white.png" alt="Lapikud Logo" class="h-16" />
           </Button>
         </div>
       {/if}
@@ -124,8 +124,8 @@
           <Dropdown
             name={$text.about || 'Meist'}
             buttonClass="rounded-[5px]"
-            buttonHoverStyle="background-color:var(--orange); color:var(--black)"
-            panelClassName="bg-[var(--off-black)]"
+            buttonHoverStyle="color:var(--white)"
+            panelClassName="bg-[var(--white)] text-[var(--black)]"
           >
             <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/lapikutest")}
               >{$text.aboutPages.info}</Button
@@ -143,8 +143,8 @@
           <Dropdown
             name={$text.events}
             buttonClass="rounded-[5px]"
-            buttonHoverStyle="background-color:var(--orange); color:var(--black)"
-            panelClassName="bg-[var(--off-black)]"
+            buttonHoverStyle="color:var(--white)"
+            panelClassName="bg-[var(--white)] text-[var(--black)]"
           >
             <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
               ><Presentation />{$text.eventsPages.workshops}</Button
@@ -159,10 +159,10 @@
               ><Coffee />{$text.eventsPages.repair}</Button
             >
           </Dropdown>
-          <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/kontakt")}
+          <Button buttonHoverStyle="color:var(--white)" class="rounded-[5px]" onClick={() => navigate("/kontakt")}
             >{$text.contact}
           </Button>
-          <Button buttonHoverStyle="background-color:var(--orange); color:var(--black)" class="rounded-[5px]" onClick={() => navigate("/helpdesk")}
+          <Button buttonHoverStyle="color:var(--white)" class="rounded-[5px]" onClick={() => navigate("/helpdesk")}
             >{$text.helpdesk}
           </Button>
           
@@ -170,7 +170,7 @@
           <Button 
             class="rounded-[5px] px-3 py-1 text-sm ml-2"
             style="color: var(--orange)"
-            buttonHoverStyle="background-color:var(--orange); color:var(--black)"
+            buttonHoverStyle="color:var(--white)"
             onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
           >
             {$currentLang === 'est' ? 'EN' : 'EST'}
@@ -181,7 +181,7 @@
       <Button
         onClick={toggleMobileMenu}
         class="md:hidden p-2 text-white transition-colors bg-transparent absolute right-0"
-        buttonHoverStyle="color: var(--orange)"
+        buttonHoverStyle="color: var(--white)"
         style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
         aria-label="Toggle menu"
       >
