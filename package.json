@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@types/js-yaml": "^4.0.9",
     "svelte": "^5.43.8",
     "vite": "npm:rolldown-vite@7.2.5"
   },
@@ -20,6 +21,8 @@
     "@tailwindcss/vite": "^4.1.17",
     "js-yaml": "^4.1.1",
     "lucide-svelte": "^0.554.0",
+    "maplibre-gl": "^5.19.0",
+    "svelte-maplibre": "^1.2.6",
     "tailwindcss": "^4.1.17"
   }
 }

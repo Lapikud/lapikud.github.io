@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "HELPDESK"
+  },
+  "whatIs": {
+    "title": "What is HELPDESK?",
+    "description": "HELPDESK is a computer support service provided by MTÜ Lapikud. The service is aimed at students, lecturers, and anyone interested both inside and outside Tallinn University of Technology. Our team consists of experienced and smart IT students from Tallinn University of Technology."
+  },
+  "services": {
+    "title": "What services do we offer?",
+    "list": [
+      "Computer hardware diagnostics and repair",
+      "Computer hardware maintenance",
+      "Software diagnostics and configuration",
+      "Software installation",
+      "Other electronics repair"
+    ]
+  },
+  "pricing": {
+    "title": "Price List",
+    "tableHeaders": {
+      "service": "Service",
+      "quantity": "Quantity/Time",
+      "price": "Price"
+    },
+    "note": "Parts are ordered by the client themselves or by agreement with the technician.<br/><br/>If needed, we can come to the student village and Technopol area.<br/><br/>With our student-friendly prices and personal approach, we offer a service you won't be disappointed with!"
+  },
+  "hours": {
+    "title": "Opening Hours:",
+    "schedule": "<strong>M</strong>onday – <strong>F</strong>riday 14-19*",
+    "note": "* This is the time period when we are most likely to be found. However, we cannot guarantee presence."
+  },
+  "location": {
+    "title": "Location",
+    "busInfo": "Accessible via <span class='text-[#E69635]'>buses 11, 37, 83, 91 from Keemia stop</span> or <span class='text-[#E69635]'>buses 10, 27, 33, 36, 45 from Tehnikaülikool stop.</span>",
+    "address": "Akadeemia tee 5 dormitory, room 008A"
+  }
+}

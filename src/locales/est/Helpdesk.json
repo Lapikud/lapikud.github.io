@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "HELPDESK"
+  },
+  "whatIs": {
+    "title": "Mis on HELPDESK?",
+    "description": "HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning kõikidele huvilistele ka väljaspool Tallinna Tehnikaülikooli. Meie meeskond koosneb kogenud ja nutikatest Tallinna Tehnikaülikooli IT-tudengitest."
+  },
+  "services": {
+    "title": "Mis teenuseid osutame?",
+    "list": [
+      "Arvuti riistvara diagnostika ja remont",
+      "Arvuti riistvara hooldus",
+      "Tarkvara diagnostika ja seadistamine",
+      "Tarkvara paigaldamine",
+      "Muu elektroonika parandamine"
+    ]
+  },
+  "pricing": {
+    "title": "Hinnakiri",
+    "tableHeaders": {
+      "service": "Teenus",
+      "quantity": "Kogus/Aeg",
+      "price": "Hind"
+    },
+    "note": "Jupid tellitakse kliendi enda poolt või kokkuleppel tehnikuga.<br/><br/>Vajadusel tuleme üliõpilasküla ja Tehnopoli piires kohale.<br/><br/>Oma tudengisõbralike hindade ja personaalse lähenemisega pakume teenust, milles ei pea pettuma!"
+  },
+  "hours": {
+    "title": "Lahtiolekuajad:",
+    "schedule": "<strong>E</strong>smaspäevast – <strong>R</strong>eedeni 14-19*",
+    "note": "* Tegu on ajaperioodiga, mil meid on kõige tõenäolisem tabada. Siiski ei saa garanteerida kohalolekut."
+  },
+  "location": {
+    "title": "Asukoht",
+    "busInfo": "Saab <span class='text-[#E69635]'>11, 37, 83, 91 bussiga Keemia peatusest</span> või <span class='text-[#E69635]'>Tehnikaülikool peatusest 10, 27, 33, 36, 45 bussiga.</span>",
+    "address": "Akadeemia tee 5 ühiselamu, ruum 008A"
+  }
+}
