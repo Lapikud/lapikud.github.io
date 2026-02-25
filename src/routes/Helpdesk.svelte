@@ -46,11 +46,11 @@
 
 <!-- Hero Section -->
 <div class="w-full bg-black">
-  <div class="flex absolute justify-center items-center flex-row w-full h-[60vh] px-4">
+  <div class="flex absolute justify-center items-center flex-row w-full h-[42vh] px-4">
     <img src={helpdesk} alt={$text["hero"]?.title || "Helpdesk logo"} class="z-10" />
   </div>
   <img
-    class="h-[60vh] object-cover object-left w-full opacity-50 blur-[1.5px]"
+    class="h-[42vh] object-cover object-left w-full opacity-50 blur-[1.5px]"
     src={helpdeskbg}
     alt="Helpdesk"
   />
@@ -59,7 +59,7 @@
 <!-- Main Content -->
 <Container>
   <Section>
-    <Grid columns="2" gap="var(--space-5)">
+    <Grid min="480px" gap="var(--space-5)">
       <!-- What is HELPDESK? -->
       <div class="flex flex-col">
         <h2 class="text-4xl font-light pb-4">{$text["whatIs"]?.title || ""}</h2>

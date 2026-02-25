@@ -52,8 +52,7 @@
         <div class="text-center max-w-4xl">
             <h1 class="text-5xl font-bold mb-6">Meie Mentorid</h1>
             <p class="text-2xl leading-relaxed">
-                Kogenud tudengid, kes aitavad sind areneda ja jagavad oma
-                teadmisi
+                Lapikud, kes on alati valmis olema sinu toeks nii õpingutes kui ka isiklikus arengus ja kellega on lihtsalt tore koos aega veeta.
             </p>
         </div>
     </Center>
@@ -61,15 +60,6 @@
 
 <!-- Mentors Grid -->
 <Section>
-    <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">
-            Tutvuge meie mentorite meeskonnaga
-        </h2>
-        <p class="text-xl text-gray-600">
-            Igaüks neist on spetsialist omas valdkonnas ja valmis sind aitama
-        </p>
-    </div>
-
     <div class="flex flex-col gap-8">
         {#each mentors as mentor}
             <div>
@@ -186,28 +176,5 @@
             </div>
         {/each}
     </div>
-</Section>
-
-<!-- Become a Mentor Section -->
-<Section background="neutral">
-    <Center>
-        <Card variant="glass" class="max-w-3xl">
-            <h2 class="text-4xl font-bold mb-6 text-center">
-                Taha saada mentoriks?
-            </h2>
-            <p class="text-lg text-center mb-6">
-                Kui oled kogenud tudeng ja soovid jagada oma teadmisi ning
-                aidata uusi liikmeid, siis võta meiega ühendust!
-            </p>
-            <div class="text-center">
-                <a
-                    href="mailto:lapikud@lapikud.ee"
-                    class="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
-                >
-                    Võta ühendust
-                </a>
-            </div>
-        </Card>
-    </Center>
 </Section>
 
