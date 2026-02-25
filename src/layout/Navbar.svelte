@@ -149,9 +149,6 @@
             <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/koolitused")}
               ><Presentation />{$text.eventsPages.workshops}</Button
             >
-            <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("/rebased")}
-              ><Swords />{$text.eventsPages.fresh}</Button
-            >
             <Button class="rounded-[5px] bg-transparent" buttonHoverStyle="color:var(--orange)" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
               ><Trophy />ASI Karikas</Button
             >
@@ -240,12 +237,12 @@
               {$text.aboutPages.mentors}
             </Button>
             <Button
-              onClick={() => handleNavigation("/ettevottele")}
+              onClick={() => handleNavigation("/juhatus")}
               class="text-left transition-colors flex items-center gap-2 bg-transparent"
               buttonHoverStyle="color: var(--orange)"
             >
               <Lectern size={20} />
-              Ettevõttele
+              {$text.aboutPages.board}
             </Button>
           </Stack>
         </Stack>
@@ -261,14 +258,6 @@
             >
               <Presentation size={20} />
               {$text.eventsPages.workshops}
-            </Button>
-            <Button
-              onClick={() => handleNavigation("/rebased")}
-              class="text-left transition-colors flex items-center gap-2 bg-transparent"
-              buttonHoverStyle="color: var(--orange)"
-            >
-              <Swords size={20} />
-              {$text.eventsPages.fresh}
             </Button>
             <Button
               onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}

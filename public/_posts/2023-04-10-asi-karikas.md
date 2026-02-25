@@ -1,8 +1,7 @@
 ---
 layout: post
-title:
-  est: "ASI Karikas 2023"
-date: 2023-04-10 +0200
+title:  "ASI Karikas 2023"
+date:   2023-04-10 +0200
 categories: blog
 ---
 
