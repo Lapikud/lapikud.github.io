@@ -7,3 +7,4 @@ export { default as Section } from './layout/Section.svelte'
 
 export { default as Button } from './Button.svelte'
 export { default as Dropdown } from './Dropdown.svelte'
+export { default as Slideshow } from './Slideshow.svelte'
