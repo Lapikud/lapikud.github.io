@@ -10,6 +10,7 @@ import AboutUs from './AboutUs.svelte'
 import Contact from './Contact.svelte'
 import Managment from './Managment.svelte'
 import Striim from './Striim.svelte'
+import Calendar from './Calendar.svelte'
 
 // Route mapping for language switching
 export const routeMap = {
@@ -79,4 +80,5 @@ export const routes = {
   '/juhatus': Managment,
   '/management': Managment,
   '/striim': Striim,
+  '/kalender': Calendar,
 }
