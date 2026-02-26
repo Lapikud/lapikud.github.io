@@ -11,7 +11,6 @@
   // Icon imports (Lucide)
   import Coffee from "lucide-svelte/icons/coffee";
   import Presentation from "lucide-svelte/icons/presentation";
-  import Swords from "lucide-svelte/icons/swords";
   import Lectern from "lucide-svelte/icons/lectern";
   import Bot from "lucide-svelte/icons/bot";
   import HandHeart from "lucide-svelte/icons/hand-heart";
