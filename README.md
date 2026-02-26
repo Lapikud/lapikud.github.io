@@ -23,6 +23,28 @@ Fork this repo to your own account and create a pull request for changes you hav
 - [Node.js](https://nodejs.org/) (v18 or higher. v20 is recommended)
 - npm (comes with Node.js)
 
+<details>
+<summary>Set up VScode</summary>
+
+1. install [VSCode](https://code.visualstudio.com/)
+
+2. Recommended: wsl2 for windows users
+
+You might need to enable virtualization in BIOS unless it is already enabled. It can be checked by looking for "Virtualization" in Task Manager > Performance tab.
+
+```bash
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+```bash
+wsl --set-default-version 2
+```
+
+install [Ubuntu from Microsoft Store](https://apps.microsoft.com/store/detail/ubuntu/9NBLGGH4MSV6)
+
+</details>
+
 ### Installation
 
 1. **Clone the repository**
