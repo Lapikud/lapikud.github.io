@@ -1,5 +1,15 @@
 # Our work
 #
+- title: Tipilan
+  photo: tipilan.jpg
+  url: http://tipilan.ee/
+  description: Tipilan on Eesti suurim üliõpilaste korraldatav LAN-üritus. Lapikud tagas ürituse IT-infrastruktuuri ja veebilehe toimimise.
+
+- title: Remondikohvik
+  photo: remondikohvik.jpg
+  url: https://remondikohvik.lapikud.ee/
+  description: Remondikohvik on Lapikute poolt algatatud ja korraldatud projekt, mis annab asjadele teise elu läbi parandamise. Projekt hõlmab nii ürituste korraldamist kui ka veebilehe väljatöötamist.
+
 - title: Tallinna Tehnikaülikooli Muuseumi eksponaadid
   photo: ttu_muusem_placeholder.jpg
   url:
