@@ -2,54 +2,42 @@
 
 @import "tailwindcss";
 
+/* Overwriting tailwindcss specific variables */
+@theme {
+  --color-orange-500: #f0941d;
+  --color-orange-300: #ffa940;
+  --color-orange-600: #d67d0a;
+
+  --color-gray-100: #fffdfa;
+  --color-gray-900: #0d0d0d;
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 48px;
+
+  --max-width-2xl: 700px;
+  --max-width-3xl: 800px;
+  --max-width-4xl: 900px;
+}
+
 /* Design tokens & theme variables (light defaults) */
 :root {
-  /* color tokens (light defaults) */
-  --orange: #f0941d;
-  --orange-light: #ffa940;
-  --orange-dark: #d67d0a;
-  --black: #000000;
-  --off-black: #0d0d0d;
-  --white: #ffffff;
-  --off-white: #fffdfa;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
-  --gray-300: #d4d4d4;
-  --gray-800: #262626;
-  --gray-900: #171717;
-
   /* layout tokens */
   --site-padding: clamp(1rem, 2vw, 2rem); /* horizontal page padding */
   --content-max: 1200px; /* main content max width */
-  --nav-height: 64px;
-  --footer-height: 80px;
 
   /* spacing scale */
-  --space-0: 0px;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 48px;
-
-  /* radius / shadows */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
-  --shadow-1: 0 1px 2px rgba(240, 148, 29, 0.2),
-    0 1px 3px rgba(240, 148, 29, 0.12);
-  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 20px rgba(240, 148, 29, 0.3);
-
-  /* breakpoints */
-  --bp-sm: 480px;
-  --bp-md: 768px;
-  --bp-lg: 1024px;
-  --bp-xl: 1280px;
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 48px;
 
   /* type scale (fluid base + modular sizes) */
   --fs-base: clamp(0.95rem, 0.9vw + 0.9rem, 1rem);
@@ -59,16 +47,6 @@
   --fs-lg: 1.125rem;
   --fs-xl: 1.5rem;
   --line-height: 1.45;
-
-  /* derived component tokens that components can rely on */
-  --button-bg: var(--color-surface);
-  --button-text: var(--color-text);
-  --card-bg: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.98),
-    rgba(255, 255, 255, 0.96)
-  );
-  --accent: var(--color-primary);
 }
 
 /* Global box sizing & accessible defaults */
@@ -88,8 +66,6 @@ html {
 }
 body {
   margin: 0;
-  color: var(--color-text);
-  background: var(--color-bg);
   line-height: var(--line-height);
   min-height: 100vh;
   -webkit-tap-highlight-color: transparent;
@@ -100,22 +76,18 @@ body {
 
 /* Basic link & button defaults that components inherit */
 a {
-  color: var(--color-primary);
   text-decoration: none;
   font-weight: 550;
 }
 a:hover {
   text-decoration: underline;
-  color: var(--color-primary-600);
 }
 
 button,
 input[type="button"],
 input[type="submit"] {
   font: inherit;
-  color: var(--button-text);
-  background: var(--button-bg);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border); /* TODO: fix css magic (we need the border, but the variable doesnt exist, but you cant remove it either) */
   padding: 0.5em 0.9em;
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -126,15 +98,8 @@ button:active {
   transform: translateY(1px);
 }
 button:focus {
-  outline: 3px solid color-mix(in srgb, var(--color-primary) 14%, transparent);
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 14%, transparent); /* TODO: change same magic here */
   outline-offset: 2px;
-}
-
-/* Simple responsive grid that adapts to available width */
-.grid {
-  display: grid;
-  gap: var(--space-3);
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 /* Utility: visually hidden (accessible labels) */
@@ -167,49 +132,34 @@ button:focus {
   }
 }
 
-/* Navbar & footer helpers so components can assume consistent heights */
-.site-header {
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  background: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 40;
-  border-bottom: 1px solid var(--color-border);
-  backdrop-filter: blur(6px);
-}
-.site-footer {
-  height: var(--footer-height);
-  display: flex;
-  align-items: center;
-  border-top: 1px solid var(--color-border);
-  background: transparent;
-}
-
-/* Small form controls default */
-.input {
-  padding: 0.6em 0.8em;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
-  background: transparent;
-  color: inherit;
-}
-
-/* Utility to visually reduce emphasis (muted text) */
-.muted {
-  color: var(--color-muted);
-  font-size: 0.95em;
-}
-
-/* Accessibility: respect reduced motion */
+/* Accessibility settings */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+    animation: none !important;
+    transition: none !important;
     scroll-behavior: auto !important;
+  }
+
+  /* Automatically apply final animation states */
+  [data-animation] { /* Everything with animation needs to be marked like this: <div class="fade-in" data-animation>Hello World</div> */
+    all: unset !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  * {
+    background: solid !important;
+    backdrop-filter: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  * {
+    background: Window !important;
+    color: WindowText !important;
+    border-color: WindowText !important;
+  }
+  a {
+    color: Highlight !important;
   }
 }

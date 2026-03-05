@@ -25,12 +25,12 @@
 </script>
 
 <!-- Header Section -->
-<Section background="orange">
+<Section bg="bg-orange-500">
   <Grid>
     <Center>
-      <img src="/assets/LapLogo_black_white.png" alt="MTÜ Lapikud" class="max-w-md w-full h-auto" style="padding: var(--space-4);"/>
+      <img src="/assets/LapLogo_black_white.png" alt="MTÜ Lapikud" class="max-w-md w-full h-auto p-4"/>
     </Center>
-    <p class="text-3xl leading-relaxed" style="padding: var(--space-4);">
+    <p class="text-3xl leading-relaxe p-4">
       MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi 
       ja praegusi IT huvilisi tudengeid.
     </p>
@@ -38,42 +38,42 @@
 </Section>
 
 <Section>
-  <Grid gap="var(--space-5)">
+  <Grid gap="gap-5">
     <Card variant="blur" href="/tudengile">
-      <div class="feature-icon" style="color: var(--orange)">
+      <div class="feature-icon text-orange-500">
         <Users size={32} strokeWidth={1.5} />
       </div>
       <h3 class="feature-title">Tudengile</h3>
       <p class="feature-description">
         Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest.
       </p>
-      <div style="color: var(--orange)" class="mt-4 font-semibold flex items-center gap-2">
+      <div class="mt-4 font-semibold flex items-center gap-2 text-orange-500">
         Liitu meiega <ArrowRight size={16} />
       </div>
     </Card>
 
     <Card variant="blur" href="/helpdesk">
-      <div class="feature-icon" style="color: var(--orange)">
+      <div class="feature-icon text-orange-500">
         <Wrench size={32} strokeWidth={1.5} />
       </div>
       <h3 class="feature-title">Helpdesk</h3>
       <p class="feature-description">
         HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning kõikidele huvilistele.
       </p>
-      <div style="color: var(--orange)" class="mt-4 font-semibold flex items-center gap-2">
+      <div class="mt-4 font-semibold flex items-center gap-2 text-orange-500">
         Vaata teenuseid <ArrowRight size={16} />
       </div>
     </Card>
 
     <Card variant="blur" href="/ourwork">
-      <div class="feature-icon" style="color: var(--orange)">
+      <div class="feature-icon text-orange-500">
         <HeartHandshake size={32} strokeWidth={1.5} />
       </div>
       <h3 class="feature-title">Ettevõttele</h3>
       <p class="feature-description">
         Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima.
       </p>
-      <div style="color: var(--orange)" class="mt-4 font-semibold flex items-center gap-2">
+      <div class="mt-4 font-semibold flex items-center gap-2 text-orange-500">
         Tehtud tööd <ArrowRight size={16} />
       </div>
     </Card>
@@ -82,7 +82,7 @@
 
 <!-- What We Do Section -->
 <Section>
-  <Grid gap="var(--space-4)">
+  <Grid gap="gap-4">
     <Card variant="blur">
       <h2 class="pb-4 text-4xl font-bold">Mida me loome</h2>
       <p>Meie põhieesmärgiks on Tallinna Tehnikaülikooli IT tudengitele erialase lisandväärtuse loomine. Kaasame tudengeid praktilistesse lahendustesse, kus saab ideid reaalselt ellu viia ja oma oskusi päriselt kasutada. Meie projektidest kasvavad välja huvitavad ja tarvilikud lõputööd, millel on selge praktiline väärtus.</p>
@@ -97,7 +97,7 @@
 <!-- Partners Section -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-5xl">
+    <h2 class="text-5xl text-orange-500">
       Koostööpartnerid
     </h2>
   </div>
@@ -107,7 +107,7 @@
       {#if partner.url}
         <a href={partner.url} target="_blank" rel="noopener noreferrer" class="partner-item" title={partner.name}>
           {#if partner.image}
-            <img src={`/assets/partners_logos/${partner.image}`} alt={partner.name} />
+            <img src={`/assets/partners/${partner.image}`} alt={partner.name} />
           {:else}
             <span class="partner-name">{partner.name}</span>
           {/if}
@@ -115,7 +115,7 @@
       {:else}
         <div class="partner-item">
           {#if partner.image}
-            <img src={`/assets/partners_logos/${partner.image}`} alt={partner.name} />
+            <img src={`/assets/partners/${partner.image}`} alt={partner.name} />
           {:else}
             <span class="partner-name">{partner.name}</span>
           {/if}
@@ -126,24 +126,7 @@
 </Section>
 
 <style>
-  .feature-icon {
-    margin-bottom: var(--space-3);
-    display: inline-flex;
-  }
-
-  .feature-title {
-    font-size: var(--fs-xl);
-    font-weight: 700;
-    margin-bottom: var(--space-2);
-    color: var(--black);
-  }
-
-  .feature-description {
-    color: var(--gray-800);
-    line-height: 1.6;
-    margin-bottom: var(--space-3);
-  }
-
+  /* PARTNERS SECTION */
   .partner-item {
     display: flex;
     align-items: center;
