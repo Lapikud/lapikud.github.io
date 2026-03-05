@@ -1,3 +1,4 @@
+// layout components
 export { default as Container } from './layout/Container.svelte'
 export { default as Card } from './layout/Card.svelte'
 export { default as Stack } from './layout/Stack.svelte'
@@ -5,6 +6,9 @@ export { default as Grid } from './layout/Grid.svelte'
 export { default as Center } from './layout/Center.svelte'
 export { default as Section } from './layout/Section.svelte'
 
+// components
 export { default as Button } from './Button.svelte'
 export { default as Dropdown } from './Dropdown.svelte'
 export { default as Slideshow } from './Slideshow.svelte'
+export { default as Svg } from './Svg.svelte'
+export { default as Image } from './Image.svelte'

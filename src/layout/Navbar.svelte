@@ -105,9 +105,9 @@
   }
 </style>
 
-<Section className="text-black" background="orange" padding="small">
+<Section className="text-black" background="orange" padding="tight">
   {#if $text && Object.keys($text).length > 0}
-    <div class="flex items-center w-full relative min-h-16">
+    <div class="flex items-center w-full relative min-h-12">
       <!-- Logo -->
       {#if currentPath !== "/"}
         <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
