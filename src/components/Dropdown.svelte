@@ -4,7 +4,6 @@
   export let name = "";
   export let buttonClass = "";
   export let panelClassName = "";
-  export let buttonHoverStyle = "";
 
   let isOpen = false;
 
@@ -22,7 +21,7 @@
 </script>
 
 <div class="relative inline-block" on:focusout={handleFocusOut}>
-  <Button onClick={toggle} class={buttonClass} {buttonHoverStyle}>
+  <Button onClick={toggle} class={buttonClass}>
     {name}
     <svg
       xmlns="http://www.w3.org/2000/svg"

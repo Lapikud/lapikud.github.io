@@ -8,16 +8,18 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prestorybook": "node generate-stories.js",
+    "prebuild-storybook": "node generate-stories.js"
   },
   "devDependencies": {
+    "@storybook/addon-svelte-csf": "^5.0.11",
+    "@storybook/svelte-vite": "^10.2.15",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "@types/js-yaml": "^4.0.9",
-    "svelte": "^5.43.8",
-    "vite": "npm:rolldown-vite@7.2.5",
     "storybook": "^10.2.15",
-    "@storybook/svelte-vite": "^10.2.15",
-    "@storybook/addon-svelte-csf": "^5.0.11"
+    "svelte": "^5.43.8",
+    "vite": "npm:rolldown-vite@7.2.5"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"

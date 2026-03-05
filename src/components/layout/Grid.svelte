@@ -1,34 +1,40 @@
-<!--
-A responsive grid wrapper using CSS Grid. It exposes `min`, `columns`,
-and `gap` props to control the responsive column minimum width, fixed
-column count, and spacing. Content is projected into the default slot.
--->
-
 <script>
-  export let min = "220px"; // minimum column width (used when columns is not set)
-  export let columns = null; // fixed number of columns (e.g., "2", "3", "4")
-  export let gap = "var(--space-3)";
+  export let min = "220px";        // min column width (used when columns not set)
+  export let columns = null;       // fixed number of columns for desktop
+  export let mobileColumns = null; // fixed number of columns for mobile
+  export let gap = "gap-3";
   export let className = "";
-  
-  $: gridTemplateColumns = columns 
-    ? `repeat(${columns}, 1fr)` 
-    : '1fr';
+
+  $: desktopColumns = columns ? `repeat(${columns}, 1fr)` : '1fr';
+  $: mobileCols = mobileColumns ? `repeat(${mobileColumns}, 1fr)` : '1fr';
 </script>
 
 <div
-  class="grid {className}"
-  style="--min: {min}; --gap: {gap}; --columns: {gridTemplateColumns}; grid-template-columns: var(--columns); gap: var(--gap);"
+  class="grid {className} {gap}"
+  style="
+    --min: {min}; 
+    --desktop-columns: {desktopColumns};
+    --mobile-columns: {mobileCols};
+    grid-template-columns: var(--mobile-columns);
+  "
 >
   <slot />
 </div>
 
 <style>
+  /* Mobile first: use mobileColumns by default */
+  .grid {
+    grid-template-columns: var(--mobile-columns);
+  }
+
+  /* Desktop / tablet screens */
   @media (min-width: 768px) {
     .grid {
-      grid-template-columns: var(--columns) !important;
+      grid-template-columns: var(--desktop-columns) !important;
     }
-    
-    .grid:not([style*="--columns: repeat"]) {
+
+    /* fallback for when columns are not set, use minmax */
+    .grid:not([style*="--desktop-columns: repeat"]) {
       grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr)) !important;
     }
   }
