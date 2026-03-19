@@ -1,152 +1,156 @@
 # Lapikud External Website
 
-Built with [Svelte 5](https://svelte.dev/) and [Vite](https://vite.dev/).
+![Built with Svelte](https://img.shields.io/badge/Svelte-5-FF3E00?logo=svelte&logoColor=white)
+![Built with Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?logo=github)
 
-## Development plan
+Welcome! This is the public-facing website for Lapikud. It's a learning project. If something breaks, that's totally fine. You just get to learn more about git.
 
-Materials are on `Google Drive > Lapikud > Tarkvara > Väliveeb`
+Materials and design files are on **Google Drive → Lapikud → Tarkvara → Väliveeb**
 
-## Contribution guide
+---
 
-### 1. Create Issues
+## 🙋 How to help
 
-Easiest way to help would be to create issues about things that are missing and wrong
+You don't need to write code to contribute!
 
-### 2. Fork this repo and create a pull request
+### Option 1 — Report something
+Found a bug, typo, or something missing? [Open an issue](https://github.com/Lapikud/lapikud.github.io/issues) and describe what's wrong. That's already super helpful.
 
-Fork this repo to your own account and create a pull request for changes you have done in there
+### Option 2 — Fix something yourself
+1. **Fork** this repo (button in the top right on GitHub — it copies the project to your account)
+2. Make your changes
+3. Open a **pull request** back to this repo
 
-## How to setup development environment
+---
 
-### Prerequisites
+## 🛠️ Setting up your dev environment
 
-- [Node.js](https://nodejs.org/) (v18 or higher. v20 is recommended)
-- npm (comes with Node.js)
+### What you need first
+
+- [Node.js](https://nodejs.org/) — v18 or higher, but grab the **LTS version** (currently v24) to be safe
+
+> Node.js comes with `npm` included, so you don't need to install that separately.
+
+---
+
+### Don't have a code editor yet?
+
+If you don't have a preferred code editor, [VSCode](https://code.visualstudio.com/) is a solid choice. Download and install it, and you're good to go.
+
+---
+
+### Windows? Set up WSL first (recommended)
+
+WSL lets you run Linux commands on Windows, which makes everything smoother.
 
 <details>
-<summary>Set up VScode</summary>
+<summary>📋 WSL setup steps</summary>
 
-1. install [VSCode](https://code.visualstudio.com/)
-
-2. Recommended: wsl2 for windows users
-
-You might need to enable virtualization in BIOS unless it is already enabled. It can be checked by looking for "Virtualization" in Task Manager > Performance tab.
+**Step 1** — Enable WSL. Run these two commands in PowerShell as Administrator (this enables the necessary Windows features):
 
 ```bash
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
+**Step 2** — Set WSL to version 2 (the better one):
+
 ```bash
 wsl --set-default-version 2
 ```
 
-install [Ubuntu from Microsoft Store](https://apps.microsoft.com/store/detail/ubuntu/9NBLGGH4MSV6)
+**Step 3** — Install [Ubuntu from the Microsoft Store](https://apps.microsoft.com/store/detail/ubuntu/9NBLGGH4MSV6)
+
+> ⚠️ If WSL doesn't work, check that **Virtualization** is enabled on your machine: open Task Manager → Performance tab → look for "Virtualization: Enabled"
 
 </details>
 
+---
+
 ### Installation
 
-1. **Clone the repository**
+**1. Clone the repo** — this downloads the project to your computer:
 
 ```bash
-   git clone https://github.com/Lapikud/lapikud.github.io.git
-   cd lapikud.github.io
+git clone https://github.com/Lapikud/lapikud.github.io.git
+cd lapikud.github.io
 ```
 
-2. **Install dependencies**
+**2. Install dependencies** — this installs all the packages the project needs:
 
 ```bash
-   npm install
+npm install
 ```
 
-3. **Start development server**
+**3. Start the dev server** — this runs the site locally so you can see your changes live:
 
 ```bash
-   npm run dev
+npm run dev
 ```
 
-> [!IMPORTANT]
->
-> ### Optional (secretly required): Image optimization
->
-> No one wants to download 5MB images that are then shown in a 100x100px box.
->
-> **Always optimize images before committing them!**
+Then open the URL it gives you (usually `http://localhost:5173`) in your browser. 🎉
+
+---
+
+## 🖼️ Images — please optimize before committing!
+
+Nobody wants to load a 5MB photo that's displayed at 100×100px. Always resize images before adding them to the project.
+
+Install FFmpeg first:
 
 <details>
-<summary>Linux/Windows (WSL/Ubuntu)</summary>
+<summary>Linux / WSL / Ubuntu</summary>
 
 ```bash
 sudo apt install ffmpeg
 ```
 
-```bash
-# For thumbnails/small images (100-300px display)
-ffmpeg -i input -vf scale=400:-1 output.jpg
-
-# For medium images (300-800px display)
-ffmpeg -i input -vf scale=1200:-1 output.jpg
-
-# For full-width hero images
-ffmpeg -i input -vf scale=1920:-1 output.jpg
-```
-
 </details>
 
 <details>
-<summary>Windows</summary>
+<summary>Windows (without WSL)</summary>
 
-**Option 1: Using winget (Windows 11 or Windows 10 with App Installer)**
-
+**Option A — via winget:**
 ```bash
 winget install ffmpeg
 ```
 
-**Option 2: Manual installation**
-
-1. Download FFmpeg from [ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+**Option B — manually:**
+1. Download from [ffmpeg.org/download.html](https://ffmpeg.org/download.html)
 2. Extract the archive
-3. Add the `bin` folder to your PATH environment variable
-
-**Usage:**
-
-```bash
-# For thumbnails/small images (100-300px display)
-ffmpeg -i input -vf scale=400:-1 output.jpg
-
-# For medium images (300-800px display)
-ffmpeg -i input -vf scale=1200:-1 output.jpg
-
-# For full-width hero images
-ffmpeg -i input -vf scale=1920:-1 output.jpg
-```
+3. Add the `bin` folder to your PATH
 
 </details>
 
 <details>
-<summary>MacOS</summary>
+<summary>macOS</summary>
 
 ```bash
 brew install ffmpeg
 ```
 
+</details>
+
+### Resize commands
+
+Once FFmpeg is installed, use the right size for the job:
+
 ```bash
-# For thumbnails/small images (100-300px display)
+# Small thumbnails (shown at 100–300px)
 ffmpeg -i input -vf scale=400:-1 output.jpg
 
-# For medium images (300-800px display)
+# Medium images (shown at 300–800px)
 ffmpeg -i input -vf scale=1200:-1 output.jpg
 
-# For full-width hero images
+# Hero / full-width images
 ffmpeg -i input -vf scale=1920:-1 output.jpg
 ```
 
-</details>
+---
 
-## Deploy
+## 🚀 Deployment
 
-> [!NOTE]  
-> Github will build and deploy the website automatically on every push to the `main` branch. You don't need to do anything manually.
+Nothing to do here — GitHub automatically builds and deploys the site whenever something is pushed to the `main` branch.
 
-Deployment typically takes 2-5 minutes. You can check the progress in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).
+It usually takes **2–5 minutes**. You can watch it happen in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).
