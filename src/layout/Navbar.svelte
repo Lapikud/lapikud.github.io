@@ -106,21 +106,21 @@
 </style>
 
 <header class="fixed inset-x-0 top-0 z-50 text-white">
-  <Container maxWidth={true} center={false} className="py-2 md:py-3">
+  <Container maxWidth={true} center={false} className="py-0">
     {#if $text && Object.keys($text).length > 0}
-      <div class="flex items-center w-full relative min-h-12">
+      <div class="flex items-center w-full relative min-h-10">
       <!-- Logo -->
       {#if currentPath !== "/"}
         <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
           <Button onClick={() => handleNavigation("/")}>
-            <img src="assets/LapLogo_black_white.png" alt="Lapikud Logo" class="h-16" />
+            <img src="assets/LapLogo_black_white.png" alt="Lapikud Logo" class="h-14" />
           </Button>
         </div>
       {/if}
       
-      <div class="flex items-center justify-end ml-auto w-full md:w-auto md:border-b-3 md:border-white">
+      <div class="flex items-center justify-end ml-auto w-full md:w-auto md:border-b-3 md:border-white backdrop-blur-lg bg-black/35">
         <!-- Desktop Navigation -->
-        <nav class="z-10 hidden md:flex gap-2 justify-end text-xl">
+        <nav class="z-10 hidden md:flex gap-1 justify-end text-lg">
           <Dropdown
             name={$text.about || 'Meist'}
             buttonClass="rounded-[5px] hover:text-white"
