@@ -1,7 +1,7 @@
 // ADD PAGES HERE TO REGISTER ROUTES
 // examples: '/page', '/page/:id'
 
-import Home from './Home.svelte'
+import NewHome from './NewHome.svelte'
 import Student from './Student.svelte'
 import Mentors from './Mentors.svelte'
 import Helpdesk from './Helpdesk.svelte'
@@ -65,7 +65,7 @@ export function getTranslatedRoute(currentPath, targetLang) {
 }
 
 export const routes = {
-  '/': Home,
+  '/': NewHome,
   '/tudengile': Student,
   '/student': Student,
   '/mentorid': Mentors,

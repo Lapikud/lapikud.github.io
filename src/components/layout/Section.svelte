@@ -18,7 +18,7 @@
   {id}
   class="w-full {paddingClasses[padding]} {bg} {className}"
 >
-  <div class="{fullWidth ? '' : 'max-w-[1200px]'} mx-auto px-(--site-padding)">
+  <div class="{fullWidth ? '' : 'max-w-[1200px]'} mx-auto">
     <slot />
   </div>
 </section>

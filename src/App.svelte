@@ -7,6 +7,8 @@
 
 {#if $text && Object.keys($text).length > 0}
   <Navbar />
-  <Router {routes} />
-  <Footer />
+  <main>
+    <Router {routes} />
+    <Footer />
+  </main>
 {/if}

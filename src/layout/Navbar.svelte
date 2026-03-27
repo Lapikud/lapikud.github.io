@@ -1,8 +1,8 @@
 <script>
   import {
     Button,
+    Container,
     Dropdown,
-    Section,
     Stack,
   } from "$components";
   import { navigate, getPath, currentLang, text, switchLanguageRoute } from "$lib";
@@ -105,9 +105,10 @@
   }
 </style>
 
-<Section className="text-black" bg="bg-orange-500" padding="tight">
-  {#if $text && Object.keys($text).length > 0}
-    <div class="flex items-center w-full relative min-h-12">
+<header class="fixed inset-x-0 top-0 z-50 text-white">
+  <Container maxWidth={true} center={false} className="py-2 md:py-3">
+    {#if $text && Object.keys($text).length > 0}
+      <div class="flex items-center w-full relative min-h-12">
       <!-- Logo -->
       {#if currentPath !== "/"}
         <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
@@ -117,9 +118,9 @@
         </div>
       {/if}
       
-      <div class="flex items-center justify-end ml-auto w-full md:w-auto">
+      <div class="flex items-center justify-end ml-auto w-full md:w-auto md:border-b-3 md:border-white">
         <!-- Desktop Navigation -->
-        <nav class="z-10 hidden md:flex gap-4 justify-end text-xl">
+        <nav class="z-10 hidden md:flex gap-2 justify-end text-xl">
           <Dropdown
             name={$text.about || 'Meist'}
             buttonClass="rounded-[5px] hover:text-white"
@@ -162,7 +163,7 @@
           
           <!-- Language Switcher -->
           <Button 
-            class="rounded-[5px] px-3 py-1 text-sm ml-2 hover:text-white"
+            class="rounded-[5px] px-3 py-1 text-sm ml-4 hover:text-white"
             onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
           >
             {$currentLang === 'est' ? 'EN' : 'EST'}
@@ -178,10 +179,11 @@
       >
         <Menu size={32} />
       </Button>
-    </div>
-    </div>
-  {/if}
-</Section>
+      </div>
+      </div>
+    {/if}
+  </Container>
+</header>
 
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
@@ -191,7 +193,7 @@
     class:menu-closing={isClosing}
   >
     <Stack className="min-h-full">
-      <div class="absolute top-8 right-0 px-(--site-padding)">
+      <div class="absolute top-8 right-0">
         <Button
           onClick={closeMobileMenu}
           class="ml-auto p-2 transition-colors flex bg-transparent hover:text-orange-500"
