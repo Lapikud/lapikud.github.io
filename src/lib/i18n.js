@@ -31,7 +31,7 @@ async function loadTranslations(lang) {
         
         // Dynamically import all translation files for the specific language
         // Vite will code-split these and only bundle the ones actually used
-        const modules = import.meta.glob('../locales/*/*.json');
+        const modules = import.meta.glob('./locales/*/*.json');
         
         for (const path in modules) {
             if (path.includes(`/locales/${lang}/`) || path.includes(`\\locales\\${lang}\\`)) {

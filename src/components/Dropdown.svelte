@@ -21,7 +21,7 @@
 </script>
 
 <div class="relative inline-block" on:focusout={handleFocusOut}>
-  <Button onClick={toggle} class={buttonClass}>
+  <Button onClick={toggle} class={`${buttonClass} gap-0`}>
     {name}
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
-      class="w-5 ml-2 mt-1 transition-transform inline-block"
+      class="w-4 h-4 ml-1 mr-0 mt-0.5 transition-transform inline-block"
       style:transform={isOpen ? "rotate(180deg)" : "none"}
     >
       <path
