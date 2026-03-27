@@ -1,9 +1,12 @@
 <script>
-  export let bg = "";
-  export let padding = "normal";
-  export let fullWidth = false;
-  export let id = "";
-  export let className = "";
+  let { 
+    bg = "", 
+    padding = "normal", 
+    fullWidth = true, 
+    id = "", 
+    className = "",
+    children
+  } = $props();
 
   const paddingClasses = {
     none: "py-0",
@@ -19,6 +22,6 @@
   class="w-full {paddingClasses[padding]} {bg} {className}"
 >
   <div class="{fullWidth ? '' : 'max-w-[1200px]'} mx-auto">
-    <slot />
+    {@render children?.()}
   </div>
 </section>
