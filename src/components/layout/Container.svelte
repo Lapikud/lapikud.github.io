@@ -11,6 +11,6 @@ projected via the default slot.
   export let className = "";
 </script>
 
-<div class="w-full {center ? 'px-4 md:px-6 lg:px-8' : ''} {maxWidth ? '' : 'max-w-[1200px]'} {center ? 'mx-auto' : ''} {className}">
+<div class="w-full {center ? 'px-[var(--page-padding-inline)]' : ''} {maxWidth ? '' : 'max-w-[var(--page-max-width)]'} {center ? 'mx-auto' : ''} {className}">
   <slot />
 </div>

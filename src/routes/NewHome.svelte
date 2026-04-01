@@ -3,22 +3,20 @@ import {Section, Stack, Grid, Center, Image, Svg, Button} from "$components";
 import { navigate } from "$lib/router/router.js";
 </script>
 
-<!-- TODO: grid gap dynamic -->
-
 <!-- Hero Section -->
 <Section className="relative min-h-screen overflow-hidden" padding="none" bg="bg-gray-900" id="hero">
   <div class="relative min-h-screen flex items-center">
-    <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute inset-0 left-1/2 w-screen -translate-x-1/2" aria-hidden="true">
       <Image
-        src="/assets/BSidesTLN25-KerstinTälli-128.jpg"
-        alt=""
+        src="/assets/hero.jpg"
+        alt="illustrative hero image"
         objectFit="cover"
         className="w-full h-full"
         pictureClass="block w-full h-full"
       />
     </div>
     <div
-      class="pointer-events-none absolute inset-0 hidden md:block [clip-path:polygon(42%_0,100%_0,100%_100%,65%_100%)]"
+      class="pointer-events-none absolute inset-0 left-1/2 hidden w-screen -translate-x-1/2 md:block [clip-path:polygon(42%_0,100%_0,100%_100%,65%_100%)]"
       aria-hidden="true"
     >
       <Svg
@@ -34,8 +32,8 @@ import { navigate } from "$lib/router/router.js";
         className="absolute right-0 bottom-[12%] w-[clamp(130px,14vw,230px)] text-[#E18E38]"
       />
     </div>
-    <div class="pointer-events-none absolute inset-y-0 left-0 w-[70%] bg-linear-to-r from-black/65 via-black/35 to-transparent" aria-hidden="true"></div>
-    <div class="relative z-20 flex min-h-screen w-full items-stretch px-6 py-8 md:px-10 md:py-12">
+    <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-linear-to-r from-black/65 via-black/35 to-transparent" aria-hidden="true"></div>
+    <div class="relative z-20 flex min-h-screen w-full items-stretch py-8 md:py-12">
       <div class="flex w-full max-w-[460px] flex-col justify-between">
         <img src="/assets/LapLogo_white_orange.png" alt="MTÜ Lapikud" class="w-full max-w-[220px] md:max-w-[260px] h-auto"/>
         <div class="flex flex-col items-start gap-5">
@@ -57,7 +55,7 @@ import { navigate } from "$lib/router/router.js";
 
 
 <Section className="relative overflow-hidden">
-  <div class="pointer-events-none absolute inset-x-0 top-15 z-0" aria-hidden="true">
+  <div class="pointer-events-none absolute inset-x-0 left-1/2 top-15 z-0 w-screen -translate-x-1/2" aria-hidden="true">
     <Svg
       type="connector"
       className="absolute left-0 w-[clamp(130px,14vw,230px)] text-orange-500"
@@ -68,7 +66,7 @@ import { navigate } from "$lib/router/router.js";
     />
   </div>
 
-  <Grid columns={2} largeColumns={3} mobileColumns={1} className="relative z-10 items-start max-w-6xl mx-auto mt-12 px-4 md:mt-20 md:px-6" gap="gap-12 md:gap-16 lg:gap-24">
+  <Grid columns={2} largeColumns={3} mobileColumns={1} className="relative z-10 items-start mt-12 md:mt-20" gap="gap-12 md:gap-16 lg:gap-24">
     <Center dir="col" className="w-full max-w-sm justify-start mx-auto">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image

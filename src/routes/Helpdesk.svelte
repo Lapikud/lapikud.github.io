@@ -2,7 +2,6 @@
   import {
     Section,
     Grid,
-    Container,
   } from "$components";
   import { onMount } from "svelte";
   import { text } from "$lib/i18n";
@@ -57,8 +56,7 @@
 </div>
 
 <!-- Main Content -->
-<Container>
-  <Section>
+<Section>
     <Grid min="480px" gap="var(--space-5)">
       <!-- What is HELPDESK? -->
       <div class="flex flex-col">
@@ -190,4 +188,3 @@
       </div>
     </Grid>
   </Section>
-</Container>

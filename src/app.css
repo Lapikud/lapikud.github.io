@@ -27,6 +27,9 @@
 
 /* Design tokens & theme variables (light defaults) */
 :root {
+  --page-max-width: 1460px;
+  --page-padding-inline: clamp(1rem, 2vw, 2rem);
+
   /* spacing scale */
   --spacing-0: 0px;
   --spacing-1: 4px;

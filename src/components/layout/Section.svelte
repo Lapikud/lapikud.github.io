@@ -1,10 +1,12 @@
 <script>
   let { 
     bg = "", 
+    background = "",
     padding = "normal", 
-    fullWidth = true, 
+    fullWidth = false, 
     id = "", 
     className = "",
+    contentClassName = "",
     children
   } = $props();
 
@@ -19,9 +21,10 @@
 
 <section
   {id}
-  class="w-full {paddingClasses[padding]} {bg} {className}"
+  class="relative w-full {bg} {className}"
+  style={background ? `background: ${background};` : undefined}
 >
-  <div class="{fullWidth ? '' : 'max-w-[1200px]'} mx-auto">
+  <div class="w-full {fullWidth ? '' : 'max-w-[var(--page-max-width)]'} mx-auto px-[var(--page-padding-inline)] {paddingClasses[padding]} {contentClassName}">
     {@render children?.()}
   </div>
 </section>

@@ -76,7 +76,7 @@
 
 <!-- Past Management Section -->
 <Section padding="large" background="rgba(240, 148, 29, 0.05)">
-  <Container>
+  <Container center={false}>
     <Center>
       <h1 class="text-4xl font-light pb-8 text-center">
         Organisatsiooni juhtinud inimesed läbi aegade

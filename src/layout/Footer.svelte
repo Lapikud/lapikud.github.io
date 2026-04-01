@@ -31,7 +31,7 @@ import {
             </Container>
         </div>
         <div>
-        <Container>
+        <Container center={false}>
             <h3 class="text-3xl font-light flex justify-center pb-4">Sotsiaalmeedia</h3>
             <div class="flex items-center justify-center gap-4">
                 <a href="https://www.instagram.com/lapikud/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="transition-opacity duration-200">
