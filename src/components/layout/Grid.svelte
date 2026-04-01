@@ -1,11 +1,13 @@
 <script>
   export let min = "220px";        // min column width (used when columns not set)
   export let columns = null;       // fixed number of columns for desktop
+  export let largeColumns = null;  // fixed number of columns for large desktop
   export let mobileColumns = null; // fixed number of columns for mobile
   export let gap = "gap-3";
   export let className = "";
 
   $: desktopColumns = columns ? `repeat(${columns}, 1fr)` : '1fr';
+  $: largeDesktopColumns = largeColumns ? `repeat(${largeColumns}, 1fr)` : desktopColumns;
   $: mobileCols = mobileColumns ? `repeat(${mobileColumns}, 1fr)` : '1fr';
 </script>
 
@@ -14,6 +16,7 @@
   style="
     --min: {min}; 
     --desktop-columns: {desktopColumns};
+    --large-desktop-columns: {largeDesktopColumns};
     --mobile-columns: {mobileCols};
     grid-template-columns: var(--mobile-columns);
   "
@@ -36,6 +39,12 @@
     /* fallback for when columns are not set, use minmax */
     .grid:not([style*="--desktop-columns: repeat"]) {
       grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr)) !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: var(--large-desktop-columns) !important;
     }
   }
 </style>

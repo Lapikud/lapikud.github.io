@@ -171,14 +171,15 @@
       </nav>
 
       <!-- Mobile Hamburger Button - Fixed position -->
-      <Button
-        onClick={toggleMobileMenu}
-        class="md:hidden p-2 text-white transition-colors bg-transparent absolute right-0 hover:text-white"
-        style="opacity: {mobileMenuOpen ? '0' : '1'}; pointer-events: {mobileMenuOpen ? 'none' : 'auto'};"
-        aria-label="Toggle menu"
-      >
-        <Menu size={32} />
-      </Button>
+      {#if !mobileMenuOpen}
+        <Button
+          onClick={toggleMobileMenu}
+          class="md:hidden p-2 text-white transition-colors bg-transparent absolute right-0 hover:text-white"
+          aria-label="Toggle menu"
+        >
+          <Menu size={32} />
+        </Button>
+      {/if}
       </div>
       </div>
     {/if}
@@ -188,12 +189,12 @@
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
   <div 
-    class="fixed inset-0 z-100 bg-(--off-black) md:hidden overflow-y-auto"
+    class="fixed inset-0 z-100 bg-black/95 md:hidden overflow-y-auto"
     class:menu-opening={!isClosing}
     class:menu-closing={isClosing}
   >
     <Stack className="min-h-full">
-      <div class="absolute top-8 right-0">
+      <div class="absolute top-6 right-4">
         <Button
           onClick={closeMobileMenu}
           class="ml-auto p-2 transition-colors flex bg-transparent hover:text-orange-500"
@@ -244,7 +245,7 @@
           <h3 class="text-2xl font-bold text-orange-500">{$text.events}</h3>
           <Stack gap="gap-2" className="pl-4">
             <Button
-              onClick={() => handleNavigation("/mentorid")}
+              onClick={() => handleNavigation("/koolitused")}
               class="text-left transition-colors flex items-center gap-2 bg-transparent hover:text-orange-500"
             >
               <Presentation size={20} />
