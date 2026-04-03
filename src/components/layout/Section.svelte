@@ -24,7 +24,7 @@
   class="relative w-full {bg} {className}"
   style={background ? `background: ${background};` : undefined}
 >
-  <div class="w-full {fullWidth ? '' : 'max-w-[var(--page-max-width)]'} mx-auto px-[var(--page-padding-inline)] {paddingClasses[padding]} {contentClassName}">
+  <div class="w-full {fullWidth ? '' : 'max-w-(--page-max-width)'} mx-auto px-(--page-padding-inline) {paddingClasses[padding]} {contentClassName}">
     {@render children?.()}
   </div>
 </section>

@@ -21,23 +21,23 @@ import { navigate } from "$lib/router/router.js";
     >
       <Svg
         type="mirrorH"
-        className="absolute right-0 top-[16%] w-[clamp(130px,14vw,230px)] text-[#E18E38]"
+        className="absolute right-0 top-[16%] w-[clamp(8.125rem,14vw,14.375rem)] text-[#E18E38]"
       />
       <Svg
         type="branchH"
-        className="absolute right-0 top-[52%] -translate-y-1/2 w-[clamp(56px,6vw,94px)] text-[#E18E38]"
+        className="absolute right-0 top-[52%] -translate-y-1/2 w-[clamp(3.5rem,6vw,5.875rem)] text-[#E18E38]"
       />
       <Svg
         type="mirrorVH"
-        className="absolute right-0 bottom-[12%] w-[clamp(130px,14vw,230px)] text-[#E18E38]"
+        className="absolute right-0 bottom-[12%] w-[clamp(8.125rem,14vw,14.375rem)] text-[#E18E38]"
       />
     </div>
     <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-linear-to-r from-black/65 via-black/35 to-transparent" aria-hidden="true"></div>
     <div class="relative z-20 flex min-h-screen w-full items-stretch py-8 md:py-12">
-      <div class="flex w-full max-w-[460px] flex-col justify-between">
-        <img src="/assets/LapLogo_white_orange.png" alt="MTÜ Lapikud" class="w-full max-w-[220px] md:max-w-[260px] h-auto"/>
+      <div class="flex w-full max-w-115 flex-col justify-between">
+        <img src="/assets/LapLogo_white_orange.png" alt="MTÜ Lapikud" class="w-full max-w-55 md:max-w-65 h-auto"/>
         <div class="flex flex-col items-start gap-5">
-          <p class="w-full max-w-[440px] text-left text-lg leading-[165%] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] md:max-w-[500px] md:text-xl">
+          <p class="w-full max-w-110 text-left text-lg leading-[165%] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] md:max-w-125 md:text-xl">
             MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi
             ja praegusi IT huvilisi tudengeid.
           </p>
@@ -58,11 +58,11 @@ import { navigate } from "$lib/router/router.js";
   <div class="pointer-events-none absolute inset-x-0 left-1/2 top-15 z-0 w-screen -translate-x-1/2" aria-hidden="true">
     <Svg
       type="connector"
-      className="absolute left-0 w-[clamp(130px,14vw,230px)] text-orange-500"
+      className="absolute left-0 w-[clamp(8.125rem,14vw,14.375rem)] text-orange-500"
     />
     <Svg
       type="mirrorH"
-      className="absolute right-0 w-[clamp(130px,14vw,230px)] text-orange-500"
+      className="absolute right-0 w-[clamp(8.125rem,14vw,14.375rem)] text-orange-500"
     />
   </div>
 

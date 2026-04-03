@@ -27,8 +27,13 @@
 
 /* Design tokens & theme variables (light defaults) */
 :root {
-  --page-max-width: 1460px;
-  --page-padding-inline: clamp(1rem, 2vw, 2rem);
+  --page-max-width: calc(1460px * var(--ui-scale));
+  --page-padding-inline: clamp(
+    calc(1.5rem * var(--ui-scale)),
+    calc(4vw * var(--ui-scale)),
+    calc(3rem * var(--ui-scale))
+  );
+  --ui-scale: 1;
 
   /* spacing scale */
   --spacing-0: 0px;
@@ -60,7 +65,7 @@ html {
     Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: var(--fs-base);
+  font-size: calc(var(--fs-base) * var(--ui-scale));
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }
@@ -129,6 +134,13 @@ button:focus {
   }
   .desktop-only {
     display: block;
+  }
+}
+
+/* Increase overall UI scale on large 4K-class viewports */
+@media (min-width: 2400px), (min-width: 1900px) and (min-resolution: 2dppx) {
+  :root {
+    --ui-scale: 1.5;
   }
 }
 
