@@ -1,9 +1,43 @@
 {
-	"homeAbout": {
+	"hero": {
+		"imageAlt": "Lapikute avalehe taustapilt",
+		"logoAlt": "MTÜ Lapikud",
+		"description": "MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi ja praegusi IT huvilisi tudengeid.",
+		"joinButton": "Liitu LAPikutega!"
+	},
+	"services": {
+		"student": {
+			"title": "Tudengile",
+			"description": "Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest.",
+			"imageAlt": "Tudengile pilt"
+		},
+		"helpdesk": {
+			"title": "Helpdesk",
+			"description": "HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning kõikidele huvilistele.",
+			"imageAlt": "Helpdeski pilt"
+		},
+		"company": {
+			"title": "Ettevõttele",
+			"description": "Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima.",
+			"imageAlt": "Ettevõttele pilt"
+		}
+	},
+	"aboutSection": {
 		"title": "Meist",
 		"description": "Meie põhieesmärgiks on Tallinna Tehnikaülikooli IT tudengitele erialase lisandväärtuse loomine. Kaasame tudengeid praktilistesse lahendustesse, kus saab ideid reaalselt ellu viia ja oma oskusi päriselt kasutada. Meie projektidest kasvavad välja huvitavad ja tarvilikud lõputööd, millel on selge praktiline väärtus.",
 		"moreInfo": "Rohkem infot",
 		"contact": "Kontakt",
 		"imageAlt": "Lapikute tudengid projekti kallal"
+	},
+	"whatWeDo": {
+		"title": "Keda ja kuidas kaasame",
+		"description": "Pakume nutikatele ja motiveeritud tudengitele võimalust saada meie juures esimene töökogemus ning arendada end meeskonnas töötades. Lapikud ei ole ainult IT-tudengite organisatsioon, kaasame projektidesse ka majandusteaduskonna tudengeid, et tehniliste lahenduste kõrval oleks esindatud ka äriline vaade.",
+		"moreInfo": "Rohkem infot",
+		"contact": "Liitu meiega",
+		"imageAlt": "Lapikud parandamas riistvara"
+	},
+	"partners": {
+		"title": "Koostööpartnerid",
+		"moreInfo": "Rohkem infot partnerluste kohta"
 	}
 }
