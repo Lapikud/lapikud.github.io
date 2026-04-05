@@ -11,7 +11,7 @@
 
 <div bind:this={sectionElement}>
 <Section >
-  <Center dir="col" className="w-full">
+  <Center dir="col" class="w-full">
     <div class="w-full max-w-4xl">
       <iframe 
         style="border: 0;" 

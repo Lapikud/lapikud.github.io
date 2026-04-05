@@ -1,5 +1,20 @@
 <script>
   import { onDestroy } from 'svelte';
+  import Image from './Image.svelte';
+
+  /**
+   * Images can be either strings or objects with optimization options:
+   * 
+   * String format (simple):
+   *   images={["image1.jpg", "image2.jpg"]}
+   * 
+   * Object format (multiple image options):
+   *   images={[
+   *     { src: "image1.jpg", webpSrc: "image1.webp", alt: "Description" },
+   *     { src: "image2.jpg", webpSrc: "image2.webp", alt: "Description" }
+   *   ]}
+   * 
+   */
 
   export let images = [];
   export let width = '100%';
@@ -15,6 +30,15 @@
 
   let current = startIndex;
   let timer;
+
+  $: currentImage = images[current];
+  $: isObjectImage = typeof currentImage === 'object' && currentImage !== null;
+  $: imageSrc = typeof currentImage === 'string' ? currentImage : currentImage?.src || '';
+  $: imageAlt = typeof currentImage === 'string' ? '' : currentImage?.alt || '';
+  $: imageWebpSrc = isObjectImage ? currentImage?.webpSrc || '' : '';
+  $: imageSrcSet = isObjectImage ? currentImage?.srcSet || '' : '';
+  $: imageWebpSrcSet = isObjectImage ? currentImage?.webpSrcSet || '' : '';
+  $: imageClass = isObjectImage ? currentImage?.class || '' : '';
 
   const next = () => {
     if (current < images.length - 1) {
@@ -51,10 +75,14 @@
   aria-live="polite"
 >
   {#if images.length}
-    <img
-      src={typeof images[current] === 'string' ? images[current] : images[current].src}
-      alt={typeof images[current] === 'string' ? '' : images[current].alt || ''}
-      class="slide"
+    <Image
+      src={imageSrc}
+      alt={imageAlt}
+      webpSrc={imageWebpSrc}
+      srcSet={imageSrcSet}
+      webpSrcSet={imageWebpSrcSet}
+      objectFit="cover"
+      class={`w-full h-full block ${imageClass}`}
     />
 
     {#if interactive && images.length > 1}
@@ -79,13 +107,6 @@
   .slideshow {
     position: relative;
     overflow: hidden;
-    display: block;
-  }
-
-  .slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
   }
 

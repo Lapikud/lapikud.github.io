@@ -5,8 +5,8 @@
     padding = "normal", 
     fullWidth = false, 
     id = "", 
-    className = "",
-    contentClassName = "",
+    class: className = "",
+    contentClass = "",
     children
   } = $props();
 
@@ -24,7 +24,7 @@
   class="relative w-full {bg} {className}"
   style={background ? `background: ${background};` : undefined}
 >
-  <div class="w-full {fullWidth ? '' : 'max-w-(--page-max-width)'} mx-auto px-(--page-padding-inline) {paddingClasses[padding]} {contentClassName}">
+  <div class="w-full {fullWidth ? '' : 'max-w-(--page-max-width)'} mx-auto px-(--page-padding-inline) {paddingClasses[padding]} {contentClass}">
     {@render children?.()}
   </div>
 </section>

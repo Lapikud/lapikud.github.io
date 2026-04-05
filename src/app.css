@@ -51,7 +51,7 @@
   --fs-md: 1rem;
   --fs-lg: 1.125rem;
   --fs-xl: 1.5rem;
-  --line-height: 1.45;
+  --line-height: 1.6;
 }
 
 /* Global box sizing & accessible defaults */
@@ -92,19 +92,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   font: inherit;
-  border: 1px solid var(--color-border); /* TODO: fix css magic (we need the border, but the variable doesnt exist, but you cant remove it either) */
-  padding: 0.5em 0.9em;
-  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: box-shadow 120ms ease, transform 120ms ease,
-    border-color 120ms ease;
-}
-button:active {
-  transform: translateY(1px);
-}
-button:focus {
-  outline: 3px solid color-mix(in srgb, var(--color-primary) 14%, transparent); /* TODO: change same magic here */
-  outline-offset: 2px;
 }
 
 /* Utility: visually hidden (accessible labels) */

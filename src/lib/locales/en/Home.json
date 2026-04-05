@@ -1,1 +1,9 @@
-{}
+{
+	"homeAbout": {
+		"title": "About us",
+		"description": "Our main goal is to create professional added value for TalTech IT students. We involve students in practical solutions where ideas can be implemented in real life and technical skills can be used in meaningful ways. Our projects often grow into useful and exciting thesis topics with clear practical value.",
+		"moreInfo": "More info",
+		"contact": "Contact",
+		"imageAlt": "Lapikud students working on a project"
+	}
+}

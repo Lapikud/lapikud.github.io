@@ -1,11 +1,14 @@
 <script>
   import Button from "./Button.svelte";
 
-  export let name = "";
-  export let buttonClass = "";
-  export let panelClassName = "";
+  let {
+    name = "",
+    buttonClass = "",
+    panelClass = "",
+    children,
+  } = $props();
 
-  let isOpen = false;
+  let isOpen = $state(false);
 
   const toggle = () => (isOpen = !isOpen);
   const close = () => (isOpen = false);
@@ -20,7 +23,7 @@
   }
 </script>
 
-<div class="relative inline-block" on:focusout={handleFocusOut}>
+<div class="relative inline-block" onfocusout={handleFocusOut}>
   <Button onClick={toggle} class={`${buttonClass} gap-0`}>
     {name}
     <svg
@@ -41,11 +44,11 @@
   </Button>
 
   <div
-    class="{panelClassName} absolute mt-2 rounded-md shadow-lg overflow-visible flex flex-col"
+    class="{panelClass} absolute mt-2 rounded-md shadow-lg overflow-visible flex flex-col"
     style:visibility={isOpen ? "visible" : "hidden"}
   >
     <div>
-      <slot />
+      {@render children?.()}
     </div>
   </div>
 </div>

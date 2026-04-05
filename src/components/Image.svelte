@@ -12,7 +12,6 @@ hover effects, size variants, and object-fit options. Includes support for WebP 
   export let rel = "noopener noreferrer";
   export let objectFit = "contain"; // 'contain' | 'cover' | 'fill' | 'none' | 'scale-down'
   export let hover = false;
-  export let className = "";
 
   // optional srcset for responsive images (w descriptors means width-based, x descriptors means pixel density-based)
   // e.g. "image-400.jpg 400w, image-800.jpg 800w"
@@ -41,7 +40,7 @@ hover effects, size variants, and object-fit options. Includes support for WebP 
         {src}
         srcset={srcSet || undefined}
         alt={alt}
-        class="block h-auto max-w-full {objectFitClass} {hoverClasses} {className}"
+        class="block h-auto max-w-full {objectFitClass} {hoverClasses} {$$props.class ?? ''}"
       />
     </picture>
   </a>
@@ -54,7 +53,7 @@ hover effects, size variants, and object-fit options. Includes support for WebP 
       {src}
       srcset={srcSet || undefined}
       alt={alt}
-      class="block h-auto max-w-full {objectFitClass} {hoverClasses} {className}"
+      class="block h-auto max-w-full {objectFitClass} {hoverClasses} {$$props.class ?? ''}"
     />
   </picture>
 {/if}

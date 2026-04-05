@@ -1,16 +1,19 @@
 <!--
 A responsive container that centers content and optionally
-removes the max-width when `fluid` is true. Use `className` to
+removes the max-width when `fluid` is true. Use the `class`
 add additional CSS classes to the root element. Content is
 projected via the default slot.
 -->
 
 <script>
-  export let maxWidth = false; // true removes max-width
-  export let center = true; // false prevents centering and removes horizontal padding
-  export let className = "";
+  let {
+    maxWidth = false, // true removes max-width
+    center = true, // false prevents centering and removes horizontal padding
+    class: className = "",
+    children,
+  } = $props();
 </script>
 
-<div class="w-full {center ? 'px-[var(--page-padding-inline)]' : ''} {maxWidth ? '' : 'max-w-[var(--page-max-width)]'} {center ? 'mx-auto' : ''} {className}">
-  <slot />
+<div class="w-full {center ? 'px-(--page-padding-inline)' : ''} {maxWidth ? '' : 'max-w-(--page-max-width)'} {center ? 'mx-auto' : ''} {className}">
+  {@render children?.()}
 </div>

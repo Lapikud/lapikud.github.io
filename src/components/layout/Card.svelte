@@ -1,7 +1,10 @@
 <script>
-  export let href = "";
-  export let variant = "default"; // 'default' | 'animated' | 'animated-neutral' | 'glass' | 'blur'
-  export let className = "";
+  let {
+    href = "",
+    variant = "default", // 'default' | 'animated' | 'animated-neutral' | 'glass' | 'blur'
+    class: className = "",
+    children,
+  } = $props();
 
   const variantClasses = {
     default: "card-default",
@@ -14,11 +17,11 @@
 
 {#if href}
   <a {href} class={`card ${variantClasses[variant]} ${className}`}>
-    <slot />
+    {@render children?.()}
   </a>
 {:else}
   <div class={`card ${variantClasses[variant]} ${className}`}>
-    <slot />
+    {@render children?.()}
   </div>
 {/if}
 

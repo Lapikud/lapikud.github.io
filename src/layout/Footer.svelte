@@ -9,7 +9,7 @@ import {
 
 </script>
 
-<Section bg="bg-gray-900" className="text-white">
+<Section bg="bg-gray-900" class="text-white">
     <Grid>
         <div>
             <h3 class="text-3xl font-light pb-4">MTÜ Lapikud</h3>

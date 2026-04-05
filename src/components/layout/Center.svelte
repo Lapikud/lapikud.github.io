@@ -1,7 +1,10 @@
 <script>
-  export let dir = "row"; // 'row' | 'col' (default: 'row')
-  export let gap = "gap-4";
-  export let className = "";
+  let {
+    dir = "row", // 'row' | 'col' (default: 'row')
+    gap = "gap-4",
+    class: className = "",
+    children,
+  } = $props();
 </script>
 
 <div
@@ -12,5 +15,5 @@
     " " +
     className}
 >
-  <slot />
+  {@render children?.()}
 </div>

@@ -1,1 +1,9 @@
-{}
+{
+	"homeAbout": {
+		"title": "Meist",
+		"description": "Meie põhieesmärgiks on Tallinna Tehnikaülikooli IT tudengitele erialase lisandväärtuse loomine. Kaasame tudengeid praktilistesse lahendustesse, kus saab ideid reaalselt ellu viia ja oma oskusi päriselt kasutada. Meie projektidest kasvavad välja huvitavad ja tarvilikud lõputööd, millel on selge praktiline väärtus.",
+		"moreInfo": "Rohkem infot",
+		"contact": "Kontakt",
+		"imageAlt": "Lapikute tudengid projekti kallal"
+	}
+}

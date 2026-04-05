@@ -1,10 +1,32 @@
 <script>
-  export let onClick = () => {};
+  let {
+    onClick = () => {},
+    class: className = "",
+    children,
+  } = $props();
 </script>
 
 <button
-  on:click={onClick}
-  class="btn border-[1.5px] px-5 py-2.5 font-medium cursor-pointer flex items-center gap-2 whitespace-nowrap {$$props.class ?? ''}"
+  onclick={onClick}
+  data-animation
+  class="btn flex p-2.5 {className}"
 >
-  <slot />
+  {@render children?.()}
 </button>
+
+<style>
+  .btn {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    align-items: center;
+    white-space: nowrap;
+    transition: color 200ms ease, background-color 200ms ease,
+      border-color 200ms ease, transform 120ms ease, box-shadow 200ms ease;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+</style>

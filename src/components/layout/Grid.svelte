@@ -1,14 +1,19 @@
 <script>
-  export let min = "220px";        // min column width (used when columns not set)
-  export let columns = null;       // fixed number of columns for desktop
-  export let largeColumns = null;  // fixed number of columns for large desktop
-  export let mobileColumns = null; // fixed number of columns for mobile
-  export let gap = "gap-3";
-  export let className = "";
+  let {
+    min = "220px", // min column width (used when columns not set)
+    columns = null, // fixed number of columns for desktop
+    largeColumns = null, // fixed number of columns for large desktop
+    mobileColumns = null, // fixed number of columns for mobile
+    gap = "gap-3",
+    class: className = "",
+    children,
+  } = $props();
 
-  $: desktopColumns = columns ? `repeat(${columns}, 1fr)` : '1fr';
-  $: largeDesktopColumns = largeColumns ? `repeat(${largeColumns}, 1fr)` : desktopColumns;
-  $: mobileCols = mobileColumns ? `repeat(${mobileColumns}, 1fr)` : '1fr';
+  const desktopColumns = $derived(columns ? `repeat(${columns}, 1fr)` : "1fr");
+  const largeDesktopColumns = $derived(
+    largeColumns ? `repeat(${largeColumns}, 1fr)` : desktopColumns
+  );
+  const mobileCols = $derived(mobileColumns ? `repeat(${mobileColumns}, 1fr)` : "1fr");
 </script>
 
 <div
@@ -21,7 +26,7 @@
     grid-template-columns: var(--mobile-columns);
   "
 >
-  <slot />
+  {@render children?.()}
 </div>
 
 <style>
