@@ -6,6 +6,7 @@ import {
     Center,
     Svg,
   } from "$components";
+import { text } from "$lib";
 
 </script>
 
@@ -15,24 +16,24 @@ import {
             <h3 class="text-3xl font-light pb-4">MTÜ Lapikud</h3>
             <Container center={false}>
                 <address class="not-italic pb-4">
-                    Aadress: <a href="https://maps.app.goo.gl/1pCDMVNaMD29G7y78" class="text-orange-500">Akadeemia tee 5, 12616 Tallinn, Eesti</a>
+                    {$text.footer?.address || "Aadress: "}<a href="https://maps.app.goo.gl/1pCDMVNaMD29G7y78" class="text-orange-500">{$text.footer?.addressValue || "Akadeemia tee 5, 12616 Tallinn, Eesti"}</a>
                     <br/>
-                    E-post: <a href="mailto:lapikud@lapikud.ee" class="text-orange-500">lapikud@lapikud.ee</a>
+                    {$text.footer?.mail || "E-post: "}<a href="mailto:lapikud@lapikud.ee" class="text-orange-500">lapikud@lapikud.ee</a>
                     <br/>
-                    Tel: <a href="tel:+37258160799" class="text-orange-500">+372 58 160 799</a>
+                    {$text.footer?.phone || "Tel: "}<a href="tel:+37258160799" class="text-orange-500">+372 58 160 799</a>
                     <br/>
-                    Messenger: <a href="https://m.me/Lapikud" target="_blank" rel="noopener noreferrer" class="text-orange-500">m.me/Lapikud</a>
+                    {$text.footer?.messenger || "Messenger: "}<a href="https://m.me/Lapikud" target="_blank" rel="noopener noreferrer" class="text-orange-500">m.me/Lapikud</a>
                 </address>
                 <div>
-                    Reg. kood: <a href="https://ariregister.rik.ee/est/company/80167145/" class="text-orange-500">80167145</a>
+                    {$text.footer?.reg || "Reg. kood: "}<a href="https://ariregister.rik.ee/est/company/80167145/" class="text-orange-500">80167145</a>
                     <br/>
-                    Swedbank EE812200221019551756
+                    {$text.footer?.bank || "Swedbank"} EE812200221019551756
                 </div>
             </Container>
         </div>
         <div>
         <Container center={false}>
-            <h3 class="text-3xl font-light flex justify-center pb-4">Sotsiaalmeedia</h3>
+            <h3 class="text-3xl font-light flex justify-center pb-4">{$text.footer?.socials || "Sotsiaalmeedia"}</h3>
             <div class="flex items-center justify-center gap-4">
                 <a href="https://www.instagram.com/lapikud/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="transition-opacity duration-200">
                     <Svg type="instagram"/>
@@ -47,5 +48,5 @@ import {
         </Container>
         </div>
     </Grid>
-    <Center><small class="text-orange-500 pt-6">© 2026 MTÜ Lapikud</small></Center>
+    <Center><small class="text-orange-500 pt-6">© 2026 {$text.footer?.organization || "MTÜ Lapikud"}</small></Center>
 </Section>

@@ -128,78 +128,78 @@
   <Container maxWidth={true} center={false} class="py-0">
     {#if $text && Object.keys($text).length > 0}
       <div class="flex items-center w-full relative min-h-10">
-      <!-- Logo -->
-      {#if currentPath !== "/"}
-        <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
-          <Button onClick={() => handleNavigation("/")} class="border-transparent">
-            <img src="assets/LapLogo_black_white.png" alt="Lapikud Logo" class="h-14" />
-          </Button>
-        </div>
-      {/if}
+        <!-- Logo -->
+        {#if currentPath !== "/"}
+          <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-auto md:translate-x-0 md:top-auto md:translate-y-0">
+            <Button onClick={() => handleNavigation("/")} class="border-transparent">
+              <img src="assets/LapLogo_black_white.png" alt="Lapikud Logo" class="h-14" />
+            </Button>
+          </div>
+        {/if}
       
-      <div class="flex items-center justify-end ml-auto w-full md:w-auto md:border-b-3 md:border-white backdrop-blur-lg bg-black/35">
-        <!-- Desktop Navigation -->
-        <nav class="z-10 hidden md:flex gap-1 justify-end text-lg">
-          <Dropdown
-            name={$text.about || 'Meist'}
-            buttonClass="rounded-[5px] hover:text-white border-transparent"
-            panelClass="bg-white text-black"
-          >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/lapikutest")}
-              >{$text.aboutPages.info}</Button
+        <div class="flex items-center justify-end ml-auto w-full md:w-auto md:border-b-3 md:border-white backdrop-blur-lg bg-black/35">
+          <!-- Desktop Navigation -->
+          <nav class="z-10 hidden md:flex gap-1 justify-end text-lg">
+            <Dropdown
+              name={$text.about}
+              buttonClass="hover:text-orange-500 border-transparent"
+              panelClass="bg-white text-black"
             >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/tudengile")}
-              ><Bot />{$text.aboutPages.join}</Button
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/lapikutest")}
+                >{$text.aboutPages.info}</Button
+              >
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/tudengile")}
+                ><Bot />{$text.aboutPages.join}</Button
+              >
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/mentorid")}
+                ><HandHeart />{$text.aboutPages.mentors}</Button
+              >
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/juhatus")}
+                ><Lectern />{$text.aboutPages.board}</Button
+              >
+            </Dropdown>
+            <Dropdown
+              name={$text.events}
+              buttonClass="hover:text-orange-500 border-transparent"
+              panelClass="bg-white text-black"
             >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/mentorid")}
-              ><HandHeart />{$text.aboutPages.mentors}</Button
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/koolitused")}
+                ><Presentation />{$text.eventsPages.workshops}</Button
+              >
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
+                ><Trophy />ASI Karikas</Button
+              >
+              <Button class="bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
+                ><Coffee />{$text.eventsPages.repair}</Button
+              >
+            </Dropdown>
+            <Button class="hover:text-orange-500 border-transparent" onClick={() => navigate("/helpdesk")}
+              >{$text.helpdesk}
+            </Button>
+            <Button class="hover:text-orange-500 border-transparent" onClick={() => navigate("/kontakt")}
+              >{$text.contact}
+            </Button>
+            
+            <!-- Language Switcher -->
+            <Button 
+              class="px-3 py-1 text-sm ml-4 hover:text-orange-500 border-transparent"
+              onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
             >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/juhatus")}
-              ><Lectern />{$text.aboutPages.board}</Button
-            >
-          </Dropdown>
-          <Dropdown
-            name={$text.events}
-            buttonClass="rounded-[5px] hover:text-white border-transparent"
-            panelClass="bg-white text-black"
-          >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("/koolitused")}
-              ><Presentation />{$text.eventsPages.workshops}</Button
-            >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("https://asikarikas.ee/", { external: true })}
-              ><Trophy />ASI Karikas</Button
-            >
-            <Button class="rounded-[5px] bg-transparent hover:text-orange-500 border-transparent" onClick={() => navigate("https://remondikohvik.lapikud.ee/", { external: true })}
-              ><Coffee />{$text.eventsPages.repair}</Button
-            >
-          </Dropdown>
-          <Button class="rounded-[5px] hover:text-white border-transparent" onClick={() => navigate("/kontakt")}
-            >{$text.contact}
-          </Button>
-          <Button class="rounded-[5px] hover:text-white border-transparent" onClick={() => navigate("/helpdesk")}
-            >{$text.helpdesk}
-          </Button>
-          
-          <!-- Language Switcher -->
-          <Button 
-            class="rounded-[5px] px-3 py-1 text-sm ml-4 hover:text-white border-transparent"
-            onClick={() => switchLanguageRoute($currentLang === 'est' ? 'en' : 'est')}
-          >
-            {$currentLang === 'est' ? 'EN' : 'EST'}
-          </Button>
-      </nav>
+              {$currentLang === 'est' ? 'EN' : 'EST'}
+            </Button>
+          </nav>
 
-      <!-- Mobile Hamburger Button - Fixed position -->
-      {#if !mobileMenuOpen}
-        <Button
-          onClick={toggleMobileMenu}
-          class="mobile-only p-2 text-white transition-colors bg-transparent absolute right-0 hover:text-white border-transparent"
-          aria-label="Toggle navigation menu"
-        >
-          <Menu size={32} />
-        </Button>
-      {/if}
-      </div>
+          <!-- Mobile Hamburger Button - Fixed position -->
+          {#if !mobileMenuOpen}
+            <Button
+              onClick={toggleMobileMenu}
+              class="mobile-only p-2 text-white transition-colors bg-transparent absolute right-0 hover:text-white border-transparent"
+              aria-label="Toggle navigation menu"
+            >
+              <Menu size={32} />
+            </Button>
+          {/if}
+        </div>
       </div>
     {/if}
   </Container>
@@ -291,16 +291,16 @@
         <!-- Direct Links -->
         <Stack gap="gap-3">
           <Button
-            onClick={() => handleNavigation("/kontakt")}
-            class="text-left text-2xl font-semibold transition-colors bg-transparent hover:text-orange-500 border-transparent"
-          >
-            {$text.contact}
-          </Button>
-          <Button
             onClick={() => handleNavigation("/helpdesk")}
             class="text-left text-2xl font-semibold transition-colors bg-transparent hover:text-orange-500 border-transparent"
           >
             {$text.helpdesk}
+          </Button>
+          <Button
+            onClick={() => handleNavigation("/kontakt")}
+            class="text-left text-2xl font-semibold transition-colors bg-transparent hover:text-orange-500 border-transparent"
+          >
+            {$text.contact}
           </Button>
         </Stack>
         <!-- Language Switcher -->

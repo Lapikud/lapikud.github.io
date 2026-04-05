@@ -1,7 +1,13 @@
 {
-  "address": "Address: ",
-  "mail": "E-mail: ",
-  "messenger": "Messenger: ",
-  "reg": "Reg. code: ",
-  "socials": "Social Media"
+  "footer": {
+    "address": "Address: ",
+    "addressValue": "Akadeemia tee 5, 12616 Tallinn, Estonia",
+    "mail": "E-mail: ",
+    "phone": "Phone: ",
+    "messenger": "Messenger: ",
+    "reg": "Reg. code: ",
+    "bank": "Swedbank",
+    "socials": "Social Media",
+    "organization": "Lapikud NGO"
+  }
 }
