@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "eyebrow": "MTÜ Lapikud",
+    "title": "Management",
+    "intro": "People who keep the organisation moving forward."
+  },
+  "current": {
+    "label": "Current board",
+    "hint": "Contacts and responsibilities"
+  },
+  "history": {
+    "label": "People who have led the organisation over time",
+    "hint": "Thanks to everyone who has helped guide Lapikud"
+  },
+  "loading": "Loading data…",
+  "error": "Failed to load the management data."
+}
