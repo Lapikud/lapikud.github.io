@@ -25,6 +25,7 @@
   });
 </script>
 
+<div class="safe-area-navbar">
 <!-- Hero Section -->
 <Section background="orange">
   <Center>
@@ -195,6 +196,7 @@
     </div>
   {/if}
 </Section>
+</div>
 
 <style>
   .feature-icon {

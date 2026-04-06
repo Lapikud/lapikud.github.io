@@ -69,6 +69,7 @@
   ];
 </script>
 
+<div class="safe-area-navbar">
 <!-- Hero Section -->
 <Section background="orange">
   <Center>
@@ -257,6 +258,7 @@
     </div>
   </Center>
 </Section>
+</div>
 
 <style>
   .feature-icon {

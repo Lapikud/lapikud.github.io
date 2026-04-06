@@ -91,6 +91,7 @@
   }
 </script>
 
+<div class="safe-area-navbar">
 <!-- Hero Section -->
 <Section background="orange">
   <Center>
@@ -299,6 +300,7 @@
     </Card>
   </Grid>
 </Section>
+</div>
 
 <style>
   .feature-icon {

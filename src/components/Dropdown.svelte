@@ -26,21 +26,13 @@
 <div class="relative inline-block" onfocusout={handleFocusOut}>
   <Button onClick={toggle} class={`${buttonClass} gap-0`}>
     {name}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      class="w-4 h-4 ml-1 mr-0 mt-0.5 transition-transform inline-block"
+    <span
+      class="ml-1 mr-0 mt-0.5 transition-transform inline-block text-[0.9em] opacity-60"
       style:transform={isOpen ? "rotate(180deg)" : "none"}
+      aria-hidden="true"
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="m19.5 8.25-7.5 7.5-7.5-7.5"
-      />
-    </svg>
+      ↓
+    </span>
   </Button>
 
   <div

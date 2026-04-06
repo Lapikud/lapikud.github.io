@@ -9,7 +9,7 @@
   });
 </script>
 
-<div bind:this={sectionElement}>
+<div class="safe-area-navbar" bind:this={sectionElement}>
 <Section >
   <Center dir="col" class="w-full">
     <div class="w-full max-w-4xl">

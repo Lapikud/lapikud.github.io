@@ -111,6 +111,7 @@
   });
 </script>
 
+<div class="safe-area-navbar">
 <Section
   padding="none"
   fullWidth={true}
@@ -255,6 +256,7 @@
     {/if}
   </Container>
 </Section>
+</div>
 
 <style>
   .hero-shell {

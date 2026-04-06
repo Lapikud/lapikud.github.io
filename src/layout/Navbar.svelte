@@ -33,7 +33,7 @@
     "/management",
   ];
 
-  const eventsRoutes = ["/kalender", "/striim", "/koolitused"];
+  const eventsRoutes = ["/koolitused"];
 
   function isCurrent(path) {
     return currentPath === path;
@@ -43,22 +43,74 @@
     return paths.includes(currentPath);
   }
 
+  function isHomePage() {
+    return currentPath === "/";
+  }
+
+  function headerShellClass() {
+    return isHomePage()
+      ? "bg-transparent"
+      : "border-b-2 border-orange-500 bg-gray-900 backdrop-blur-md";
+  }
+
+  function headerRowClass() {
+    return isHomePage()
+      ? "flex items-center w-full relative min-h-10"
+      : "flex min-h-16 items-center gap-4";
+  }
+
+  function headerWrapClass() {
+    return isHomePage()
+      ? "ml-auto flex w-full items-center justify-end md:w-auto md:border-b-3 md:border-white backdrop-blur-lg bg-black/35 pr-(--page-padding-inline)"
+      : "flex items-center justify-end ml-auto w-full md:w-auto";
+  }
+
+  function desktopNavClass() {
+    return isHomePage()
+      ? "z-10 hidden md:flex gap-1 justify-end text-lg"
+      : "z-10 hidden md:flex items-center gap-1 justify-end text-lg";
+  }
+
   function navButtonClass(active = false) {
+    if (isHomePage()) {
+      return active
+        ? "border-transparent text-orange-500 bg-transparent"
+        : "border-transparent bg-transparent text-white/75 hover:text-orange-500";
+    }
+
     return active
-      ? "border-transparent text-orange-500 bg-white/5"
-      : "border-transparent text-white/75 hover:text-white hover:bg-white/5";
+      ? "border-transparent text-orange-500 hover:bg-white/5"
+      : "border-transparent text-white/75 hover:bg-white/5";
   }
 
   function dropdownButtonClass(active = false) {
+    if (isHomePage()) {
+      return active
+        ? "border-transparent text-orange-500 bg-transparent"
+        : "border-transparent bg-transparent text-white/75 hover:text-orange-500";
+    }
+
     return active
-      ? "border-transparent text-orange-500 bg-white/5"
-      : "border-transparent text-white/75 hover:text-white hover:bg-white/5";
+      ? "border-transparent text-orange-500 hover:bg-white/5"
+      : "border-transparent text-white/75 hover:bg-white/5";
+  }
+
+  function languageButtonClass() {
+    if (isHomePage()) {
+      return "ml-3 border-transparent bg-transparent px-3 py-1 text-sm text-white/75 hover:text-orange-500";
+    }
+
+    return "ml-3 border-transparent bg-transparent px-3 py-1 text-sm text-white/75 hover:bg-white/5";
   }
 
   function dropdownItemClass(active = false) {
     return active
-      ? "bg-orange-500/10 text-orange-500"
-      : "bg-transparent text-black hover:text-orange-500";
+      ? "w-full justify-start border-transparent bg-transparent text-orange-500"
+      : "w-full justify-start border-transparent bg-transparent text-black hover:text-orange-500";
+  }
+
+  function dropdownPanelClass() {
+    return "nav-dropdown-panel min-w-52 border border-black/10 bg-white/95 p-1 text-black backdrop-blur-md";
   }
 
   // Update currentPath when navigation occurs
@@ -164,23 +216,25 @@
 </style>
 
 <header class="fixed inset-x-0 top-0 z-50 text-white">
-  <div class="border-b-2 border-orange-500 bg-gray-900/95 backdrop-blur-md">
-    <Container maxWidth={true} center={true} class="py-0">
+  <div class={headerShellClass()}>
+    <Container maxWidth={true} center={!isHomePage()} class="py-0">
       {#if $text && Object.keys($text).length > 0}
-        <div class="flex min-h-16 items-center gap-4">
-          <Button
-            onClick={() => handleNavigation("/")}
-            class="nav-logo-button border-transparent bg-transparent px-0 py-0 text-white hover:text-white"
-          >
-            <img src="/assets/LapLogo_white_orange.png" alt="Lapikud Logo" class="h-12 md:h-14 w-auto" />
-          </Button>
+        <div class={headerRowClass()}>
+          {#if !isHomePage()}
+            <Button
+              onClick={() => handleNavigation("/")}
+              class="nav-logo-button border-transparent bg-transparent px-0 py-3"
+            >
+              <img src="/assets/LapLogo_white_orange.png" alt="Lapikud logo" class="h-12 md:h-14 w-auto" />
+            </Button>
+          {/if}
 
-          <div class="flex items-center justify-end ml-auto w-full md:w-auto">
-            <nav class="z-10 hidden md:flex items-center gap-1 justify-end text-lg">
+          <div class={headerWrapClass()}>
+            <nav class={desktopNavClass()}>
               <Dropdown
                 name={$text.about}
                 buttonClass={`${dropdownButtonClass(isInGroup(aboutRoutes))} ${isInGroup(aboutRoutes) ? "nav-active-parent" : ""}`}
-                panelClass="nav-dropdown-panel"
+                panelClass={dropdownPanelClass()}
               >
                 <Button
                   class={dropdownItemClass(isCurrent("/lapikutest") || isCurrent("/aboutus"))}
@@ -211,7 +265,7 @@
               <Dropdown
                 name={$text.events}
                 buttonClass={`${dropdownButtonClass(isInGroup(eventsRoutes))} ${isInGroup(eventsRoutes) ? "nav-active-parent" : ""}`}
-                panelClass="nav-dropdown-panel"
+                panelClass={dropdownPanelClass()}
               >
                 <Button
                   class={dropdownItemClass(isCurrent("/koolitused"))}
@@ -220,13 +274,13 @@
                   <Presentation />{$text.eventsPages.workshops}
                 </Button>
                 <Button
-                  class="bg-transparent text-black hover:text-orange-500"
+                  class={dropdownItemClass(false)}
                   onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}
                 >
                   <Trophy />ASI Karikas
                 </Button>
                 <Button
-                  class="bg-transparent text-black hover:text-orange-500"
+                  class={dropdownItemClass(false)}
                   onClick={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
                 >
                   <Coffee />{$text.eventsPages.repair}
@@ -248,7 +302,7 @@
               </Button>
 
               <Button
-                class="ml-3 border-transparent bg-transparent px-3 py-1 text-sm text-white/75 hover:text-orange-500 hover:bg-white/5"
+                class={languageButtonClass()}
                 onClick={() => switchLanguageRoute($currentLang === "est" ? "en" : "est")}
               >
                 {$currentLang === "est" ? "EN" : "EST"}

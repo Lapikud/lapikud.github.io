@@ -46,6 +46,7 @@
     }
 </script>
 
+<div class="safe-area-navbar">
 <!-- Hero Section -->
 <Section background="orange">
     <Center>
@@ -177,4 +178,5 @@
         {/each}
     </div>
 </Section>
+</div>
 

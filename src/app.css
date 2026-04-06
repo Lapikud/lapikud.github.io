@@ -5,9 +5,9 @@
 
 /* Overwriting tailwindcss specific variables */
 @theme {
-  --color-orange-500: #f0941d;
-  --color-orange-300: #ffa940;
-  --color-orange-600: #d67d0a;
+  --color-orange-500: #f0941d; /* Primary color, use this for most things. */
+  --color-orange-300: #ffa80d; /* Use for hover states, accents, and highlights. (lighter than primary) */
+  --color-orange-600: #d67d0a; /* Ideally don't use */
 
   --color-gray-100: #fffdfa;
   --color-gray-900: #0d0d0d;
@@ -107,6 +107,11 @@ input[type="submit"] {
   border: 0;
   padding: 0;
   margin: -1px;
+}
+
+/* Safe area for content below navbar (94px scaled) */
+.safe-area-navbar {
+  padding-top: calc(94px * var(--ui-scale));
 }
 
 /* Show/hide helpers for breakpoints */

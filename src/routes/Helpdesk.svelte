@@ -43,6 +43,7 @@
   });
 </script>
 
+<div class="safe-area-navbar">
 <!-- Hero Section -->
 <div class="w-full bg-black">
   <div class="flex absolute justify-center items-center flex-row w-full h-[42vh] px-4">
@@ -188,3 +189,4 @@
       </div>
     </Grid>
   </Section>
+</div>

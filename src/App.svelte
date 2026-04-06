@@ -7,8 +7,10 @@
 
 {#if $text && Object.keys($text).length > 0}
   <Navbar />
-  <main>
-    <Router {routes} />
+  <main class="min-h-screen flex flex-col">
+    <div class="flex-1 flex flex-col">
+      <Router {routes} />
+    </div>
     <Footer />
   </main>
 {/if}

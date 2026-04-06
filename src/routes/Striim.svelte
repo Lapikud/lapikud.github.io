@@ -13,9 +13,9 @@
   }
 </script>
 
-<div bind:this={sectionElement}>
-<Section>
-  <Grid min="400px">
+<div class="safe-area-navbar" bind:this={sectionElement}>
+<Section fullWidth={true} contentClass="flex items-start">
+  <Grid min="400px" class="w-full">
     <a href="https://master.lapikud.ee/stream/1/stream">
       <img src="https://master.lapikud.ee/stream/1/substream" alt="video0" style="width:100%;" on:load={handleImageLoad}/>
     </a>
@@ -27,6 +27,6 @@
     <a href="https://master.lapikud.ee/stream/3/stream">
       <img src="https://master.lapikud.ee/stream/3/substream" alt="video2" style="width:100%;" on:load={handleImageLoad}/>
     </a>
-    </Grid>
+  </Grid>
 </Section>
 </div>
