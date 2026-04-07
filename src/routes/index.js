@@ -43,18 +43,45 @@ export const routeMap = {
   // Juhatus/Managment
   '/juhatus': { est: '/juhatus', en: '/management' },
   '/management': { est: '/juhatus', en: '/management' },
+
+  // Workshops/Koolitused
+  '/koolitused': { est: '/koolitused', en: '/workshops' },
+  '/workshops': { est: '/koolitused', en: '/workshops' },
+
+  // Calendar/Kalender
+  '/kalender': { est: '/kalender', en: '/calendar' },
+  '/calendar': { est: '/kalender', en: '/calendar' },
 };
 
 // Detect language from route
 export function getLanguageFromRoute(path) {
-  const estRoutes = ['/tudengile', '/mentorid', '/ettevottele', '/lapikutest', '/kontakt'];
-  const enRoutes = ['/student', '/mentors', '/ourwork', '/aboutus', '/contact'];
+  const estRoutes = [
+    '/tudengile',
+    '/mentorid',
+    '/ettevottele',
+    '/lapikutest',
+    '/kontakt',
+    '/juhatus',
+    '/koolitused',
+    '/kalender',
+  ];
+  const enRoutes = [
+    '/student',
+    '/mentors',
+    '/ourwork',
+    '/aboutus',
+    '/contact',
+    '/management',
+    '/workshops',
+    '/calendar',
+  ];
   
   if (estRoutes.includes(path)) return 'est';
   if (enRoutes.includes(path)) return 'en';
   
-  // Default to Estonian
-  return 'est';
+  // Neutral/shared route (e.g. '/', '/helpdesk')
+  // -> keep currently selected language
+  return null;
 }
 
 // Get translated route
@@ -79,6 +106,9 @@ export const routes = {
   '/contact': Contact,
   '/juhatus': Managment,
   '/management': Managment,
+  '/koolitused': Home, // TODO
+  '/workshops': Home, // TODO
   '/striim': Striim,
   '/kalender': Calendar,
+  '/calendar': Calendar,
 }

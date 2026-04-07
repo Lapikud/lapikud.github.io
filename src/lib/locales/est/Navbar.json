@@ -8,11 +8,11 @@
   },
   "events": "Üritused",
   "eventsPages": {
-    "calendar": "Ürituste Kalender",
     "workshops": "Koolitused",
-    "fresh": "Rebaste Ristimine",
+    "tipilan": "TipiLAN",
+    "asi": "ASI Karikas",
     "repair": "Remondikohvik"
   },
-  "contact": "Kontakt",
-  "helpdesk": "Helpdesk"
+  "helpdesk": "Helpdesk",
+  "contact": "Kontakt"
 }

@@ -1,6 +1,8 @@
 import { writable } from 'svelte/store';
 import { getLanguageFromRoute } from '../routes';
 
+const localeModules = import.meta.glob('./locales/*/*.json');
+
 // Get initial language from URL or localStorage
 function getInitialLanguage() {
     if (typeof window === 'undefined') return 'est';
@@ -31,11 +33,9 @@ async function loadTranslations(lang) {
         
         // Dynamically import all translation files for the specific language
         // Vite will code-split these and only bundle the ones actually used
-        const modules = import.meta.glob('./locales/*/*.json');
-        
-        for (const path in modules) {
+        for (const path in localeModules) {
             if (path.includes(`/locales/${lang}/`) || path.includes(`\\locales\\${lang}\\`)) {
-                const module = await modules[path]();
+                const module = await localeModules[path]();
                 Object.assign(translations, module.default || module);
             }
         }
@@ -47,6 +47,41 @@ async function loadTranslations(lang) {
 }
 
 loadTranslations(initialLang);
+
+/**
+ * Create a translation store that only loads one page file per language.
+ * Example: createPageTextStore('Home') -> ./locales/est/Home.json or ./locales/en/Home.json
+ */
+export function createPageTextStore(pageName) {
+    const pageText = writable({});
+
+    async function loadPageTranslations(lang) {
+        try {
+            const filePath = `./locales/${lang}/${pageName}.json`;
+            const loader = localeModules[filePath];
+
+            if (!loader) {
+                pageText.set({});
+                return;
+            }
+
+            const module = await loader();
+            pageText.set(module.default || module);
+        } catch (error) {
+            console.error(`Failed to load ${pageName} translations for ${lang}:`, error);
+            pageText.set({});
+        }
+    }
+
+    const unsubscribe = currentLang.subscribe((lang) => {
+        loadPageTranslations(lang);
+    });
+
+    return {
+        subscribe: pageText.subscribe,
+        destroy: unsubscribe,
+    };
+}
 
 export function switchLang(lang) {
     currentLang.set(lang);

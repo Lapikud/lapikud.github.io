@@ -1,8 +1,8 @@
 <script>
   import {Section, Stack, Grid, Center, Image, Svg, Button} from "$components";
   import { navigate } from "$lib/router/router.js";
-  import { text, currentLang } from "$lib";
-  import { onMount } from "svelte";
+  import { createPageTextStore, currentLang } from "$lib";
+  import { onMount, onDestroy } from "svelte";
   import yaml from 'js-yaml';
 
   import ArrowRight from "lucide-svelte/icons/arrow-right";
@@ -10,17 +10,16 @@
 
   // Partners data
   let partners = [];
-  let textData = {};
-
-  // Subscribe to text store updates
-  text.subscribe(value => {
-    textData = value;
-  });
+  const text = createPageTextStore("Home");
 
   onMount(async () => {
     const response = await fetch('/_data/partners.yml');
     const yamlText = await response.text();
     partners = yaml.load(yamlText);
+  });
+
+  onDestroy(() => {
+    text.destroy();
   });
 </script>
 

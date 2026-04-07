@@ -5,8 +5,7 @@
     "intro": "Inimesed, kes viivad organisatsiooni edasi."
   },
   "current": {
-    "label": "Praegune juhtkond",
-    "hint": "Kontaktid ja vastutusvaldkonnad"
+    "label": "Praegune juhtkond"
   },
   "history": {
     "label": "Organisatsiooni juhtinud inimesed läbi aegade",

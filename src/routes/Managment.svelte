@@ -1,8 +1,15 @@
 <script>
-  import { Section, Grid, Container, Image } from "$components";
-  import { text } from "$lib";
+  import {
+    Section,
+    Grid,
+    Container,
+    Image,
+  } from "$components";
   import { onMount } from "svelte";
   import yaml from "js-yaml";
+  import { currentLang, getLangText } from "$lib";
+  import estManagementText from "$lib/locales/est/Management.json";
+  import enManagementText from "$lib/locales/en/Management.json";
   import Mail from "lucide-svelte/icons/mail";
   import Phone from "lucide-svelte/icons/phone";
 
@@ -11,53 +18,19 @@
   let loading = true;
   let loadError = false;
 
-  const fallbackText = {
-    est: {
-      hero: {
-        eyebrow: "MTÜ Lapikud",
-        title: "Juhtkond",
-        intro: "Inimesed, kes viivad organisatsiooni edasi.",
-      },
-      current: {
-        label: "Praegune juhtkond",
-        hint: "Kontaktid ja vastutusvaldkonnad",
-      },
-      history: {
-        label: "Organisatsiooni juhtinud inimesed läbi aegade",
-        hint: "Tänu kõigile, kes on Lapikuid juhtinud",
-      },
-      loading: "Laadin andmeid…",
-      error: "Juhtkonna andmete laadimine ebaõnnestus.",
-    },
-    en: {
-      hero: {
-        eyebrow: "MTÜ Lapikud",
-        title: "Management",
-        intro: "People who keep the organisation moving forward.",
-      },
-      current: {
-        label: "Current board",
-        hint: "Contacts and responsibilities",
-      },
-      history: {
-        label: "People who have led the organisation over time",
-        hint: "Thanks to everyone who has helped guide Lapikud",
-      },
-      loading: "Loading data…",
-      error: "Failed to load the management data.",
-    },
+  const managementTextByLang = {
+    est: estManagementText,
+    en: enManagementText,
   };
 
-  function getText() {
-    return $text.management ?? fallbackText.est;
-  }
+  $: t = managementTextByLang[$currentLang] || managementTextByLang.est;
 
   function parseYearLabel(label) {
-    const text = String(label ?? "");
-    const match = text.match(/^(\d{4})(?:\s*\((.+)\))?$/);
+    const value = String(label ?? "");
+    const match = value.match(/^(\d{4})(?:\s*\((.+)\))?$/);
 
     if (!match) {
-      return { year: text, tag: "" };
+      return { year: value, tag: "" };
     }
 
     return {
@@ -66,44 +39,28 @@
     };
   }
 
-  function getBoardLabel(member) {
-    if (!member) return "";
-    if (member.role && member.role !== "Juhatuse liige") {
-      return member.role;
-    }
-    return member.subrole || member.role || "";
-  }
-
-  function getPhoneHref(phone) {
-    if (!phone) return "";
-    return `tel:${String(phone).replace(/[\s()-]/g, "")}`;
-  }
-
   function getInitials(name) {
-    return String(name ?? "")
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((part) => part[0]?.toUpperCase() ?? "")
-      .join("") || "?";
+    return (
+      String(name ?? "")
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((part) => part[0]?.toUpperCase() ?? "")
+        .join("") || "?"
+    );
   }
 
   onMount(async () => {
     try {
-      const [currentRes, pastRes] = await Promise.all([
-        fetch("/_data/management.yml"),
-        fetch("/_data/past_management.yml"),
-      ]);
-
-      const [currentYaml, pastYaml] = await Promise.all([
-        currentRes.text(),
-        pastRes.text(),
-      ]);
-
+      const currentRes = await fetch('/_data/management.yml');
+      const currentYaml = await currentRes.text();
       currentManagement = yaml.load(currentYaml) || [];
+
+      const pastRes = await fetch('/_data/past_management.yml');
+      const pastYaml = await pastRes.text();
       pastManagement = yaml.load(pastYaml) || [];
     } catch (error) {
-      console.error("Error loading management data:", error);
+      console.error('Error loading management data:', error);
       loadError = true;
     } finally {
       loading = false;
@@ -116,137 +73,101 @@
   padding="none"
   fullWidth={true}
   contentClass="!px-0 !py-0"
-  class="management-page overflow-hidden text-white"
-  background="#0d0d0d"
+  class="overflow-hidden text-white"
 >
-  <div class="hero-shell">
-    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="relative overflow-hidden bg-linear-to-b bg-gray-900 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-[rgba(240,148,29,0.16)] after:content-['']">
+    <div class="pointer-events-none absolute -right-16 -top-16 h-80 w-80 rounded-full border border-[rgba(240,148,29,0.12)]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-20 right-16 h-52 w-52 rounded-full border border-[rgba(240,148,29,0.08)]" aria-hidden="true"></div>
 
     <Container class="relative z-10 py-[clamp(3rem,8vw,6rem)]">
       <div class="max-w-4xl">
-        <p class="eyebrow">{getText().hero.eyebrow}</p>
-        <h1 class="hero-title">{getText().hero.title}</h1>
-        <p class="hero-intro">{getText().hero.intro}</p>
+        <p class="mb-4 text-xs tracking-[0.16em] uppercase text-orange-500">{t.hero.eyebrow}</p>
+        <h1 class="m-0 text-[clamp(2.4rem,6vw,4.2rem)] font-bold">{t.hero.title}</h1>
+        <p class="mt-4 max-w-[52ch] text-[clamp(1.05rem,1.5vw,1.25rem)] text-white/75">{t.hero.intro}</p>
       </div>
     </Container>
   </div>
 </Section>
 
-<Section padding="large" class="current-section bg-white text-gray-900">
-  <Container>
-    <div class="section-label">
-      <span>{getText().current.label}</span>
-      <span class="section-label-line"></span>
-    </div>
-
-    <div class="section-heading-row">
-      <div>
-        <h2 class="section-title">{getText().current.label}</h2>
-        <p class="section-subtitle">{getText().current.hint}</p>
-      </div>
-    </div>
-
-    {#if loading}
-      <p class="section-message">{getText().loading}</p>
-    {:else if loadError}
-      <p class="section-message section-message-error">{getText().error}</p>
-    {:else}
-      <Grid min="280px" gap="gap-6" class="board-grid">
-        {#each currentManagement as member (member.name)}
-          <article class="board-card">
-            <div class="board-card-media">
-              {#if member.photo}
-                <Image
-                  src={`/assets/management-images/${member.photo}`}
-                  alt={member.name}
-                  objectFit="cover"
-                  class="board-card-image"
-                  pictureClass="board-card-picture"
-                />
-              {:else}
-                <div class="board-card-placeholder">{getInitials(member.name)}</div>
-              {/if}
-            </div>
-
-            <div class="board-card-body">
-              <div class="board-card-domain">{getBoardLabel(member)}</div>
-              <div class="board-card-name">{member.name}</div>
-
-              <div class="board-card-contacts">
-                {#if member.email}
-                  <a href={`mailto:${member.email}`}>
-                    <Mail size={14} strokeWidth={2} />
-                    <span>{member.email}</span>
-                  </a>
-                {/if}
-
-                {#if member.phone}
-                  <a href={getPhoneHref(member.phone)}>
-                    <Phone size={14} strokeWidth={2} />
-                    <span>{member.phone}</span>
-                  </a>
-                {/if}
-              </div>
-            </div>
-          </article>
-        {/each}
-      </Grid>
-    {/if}
-  </Container>
+<!-- Current Management Section -->
+<Section padding="large">
+    <h1 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em] mb-10">{t.current.label}</h1>
+    <Grid min="500px">
+      {#each currentManagement as member (member.name)}
+        <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <div class="w-full sm:w-auto sm:max-w-[200px] aspect-square shrink-0">
+            <img
+              src={`/assets/management-images/${member.photo}`}
+              alt={member.name}
+              class="w-full h-full object-cover rounded-md"
+            />
+          </div>
+          <div class="flex flex-col gap-2 grow">
+            <h3 class="text-2xl font-medium">{member.name}</h3>
+            <p class="text-base text-gray-700">
+              {getLangText(member, 'role', $currentLang)} - {getLangText(member, 'subrole', $currentLang)}
+            </p>
+            <a
+              href="mailto:{member.email}"
+              class="text-base flex items-center gap-2 text-orange-500 hover:opacity-80 transition"
+            >
+              <Mail size={18} />{member.email}
+            </a>
+            <a
+              href="tel:{member.phone}"
+              class="text-base flex items-center gap-2 text-orange-500 hover:opacity-80 transition"
+            >
+              <Phone size={18} />{member.phone}
+            </a>
+          </div>
+        </div>
+      {/each}
+    </Grid>
 </Section>
 
-<div class="divider"></div>
-
-<Section padding="large" class="history-section" background="#fffdfa">
-  <Container>
-    <div class="section-label">
-      <span>{getText().history.label}</span>
-      <span class="section-label-line"></span>
-    </div>
-
-    <div class="section-heading-row">
+<!-- Past Management Section -->
+<Section padding="large">
+    <div class="mb-7 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
       <div>
-        <h2 class="section-title">{getText().history.label}</h2>
-        <p class="section-subtitle">{getText().history.hint}</p>
+        <h2 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em]">{t.history.label}</h2>
+        <p class="mt-2 text-[0.98rem] text-[rgba(13,13,13,0.62)]">{t.history.hint}</p>
       </div>
     </div>
 
     {#if loading}
-      <p class="section-message">{getText().loading}</p>
+      <p class="m-0 py-4 text-black">{t.loading}</p>
     {:else if loadError}
-      <p class="section-message section-message-error">{getText().error}</p>
+      <p class="m-0 py-4 text-red-500">{t.error}</p>
     {:else}
-      <div class="history-list">
+      <div class="flex flex-col gap-10">
         {#each pastManagement as yearData (yearData.year)}
-          <section class="year-block">
-            <div class="year-header">
-              <div class="year-heading-group">
-                <span class="year-number">{parseYearLabel(yearData.year).year}</span>
+          <section class="mb-5">
+            <div class="mb-4 flex w-full flex-col items-start gap-3 border-b border-orange-500 pb-3">
+              <div class="flex items-baseline gap-3 whitespace-nowrap">
+                <span class="text-[1.6rem] leading-none font-bold text-orange-500 tracking-[-0.04em]">{parseYearLabel(yearData.year).year}</span>
                 {#if parseYearLabel(yearData.year).tag}
-                  <span class="year-tag">{parseYearLabel(yearData.year).tag}</span>
+                  <span class="rounded-full px-[0.55rem] py-[0.2rem] text-[0.64rem] tracking-widest uppercase self-center text-orange-500">{parseYearLabel(yearData.year).tag}</span>
                 {/if}
               </div>
-              <span class="year-line"></span>
             </div>
 
-            <Grid min="150px" gap="gap-5" class="year-people">
+            <Grid min="150px" mobileColumns={2} gap="gap-5" class="items-start">
               {#each yearData.members as member (member.name)}
-                <div class="person-item">
-                  <div class="person-photo">
+                <div class="group flex flex-col items-center gap-2.5 text-center">
+                  <div class="h-24 w-24 overflow-hidden rounded-[10px] bg-linear-to-br outline-2 outline-transparent outline-offset-2 transition [@media(min-width:769px)]:h-28 [@media(min-width:769px)]:w-28">
                     {#if member.image}
                       <Image
                         src={`/assets/past-management-images/optimised/${member.image}`}
                         alt={member.name}
                         objectFit="cover"
-                        class="person-image"
-                        pictureClass="person-picture"
+                        class="block h-full w-full"
+                        pictureClass="h-full w-full"
                       />
                     {:else}
-                      <div class="person-placeholder">{getInitials(member.name)}</div>
+                      <div class="grid h-full w-full place-items-center text-sm font-bold text-orange-600">{getInitials(member.name)}</div>
                     {/if}
                   </div>
-                  <span class="person-name">{member.name}</span>
+                  <span class="max-w-[14ch] text-[0.86rem] font-semibold leading-[1.35] text-gray-900">{member.name}</span>
                 </div>
               {/each}
             </Grid>
@@ -254,359 +175,5 @@
         {/each}
       </div>
     {/if}
-  </Container>
 </Section>
 </div>
-
-<style>
-  .hero-shell {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(180deg, #0d0d0d 0%, #111111 100%);
-  }
-
-  .hero-shell::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0 0;
-    height: 1px;
-    background: rgba(240, 148, 29, 0.16);
-  }
-
-  .hero-orb {
-    position: absolute;
-    border: 1px solid rgba(240, 148, 29, 0.12);
-    border-radius: 999px;
-    pointer-events: none;
-  }
-
-  .hero-orb-1 {
-    top: -4rem;
-    right: -4rem;
-    width: 20rem;
-    height: 20rem;
-  }
-
-  .hero-orb-2 {
-    bottom: -5rem;
-    right: 4rem;
-    width: 13rem;
-    height: 13rem;
-    border-color: rgba(240, 148, 29, 0.08);
-  }
-
-  .eyebrow {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #f0941d;
-    margin: 0 0 1rem;
-  }
-
-  .hero-title {
-    margin: 0;
-    font-size: clamp(2.4rem, 6vw, 4.2rem);
-    line-height: 1.05;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-  }
-
-  .hero-intro {
-    margin: 1rem 0 0;
-    max-width: 52ch;
-    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.76);
-  }
-
-  .section-label {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 2rem;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #f0941d;
-  }
-
-  .section-label-line {
-    flex: 1;
-    height: 1px;
-    background: rgba(13, 13, 13, 0.12);
-  }
-
-  .section-heading-row {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 1.75rem;
-  }
-
-  .section-title {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    line-height: 1.12;
-    letter-spacing: -0.03em;
-  }
-
-  .section-subtitle {
-    margin: 0.45rem 0 0;
-    color: rgba(13, 13, 13, 0.62);
-    font-size: 0.98rem;
-  }
-
-  .section-message {
-    margin: 0;
-    padding: 1rem 0;
-    color: rgba(13, 13, 13, 0.65);
-  }
-
-  .section-message-error {
-    color: #b42318;
-  }
-
-  :global(.board-grid) {
-    align-items: stretch;
-  }
-
-  .board-card {
-    overflow: hidden;
-    border-radius: 14px;
-    border: 1px solid rgba(13, 13, 13, 0.08);
-    background: #ffffff;
-    transition: transform 0.2s ease, border-color 0.2s ease,
-      box-shadow 0.2s ease;
-    box-shadow: 0 1px 0 rgba(13, 13, 13, 0.02);
-  }
-
-  .board-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(240, 148, 29, 0.35);
-    box-shadow: 0 12px 30px rgba(13, 13, 13, 0.08);
-  }
-
-  .board-card-media {
-    aspect-ratio: 4 / 3;
-    background: linear-gradient(135deg, #f7f1e6, #efe5d3);
-    overflow: hidden;
-  }
-
-  :global(.board-card-picture),
-  :global(.board-card-image) {
-    width: 100%;
-    height: 100%;
-  }
-
-  :global(.board-card-image) {
-    display: block;
-  }
-
-  .board-card-placeholder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    color: #d67d0a;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-  }
-
-  .board-card-body {
-    padding: 1.2rem 1.2rem 1.25rem;
-    border-top: 1px solid rgba(13, 13, 13, 0.06);
-  }
-
-  .board-card-domain {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.7rem;
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
-    background: rgba(240, 148, 29, 0.1);
-    color: #d67d0a;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .board-card-name {
-    margin: 0 0 0.8rem;
-    font-size: 1.1rem;
-    font-weight: 650;
-    line-height: 1.25;
-  }
-
-  .board-card-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .board-card-contacts a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: rgba(13, 13, 13, 0.54);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.77rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .board-card-contacts a:hover {
-    color: #f0941d;
-    text-decoration: none;
-  }
-
-  .divider {
-    height: 1px;
-    background: rgba(13, 13, 13, 0.08);
-  }
-
-  :global(.history-section) {
-    background: #fffdfa;
-  }
-
-  .history-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .year-block {
-    margin: 0;
-  }
-
-  .year-header {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 1.1rem;
-  }
-
-  .year-heading-group {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    white-space: nowrap;
-  }
-
-  .year-number {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1;
-  }
-
-  .year-tag {
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
-    background: rgba(240, 148, 29, 0.12);
-    color: #d67d0a;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.64rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .year-line {
-    flex: 1;
-    height: 1px;
-    background: rgba(13, 13, 13, 0.1);
-  }
-
-  :global(.year-people) {
-    align-items: start;
-  }
-
-  .person-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.55rem;
-    text-align: center;
-  }
-
-  .person-photo {
-    width: 112px;
-    height: 112px;
-    overflow: hidden;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #efe6d7, #e7dbc7);
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    transition: outline-color 0.2s ease, transform 0.2s ease;
-  }
-
-  .person-item:hover .person-photo {
-    outline-color: #f0941d;
-    transform: translateY(-1px);
-  }
-
-  :global(.person-picture),
-  :global(.person-image) {
-    width: 100%;
-    height: 100%;
-  }
-
-  :global(.person-image) {
-    display: block;
-  }
-
-  .person-placeholder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    color: #d67d0a;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.9rem;
-    font-weight: 700;
-  }
-
-  .person-name {
-    max-width: 14ch;
-    font-size: 0.86rem;
-    line-height: 1.35;
-    font-weight: 600;
-    color: #0d0d0d;
-  }
-
-  @media (max-width: 768px) {
-    .section-heading-row {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    .year-header {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    .year-line {
-      width: 100%;
-    }
-
-    .person-photo {
-      width: 96px;
-      height: 96px;
-    }
-  }
-</style>

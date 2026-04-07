@@ -13,11 +13,18 @@ export function navigate(path, options = {}) {
     if (external) {
         window.open(path, '_blank', 'noopener,noreferrer');
     } else {
-        window.history.pushState({}, "", path);
+        const selectedLang =
+            localStorage.getItem('language') ||
+            getLanguageFromRoute(window.location.pathname) ||
+            'est';
+
+        const resolvedPath = getTranslatedRoute(path, selectedLang);
+
+        window.history.pushState({}, "", resolvedPath);
         window.dispatchEvent(new PopStateEvent('popstate'));
         
         // Update language based on new route
-        const lang = getLanguageFromRoute(path);
+        const lang = getLanguageFromRoute(resolvedPath);
         if (lang) {
             switchLang(lang);
         }

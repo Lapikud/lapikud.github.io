@@ -11,6 +11,7 @@
   // Icon imports (Lucide)
   import Coffee from "lucide-svelte/icons/coffee";
   import Presentation from "lucide-svelte/icons/presentation";
+  import Gamepad2 from "lucide-svelte/icons/gamepad-2";
   import Lectern from "lucide-svelte/icons/lectern";
   import Bot from "lucide-svelte/icons/bot";
   import HandHeart from "lucide-svelte/icons/hand-heart";
@@ -33,7 +34,7 @@
     "/management",
   ];
 
-  const eventsRoutes = ["/koolitused"];
+  const eventsRoutes = ["/koolitused", "/workshops"];
 
   function isCurrent(path) {
     return currentPath === path;
@@ -268,10 +269,16 @@
                 panelClass={dropdownPanelClass()}
               >
                 <Button
-                  class={dropdownItemClass(isCurrent("/koolitused"))}
+                  class={dropdownItemClass(isCurrent("/koolitused") || isCurrent("/workshops"))}
                   onClick={() => handleNavigation("/koolitused")}
                 >
                   <Presentation />{$text.eventsPages.workshops}
+                </Button>
+                <Button
+                  class={dropdownItemClass(false)}
+                  onClick={() => handleNavigation("https://tipilan.ee/", { external: true })}
+                >
+                  <Gamepad2 />{$text.eventsPages.tipilan}
                 </Button>
                 <Button
                   class={dropdownItemClass(false)}
@@ -397,6 +404,13 @@
             >
               <Presentation size={20} />
               {$text.eventsPages.workshops}
+            </Button>
+            <Button
+              onClick={() => handleNavigation("https://tipilan.ee/", { external: true })}
+              class="text-left transition-colors flex items-center gap-2 bg-transparent hover:text-orange-500 border-transparent"
+            >
+              <Gamepad2 size={20} />
+              {$text.eventsPages.tipilan}
             </Button>
             <Button
               onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}
