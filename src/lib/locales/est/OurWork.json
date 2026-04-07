@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "title": "Ettevõttele",
+    "description": "Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima."
+  },
+  "services": {
+    "title": "Mida me pakume?",
+    "subtitle": "Laia valik IT-teenuseid teie ärivajaduste täitmiseks",
+    "items": [
+      {
+        "title": "Veebilahendused",
+        "description": "Kaasaegsed ja responsiivsed veebilehed, mis toimivad igal seadmel"
+      },
+      {
+        "title": "Mobiilirakendused",
+        "description": "iOS ja Android rakendused kasutajasõbralike liidestega"
+      },
+      {
+        "title": "Tarkvara arendus",
+        "description": "Kohandatud tarkvaralahendused teie ärivajadusteks"
+      },
+      {
+        "title": "Konsultatsioon",
+        "description": "IT-nõustamine ja projekti planeerimine"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Miks meiega koostööd teha?",
+    "items": [
+      {
+        "title": "Motiveeritud meeskond",
+        "description": "Meie tudengid on andekad, õhevil ja tahavad tõestada oma oskuseid"
+      },
+      {
+        "title": "Kvaliteetne tulemus",
+        "description": "Võtame iga projekti tõsiselt ja pingutame parima tulemuse nimel"
+      },
+      {
+        "title": "Kaasaegsed tehnoloogiad",
+        "description": "Kasutame uusimaid tööriistu ja tehnoloogiaid"
+      }
+    ]
+  },
+  "process": {
+    "title": "Kuidas töötame?",
+    "steps": [
+      {
+        "title": "Esimene kohtumine",
+        "description": "Arutame teie ideed, vajadusi ja eesmärke. Mõistame, mida soovite saavutada."
+      },
+      {
+        "title": "Planeerimine",
+        "description": "Koostame projekti plaani, hinnapakkumise ja ajakava. Lepime kokku detailides."
+      },
+      {
+        "title": "Arendus",
+        "description": "Meie meeskond töötab teie projekti kallal. Hoiame teid regulaarselt kursis."
+      },
+      {
+        "title": "Üleandmine",
+        "description": "Anname valmis toote üle koos dokumentatsiooni ja juhendamisega."
+      },
+      {
+        "title": "Tugi",
+        "description": "Pakume vajadusel jätkuvat tuge ja hooldust."
+      }
+    ]
+  },
+  "fit": {
+    "title": "Millal meie sobime?",
+    "items": [
+      {
+        "title": "Startup ja väikeettevõtted:",
+        "description": "Meie teenused on hinnaefektiivsed ja paindlikud, sobides hästi piiratud eelarvega projektidele."
+      },
+      {
+        "title": "Prototüüpide arendus:",
+        "description": "Vajate kiiresti töökorras prototüüpi? Meie agile meeskond suudab kiiresti teie idee ellu viia."
+      },
+      {
+        "title": "Lõputööd ja projektid:",
+        "description": "Teie projekt võib saada meie tudengite lõputöö teemaks, mis tagab motiveeritud ja pühendunud meeskonna."
+      },
+      {
+        "title": "Pikaajalised projektid:",
+        "description": "Pakume ka pikemaajalisi koostöövõimalusi keerulisemate süsteemide arendamiseks."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Meie tehtud tööd",
+    "subtitle": "Vaata, mida oleme varem loonud",
+    "projectLink": "Vaata projekti"
+  },
+  "cta": {
+    "title": "Alustame koostööd?",
+    "description": "Võta ühendust ja arutame, kuidas saame sinu ideed ellu viia!",
+    "emailButton": "Saada e-kiri",
+    "contactButton": "Kontaktandmed"
+  }
+}

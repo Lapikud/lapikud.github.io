@@ -5,6 +5,8 @@
     Card,
     Center,
   } from "$components";
+  import { onDestroy } from "svelte";
+  import { createPageTextStore } from "$lib";
   
   import MapPin from "lucide-svelte/icons/map-pin";
   import Mail from "lucide-svelte/icons/mail";
@@ -16,29 +18,31 @@
   import Building from "lucide-svelte/icons/building";
   import Clock from "lucide-svelte/icons/clock";
 
-  const contactMethods = [
+  const text = createPageTextStore("Contact");
+
+  $: contactMethods = [
     {
       icon: MapPin,
-      title: "Aadress",
+      title: $text["methods"]?.addressTitle || "Aadress",
       content: "Akadeemia tee 5, 12616 Tallinn",
-      subtitle: "ICT-teaduskond, Raja 15 ruum 111",
+      subtitle: $text["methods"]?.addressSubtitle || "ICT-teaduskond, Raja 15 ruum 111",
       link: "https://goo.gl/maps/..."
     },
     {
       icon: Mail,
-      title: "E-post",
+      title: $text["methods"]?.emailTitle || "E-post",
       content: "lapikud@lapikud.ee",
       link: "mailto:lapikud@lapikud.ee"
     },
     {
       icon: Phone,
-      title: "Telefon",
+      title: $text["methods"]?.phoneTitle || "Telefon",
       content: "+372 58 160 799",
       link: "tel:+37258160799"
     },
     {
       icon: MessageCircle,
-      title: "Messenger",
+      title: $text["methods"]?.messengerTitle || "Messenger",
       content: "m.me/Lapikud",
       link: "https://m.me/Lapikud"
     }
@@ -62,17 +66,17 @@
     }
   ];
 
-  const organizationInfo = [
+  $: organizationInfo = [
     {
       icon: Building,
-      title: "Registrikood",
+      title: $text["organization"]?.registryTitle || "Registrikood",
       content: "80167145"
     },
     {
       icon: Building,
-      title: "Pangakonto",
+      title: $text["organization"]?.bankTitle || "Pangakonto",
       content: "EE812200221019551756",
-      subtitle: "Swedbank"
+      subtitle: $text["organization"]?.bankSubtitle || "Swedbank"
     }
   ];
 
@@ -86,9 +90,13 @@
   function handleSubmit(e) {
     e.preventDefault();
     // Create mailto link with form data
-    const mailtoLink = `mailto:lapikud@lapikud.ee?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Nimi: ${formData.name}\nE-post: ${formData.email}\n\nSõnum:\n${formData.message}`)}`;
+    const mailtoLink = `mailto:lapikud@lapikud.ee?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`${$text["form"]?.mailBody?.name || "Nimi"}: ${formData.name}\n${$text["form"]?.mailBody?.email || "E-post"}: ${formData.email}\n\n${$text["form"]?.mailBody?.message || "Sõnum"}:\n${formData.message}`)}`;
     window.location.href = mailtoLink;
   }
+
+  onDestroy(() => {
+    text.destroy();
+  });
 </script>
 
 <div class="safe-area-navbar">
@@ -96,9 +104,9 @@
 <Section background="orange">
   <Center>
     <div class="text-center max-w-4xl">
-      <h1 class="text-5xl font-bold mb-6">Võta ühendust</h1>
+      <h1 class="text-5xl font-bold mb-6">{$text["hero"]?.title || "Võta ühendust"}</h1>
       <p class="text-2xl leading-relaxed">
-        Kas sul on küsimusi? Tahad liituda? Või soovid alustada koostööd? Võta julgelt ühendust!
+        {$text["hero"]?.description || "Kas sul on küsimusi? Tahad liituda? Või soovid alustada koostööd? Võta julgelt ühendust!"}
       </p>
     </div>
   </Center>
@@ -107,8 +115,8 @@
 <!-- Contact Methods -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold mb-4">Kuidas meiega ühendust võtta?</h2>
-    <p class="text-xl text-gray-600">Vali endale sobiv viis</p>
+    <h2 class="text-4xl font-bold mb-4">{$text["methods"]?.title || "Kuidas meiega ühendust võtta?"}</h2>
+    <p class="text-xl text-gray-600">{$text["methods"]?.subtitle || "Vali endale sobiv viis"}</p>
   </div>
   
   <Grid columns={2} gap="var(--space-5)">
@@ -147,57 +155,57 @@
 <Section background="neutral">
   <div class="max-w-3xl mx-auto">
     <div class="text-center mb-8">
-      <h2 class="text-4xl font-bold mb-4">Saada meile sõnum</h2>
-      <p class="text-xl text-gray-600">Täida vorm ja me võtame sinuga ühendust</p>
+      <h2 class="text-4xl font-bold mb-4">{$text["form"]?.title || "Saada meile sõnum"}</h2>
+      <p class="text-xl text-gray-600">{$text["form"]?.subtitle || "Täida vorm ja me võtame sinuga ühendust"}</p>
     </div>
     
     <Card variant="glass">
       <form on:submit={handleSubmit} class="space-y-6">
         <div>
-          <label for="name" class="block text-sm font-semibold mb-2">Nimi *</label>
+          <label for="name" class="block text-sm font-semibold mb-2">{$text["form"]?.nameLabel || "Nimi *"}</label>
           <input
             type="text"
             id="name"
             bind:value={formData.name}
             required
             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition"
-            placeholder="Sinu nimi"
+            placeholder={$text["form"]?.namePlaceholder || "Sinu nimi"}
           />
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-semibold mb-2">E-post *</label>
+          <label for="email" class="block text-sm font-semibold mb-2">{$text["form"]?.emailLabel || "E-post *"}</label>
           <input
             type="email"
             id="email"
             bind:value={formData.email}
             required
             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition"
-            placeholder="sinu@email.ee"
+            placeholder={$text["form"]?.emailPlaceholder || "sinu@email.ee"}
           />
         </div>
 
         <div>
-          <label for="subject" class="block text-sm font-semibold mb-2">Teema *</label>
+          <label for="subject" class="block text-sm font-semibold mb-2">{$text["form"]?.subjectLabel || "Teema *"}</label>
           <input
             type="text"
             id="subject"
             bind:value={formData.subject}
             required
             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition"
-            placeholder="Sõnumi teema"
+            placeholder={$text["form"]?.subjectPlaceholder || "Sõnumi teema"}
           />
         </div>
 
         <div>
-          <label for="message" class="block text-sm font-semibold mb-2">Sõnum *</label>
+          <label for="message" class="block text-sm font-semibold mb-2">{$text["form"]?.messageLabel || "Sõnum *"}</label>
           <textarea
             id="message"
             bind:value={formData.message}
             required
             rows="6"
             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition resize-none"
-            placeholder="Kirjuta oma sõnum siia..."
+            placeholder={$text["form"]?.messagePlaceholder || "Kirjuta oma sõnum siia..."}
           ></textarea>
         </div>
 
@@ -205,7 +213,7 @@
           type="submit"
           class="w-full py-3 px-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
         >
-          Saada sõnum
+          {$text["form"]?.submit || "Saada sõnum"}
         </button>
       </form>
     </Card>
@@ -221,20 +229,20 @@
           <Clock size={32} strokeWidth={1.5} />
         </div>
         <div>
-          <h2 class="text-3xl font-bold mb-4">Lahtiolekuajad</h2>
+          <h2 class="text-3xl font-bold mb-4">{$text["hours"]?.title || "Lahtiolekuajad"}</h2>
         </div>
       </div>
       <div class="space-y-3 text-lg">
         <div class="flex justify-between">
-          <span class="font-semibold">Esmaspäev - Reede:</span>
-          <span>10:00 - 16:00</span>
+          <span class="font-semibold">{$text["hours"]?.weekdays || "Esmaspäev - Reede:"}</span>
+          <span>{$text["hours"]?.weekdaysTime || "10:00 - 16:00"}</span>
         </div>
         <div class="flex justify-between">
-          <span class="font-semibold">Laupäev - Pühapäev:</span>
-          <span>Suletud</span>
+          <span class="font-semibold">{$text["hours"]?.weekend || "Laupäev - Pühapäev:"}</span>
+          <span>{$text["hours"]?.weekendTime || "Suletud"}</span>
         </div>
         <p class="text-sm text-gray-600 mt-4">
-          * Soovitame enne külastamist võtta ühendust, et vältida ootamist
+          {$text["hours"]?.note || "* Soovitame enne külastamist võtta ühendust, et vältida ootamist"}
         </p>
       </div>
     </Card>
@@ -245,16 +253,15 @@
           <MapPin size={32} strokeWidth={1.5} />
         </div>
         <div>
-          <h2 class="text-3xl font-bold mb-4">Kuidas meid leida?</h2>
+          <h2 class="text-3xl font-bold mb-4">{$text["location"]?.title || "Kuidas meid leida?"}</h2>
         </div>
       </div>
       <div class="space-y-3 text-lg">
-        <p><strong>Aadress:</strong> Akadeemia tee 5, 12616 Tallinn</p>
-        <p><strong>Hoone:</strong> ICT-teaduskond (Raja 15)</p>
-        <p><strong>Ruum:</strong> 111</p>
+        <p><strong>{$text["location"]?.addressLabel || "Aadress:"}</strong> {$text["location"]?.address || "Akadeemia tee 5, 12616 Tallinn"}</p>
+        <p><strong>{$text["location"]?.buildingLabel || "Hoone:"}</strong> {$text["location"]?.building || "ICT-teaduskond (Raja 15)"}</p>
+        <p><strong>{$text["location"]?.roomLabel || "Ruum:"}</strong> {$text["location"]?.room || "111"}</p>
         <p class="text-sm text-gray-600 mt-4">
-          Asume Tallinna Tehnikaülikooli ICT-teaduskonna hoones. 
-          Kui tuled ühistranspordiga, on lähimad peatused "Mustakivi" ja "Tehnikaülikool".
+          {$text["location"]?.note || "Asume Tallinna Tehnikaülikooli ICT-teaduskonna hoones. Kui tuled ühistranspordiga, on lähimad peatused \"Mustakivi\" ja \"Tehnikaülikool\"."}
         </p>
       </div>
     </Card>
@@ -265,7 +272,7 @@
 <Section background="neutral">
   <Grid gap="var(--space-5)">
     <Card variant="glass">
-      <h2 class="text-3xl font-bold mb-6 text-center">Jälgi meid sotsiaalmeedias</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center">{$text["social"]?.title || "Jälgi meid sotsiaalmeedias"}</h2>
       <div class="flex flex-wrap justify-center gap-4">
         {#each socialMedia as social}
           <a
@@ -282,7 +289,7 @@
     </Card>
 
     <Card variant="glass">
-      <h2 class="text-3xl font-bold mb-6 text-center">MTÜ Lapikud</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center">{$text["organization"]?.title || "MTÜ Lapikud"}</h2>
       <div class="space-y-3">
         {#each organizationInfo as info}
           <div class="flex items-start gap-4">

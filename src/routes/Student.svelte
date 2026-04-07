@@ -4,10 +4,10 @@
     Grid,
     Card,
     Center,
-    Container,
   } from "$components";
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import yaml from 'js-yaml';
+  import { createPageTextStore } from "$lib";
   
   import Users from "lucide-svelte/icons/users";
   import GraduationCap from "lucide-svelte/icons/graduation-cap";
@@ -17,12 +17,26 @@
   import Trophy from "lucide-svelte/icons/trophy";
 
   let members = { junior: [], senior: [] };
+  const text = createPageTextStore("Student");
   
   onMount(async () => {
     const response = await fetch('/_data/members.yml');
     const yamlText = await response.text();
     members = yaml.load(yamlText);
   });
+
+  onDestroy(() => {
+    text.destroy();
+  });
+
+  $: benefits = [
+    { icon: Code, ...($text["benefits"]?.items?.[0] || { title: "Praktilised projektid", description: "Osale reaalsetel tarkvaraarenduse projektidel. Omanda kogemust, mida ei õpeta ühelgi kursusel." }) },
+    { icon: Users, ...($text["benefits"]?.items?.[1] || { title: "Tugev kogukond", description: "Liitu sõbralike ja ambitsioonikate tudengitega. Leia oma meeskond ja loo püsivaid sõprussuhteid." }) },
+    { icon: GraduationCap, ...($text["benefits"]?.items?.[2] || { title: "Mentorlus", description: "Saa juhendamist kogenud tudengitelt ja arendajatelt. Õpi parimate käest ja arene kiiremini." }) },
+    { icon: Calendar, ...($text["benefits"]?.items?.[3] || { title: "Üritused", description: "Osale huvitavatel üritustel, hackathonidel ja koolitustel. Laienda oma silmaringi ja võrgustikku." }) },
+    { icon: Lightbulb, ...($text["benefits"]?.items?.[4] || { title: "Lõputööd", description: "Meie projektidest kasvavad välja huvitavad lõputööd. Leia oma teema ja juhendaja meie seast." }) },
+    { icon: Trophy, ...($text["benefits"]?.items?.[5] || { title: "Töökogemus", description: "Aktiivsed liikmed saavad võimaluse teenida oma esimest töökogemust ja palka meie projektides." }) },
+  ];
 </script>
 
 <div class="safe-area-navbar">
@@ -30,9 +44,9 @@
 <Section background="orange">
   <Center>
     <div class="text-center max-w-4xl">
-      <h1 class="text-5xl font-bold mb-6">Liitu Meiega!</h1>
+      <h1 class="text-5xl font-bold mb-6">{$text["hero"]?.title || "Liitu Meiega!"}</h1>
       <p class="text-2xl leading-relaxed">
-        Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest.
+        {$text["hero"]?.description || "Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest."}
       </p>
     </div>
   </Center>
@@ -41,70 +55,20 @@
 <!-- Benefits Section -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold mb-4">Miks Lapikutega liituda?</h2>
-    <p class="text-xl text-gray-600">Siin on mõned põhjused, miks meie kogukond on suurepärane koht arenguks</p>
+    <h2 class="text-4xl font-bold mb-4">{$text["benefits"]?.title || "Miks Lapikutega liituda?"}</h2>
+    <p class="text-xl text-gray-600">{$text["benefits"]?.subtitle || "Siin on mõned põhjused, miks meie kogukond on suurepärane koht arenguks"}</p>
   </div>
   
   <Grid columns={3} gap="var(--space-5)">
-    <Card variant="glass">
-      <div class="feature-icon mb-4" style="color: var(--orange)">
-        <Code size={48} strokeWidth={1.5} />
-      </div>
-      <h3 class="text-2xl font-bold mb-3">Praktilised projektid</h3>
-      <p class="text-gray-600">
-        Osale reaalsetel tarkvaraarenduse projektidel. Omanda kogemust, mida ei õpeta ühelgi kursusel.
-      </p>
-    </Card>
-
-    <Card variant="glass">
-      <div class="feature-icon mb-4" style="color: var(--orange)">
-        <Users size={48} strokeWidth={1.5} />
-      </div>
-      <h3 class="text-2xl font-bold mb-3">Tugev kogukond</h3>
-      <p class="text-gray-600">
-        Liitu sõbralike ja ambitsioonikate tudengitega. Leia oma meeskond ja loo püsivaid sõprussuhteid.
-      </p>
-    </Card>
-
-    <Card variant="glass">
-      <div class="feature-icon mb-4" style="color: var(--orange)">
-        <GraduationCap size={48} strokeWidth={1.5} />
-      </div>
-      <h3 class="text-2xl font-bold mb-3">Mentorlus</h3>
-      <p class="text-gray-600">
-        Saa juhendamist kogenud tudengitelt ja arendajatelt. Õpi parimate käest ja arene kiiremini.
-      </p>
-    </Card>
-
-    <Card variant="glass">
-      <div class="feature-icon mb-4" style="color: var(--orange)">
-        <Calendar size={48} strokeWidth={1.5} />
-      </div>
-      <h3 class="text-2xl font-bold mb-3">Üritused</h3>
-      <p class="text-gray-600">
-        Osale huvitavatel üritustel, hackathonidel ja koolitustel. Laienda oma silmaringi ja võrgustikku.
-      </p>
-    </Card>
-
-    <Card variant="glass">
-      <div class="feature-icon mb-4" style="color: var(--orange)">
-        <Lightbulb size={48} strokeWidth={1.5} />
-      </div>
-      <h3 class="text-2xl font-bold mb-3">Lõputööd</h3>
-      <p class="text-gray-600">
-        Meie projektidest kasvavad välja huvitavad lõputööd. Leia oma teema ja juhendaja meie seast.
-      </p>
-    </Card>
-
-    <Card variant="glass">
-      <div class="feature-icon mb-4" style="color: var(--orange)">
-        <Trophy size={48} strokeWidth={1.5} />
-      </div>
-      <h3 class="text-2xl font-bold mb-3">Töökogemus</h3>
-      <p class="text-gray-600">
-        Aktiivsed liikmed saavad võimaluse teenida oma esimest töökogemust ja palka meie projektides.
-      </p>
-    </Card>
+    {#each benefits as benefit}
+      <Card variant="glass">
+        <div class="feature-icon mb-4" style="color: var(--orange)">
+          <svelte:component this={benefit.icon} size={48} strokeWidth={1.5} />
+        </div>
+        <h3 class="text-2xl font-bold mb-3">{benefit.title}</h3>
+        <p class="text-gray-600">{benefit.description}</p>
+      </Card>
+    {/each}
   </Grid>
 </Section>
 
@@ -112,52 +76,32 @@
 <Section background="neutral">
   <Grid gap="var(--space-5)">
     <Card variant="glass">
-      <h2 class="text-4xl font-bold mb-4">Mida saad teha?</h2>
+      <h2 class="text-4xl font-bold mb-4">{$text["activities"]?.title || "Mida saad teha?"}</h2>
       <div class="space-y-4 text-lg">
-        <p>
-          <strong>Tarkvara arendus:</strong> Töötad reaalsetel projektidel kasutades kaasaegseid tehnoloogiaid. 
-          Õpid koodi kirjutamist meeskonnas, versioonihaldustööriistade kasutamist ja tarkvara kvaliteedi tagamist.
-        </p>
-        <p>
-          <strong>Helpdesk:</strong> Aita tudengeid ja õppejõude IT-probleemide lahendamisel. 
-          Arenda oma tehnilisi oskuseid ja õpi suhtlemist klientidega.
-        </p>
-        <p>
-          <strong>Projektijuhtimine:</strong> Võta vastutus projekti koordineerimise eest. 
-          Õpi planeerimist, meeskonna juhtimist ja suhtlemist klientidega.
-        </p>
-        <p>
-          <strong>Turundus ja disain:</strong> Aita meie projektide ja ürituste turundamisel. 
-          Loo sisu sotsiaalmeedias, disaini materjale ja jälgi tulemusi.
-        </p>
+        {#each $text["activities"]?.items || [] as item}
+          <p>
+            <strong>{item.title}</strong> {item.description}
+          </p>
+        {/each}
       </div>
     </Card>
 
     <Card variant="glass">
-      <h2 class="text-4xl font-bold mb-4">Kuidas liituda?</h2>
+      <h2 class="text-4xl font-bold mb-4">{$text["join"]?.title || "Kuidas liituda?"}</h2>
       <div class="space-y-4 text-lg">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">1.</div>
-          <div>
-            <strong>Võta ühendust</strong><br/>
-            Kirjuta meile e-posti aadressil <a href="mailto:lapikud@lapikud.ee" class="text-orange-500 hover:underline">lapikud@lapikud.ee</a> 
-            või tule meie kontorisse Akadeemia tee 5.
+        {#each $text["join"]?.steps || [] as step, index}
+          <div class="flex items-start gap-4">
+            <div class="text-3xl font-bold" style="color: var(--orange)">{index + 1}.</div>
+            <div>
+              <strong>{step.title}</strong><br/>
+              {#if index === 0}
+                {step.description || "Kirjuta meile e-posti aadressil"} <a href="mailto:lapikud@lapikud.ee" class="text-orange-500 hover:underline">lapikud@lapikud.ee</a> {step.descriptionEnd || "või tule meie kontorisse Akadeemia tee 5."}
+              {:else}
+                {step.description}
+              {/if}
+            </div>
           </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">2.</div>
-          <div>
-            <strong>Tutvumine</strong><br/>
-            Kohtu meie meeskonnaga, tutvusta ennast ja räägi oma huvidest. Näitame sulle meie projekte ja võimalusi.
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">3.</div>
-          <div>
-            <strong>Alusta tööd</strong><br/>
-            Leia endale sobiv projekt või meeskond ja hakka tegutsema! Meie mentorid aitavad sind iga sammu juures.
-          </div>
-        </div>
+        {/each}
       </div>
     </Card>
   </Grid>
@@ -166,13 +110,13 @@
 <!-- Members Section -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold mb-4">Meie liikmed</h2>
-    <p class="text-xl text-gray-600">Suurepärased inimesed, kes moodustavad meie kogukonna</p>
+    <h2 class="text-4xl font-bold mb-4">{$text["members"]?.title || "Meie liikmed"}</h2>
+    <p class="text-xl text-gray-600">{$text["members"]?.subtitle || "Suurepärased inimesed, kes moodustavad meie kogukonna"}</p>
   </div>
   
   {#if members.senior && members.senior.length > 0}
     <div class="mb-12">
-      <h3 class="text-3xl font-bold mb-6 text-center">Vanemliikmed</h3>
+      <h3 class="text-3xl font-bold mb-6 text-center">{$text["members"]?.senior || "Vanemliikmed"}</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {#each members.senior as member}
           <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
@@ -185,7 +129,7 @@
 
   {#if members.junior && members.junior.length > 0}
     <div>
-      <h3 class="text-3xl font-bold mb-6 text-center">Noorliikmed</h3>
+      <h3 class="text-3xl font-bold mb-6 text-center">{$text["members"]?.junior || "Noorliikmed"}</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {#each members.junior as member}
           <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">

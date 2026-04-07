@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Join Us!",
+    "description": "Develop your skills, make great friends, and gain practical experience through real projects."
+  },
+  "benefits": {
+    "title": "Why join Lapikud?",
+    "subtitle": "Here are a few reasons why our community is a great place to grow",
+    "items": [
+      {
+        "title": "Practical projects",
+        "description": "Work on real software projects and gain experience you don't get from classes alone."
+      },
+      {
+        "title": "Strong community",
+        "description": "Join friendly and ambitious students, find your team, and build lasting friendships."
+      },
+      {
+        "title": "Mentorship",
+        "description": "Get guidance from experienced students and developers, and improve faster."
+      },
+      {
+        "title": "Events",
+        "description": "Take part in exciting events, hackathons, and trainings to expand your network."
+      },
+      {
+        "title": "Thesis opportunities",
+        "description": "Interesting thesis topics grow from our projects. Find your topic and supervisor with us."
+      },
+      {
+        "title": "Work experience",
+        "description": "Active members can gain their first paid work experience through our projects."
+      }
+    ]
+  },
+  "activities": {
+    "title": "What can you do?",
+    "items": [
+      {
+        "title": "Software development:",
+        "description": "Work on real projects with modern technologies and learn team collaboration and quality practices."
+      },
+      {
+        "title": "Helpdesk:",
+        "description": "Help students and lecturers solve IT issues while improving your technical and communication skills."
+      },
+      {
+        "title": "Project management:",
+        "description": "Take responsibility for project coordination and learn planning, leadership, and client communication."
+      },
+      {
+        "title": "Marketing and design:",
+        "description": "Support project and event promotion, create social content, design materials, and track results."
+      }
+    ]
+  },
+  "join": {
+    "title": "How to join?",
+    "steps": [
+      {
+        "title": "Get in touch",
+        "description": "Write to us at",
+        "descriptionEnd": "or visit our office at Akadeemia tee 5."
+      },
+      {
+        "title": "Introduction",
+        "description": "Meet our team, introduce yourself, and share your interests. We'll show you our projects and opportunities."
+      },
+      {
+        "title": "Start contributing",
+        "description": "Find a suitable project or team and get started. Our mentors will support you at every step."
+      }
+    ]
+  },
+  "members": {
+    "title": "Our members",
+    "subtitle": "Great people who make up our community",
+    "senior": "Senior members",
+    "junior": "Junior members"
+  }
+}

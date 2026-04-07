@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Liitu Meiega!",
+    "description": "Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest."
+  },
+  "benefits": {
+    "title": "Miks Lapikutega liituda?",
+    "subtitle": "Siin on mõned põhjused, miks meie kogukond on suurepärane koht arenguks",
+    "items": [
+      {
+        "title": "Praktilised projektid",
+        "description": "Osale reaalsetel tarkvaraarenduse projektidel. Omanda kogemust, mida ei õpeta ühelgi kursusel."
+      },
+      {
+        "title": "Tugev kogukond",
+        "description": "Liitu sõbralike ja ambitsioonikate tudengitega. Leia oma meeskond ja loo püsivaid sõprussuhteid."
+      },
+      {
+        "title": "Mentorlus",
+        "description": "Saa juhendamist kogenud tudengitelt ja arendajatelt. Õpi parimate käest ja arene kiiremini."
+      },
+      {
+        "title": "Üritused",
+        "description": "Osale huvitavatel üritustel, hackathonidel ja koolitustel. Laienda oma silmaringi ja võrgustikku."
+      },
+      {
+        "title": "Lõputööd",
+        "description": "Meie projektidest kasvavad välja huvitavad lõputööd. Leia oma teema ja juhendaja meie seast."
+      },
+      {
+        "title": "Töökogemus",
+        "description": "Aktiivsed liikmed saavad võimaluse teenida oma esimest töökogemust ja palka meie projektides."
+      }
+    ]
+  },
+  "activities": {
+    "title": "Mida saad teha?",
+    "items": [
+      {
+        "title": "Tarkvara arendus:",
+        "description": "Töötad reaalsetel projektidel kasutades kaasaegseid tehnoloogiaid. Õpid koodi kirjutamist meeskonnas, versioonihaldustööriistade kasutamist ja tarkvara kvaliteedi tagamist."
+      },
+      {
+        "title": "Helpdesk:",
+        "description": "Aita tudengeid ja õppejõude IT-probleemide lahendamisel. Arenda oma tehnilisi oskuseid ja õpi suhtlemist klientidega."
+      },
+      {
+        "title": "Projektijuhtimine:",
+        "description": "Võta vastutus projekti koordineerimise eest. Õpi planeerimist, meeskonna juhtimist ja suhtlemist klientidega."
+      },
+      {
+        "title": "Turundus ja disain:",
+        "description": "Aita meie projektide ja ürituste turundamisel. Loo sisu sotsiaalmeedias, disaini materjale ja jälgi tulemusi."
+      }
+    ]
+  },
+  "join": {
+    "title": "Kuidas liituda?",
+    "steps": [
+      {
+        "title": "Võta ühendust",
+        "description": "Kirjuta meile e-posti aadressil",
+        "descriptionEnd": "või tule meie kontorisse Akadeemia tee 5."
+      },
+      {
+        "title": "Tutvumine",
+        "description": "Kohtu meie meeskonnaga, tutvusta ennast ja räägi oma huvidest. Näitame sulle meie projekte ja võimalusi."
+      },
+      {
+        "title": "Alusta tööd",
+        "description": "Leia endale sobiv projekt või meeskond ja hakka tegutsema! Meie mentorid aitavad sind iga sammu juures."
+      }
+    ]
+  },
+  "members": {
+    "title": "Meie liikmed",
+    "subtitle": "Suurepärased inimesed, kes moodustavad meie kogukonna",
+    "senior": "Vanemliikmed",
+    "junior": "Noorliikmed"
+  }
+}

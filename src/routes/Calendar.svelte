@@ -1,11 +1,17 @@
 <script>
   import { Section, Center } from "$components";
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
+  import { createPageTextStore } from "$lib";
 
   let sectionElement;
+  const text = createPageTextStore("Calendar");
 
   onMount(() => {
     sectionElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  onDestroy(() => {
+    text.destroy();
   });
 </script>
 
@@ -16,7 +22,7 @@
       <iframe 
         style="border: 0;" 
         src="https://www.google.com/calendar/embed?src=lapikud%40gmail.com&ctz=Europe/Tallinn&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=2" 
-        title="Lapikud Calendar"
+        title={$text.iframeTitle || "Lapikud Calendar"}
         class="w-full"
         height="600" 
         frameborder="0" 

@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Get in touch",
+    "description": "Have questions? Want to join? Or start a collaboration? Feel free to contact us!"
+  },
+  "methods": {
+    "title": "How to reach us?",
+    "subtitle": "Choose the method that works for you",
+    "addressTitle": "Address",
+    "emailTitle": "Email",
+    "phoneTitle": "Phone",
+    "messengerTitle": "Messenger",
+    "addressSubtitle": "ICT faculty, Raja 15 room 111"
+  },
+  "form": {
+    "title": "Send us a message",
+    "subtitle": "Fill in the form and we will get back to you",
+    "nameLabel": "Name *",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "you@email.com",
+    "subjectLabel": "Subject *",
+    "subjectPlaceholder": "Message subject",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Write your message here...",
+    "submit": "Send message",
+    "mailBody": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    }
+  },
+  "hours": {
+    "title": "Opening hours",
+    "weekdays": "Monday - Friday:",
+    "weekdaysTime": "10:00 - 16:00",
+    "weekend": "Saturday - Sunday:",
+    "weekendTime": "Closed",
+    "note": "* We recommend contacting us before visiting to avoid waiting"
+  },
+  "location": {
+    "title": "How to find us?",
+    "addressLabel": "Address:",
+    "buildingLabel": "Building:",
+    "roomLabel": "Room:",
+    "address": "Akadeemia tee 5, 12616 Tallinn",
+    "building": "ICT faculty (Raja 15)",
+    "room": "111",
+    "note": "We are located in TalTech ICT faculty building. If you come by public transport, the nearest stops are \"Mustakivi\" and \"Tehnikaülikool\"."
+  },
+  "social": {
+    "title": "Follow us on social media"
+  },
+  "organization": {
+    "title": "Lapikud NGO",
+    "registryTitle": "Registry code",
+    "bankTitle": "Bank account",
+    "bankSubtitle": "Swedbank"
+  }
+}

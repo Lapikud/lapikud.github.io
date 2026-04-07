@@ -5,11 +5,9 @@
     Container,
     Image,
   } from "$components";
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import yaml from "js-yaml";
-  import { currentLang, getLangText } from "$lib";
-  import estManagementText from "$lib/locales/est/Management.json";
-  import enManagementText from "$lib/locales/en/Management.json";
+  import { currentLang, getLangText, createPageTextStore } from "$lib";
   import Mail from "lucide-svelte/icons/mail";
   import Phone from "lucide-svelte/icons/phone";
 
@@ -17,13 +15,7 @@
   let pastManagement = [];
   let loading = true;
   let loadError = false;
-
-  const managementTextByLang = {
-    est: estManagementText,
-    en: enManagementText,
-  };
-
-  $: t = managementTextByLang[$currentLang] || managementTextByLang.est;
+  const text = createPageTextStore("Management");
 
   function parseYearLabel(label) {
     const value = String(label ?? "");
@@ -66,6 +58,10 @@
       loading = false;
     }
   });
+
+  onDestroy(() => {
+    text.destroy();
+  });
 </script>
 
 <div class="safe-area-navbar">
@@ -81,9 +77,9 @@
 
     <Container class="relative z-10 py-[clamp(3rem,8vw,6rem)]">
       <div class="max-w-4xl">
-        <p class="mb-4 text-xs tracking-[0.16em] uppercase text-orange-500">{t.hero.eyebrow}</p>
-        <h1 class="m-0 text-[clamp(2.4rem,6vw,4.2rem)] font-bold">{t.hero.title}</h1>
-        <p class="mt-4 max-w-[52ch] text-[clamp(1.05rem,1.5vw,1.25rem)] text-white/75">{t.hero.intro}</p>
+        <p class="mb-4 text-xs tracking-[0.16em] uppercase text-orange-500">{$text.hero?.eyebrow || "MTÜ Lapikud"}</p>
+        <h1 class="m-0 text-[clamp(2.4rem,6vw,4.2rem)] font-bold">{$text.hero?.title || "Management"}</h1>
+        <p class="mt-4 max-w-[52ch] text-[clamp(1.05rem,1.5vw,1.25rem)] text-white/75">{$text.hero?.intro || "People who keep the organisation moving forward."}</p>
       </div>
     </Container>
   </div>
@@ -91,7 +87,7 @@
 
 <!-- Current Management Section -->
 <Section padding="large">
-    <h1 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em] mb-10">{t.current.label}</h1>
+  <h1 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em] mb-10">{$text.current?.label || "Current board"}</h1>
     <Grid min="500px">
       {#each currentManagement as member (member.name)}
         <div class="flex flex-col sm:flex-row gap-6 items-start">
@@ -129,15 +125,15 @@
 <Section padding="large">
     <div class="mb-7 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
       <div>
-        <h2 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em]">{t.history.label}</h2>
-        <p class="mt-2 text-[0.98rem] text-[rgba(13,13,13,0.62)]">{t.history.hint}</p>
+        <h2 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em]">{$text.history?.label || "People who have led the organisation over time"}</h2>
+        <p class="mt-2 text-[0.98rem] text-[rgba(13,13,13,0.62)]">{$text.history?.hint || "Thanks to everyone who has helped guide Lapikud"}</p>
       </div>
     </div>
 
     {#if loading}
-      <p class="m-0 py-4 text-black">{t.loading}</p>
+      <p class="m-0 py-4 text-black">{$text.loading || "Loading data..."}</p>
     {:else if loadError}
-      <p class="m-0 py-4 text-red-500">{t.error}</p>
+      <p class="m-0 py-4 text-red-500">{$text.error || "Failed to load the management data."}</p>
     {:else}
       <div class="flex flex-col gap-10">
         {#each pastManagement as yearData (yearData.year)}

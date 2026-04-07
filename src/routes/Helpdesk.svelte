@@ -3,8 +3,8 @@
     Section,
     Grid,
   } from "$components";
-  import { onMount } from "svelte";
-  import { text } from "$lib/i18n";
+  import { onMount, onDestroy } from "svelte";
+  import { createPageTextStore } from "$lib";
   import yaml from 'js-yaml';
   
   import { MapLibre, Marker } from "svelte-maplibre";
@@ -35,11 +35,16 @@
 
   // Load pricing data
   let pricingData = { services: [] };
+  const text = createPageTextStore("Helpdesk");
   
   onMount(async () => {
     const response = await fetch('/_data/helpdesk/hinnakiri.yml');
     const yamlText = await response.text();
     pricingData = yaml.load(yamlText);
+  });
+
+  onDestroy(() => {
+    text.destroy();
   });
 </script>
 

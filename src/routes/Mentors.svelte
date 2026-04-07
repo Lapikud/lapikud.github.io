@@ -1,8 +1,8 @@
 <script>
-    import { Section, Card, Center } from "$components";
-    import { onMount } from "svelte";
+    import { Section, Container } from "$components";
+    import { onMount, onDestroy } from "svelte";
     import yaml from "js-yaml";
-    import { currentLang, getLangText } from "$lib";
+    import { currentLang, getLangText, createPageTextStore } from "$lib";
 
     import Mail from "lucide-svelte/icons/mail";
     import Phone from "lucide-svelte/icons/phone";
@@ -10,11 +10,17 @@
     import User from "lucide-svelte/icons/user";
 
     let mentors = [];
+    const text = createPageTextStore("Mentors");
+    
 
     onMount(async () => {
         const response = await fetch("/_data/mentors.yml");
         const yamlText = await response.text();
         mentors = yaml.load(yamlText);
+    });
+
+    onDestroy(() => {
+        text.destroy();
     });
 
     function getContactIcon(contactType) {
@@ -48,15 +54,23 @@
 
 <div class="safe-area-navbar">
 <!-- Hero Section -->
-<Section background="orange">
-    <Center>
-        <div class="text-center max-w-4xl">
-            <h1 class="text-5xl font-bold mb-6">Meie Mentorid</h1>
-            <p class="text-2xl leading-relaxed">
-                Lapikud, kes on alati valmis olema sinu toeks nii õpingutes kui ka isiklikus arengus ja kellega on lihtsalt tore koos aega veeta.
-            </p>
-        </div>
-    </Center>
+<Section
+  padding="none"
+  fullWidth={true}
+  contentClass="!px-0 !py-0"
+  class="overflow-hidden text-white"
+>
+  <div class="relative overflow-hidden bg-linear-to-b bg-gray-900 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-[rgba(240,148,29,0.16)] after:content-['']">
+    <div class="pointer-events-none absolute -right-16 -top-16 h-80 w-80 rounded-full border border-[rgba(240,148,29,0.12)]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-20 right-16 h-52 w-52 rounded-full border border-[rgba(240,148,29,0.08)]" aria-hidden="true"></div>
+
+    <Container class="relative z-10 py-[clamp(3rem,8vw,6rem)]">
+      <div class="max-w-4xl">
+                <h1 class="m-0 text-[clamp(2.4rem,6vw,4.2rem)] font-bold">{$text.hero?.title || "Our Mentors"}</h1>
+                <p class="mt-4 max-w-[52ch] text-[clamp(1.05rem,1.5vw,1.25rem)] text-white/75">{$text.hero?.intro || "Lapikud who are always ready to support you in your studies and personal development."}</p>
+      </div>
+    </Container>
+  </div>
 </Section>
 
 <!-- Mentors Grid -->

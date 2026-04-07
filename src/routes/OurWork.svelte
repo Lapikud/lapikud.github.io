@@ -5,9 +5,9 @@
     Card,
     Center,
   } from "$components";
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import yaml from 'js-yaml';
-  import { currentLang, getLangText } from "$lib";
+  import { currentLang, getLangText, createPageTextStore } from "$lib";
   
   import Rocket from "lucide-svelte/icons/rocket";
   import Users from "lucide-svelte/icons/users";
@@ -20,6 +20,7 @@
   import ExternalLink from "lucide-svelte/icons/external-link";
 
   let projects = [];
+  const text = createPageTextStore("OurWork");
   
   onMount(async () => {
     const response = await fetch('/_data/ourwork.yml');
@@ -27,44 +28,48 @@
     projects = yaml.load(yamlText).filter(p => p.title);
   });
 
-  const services = [
+  onDestroy(() => {
+    text.destroy();
+  });
+
+  $: services = [
     {
       icon: Globe,
-      title: "Veebilahendused",
-      description: "Kaasaegsed ja responsiivsed veebilehed, mis toimivad igal seadmel"
+      title: $text["services"]?.items?.[0]?.title || "Veebilahendused",
+      description: $text["services"]?.items?.[0]?.description || "Kaasaegsed ja responsiivsed veebilehed, mis toimivad igal seadmel"
     },
     {
       icon: Smartphone,
-      title: "Mobiilirakendused",
-      description: "iOS ja Android rakendused kasutajasõbralike liidestega"
+      title: $text["services"]?.items?.[1]?.title || "Mobiilirakendused",
+      description: $text["services"]?.items?.[1]?.description || "iOS ja Android rakendused kasutajasõbralike liidestega"
     },
     {
       icon: Code,
-      title: "Tarkvara arendus",
-      description: "Kohandatud tarkvaralahendused teie ärivajadusteks"
+      title: $text["services"]?.items?.[2]?.title || "Tarkvara arendus",
+      description: $text["services"]?.items?.[2]?.description || "Kohandatud tarkvaralahendused teie ärivajadusteks"
     },
     {
       icon: Briefcase,
-      title: "Konsultatsioon",
-      description: "IT-nõustamine ja projekti planeerimine"
+      title: $text["services"]?.items?.[3]?.title || "Konsultatsioon",
+      description: $text["services"]?.items?.[3]?.description || "IT-nõustamine ja projekti planeerimine"
     }
   ];
 
-  const whyUs = [
+  $: whyUs = [
     {
       icon: Users,
-      title: "Motiveeritud meeskond",
-      description: "Meie tudengid on andekad, õhevil ja tahavad tõestada oma oskuseid"
+      title: $text["whyUs"]?.items?.[0]?.title || "Motiveeritud meeskond",
+      description: $text["whyUs"]?.items?.[0]?.description || "Meie tudengid on andekad, õhevil ja tahavad tõestada oma oskuseid"
     },
     {
       icon: Target,
-      title: "Kvaliteetne tulemus",
-      description: "Võtame iga projekti tõsiselt ja pingutame parima tulemuse nimel"
+      title: $text["whyUs"]?.items?.[1]?.title || "Kvaliteetne tulemus",
+      description: $text["whyUs"]?.items?.[1]?.description || "Võtame iga projekti tõsiselt ja pingutame parima tulemuse nimel"
     },
     {
       icon: Rocket,
-      title: "Kaasaegsed tehnoloogiad",
-      description: "Kasutame uusimaid tööriistu ja tehnoloogiaid"
+      title: $text["whyUs"]?.items?.[2]?.title || "Kaasaegsed tehnoloogiad",
+      description: $text["whyUs"]?.items?.[2]?.description || "Kasutame uusimaid tööriistu ja tehnoloogiaid"
     }
   ];
 </script>
@@ -74,9 +79,9 @@
 <Section background="orange">
   <Center>
     <div class="text-center max-w-4xl">
-      <h1 class="text-5xl font-bold mb-6">Ettevõttele</h1>
+      <h1 class="text-5xl font-bold mb-6">{$text["hero"]?.title || "Ettevõttele"}</h1>
       <p class="text-2xl leading-relaxed">
-        Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima.
+        {$text["hero"]?.description || "Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima."}
       </p>
     </div>
   </Center>
@@ -85,8 +90,8 @@
 <!-- Services Section -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold mb-4">Mida me pakume?</h2>
-    <p class="text-xl text-gray-600">Laia valik IT-teenuseid teie ärivajaduste täitmiseks</p>
+    <h2 class="text-4xl font-bold mb-4">{$text["services"]?.title || "Mida me pakume?"}</h2>
+    <p class="text-xl text-gray-600">{$text["services"]?.subtitle || "Laia valik IT-teenuseid teie ärivajaduste täitmiseks"}</p>
   </div>
   
   <Grid columns={2} gap="var(--space-5)">
@@ -105,7 +110,7 @@
 <!-- Why Choose Us -->
 <Section background="neutral">
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold mb-4">Miks meiega koostööd teha?</h2>
+    <h2 class="text-4xl font-bold mb-4">{$text["whyUs"]?.title || "Miks meiega koostööd teha?"}</h2>
   </div>
   
   <Grid columns={3} gap="var(--space-5)">
@@ -125,65 +130,28 @@
 <Section>
   <Grid gap="var(--space-5)">
     <Card variant="glass">
-      <h2 class="text-4xl font-bold mb-6">Kuidas töötame?</h2>
+      <h2 class="text-4xl font-bold mb-6">{$text["process"]?.title || "Kuidas töötame?"}</h2>
       <div class="space-y-6">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">1.</div>
-          <div>
-            <strong class="text-lg">Esimene kohtumine</strong><br/>
-            Arutame teie ideed, vajadusi ja eesmärke. Mõistame, mida soovite saavutada.
+        {#each $text["process"]?.steps || [] as step, index}
+          <div class="flex items-start gap-4">
+            <div class="text-3xl font-bold" style="color: var(--orange)">{index + 1}.</div>
+            <div>
+              <strong class="text-lg">{step.title}</strong><br/>
+              {step.description}
+            </div>
           </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">2.</div>
-          <div>
-            <strong class="text-lg">Planeerimine</strong><br/>
-            Koostame projekti plaani, hinnapakkumise ja ajakava. Lepime kokku detailides.
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">3.</div>
-          <div>
-            <strong class="text-lg">Arendus</strong><br/>
-            Meie meeskond töötab teie projekti kallal. Hoiame teid regulaarselt kursis.
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">4.</div>
-          <div>
-            <strong class="text-lg">Üleandmine</strong><br/>
-            Anname valmis toote üle koos dokumentatsiooni ja juhendamisega.
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-bold" style="color: var(--orange)">5.</div>
-          <div>
-            <strong class="text-lg">Tugi</strong><br/>
-            Pakume vajadusel jätkuvat tuge ja hooldust.
-          </div>
-        </div>
+        {/each}
       </div>
     </Card>
 
     <Card variant="glass">
-      <h2 class="text-4xl font-bold mb-6">Millal meie sobime?</h2>
+      <h2 class="text-4xl font-bold mb-6">{$text["fit"]?.title || "Millal meie sobime?"}</h2>
       <div class="space-y-4 text-lg">
-        <p>
-          <strong>Startup ja väikeettevõtted:</strong> Meie teenused on hinnaefektiivsed ja paindlikud, 
-          sobides hästi piiratud eelarvega projektidele.
-        </p>
-        <p>
-          <strong>Prototüüpide arendus:</strong> Vajate kiiresti töökorras prototüüpi? 
-          Meie agile meeskond suudab kiiresti teie idee ellu viia.
-        </p>
-        <p>
-          <strong>Lõputööd ja projektid:</strong> Teie projekt võib saada meie tudengite 
-          lõputöö teemaks, mis tagab motiveeritud ja pühendunud meeskonna.
-        </p>
-        <p>
-          <strong>Pikaajalised projektid:</strong> Pakume ka pikemaajalisi koostöövõimalusi 
-          keerulisemate süsteemide arendamiseks.
-        </p>
+        {#each $text["fit"]?.items || [] as item}
+          <p>
+            <strong>{item.title}</strong> {item.description}
+          </p>
+        {/each}
       </div>
     </Card>
   </Grid>
@@ -192,8 +160,8 @@
 <!-- Portfolio Section -->
 <Section>
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold mb-4">Meie tehtud tööd</h2>
-    <p class="text-xl text-gray-600">Vaata, mida oleme varem loonud</p>
+    <h2 class="text-4xl font-bold mb-4">{$text["portfolio"]?.title || "Meie tehtud tööd"}</h2>
+    <p class="text-xl text-gray-600">{$text["portfolio"]?.subtitle || "Vaata, mida oleme varem loonud"}</p>
   </div>
   
   <Grid columns={3} gap="var(--space-5)">
@@ -225,7 +193,7 @@
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 font-semibold"
           >
-            Vaata projekti <ExternalLink size={16} />
+            {$text["portfolio"]?.projectLink || "Vaata projekti"} <ExternalLink size={16} />
           </a>
         {/if}
       </Card>
@@ -237,22 +205,22 @@
 <Section background="orange">
   <Center>
     <div class="text-center max-w-4xl text-white">
-      <h2 class="text-4xl font-bold mb-6">Alustame koostööd?</h2>
+      <h2 class="text-4xl font-bold mb-6">{$text["cta"]?.title || "Alustame koostööd?"}</h2>
       <p class="text-xl mb-8">
-        Võta ühendust ja arutame, kuidas saame sinu ideed ellu viia!
+        {$text["cta"]?.description || "Võta ühendust ja arutame, kuidas saame sinu ideed ellu viia!"}
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
         <a 
           href="mailto:lapikud@lapikud.ee"
           class="inline-flex items-center gap-2 px-8 py-3 bg-white text-orange-500 hover:bg-gray-100 font-semibold rounded-lg transition-colors"
         >
-          Saada e-kiri <ArrowRight size={20} />
+          {$text["cta"]?.emailButton || "Saada e-kiri"} <ArrowRight size={20} />
         </a>
         <a 
           href="/contact"
           class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-orange-500 font-semibold rounded-lg transition-colors"
         >
-          Kontaktandmed
+          {$text["cta"]?.contactButton || "Kontaktandmed"}
         </a>
       </div>
     </div>

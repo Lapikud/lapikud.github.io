@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "title": "For companies",
+    "description": "We help bring your ideas to life. Our experienced students are ready to deliver your projects."
+  },
+  "services": {
+    "title": "What do we offer?",
+    "subtitle": "A wide range of IT services for your business needs",
+    "items": [
+      {
+        "title": "Web solutions",
+        "description": "Modern and responsive websites that work on every device"
+      },
+      {
+        "title": "Mobile applications",
+        "description": "iOS and Android apps with user-friendly interfaces"
+      },
+      {
+        "title": "Software development",
+        "description": "Custom software solutions for your business needs"
+      },
+      {
+        "title": "Consulting",
+        "description": "IT consulting and project planning"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Why collaborate with us?",
+    "items": [
+      {
+        "title": "Motivated team",
+        "description": "Our students are talented, eager, and ready to prove their skills"
+      },
+      {
+        "title": "Quality results",
+        "description": "We take every project seriously and aim for the best outcome"
+      },
+      {
+        "title": "Modern technologies",
+        "description": "We use up-to-date tools and technologies"
+      }
+    ]
+  },
+  "process": {
+    "title": "How do we work?",
+    "steps": [
+      {
+        "title": "First meeting",
+        "description": "We discuss your idea, needs, and goals to understand what you want to achieve."
+      },
+      {
+        "title": "Planning",
+        "description": "We prepare a project plan, quote, and timeline, then align on details."
+      },
+      {
+        "title": "Development",
+        "description": "Our team works on your project and keeps you regularly updated."
+      },
+      {
+        "title": "Delivery",
+        "description": "We deliver the final product with documentation and onboarding."
+      },
+      {
+        "title": "Support",
+        "description": "We provide ongoing support and maintenance when needed."
+      }
+    ]
+  },
+  "fit": {
+    "title": "When are we a good fit?",
+    "items": [
+      {
+        "title": "Startups and small businesses:",
+        "description": "Our services are cost-effective and flexible, ideal for limited budgets."
+      },
+      {
+        "title": "Prototype development:",
+        "description": "Need a working prototype fast? Our agile team can move quickly."
+      },
+      {
+        "title": "Thesis and projects:",
+        "description": "Your project can become a thesis topic for our students, ensuring a dedicated team."
+      },
+      {
+        "title": "Long-term projects:",
+        "description": "We also offer long-term cooperation for more complex systems."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Our work",
+    "subtitle": "See what we have built before",
+    "projectLink": "View project"
+  },
+  "cta": {
+    "title": "Shall we start working together?",
+    "description": "Get in touch and let's discuss how we can bring your idea to life.",
+    "emailButton": "Send email",
+    "contactButton": "Contact details"
+  }
+}
