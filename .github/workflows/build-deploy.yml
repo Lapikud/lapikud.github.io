@@ -4,7 +4,7 @@ name: Build and Deploy to Production
 env:
   SOURCE_BRANCH: v2  # Change this to your desired trigger branch
   PRODUCTION_BRANCH: production  # Change this to your desired output branch
-  NODE_VERSION: "20"  # Specify Node version for consistency
+  NODE_VERSION: "24"  # Specify Node version for consistency
 
 on:
   push:
@@ -37,11 +37,11 @@ jobs:
 
       - name: Prepare for deployment
         run: |
-          # Remove source files, keep only dist
-          rm -rf src public package.json node_modules vite.config.js svelte.config.js tailwind.config.js README.md
-          # Move build output to root
-          mv dist/* .
-          rmdir dist
+          # Keep only the build output and git metadata
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name dist -exec rm -rf {} +
+          # Copy build output to repo root (includes files from public/)
+          cp -a dist/. .
+          rm -rf dist
 
       - name: Deploy to production branch
         run: |
