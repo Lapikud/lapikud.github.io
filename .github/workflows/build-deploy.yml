@@ -1,32 +1,32 @@
-name: Build and Deploy to Production
-
-# Configuration
-env:
-  SOURCE_BRANCH: v2  # Change this to your desired trigger branch
-  PRODUCTION_BRANCH: production  # Change this to your desired output branch
-  NODE_VERSION: "24"  # Specify Node version for consistency
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - v2  # Update this if you change SOURCE_BRANCH above
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # Required to push to the production branch
 
     steps:
-      - name: Checkout code
+      - name: Checkout source
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Full history for better git operations
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -35,24 +35,19 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Prepare for deployment
-        run: |
-          # Keep only the build output and git metadata
-          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name dist -exec rm -rf {} +
-          # Copy build output to repo root (includes files from public/)
-          cp -a dist/. .
-          rm -rf dist
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Deploy to production branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          
-          # Check if there are changes
-          if git diff --quiet --cached; then
-            echo "No changes to commit"
-          else
-            git commit -m "Build from ${{ github.sha }}"
-            git push origin HEAD:${{ env.PRODUCTION_BRANCH }} --force
-          fi
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
