@@ -63,7 +63,7 @@
 
 <!-- Main Content -->
 <Section>
-    <Grid min="480px" gap="var(--space-5)">
+  <Grid columns={2} tabletColumns={1} mobileColumns={1} gap="gap-6">
       <!-- What is HELPDESK? -->
       <div class="flex flex-col">
         <h2 class="text-4xl font-light pb-4">{$text["whatIs"]?.title || ""}</h2>
@@ -89,13 +89,13 @@
           <table class="w-full text-lg">
             <thead class="bg-gray-50">
               <tr>
-                <th class="px-6 py-4 text-left font-semibold text-gray-900 border-b border-gray-200">
+                <th class="px-3 py-4 text-left font-semibold text-gray-900 border-b border-gray-200">
                   {$text["pricing"]?.tableHeaders?.service || ""}
                 </th>
-                <th class="px-6 py-4 text-left font-semibold text-gray-900 border-b border-gray-200">
+                <th class="px-3 py-4 text-left font-semibold text-gray-900 border-b border-gray-200">
                   {$text["pricing"]?.tableHeaders?.quantity || ""}
                 </th>
-                <th class="px-6 py-4 text-left font-semibold text-gray-900 border-b border-gray-200">
+                <th class="px-3 py-4 text-left font-semibold text-gray-900 border-b border-gray-200">
                   {$text["pricing"]?.tableHeaders?.price || ""}
                 </th>
               </tr>
@@ -103,9 +103,9 @@
             <tbody class="bg-white divide-y divide-gray-200">
               {#each pricingData.services as service}
                 <tr class="hover:bg-gray-50 transition-colors duration-200">
-                  <td class="px-6 py-4 text-gray-900">{service.name}</td>
-                  <td class="px-6 py-4 text-gray-600">{service.quantity}</td>
-                  <td class="px-6 py-4 font-medium" class:text-green-600={service.price === "Tasuta"} class:text-gray-900={service.price !== "Tasuta"}>
+                  <td class="px-3 py-4 text-gray-900">{service.name}</td>
+                  <td class="px-3 py-4 text-gray-600">{service.quantity}</td>
+                  <td class="px-3 py-4 font-medium" class:text-green-600={service.price === "Tasuta"} class:text-gray-900={service.price !== "Tasuta"}>
                     {service.price}
                   </td>
                 </tr>

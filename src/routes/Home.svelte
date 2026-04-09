@@ -56,7 +56,7 @@
     <div class="relative z-20 flex min-h-screen w-full items-stretch py-8 md:py-12">
       <div class="flex w-full max-w-115 flex-col justify-between">
         <Image
-          src="/assets/LapLogo_white_orange.png"
+          src="/assets/logo.svg"
           alt={$text["hero"]?.logoAlt || "MTÜ Lapikud"}
           class="w-full max-w-65 md:max-w-80 h-auto pt-5 md:pt-10"
         />

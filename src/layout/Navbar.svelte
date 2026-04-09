@@ -226,7 +226,7 @@
               onClick={() => handleNavigation("/")}
               class="nav-logo-button border-transparent bg-transparent px-0 py-3"
             >
-              <img src="/assets/LapLogo_white_orange.png" alt="Lapikud logo" class="h-12 md:h-14 w-auto" />
+              <img src="/assets/logo.svg" alt="Lapikud logo" class="h-12 md:h-14 w-auto" />
             </Button>
           {/if}
 
@@ -357,7 +357,7 @@
           onClick={() => handleNavigation("/")}
           class="mb-3 border-transparent bg-transparent px-0 py-0 text-left text-white hover:text-white"
         >
-          <img src="/assets/LapLogo_white_orange.png" alt="Lapikud Logo" class="h-12 w-auto" />
+          <img src="/assets/logo.svg" alt="Lapikud Logo" class="h-12 w-auto" />
         </Button>
 
         <!-- About Section -->

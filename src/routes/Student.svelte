@@ -59,7 +59,7 @@
     <p class="text-xl text-gray-600">{$text["benefits"]?.subtitle || "Siin on mõned põhjused, miks meie kogukond on suurepärane koht arenguks"}</p>
   </div>
   
-  <Grid columns={3} gap="var(--space-5)">
+  <Grid columns={3} gap="gap-5">
     {#each benefits as benefit}
       <Card variant="glass">
         <div class="feature-icon mb-4" style="color: var(--orange)">
@@ -74,7 +74,7 @@
 
 <!-- What You'll Do Section -->
 <Section background="neutral">
-  <Grid gap="var(--space-5)">
+  <Grid gap="gap-5">
     <Card variant="glass">
       <h2 class="text-4xl font-bold mb-4">{$text["activities"]?.title || "Mida saad teha?"}</h2>
       <div class="space-y-4 text-lg">

@@ -1,19 +1,21 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "MTÜ Lapikud",
+    "short_name": "Lapikud",
     "icons": [
         {
-            "src": "/assets/favicon/android-chrome-192x192.png?v=LbyW42We5z",
+            "src": "/assets/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/favicon/android-chrome-512x512.png?v=LbyW42We5z",
+            "src": "/assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#0d0d0d",
+    "background_color": "#fffdfa",
+    "start_url": "/",
+    "scope": "/",
     "display": "standalone"
 }

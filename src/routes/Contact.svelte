@@ -119,7 +119,7 @@
     <p class="text-xl text-gray-600">{$text["methods"]?.subtitle || "Vali endale sobiv viis"}</p>
   </div>
   
-  <Grid columns={2} gap="var(--space-5)">
+  <Grid columns={2} gap="gap-5">
     {#each contactMethods as method}
       <Card variant="glass">
         <div class="flex items-start gap-4">
@@ -222,7 +222,7 @@
 
 <!-- Office Hours & Location -->
 <Section>
-  <Grid gap="var(--space-5)">
+  <Grid gap="gap-5">
     <Card variant="glass">
       <div class="flex items-start gap-4 mb-4">
         <div class="feature-icon" style="color: var(--orange)">
@@ -270,7 +270,7 @@
 
 <!-- Social Media & Legal Info -->
 <Section background="neutral">
-  <Grid gap="var(--space-5)">
+  <Grid gap="gap-5">
     <Card variant="glass">
       <h2 class="text-3xl font-bold mb-6 text-center">{$text["social"]?.title || "Jälgi meid sotsiaalmeedias"}</h2>
       <div class="flex flex-wrap justify-center gap-4">

@@ -94,7 +94,7 @@
     <p class="text-xl text-gray-600">{$text["services"]?.subtitle || "Laia valik IT-teenuseid teie ärivajaduste täitmiseks"}</p>
   </div>
   
-  <Grid columns={2} gap="var(--space-5)">
+  <Grid columns={2} gap="gap-5">
     {#each services as service}
       <Card variant="glass">
         <div class="feature-icon mb-4" style="color: var(--orange)">
@@ -113,7 +113,7 @@
     <h2 class="text-4xl font-bold mb-4">{$text["whyUs"]?.title || "Miks meiega koostööd teha?"}</h2>
   </div>
   
-  <Grid columns={3} gap="var(--space-5)">
+  <Grid columns={3} gap="gap-5">
     {#each whyUs as item}
       <Card variant="glass">
         <div class="feature-icon mb-4" style="color: var(--orange)">
@@ -128,7 +128,7 @@
 
 <!-- Process Section -->
 <Section>
-  <Grid gap="var(--space-5)">
+  <Grid gap="gap-5">
     <Card variant="glass">
       <h2 class="text-4xl font-bold mb-6">{$text["process"]?.title || "Kuidas töötame?"}</h2>
       <div class="space-y-6">
@@ -164,7 +164,7 @@
     <p class="text-xl text-gray-600">{$text["portfolio"]?.subtitle || "Vaata, mida oleme varem loonud"}</p>
   </div>
   
-  <Grid columns={3} gap="var(--space-5)">
+  <Grid columns={3} gap="gap-5">
     {#each projects as project}
       <Card variant="animated-neutral">
         {#if project.photo}
