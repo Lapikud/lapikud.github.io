@@ -38,7 +38,7 @@
   const text = createPageTextStore("Helpdesk");
   
   onMount(async () => {
-    const response = await fetch('/_data/helpdesk/hinnakiri.yml');
+    const response = await fetch('/_data/hinnakiri.yml');
     const yamlText = await response.text();
     pricingData = yaml.load(yamlText);
   });
