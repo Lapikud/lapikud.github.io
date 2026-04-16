@@ -28,7 +28,7 @@
 /* Design tokens & theme variables (light defaults) */
 :root {
   --page-max-width: calc(1460px * var(--ui-scale));
-  --navbar-offset: calc(94px * var(--ui-scale));
+  --navbar-offset: calc(93px * var(--ui-scale));
   --page-padding-inline: clamp(
     calc(1.5rem * var(--ui-scale)),
     calc(4vw * var(--ui-scale)),
