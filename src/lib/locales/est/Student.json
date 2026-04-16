@@ -1,81 +1,99 @@
 {
   "hero": {
-    "title": "Liitu Meiega!",
-    "description": "Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest."
+    "bgWord": "Lapikud",
+    "tagline": "TalTech IT tudengite organisatsioon",
+    "title": "IT-tudeng?",
+    "emphasis": "Sul on koht siin.",
+    "description": "Lapikud on kolmest tiimist koosnev organisatsioon, kus saad päriselt midagi teha — arendada tarkvara, aidata inimesi tehnikaga või korraldada üritusi. Liitumine ei kohusta millegagi.",
+    "cta": "Vaata, kuidas liituda",
+    "aside": "või loe esmalt, mida me teeme ↓"
   },
-  "benefits": {
-    "title": "Miks Lapikutega liituda?",
-    "subtitle": "Siin on mõned põhjused, miks meie kogukond on suurepärane koht arenguks",
+  "teams": {
+    "kicker": "Kolm tiimi",
+    "title": "Vali, mis sind päriselt kõnetab.",
+    "subtitle": "Igal tiimil on oma fookus. Sa ei pea kõigega tegelema — liitud tiimiga, mis sobib.",
     "items": [
       {
-        "title": "Praktilised projektid",
-        "description": "Osale reaalsetel tarkvaraarenduse projektidel. Omanda kogemust, mida ei õpeta ühelgi kursusel."
+        "title": "Tarkvara",
+        "short": "Päris projektid, päris meeskond.",
+        "about": [
+          "Tarkvaratiim arendab päris kasutatavat tarkvara: veebilehti, mänge ja muid süsteeme (nt TipiLAN, mikrokontrollerid). Töötame ka välisprojektidega ning kasutame päris arendustöö töövoogu (Git, PR-id, code review).",
+          "Siin saad praktilise kogemuse tiimitööst ja arendusest, arendades nii tehnilisi kui ka suhtlusoskusi. Uued liikmed saavad tuge ja koolitusi, et sisse elada."
+        ],
+        "tags": ["Git & koostöö", "Code review", "Päris projektid", "Hackathonid"],
+        "whatTitle": "Mida tehakse",
+        "what": [
+          "Arendatakse veebilehti ja rakendusi (nt TipiLAN)",
+          "Töötatakse välisprojektide ja tellimustega",
+          "Tehakse koodiülevaatusi ja arutatakse arhitektuuri",
+          "Arendatakse mikrokontrollerite ja mängude projekte"
+        ],
+        "eventsTitle": "Korduvad üritused",
+        "events": [
+          "Iganädalased arendussessioonid",
+          "Demoõhtud ja projektide esitlused",
+          "Töötoad ja uute liikmete koolitused"
+        ]
       },
       {
-        "title": "Tugev kogukond",
-        "description": "Liitu sõbralike ja ambitsioonikate tudengitega. Leia oma meeskond ja loo püsivaid sõprussuhteid."
+        "title": "Helpdesk",
+        "short": "IT-tugi inimestele, kes seda vajavad.",
+        "about": [
+          "Helpdesk tegeleb arvutite ja muu tehnika hoolduse ning parandamisega — diagnostika, riistvara remont, jootmine, puhastus ja tarkvara installimine.",
+          "Lisaks pakume tudengisõbralikku IT-abi ning korraldame Remondikohviku, kus inimesed saavad oma katkise tehnika parandada koos meie juhendamisega."
+        ],
+        "tags": ["Diagnostika", "Riistvara", "IT-tugi", "Remondiköök"],
+        "whatTitle": "Mida tehakse",
+        "what": [
+          "Diagnoositakse ja parandatakse arvuteid ja seadmeid",
+          "Installitakse ja seadistatakse operatsioonisüsteeme",
+          "Teostatakse riistvara hooldust (jootmine, puhastus)",
+          "Hallatakse IT-tuge ja kasutajate probleeme"
+        ],
+        "eventsTitle": "Korduvad üritused",
+        "events": [
+          "Ava-abi tunnid campus'es",
+          "Remondiköök – avalik remondiüritus",
+          "IT-küsimuste ja abi sessioonid"
+        ]
       },
       {
-        "title": "Mentorlus",
-        "description": "Saa juhendamist kogenud tudengitelt ja arendajatelt. Õpi parimate käest ja arene kiiremini."
-      },
-      {
-        "title": "Üritused",
-        "description": "Osale huvitavatel üritustel, hackathonidel ja koolitustel. Laienda oma silmaringi ja võrgustikku."
-      },
-      {
-        "title": "Lõputööd",
-        "description": "Meie projektidest kasvavad välja huvitavad lõputööd. Leia oma teema ja juhendaja meie seast."
-      },
-      {
-        "title": "Töökogemus",
-        "description": "Aktiivsed liikmed saavad võimaluse teenida oma esimest töökogemust ja palka meie projektides."
-      }
-    ]
-  },
-  "activities": {
-    "title": "Mida saad teha?",
-    "items": [
-      {
-        "title": "Tarkvara arendus:",
-        "description": "Töötad reaalsetel projektidel kasutades kaasaegseid tehnoloogiaid. Õpid koodi kirjutamist meeskonnas, versioonihaldustööriistade kasutamist ja tarkvara kvaliteedi tagamist."
-      },
-      {
-        "title": "Helpdesk:",
-        "description": "Aita tudengeid ja õppejõude IT-probleemide lahendamisel. Arenda oma tehnilisi oskuseid ja õpi suhtlemist klientidega."
-      },
-      {
-        "title": "Projektijuhtimine:",
-        "description": "Võta vastutus projekti koordineerimise eest. Õpi planeerimist, meeskonna juhtimist ja suhtlemist klientidega."
-      },
-      {
-        "title": "Turundus ja disain:",
-        "description": "Aita meie projektide ja ürituste turundamisel. Loo sisu sotsiaalmeedias, disaini materjale ja jälgi tulemusi."
+        "title": "Kultuur",
+        "short": "Kogukond ei püsi ise üleval.",
+        "about": [
+          "Kultuuritiim ühendab ürituste korraldamise ja turundustegevuse. Meie eesmärk on hoida Lapikute kogukonna elu aktiivsena ka väljaspool õppetööd, et peale pikka ja teadmisterohket koolipäeva saaks koos mõnusalt aega veeta.",
+          "Kultuuritiim tegeleb nii väiksemate kui ka suurürituste korraldamise ja nende turundamisega ning aitab hoida Lapikute nähtavust ja aktiivsust."
+        ],
+        "tags": ["Ürituste korraldus", "Turundus", "Sotsiaalmeedia", "Figma & Canva"],
+        "whatTitle": "Mida tehakse",
+        "what": [
+          "Planeeritakse ja korraldatakse üritusi",
+          "Hallatakse turundust ja sotsiaalmeediat",
+          "Disainitakse visuaale ja materjale"
+        ],
+        "eventsTitle": "Näited üritustest",
+        "events": [
+          "LAN-id ja mänguõhtud",
+          "Filmi- ja seriaalide ühisvaatamised",
+          "Väljasõidud ja avastusretked",
+          "Temaatilised peod"
+        ]
       }
     ]
   },
   "join": {
-    "title": "Kuidas liituda?",
-    "steps": [
-      {
-        "title": "Võta ühendust",
-        "description": "Kirjuta meile e-posti aadressil",
-        "descriptionEnd": "või tule meie kontorisse Akadeemia tee 5."
-      },
-      {
-        "title": "Tutvumine",
-        "description": "Kohtu meie meeskonnaga, tutvusta ennast ja räägi oma huvidest. Näitame sulle meie projekte ja võimalusi."
-      },
-      {
-        "title": "Alusta tööd",
-        "description": "Leia endale sobiv projekt või meeskond ja hakka tegutsema! Meie mentorid aitavad sind iga sammu juures."
-      }
-    ]
+    "bgWord": "Liitu",
+    "kicker": "Liitumine",
+    "title": "Valmis liituma?",
+    "titleLine2": "Täida ankeet.",
+    "description": "Üheski tiimis pole varasemat kogemust vaja, isegi kui see tuleks kasuks. Üritame leida igale tasemele vastavaid ülesandeid ning vajadusel pigistame teie jaoks enda ajudest ka tarkust välja ehk õpetame, kuidas midagi teha.",
+    "cta": "Täida ankeet →"
   },
   "members": {
-    "title": "Meie liikmed",
-    "subtitle": "Suurepärased inimesed, kes moodustavad meie kogukonna",
+    "kicker": "Meie inimesed",
+    "title": "Liikmed",
     "senior": "Vanemliikmed",
-    "junior": "Noorliikmed"
+    "junior": "Noorliikmed",
+    "graduates": "Vilistlased"
   }
 }
