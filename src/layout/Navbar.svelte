@@ -56,13 +56,13 @@
 
   function headerRowClass() {
     return isHomePage()
-      ? "flex items-center w-full relative min-h-10"
+      ? "flex min-h-16 items-center w-full relative gap-4"
       : "flex min-h-16 items-center gap-4";
   }
 
   function headerWrapClass() {
     return isHomePage()
-      ? "ml-auto flex w-full items-center justify-end md:w-auto md:border-b-3 md:border-white backdrop-blur-lg bg-black/35 pr-(--page-padding-inline)"
+      ? "ml-auto flex w-full self-stretch items-center justify-end md:w-auto md:border-b-3 md:border-white backdrop-blur-lg bg-black/35 pr-(--page-padding-inline)"
       : "flex items-center justify-end ml-auto w-full md:w-auto";
   }
 

@@ -10,7 +10,7 @@
 
   let members = { junior: [], senior: [] };
   const text = createPageTextStore("Student");
-  const joinFormUrl = "https://forms.google.com/#LINK";
+  const joinFormUrl = "https://pilves.lapikud.ee/apps/forms/s/WXed8sbG2s45GMKGAiXCemgE";
   
   onMount(async () => {
     try {

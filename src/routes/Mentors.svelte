@@ -78,7 +78,7 @@
     <div class="flex flex-col gap-8">
         {#each mentors as mentor}
             <div>
-                <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex flex-col md:flex-row gap-6 m-3">
                     <!-- Mentor Photo -->
                     {#if mentor.photo}
                         <div class="shrink-0">

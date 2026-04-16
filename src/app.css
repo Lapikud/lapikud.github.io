@@ -28,6 +28,7 @@
 /* Design tokens & theme variables (light defaults) */
 :root {
   --page-max-width: calc(1460px * var(--ui-scale));
+  --navbar-offset: calc(94px * var(--ui-scale));
   --page-padding-inline: clamp(
     calc(1.5rem * var(--ui-scale)),
     calc(4vw * var(--ui-scale)),
@@ -67,6 +68,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: calc(var(--fs-base) * var(--ui-scale));
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--navbar-offset);
   overflow-x: hidden;
 }
 body {
@@ -111,7 +113,8 @@ input[type="submit"] {
 
 /* Safe area for content below navbar (94px scaled) */
 .safe-area-navbar {
-  padding-top: calc(94px * var(--ui-scale));
+  padding-top: var(--navbar-offset);
+  scroll-margin-top: var(--navbar-offset);
 }
 
 /* Show/hide helpers for breakpoints */

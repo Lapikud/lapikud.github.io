@@ -79,8 +79,6 @@ export function getLanguageFromRoute(path) {
   if (estRoutes.includes(path)) return 'est';
   if (enRoutes.includes(path)) return 'en';
   
-  // Neutral/shared route (e.g. '/', '/helpdesk')
-  // -> keep currently selected language
   return null;
 }
 
