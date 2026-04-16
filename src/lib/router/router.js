@@ -21,6 +21,7 @@ export function navigate(path, options = {}) {
         const resolvedPath = getTranslatedRoute(path, selectedLang);
 
         window.history.pushState({}, "", resolvedPath);
+        window.scrollTo(0, 0);
         window.dispatchEvent(new PopStateEvent('popstate'));
         
         // Update language based on new route

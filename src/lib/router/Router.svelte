@@ -4,6 +4,7 @@
 <script>
   export function routeTo(path) {
     window.history.pushState({}, "", path);
+    window.scrollTo(0, 0);
     window.dispatchEvent(new PopStateEvent("popstate"));
   }
 
@@ -14,6 +15,7 @@
 
   function navigate(path) {
     window.history.pushState({}, "", path);
+    window.scrollTo(0, 0);
     currentPath = path;
   }
 
