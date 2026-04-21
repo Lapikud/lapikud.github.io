@@ -1,0 +1,52 @@
+# Workshops & courses conducted by Lapikud members
+#
+- title:
+    en: Go Programming Language Workshop
+    est: Go programmeerimiskeele töötuba
+  description:
+    en: Introduction to Go through practical exercises. Covered basic syntax, goroutines, channels and concurrency with real-world examples.
+    est: Sissejuhatus Go keelde läbi praktiliste ülesannete. Kaetud on põhisüntaks, goroutiinid, kanalid ja konkurentsus reaaleluliste näidete kaudu.
+  mentor:
+    en: Henri Karba
+    est: Henri Karba
+  duration:
+    en: 3 × 2h
+    est: 3 × 2h
+  date:
+    en: March 2025
+    est: Märts 2025
+  gallery: 3
+
+- title:
+    en: Figma Design Workshop
+    est: Figma disainitöötuba
+  description:
+    en: Over two days we learned the Figma workflow, covering components, auto-layout, prototyping and presenting to clients.
+    est: Kahe päeva jooksul õppisime Figma töövoogu, komponendid, auto-layout, prototüüpimine ja klientidele esitamine.
+  mentor:
+    en: Maris Tamm
+    est: Maris Tamm
+  duration:
+    en: 2 days
+    est: 2 päeva
+  date:
+    en: November 2024
+    est: Nov 2024
+  gallery: 2
+
+- title:
+    en: Web Security Basics
+    est: Veebiturvalisuse alused
+  description:
+    en: Practical seminar on OWASP Top 10 attacks and defense methods. Lab work involved fixing real vulnerabilities in a controlled environment.
+    est: Praktiline seminar OWASP Top 10 rünnakute ja kaitsmismeetodite kohta. Laboris lahendati päris haavatavusi kontrollitud keskkonnas.
+  mentor:
+    en: Juku Rebane
+    est: Juku Rebane
+  duration:
+    en: 4 hours
+    est: 4 tundi
+  date:
+    en: September 2024
+    est: Sept 2024
+  gallery: 4
