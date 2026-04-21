@@ -1,16 +1,17 @@
 <script>
   import {
     Section,
+    Grid,
+    Center,
   } from "$components";
   import { onDestroy } from "svelte";
   import { createPageTextStore } from "$lib";
 
-  const text = createPageTextStore("AboutUs");
+  const text = createPageTextStore("Workshops");
 
   onDestroy(() => {
     text.destroy();
   });
-  
 </script>
 
 <div class="safe-area-navbar">

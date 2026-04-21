@@ -30,6 +30,10 @@
     document.getElementById("liitu")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const scrollToUnderHero = () => {
+    document.getElementById("tiimid")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const openJoinForm = () => {
     window.open(joinFormUrl, "_blank", "noopener,noreferrer");
   };
@@ -62,7 +66,7 @@
             <Button onClick={scrollToJoin} class="border-transparent bg-orange-500 px-8 py-3 text-sm font-semibold text-white hover:opacity-90">
               {$text["hero"]?.cta || ""}
             </Button>
-            <span class="text-sm text-white/40">{$text["hero"]?.aside || ""}</span>
+            <a href="#tiimid" on:click|preventDefault={scrollToUnderHero} class="text-sm text-white/40">{$text["hero"]?.aside || ""}</a>
           </div>
         </div>
       </div>

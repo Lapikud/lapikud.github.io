@@ -1,4 +1,9 @@
 {
+  "intro": {
+    "prefix": "Meie tehtud ",
+    "emphasis": "tööd.",
+    "subtitle": "Valik projekte, mida meie liikmed on teostanud, veebilehtedest mobiilirakendusteni."
+  },
   "hero": {
     "title": "Ettevõttele",
     "description": "Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima."
@@ -89,9 +94,13 @@
     ]
   },
   "portfolio": {
-    "title": "Meie tehtud tööd",
-    "subtitle": "Vaata, mida oleme varem loonud",
-    "projectLink": "Vaata projekti"
+    "label": "Tehtud tööd",
+    "title": "Projektid, mis räägivad enda eest.",
+    "subtitle": "Igal projektil on oma lugu. Siin on valik töödest, mida meie liikmed on aastate jooksul ellu viinud.",
+    "projectLink": "Vaata projekti",
+    "featured": "Esile tõstetud",
+    "placeholder": "Pilt puudub",
+    "noDescription": "Kirjeldus lisamisel."
   },
   "cta": {
     "title": "Alustame koostööd?",

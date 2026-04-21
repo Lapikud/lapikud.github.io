@@ -1,4 +1,9 @@
 {
+  "intro": {
+    "prefix": "Our ",
+    "emphasis": "work.",
+    "subtitle": "A selection of projects our members have delivered, from websites to mobile apps."
+  },
   "hero": {
     "title": "For companies",
     "description": "We help bring your ideas to life. Our experienced students are ready to deliver your projects."
@@ -89,9 +94,13 @@
     ]
   },
   "portfolio": {
-    "title": "Our work",
-    "subtitle": "See what we have built before",
-    "projectLink": "View project"
+    "label": "Our Work",
+    "title": "Projects that speak for themselves.",
+    "subtitle": "Every project has a story. Here is a selection of work our members have delivered over the years.",
+    "projectLink": "View project",
+    "featured": "Featured",
+    "placeholder": "No image",
+    "noDescription": "Description coming soon."
   },
   "cta": {
     "title": "Shall we start working together?",
