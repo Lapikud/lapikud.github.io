@@ -9,6 +9,7 @@
   } = $props();
 
   let isOpen = $state(false);
+  let panelElement = $state(null);
 
   const toggle = () => (isOpen = !isOpen);
   const close = () => (isOpen = false);
@@ -21,6 +22,26 @@
       return;
     close();
   }
+
+
+  $effect(() => {
+    if (!isOpen) return;
+
+    const handleDocumentClick = (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement) || !panelElement) return;
+
+      if (
+        panelElement.contains(target) &&
+        target.closest("button, a, [role='menuitem']")
+      ) {
+        close();
+      }
+    };
+
+    document.addEventListener("click", handleDocumentClick);
+    return () => document.removeEventListener("click", handleDocumentClick);
+  });
 </script>
 
 <div class="relative inline-block" onfocusout={handleFocusOut}>
@@ -38,6 +59,7 @@
   <div
     class="{panelClass} absolute mt-2 rounded-md shadow-lg overflow-visible flex flex-col"
     style:visibility={isOpen ? "visible" : "hidden"}
+    bind:this={panelElement}
   >
     <div>
       {@render children?.()}

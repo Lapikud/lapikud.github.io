@@ -54,12 +54,7 @@
     </div>
     <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-linear-to-r from-black/65 via-black/35 to-transparent" aria-hidden="true"></div>
     <div class="relative z-20 flex min-h-screen w-full items-stretch py-8 md:py-12">
-      <div class="flex w-full max-w-115 flex-col justify-between">
-        <Image
-          src="/assets/logo.svg"
-          alt={$text["hero"]?.logoAlt || "MTÜ Lapikud"}
-          class="w-full max-w-65 md:max-w-80 h-auto pt-5 md:pt-10"
-        />
+      <div class="flex w-full max-w-115 flex-col justify-end">
         <div class="flex flex-col items-start gap-5">
           <p class="w-full max-w-110 text-left text-lg leading-[165%] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] md:max-w-125 md:text-xl">
             {$text["hero"]?.description || "MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi ja praegusi IT huvilisi tudengeid."}

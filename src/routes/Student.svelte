@@ -51,7 +51,7 @@
 </script>
 
 <div class="safe-area-navbar">
-  <Section class="overflow-hidden bg-[#0f0f0f]" padding="none" fullWidth={true} contentClass="relative !px-0">
+  <Section class="overflow-hidden bg-gray-900" padding="none" fullWidth={true} contentClass="relative !px-0">
     <div class="relative overflow-hidden py-[clamp(3rem,8vw,6rem)]">
       <div class="relative z-10 mx-auto w-full max-w-(--page-max-width) px-(--page-padding-inline)">
         <div class="relative z-10 w-full max-w-3xl">

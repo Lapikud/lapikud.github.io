@@ -11,7 +11,23 @@
   let { routes } = $props();
 
   let currentPath = $state(window.location.pathname);
-  let CurrentComponent = $derived(routes[currentPath] || routes["/"]);
+  let CurrentComponent = $state(null);
+
+  async function resolveCurrentComponent(path) {
+    const routeEntry = routes[path] || routes["/"];
+
+    if (typeof routeEntry === "function") {
+      try {
+        const module = await routeEntry();
+        CurrentComponent = module?.default || null;
+      } catch {
+        CurrentComponent = null;
+      }
+      return;
+    }
+
+    CurrentComponent = routeEntry || null;
+  }
 
   function navigate(path) {
     window.history.pushState({}, "", path);
@@ -45,6 +61,10 @@
     window.addEventListener("click", handleClick);
 
     return () => window.removeEventListener("click", handleClick);
+  });
+
+  $effect(() => {
+    resolveCurrentComponent(currentPath);
   });
 </script>
 

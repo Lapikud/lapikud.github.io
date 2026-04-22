@@ -1,17 +1,17 @@
 // ADD PAGES HERE TO REGISTER ROUTES
 // examples: '/page', '/page/:id'
 
-import Home from './Home.svelte'
-import Student from './Student.svelte'
-import Mentors from './Mentors.svelte'
-import Helpdesk from './Helpdesk.svelte'
-import OurWork from './OurWork.svelte'
-import AboutUs from './AboutUs.svelte'
-import Contact from './Contact.svelte'
-import Managment from './Managment.svelte'
-import Striim from './Striim.svelte'
-import Calendar from './Calendar.svelte'
-import Workshops from './Workshops.svelte';
+const loadHome = () => import('./Home.svelte');
+const loadStudent = () => import('./Student.svelte');
+const loadMentors = () => import('./Mentors.svelte');
+const loadHelpdesk = () => import('./Helpdesk.svelte');
+const loadOurWork = () => import('./OurWork.svelte');
+const loadAboutUs = () => import('./AboutUs.svelte');
+const loadContact = () => import('./Contact.svelte');
+const loadManagment = () => import('./Managment.svelte');
+const loadStriim = () => import('./Striim.svelte');
+const loadCalendar = () => import('./Calendar.svelte');
+const loadWorkshops = () => import('./Workshops.svelte');
 
 // Route mapping for language switching
 export const routeMap = {
@@ -91,23 +91,23 @@ export function getTranslatedRoute(currentPath, targetLang) {
 }
 
 export const routes = {
-  '/': Home,
-  '/tudengile': Student,
-  '/student': Student,
-  '/mentorid': Mentors,
-  '/mentors': Mentors,
-  '/helpdesk': Helpdesk,
-  '/ettevottele': OurWork,
-  '/ourwork': OurWork,
-  '/lapikutest': AboutUs,
-  '/aboutus': AboutUs,
-  '/kontakt': Contact,
-  '/contact': Contact,
-  '/juhatus': Managment,
-  '/management': Managment,
-  '/koolitused': Workshops,
-  '/workshops': Workshops,
-  '/striim': Striim,
-  '/kalender': Calendar,
-  '/calendar': Calendar,
+  '/': loadHome,
+  '/tudengile': loadStudent,
+  '/student': loadStudent,
+  '/mentorid': loadMentors,
+  '/mentors': loadMentors,
+  '/helpdesk': loadHelpdesk,
+  '/ettevottele': loadOurWork,
+  '/ourwork': loadOurWork,
+  '/lapikutest': loadAboutUs,
+  '/aboutus': loadAboutUs,
+  '/kontakt': loadContact,
+  '/contact': loadContact,
+  '/juhatus': loadManagment,
+  '/management': loadManagment,
+  '/koolitused': loadWorkshops,
+  '/workshops': loadWorkshops,
+  '/striim': loadStriim,
+  '/kalender': loadCalendar,
+  '/calendar': loadCalendar,
 }

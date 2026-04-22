@@ -1,52 +1,41 @@
 # Workshops & courses conducted by Lapikud members
 #
 - title:
-    en: Go Programming Language Workshop
-    est: Go programmeerimiskeele töötuba
+    en: C workshop
+    est: C koolitus
   description:
-    en: Introduction to Go through practical exercises. Covered basic syntax, goroutines, channels and concurrency with real-world examples.
-    est: Sissejuhatus Go keelde läbi praktiliste ülesannete. Kaetud on põhisüntaks, goroutiinid, kanalid ja konkurentsus reaaleluliste näidete kaudu.
+    en: Three-part introductory C workshop series for beginners and early-stage programmers. Covered core programming foundations and practical C basics in Estonian at TalTech IT College.
+    est: Kolmeosaline C programmeerimiskeele koolitus algajatele ja varasema kogemusega huvilistele. Käsitleti programmeerimise alusteadmisi ja C keele põhiteemasid praktiliste näidete kaudu TalTech IT Kolledžis.
   mentor:
-    en: Henri Karba
-    est: Henri Karba
+    en: Lapikud mentors
+    est: MTÜ Lapikud mentorid
   duration:
-    en: 3 × 2h
-    est: 3 × 2h
+    en: 3 × 1h 30min
+    est: 3 × 1h 30min
   date:
-    en: March 2025
-    est: Märts 2025
-  gallery: 3
+    en: March 2026
+    est: Märts 2026
+  gallery:
+    - temp1.jpg
+    - temp2.jpg
 
 - title:
-    en: Figma Design Workshop
-    est: Figma disainitöötuba
+    en: C workshop
+    est: C koolitus
   description:
-    en: Over two days we learned the Figma workflow, covering components, auto-layout, prototyping and presenting to clients.
-    est: Kahe päeva jooksul õppisime Figma töövoogu, komponendid, auto-layout, prototüüpimine ja klientidele esitamine.
+    en: Three-part introductory C workshop series for beginners and early-stage programmers. Covered core programming foundations and practical C basics in Estonian at TalTech IT College.
+    est: Kolmeosaline C programmeerimiskeele koolitus algajatele ja varasema kogemusega huvilistele. Käsitleti programmeerimise alusteadmisi ja C keele põhiteemasid praktiliste näidete kaudu TalTech IT Kolledžis.
   mentor:
-    en: Maris Tamm
-    est: Maris Tamm
+    en: Lapikud mentors
+    est: MTÜ Lapikud mentorid
   duration:
-    en: 2 days
-    est: 2 päeva
+    en: 3 × 1h 30min
+    est: 3 × 1h 30min
   date:
-    en: November 2024
-    est: Nov 2024
-  gallery: 2
+    en: March 2026
+    est: Märts 2026
+  gallery:
+    - temp1.jpg
+    - temp2.jpg
+    - temp3.jpg
 
-- title:
-    en: Web Security Basics
-    est: Veebiturvalisuse alused
-  description:
-    en: Practical seminar on OWASP Top 10 attacks and defense methods. Lab work involved fixing real vulnerabilities in a controlled environment.
-    est: Praktiline seminar OWASP Top 10 rünnakute ja kaitsmismeetodite kohta. Laboris lahendati päris haavatavusi kontrollitud keskkonnas.
-  mentor:
-    en: Juku Rebane
-    est: Juku Rebane
-  duration:
-    en: 4 hours
-    est: 4 tundi
-  date:
-    en: September 2024
-    est: Sept 2024
-  gallery: 4

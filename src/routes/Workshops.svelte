@@ -1,5 +1,5 @@
 <script>
-  import { Section, Stack, Container } from "$components";
+  import { Section, Stack, Image } from "$components";
   import { onMount, onDestroy } from "svelte";
   import yaml from "js-yaml";
   import { currentLang, getLangText, createPageTextStore } from "$lib";
@@ -22,6 +22,10 @@
     return getLangText(workshop, field, $currentLang);
   }
 
+  function getGallery(workshop) {
+    return Array.isArray(workshop?.gallery) ? workshop.gallery : [];
+  }
+
   function getGalleryClass(count) {
     const classes = {
       1: "grid-cols-1 grid-rows-1",
@@ -29,7 +33,7 @@
       3: "grid-cols-2 grid-rows-2",
       4: "grid-cols-2 grid-rows-2",
     };
-    return classes[count] || classes[1];
+    return classes[count] || "grid-cols-2";
   }
 
   function getImageHeightClass(count, index) {
@@ -39,13 +43,13 @@
       return index === 0 ? "h-72 row-span-2" : "h-32";
     }
     if (count === 4) return "h-32";
-    return "h-40";
+    return "h-32";
   }
 </script>
 
 <div class="safe-area-navbar">
   <!-- Hero Section -->
-  <Section bg="bg-black" class="text-white">
+  <Section bg="bg-gray-900" class="text-white">
       <div class="max-w-2xl">
         <p class="font-dm-mono text-xs uppercase tracking-widest text-orange-500 mb-4">
           {$text["hero"]?.label}
@@ -66,29 +70,23 @@
   <Section>
     <Stack gap="lg">
       {#each workshops as workshop, index (index)}
-        <div class={`grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 py-16 border-b border-gray-100 ${index === workshops.length - 1 ? "border-b-0" : ""}`}>
+        <div class={`grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 py-16 border-b border-orange-500 ${index === workshops.length - 1 ? "border-b-0" : ""}`}>
           <!-- Gallery -->
           <div
             class={`grid gap-1.5 ${index % 2 === 1 ? "md:order-2" : ""}`}
           >
-            <div class={`grid ${getGalleryClass(workshop.gallery)} gap-1.5`}>
-              {#each Array(workshop.gallery) as _, i}
+            <div class={`grid ${getGalleryClass(getGallery(workshop).length)} gap-1.5`}>
+              {#each getGallery(workshop) as filename, i (filename)}
                 <div
-                  class={`bg-gray-100 overflow-hidden flex items-center justify-center ${getImageHeightClass(workshop.gallery, i)}`}
+                  class={`overflow-hidden ${getImageHeightClass(getGallery(workshop).length, i)}`}
                 >
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1"
-                    class="text-gray-300"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="1" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
+                  <Image
+                    src={`/assets/workshops/${filename}`}
+                    alt={`${getField(workshop, "title")} ${i + 1}`}
+                    objectFit="cover"
+                    class="h-full w-full"
+                    pictureClass="h-full w-full"
+                  />
                 </div>
               {/each}
             </div>
