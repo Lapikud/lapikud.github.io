@@ -2,6 +2,7 @@
   import {Section, Stack, Grid, Center, Image, Svg, Button} from "$components";
   import { navigate } from "$lib/router/router.js";
   import { createPageTextStore, currentLang } from "$lib";
+  import { getHeroImagePath, getHeroImageSrcSet, getHeroImageFallback, getOptimisedImagePath, getOptimisedImageFallback } from "$lib/imageHelpers.js";
   import { onMount, onDestroy } from "svelte";
   import yaml from 'js-yaml';
 
@@ -21,6 +22,19 @@
   onDestroy(() => {
     text.destroy();
   });
+
+  const partnerLogoExtByName = {
+    taltech_logo: "jpg",
+    eas: "svg",
+    hextech_logo: "svg",
+  };
+
+  function getPartnerLogoPath(name) {
+    if (!name) return "";
+    if (name.includes(".")) return `/assets/partners/${name}`;
+    const ext = partnerLogoExtByName[name] || "png";
+    return `/assets/partners/${name}.${ext}`;
+  }
 </script>
 
 <!-- Hero Section -->
@@ -28,7 +42,9 @@
   <div class="relative min-h-screen flex items-center">
     <div class="absolute inset-0 left-1/2 w-screen -translate-x-1/2" aria-hidden="true">
       <Image
-        src="/assets/home-page-images/hero.jpg"
+        webpSrc={getHeroImagePath("home-page-images", "hero")}
+        src={getHeroImageFallback("home-page-images", "hero")}
+        webpSrcSet={getHeroImageSrcSet("home-page-images", "hero")}
         alt={$text["hero"]?.imageAlt || "illustrative hero image"}
         objectFit="cover"
         class="w-full h-full"
@@ -88,8 +104,8 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          src="/assets/student-images/image_1.jpg"
-          webpSrc=""
+          webpSrc={getOptimisedImagePath("home-page-images", "student_temp", "webp")}
+          src={getOptimisedImageFallback("home-page-images", "student_temp")}
           alt={$text["services"]?.student?.imageAlt || "Tudengile Pilt"}
           objectFit="cover"
           class="w-full h-full rounded-full object-[center_35%]"
@@ -103,8 +119,8 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          src="/assets/helpdesk/helpdesk_bg.jpg"
-          webpSrc=""
+          webpSrc={getOptimisedImagePath("home-page-images", "helpdesk", "webp")}
+          src={getOptimisedImageFallback("home-page-images", "helpdesk")}
           alt={$text["services"]?.helpdesk?.imageAlt || "Helpdesk Pilt"}
           objectFit="cover"
           class="w-full h-full rounded-full object-[center_38%]"
@@ -118,8 +134,8 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto md:col-span-2 lg:col-span-1">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          src="/assets/asi-karikas-2023-images/miina_harma.jpeg"
-          webpSrc=""
+          webpSrc={getOptimisedImagePath("home-page-images", "company_temp", "webp")}
+          src={getOptimisedImageFallback("home-page-images", "company_temp")}
           alt={$text["services"]?.company?.imageAlt || "Ettevõttele Pilt"}
           objectFit="cover"
           class="w-full h-full rounded-full object-[center_25%]"
@@ -185,7 +201,8 @@
     <div class="relative overflow-hidden min-h-90 md:h-full md:self-stretch">
       <div class="absolute inset-0">
         <Image
-          src="/assets/home-page-images/about_us.png"
+          webpSrc={getOptimisedImagePath("home-page-images", "about_us", "webp")}
+          src={getOptimisedImageFallback("home-page-images", "about_us")}
           alt={$text["aboutSection"]?.imageAlt || "Lapikud team"}
           objectFit="cover"
           class="h-full w-full max-w-none!"
@@ -284,7 +301,8 @@
     <div class="relative overflow-hidden min-h-90 md:min-h-0 md:h-full md:self-stretch">
       <div class="absolute inset-0">
         <Image
-          src="/assets/home-page-images/temp.png"
+          webpSrc={getOptimisedImagePath("home-page-images", "temp", "webp")}
+          src={getOptimisedImageFallback("home-page-images", "temp")}
           alt={$text["whatWeDo"]?.imageAlt || "Lapikud parandamas riistvara"}
           objectFit="cover"
           class="h-full w-full max-w-none!"
@@ -349,11 +367,10 @@
           title={partner.name}
         >
           {#if partner.image}
-            <Image
-              src={`/assets/partners/${partner.image}`}
+            <img
+              src={getPartnerLogoPath(partner.image)}
               alt={partner.name}
-              objectFit="contain"
-              class="w-auto max-h-[150px] transition-all duration-300"
+              class="w-auto max-h-[150px] transition-all duration-300 object-contain"
             />
           {:else}
             <span class="font-semibold text-center">{partner.name}</span>
@@ -362,11 +379,10 @@
       {:else}
         <div class="flex h-[170px] items-center justify-center p-3 transition-all duration-300">
           {#if partner.image}
-            <Image
-              src={`/assets/partners/${partner.image}`}
+            <img
+              src={getPartnerLogoPath(partner.image)}
               alt={partner.name}
-              objectFit="contain"
-              class="w-auto max-h-[150px] transition-all duration-300"
+              class="w-auto max-h-[150px] transition-all duration-300 object-contain"
             />
           {:else}
             <span class="font-semibold text-center">{partner.name}</span>

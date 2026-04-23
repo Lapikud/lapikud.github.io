@@ -3,6 +3,7 @@
   import { onMount, onDestroy } from "svelte";
   import yaml from "js-yaml";
   import { currentLang, getLangText, createPageTextStore } from "$lib";
+  import { getRootAssetPath } from "$lib/imageHelpers.js";
 
   let workshops = [];
   const text = createPageTextStore("Workshops");
@@ -81,7 +82,7 @@
                   class={`overflow-hidden ${getImageHeightClass(getGallery(workshop).length, i)}`}
                 >
                   <Image
-                    src={`/assets/workshops/${filename}`}
+                    src={getRootAssetPath("workshop-images", filename, "jpg")}
                     alt={`${getField(workshop, "title")} ${i + 1}`}
                     objectFit="cover"
                     class="h-full w-full"

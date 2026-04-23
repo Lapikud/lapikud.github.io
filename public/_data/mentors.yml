@@ -2,7 +2,7 @@
 
 - name: Agnes Triin Saga
   age: 28
-  photo: agnes_triin_saga_mentor.jpg
+  photo: agnes_triin_saga_mentor
   speciality: Süsteemi administaator
   teams: ['Helpdesk']
   term: 3
@@ -17,7 +17,7 @@
 
 - name: Christopher Rammul
   age: 23
-  photo: christopher_rammul_mentor.jpg
+  photo: christopher_rammul_mentor
   speciality: Mehhatroonika 
   teams: ['Kultuur', 'Juhatus']
   contactMethods: 
@@ -33,7 +33,7 @@
 
 - name: Erki Lasberg
   age: 23
-  photo: erki_lasberg_mentor.jpg 
+  photo: erki_lasberg_mentor 
   speciality: IT süsteemide administreerimine
   teams: ['Helpdesk', 'Juhatus']
   term: 3
@@ -49,7 +49,7 @@
   
 - name: Jürjo Eibak
   age: 26
-  photo: jürjo_eibak_mentor.jpg
+  photo: jürjo_eibak_mentor
   speciality: Salastatud
   teams: ['Kultuur']
   contactMethods: 
@@ -69,7 +69,7 @@
 
 - name: Katri Lotamõis
   age: 29
-  photo: katri_lotamõis_mentor.jpg
+  photo: katri_lotamõis_mentor
   speciality: Tarkvaraarendus
   teams: ['Kultuur', 'Tarkvara']
   term:  
@@ -83,7 +83,7 @@
 
 - name: Kerdo Käärma
   age: 22
-  photo: kerdo_käärma_mentor.jpg
+  photo: kerdo_käärma_mentor
   speciality: IT süsteemide arendus
   teams: ['Kultuur', 'Tarkvara', 'Juhatus']
   term: 3
@@ -103,7 +103,7 @@
 
 - name: Reio Opromei
   age: 24
-  photo: reio_opromei_mentor.jpg
+  photo: reio_opromei_mentor
   speciality: IT süsteemide arendus
   teams: ['Kultuur', 'Juhatus']
   term: 
@@ -121,7 +121,7 @@
 
 - name: Rene Arumetsa
   age: 29
-  photo: rene_arumetsa_mentor.jpg
+  photo: rene_arumetsa_mentor
   speciality: IT süsteemide administeerimine
   teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
   term: 3
@@ -142,7 +142,7 @@
 
 - name: Lembitu Valdmets
   age: 31
-  photo: lembitu_valdmets_mentor.jpg
+  photo: lembitu_valdmets_mentor
   speciality: Arvutisüsteemid (Lõpetanud)
   teams: ['Helpdesk']
   term: null

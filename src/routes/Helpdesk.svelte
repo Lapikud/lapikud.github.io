@@ -5,6 +5,7 @@
   } from "$components";
   import { onMount, onDestroy } from "svelte";
   import { createPageTextStore } from "$lib";
+  import { getHeroImageFallback, getHeroImageSrcSet, getRootAssetPath } from "$lib/imageHelpers.js";
   import yaml from 'js-yaml';
   
   import { MapLibre, Marker } from "svelte-maplibre";
@@ -13,8 +14,9 @@
   import { navigate } from "$lib/router/router.js";
 
   // Images
-  const helpdeskbg = "/assets/helpdesk/helpdesk_bg.jpg";
-  const helpdesk = "/assets/helpdesk/helpdesk-on-black.png";
+  const helpdeskbg = getHeroImageFallback("helpdesk-page-images", "helpdesk_bg");
+  const helpdeskbgWebpSet = getHeroImageSrcSet("helpdesk-page-images", "helpdesk_bg");
+  const helpdesk = getRootAssetPath("helpdesk-page-images", "helpdesk-on-black.png");
 
   // Coordinates for Akadeemia tee 5, 12616 Tallinn [longitude, latitude]
   const center = [24.66887400515207, 59.396427975093935];
@@ -24,13 +26,17 @@
   const tehnikaBusStop = [24.67328945396854, 59.39508874042947];
   
   // Google Maps directions URL
-  const getDirectionsUrl = (lng, lat) => {
+  const getDirectionsUrl = (lng, lat, loc) => {
+    if (loc == "bus"){
+      return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=transit`;
+    }
+    
     return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
   };
   
   // Navigate to directions using router
-  const openDirections = (lng, lat) => {
-    navigate(getDirectionsUrl(lng, lat), { external: true });
+  const openDirections = (lng, lat, loc) => {
+    navigate(getDirectionsUrl(lng, lat, loc), { external: true });
   };
 
   // Load pricing data
@@ -54,11 +60,14 @@
   <div class="flex absolute justify-center items-center flex-row w-full h-[42vh] px-4">
     <img src={helpdesk} alt={$text["hero"]?.title || "Helpdesk logo"} class="z-10" />
   </div>
-  <img
-    class="h-[42vh] object-cover object-left w-full opacity-50 blur-[1.5px]"
-    src={helpdeskbg}
-    alt="Helpdesk"
-  />
+  <picture>
+    <source srcset={helpdeskbgWebpSet} type="image/webp" />
+    <img
+      class="h-[42vh] object-cover object-left w-full opacity-50 blur-[1.5px]"
+      src={helpdeskbg}
+      alt="Helpdesk"
+    />
+  </picture>
 </div>
 
 <!-- Main Content -->
@@ -159,8 +168,8 @@
               <div
                 role="button"
                 tabindex="0"
-                onclick={() => openDirections(keemiaBusStop[0], keemiaBusStop[1])}
-                onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && openDirections(keemiaBusStop[0], keemiaBusStop[1])}
+                onclick={() => openDirections(keemiaBusStop[0], keemiaBusStop[1], "bus")}
+                onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && openDirections(keemiaBusStop[0], keemiaBusStop[1], "bus")}
                 class="flex flex-col items-center hover:scale-110 transition-transform cursor-pointer"
                 title="Get directions to Keemia bus stop"
               >
@@ -174,8 +183,8 @@
               <div
                 role="button"
                 tabindex="0"
-                onclick={() => openDirections(tehnikaBusStop[0], tehnikaBusStop[1])}
-                onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && openDirections(tehnikaBusStop[0], tehnikaBusStop[1])}
+                onclick={() => openDirections(tehnikaBusStop[0], tehnikaBusStop[1], "bus")}
+                onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && openDirections(tehnikaBusStop[0], tehnikaBusStop[1], "bus")}
                 class="flex flex-col items-center hover:scale-110 transition-transform cursor-pointer"
                 title="Get directions to Tehnikaülikool bus stop"
               >

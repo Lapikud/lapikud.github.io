@@ -8,6 +8,7 @@
   import { onMount, onDestroy } from "svelte";
   import yaml from "js-yaml";
   import { currentLang, getLangText, createPageTextStore } from "$lib";
+  import { getOptimisedImagePath, getOptimisedImageFallback } from "$lib/imageHelpers.js";
   import Mail from "lucide-svelte/icons/mail";
   import Phone from "lucide-svelte/icons/phone";
 
@@ -92,11 +93,14 @@
       {#each currentManagement as member (member.name)}
         <div class="flex flex-col sm:flex-row gap-6 items-start">
           <div class="w-full sm:w-auto sm:max-w-[200px] aspect-square shrink-0">
-            <img
-              src={`/assets/management-images/${member.photo}`}
-              alt={member.name}
-              class="w-full h-full object-cover rounded-md"
-            />
+            <picture>
+              <source srcset={getOptimisedImagePath("management-images", member.photo, "webp")} type="image/webp" />
+              <img
+                src={getOptimisedImageFallback("management-images", member.photo)}
+                alt={member.name}
+                class="w-full h-full object-cover rounded-md"
+              />
+            </picture>
           </div>
           <div class="flex flex-col gap-2 grow">
             <h3 class="text-2xl font-medium">{member.name}</h3>
@@ -153,7 +157,8 @@
                   <div class="h-24 w-24 overflow-hidden rounded-[10px] bg-linear-to-br outline-2 outline-transparent outline-offset-2 transition [@media(min-width:769px)]:h-28 [@media(min-width:769px)]:w-28">
                     {#if member.image}
                       <Image
-                        src={`/assets/past-management-images/optimised/${member.image}`}
+                        webpSrc={getOptimisedImagePath("past-management-images", member.image, "webp")}
+                        src={getOptimisedImageFallback("past-management-images", member.image)}
                         alt={member.name}
                         objectFit="cover"
                         class="block h-full w-full"

@@ -83,7 +83,15 @@ cd lapikud.github.io
 npm install
 ```
 
-**3. Start the dev server** — this runs the site locally so you can see your changes live:
+**3. Optimise images** — the optimised image variants are not stored in the repo, so you need to generate them locally before running the site:
+
+```bash
+npm run optimise
+```
+
+> You only need to run this once after cloning, and again whenever you add or change images in any `original/` folder.
+
+**4. Start the dev server** — this runs the site locally so you can see your changes live:
 
 ```bash
 npm run dev
@@ -93,64 +101,22 @@ Then open the URL it gives you (usually `http://localhost:5173`) in your browser
 
 ---
 
-## 🖼️ Images — please optimize before committing!
+## 🖼️ Adding images
 
-Nobody wants to load a 5MB photo that's displayed at 100×100px. Always resize images before adding them to the project.
-
-Install FFmpeg first:
-
-<details>
-<summary>Linux / WSL / Ubuntu</summary>
+Place your original image files (PNG, JPG, etc.) into the appropriate `public/assets/{category}/original/` folder, then run:
 
 ```bash
-sudo apt install ffmpeg
+npm run optimise
 ```
 
-</details>
+The script will generate optimised WebP and JPG variants automatically. **Do not commit anything inside `optimised/` folders** — those are generated and ignored by git.
 
-<details>
-<summary>Windows (without WSL)</summary>
-
-**Option A — via winget:**
-```bash
-winget install ffmpeg
-```
-
-**Option B — manually:**
-1. Download from [ffmpeg.org/download.html](https://ffmpeg.org/download.html)
-2. Extract the archive
-3. Add the `bin` folder to your PATH
-
-</details>
-
-<details>
-<summary>macOS</summary>
-
-```bash
-brew install ffmpeg
-```
-
-</details>
-
-### Resize commands
-
-Once FFmpeg is installed, use the right size for the job:
-
-```bash
-# Small thumbnails (shown at 100–300px)
-ffmpeg -i input -vf scale=400:-1 output.jpg
-
-# Medium images (shown at 300–800px)
-ffmpeg -i input -vf scale=1200:-1 output.jpg
-
-# Hero / full-width images
-ffmpeg -i input -vf scale=1920:-1 output.jpg
-```
+> SVGs don't need optimising — just place them directly where they're needed, no `original/` folder required.
 
 ---
 
 ## 🚀 Deployment
 
-Nothing to do here — GitHub automatically builds and deploys the site whenever something is pushed to the `main` branch.
+Nothing to do here — GitHub automatically builds and deploys the site whenever something is pushed to the `v2` branch. The optimised images are generated as part of the build, so you don't need to worry about that either.
 
 It usually takes **2–5 minutes**. You can watch it happen in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).

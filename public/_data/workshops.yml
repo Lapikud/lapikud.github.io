@@ -16,8 +16,8 @@
     en: March 2026
     est: Märts 2026
   gallery:
-    - temp1.jpg
-    - temp2.jpg
+    - temp1
+    - temp2
 
 - title:
     en: C workshop
@@ -35,7 +35,7 @@
     en: March 2026
     est: Märts 2026
   gallery:
-    - temp1.jpg
-    - temp2.jpg
-    - temp3.jpg
+    - temp1
+    - temp2
+    - temp3
 

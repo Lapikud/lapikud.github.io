@@ -3,6 +3,7 @@
     import { onMount, onDestroy } from "svelte";
     import yaml from "js-yaml";
     import { currentLang, getLangText, createPageTextStore } from "$lib";
+    import { getOptimisedImagePath, getOptimisedImageFallback } from "$lib/imageHelpers.js";
 
     import Mail from "lucide-svelte/icons/mail";
     import Phone from "lucide-svelte/icons/phone";
@@ -82,16 +83,14 @@
                     <!-- Mentor Photo -->
                     {#if mentor.photo}
                         <div class="shrink-0">
-                            <img
-                                src={`/assets/mentors-images/optimised/${mentor.photo}`}
-                                alt={mentor.name}
-                                class="w-full md:w-48 h-48 object-cover"
-                                on:error={(e) => {
-                                    e.target.src =
-                                        "/assets/mentors-images/original/" +
-                                        mentor.photo;
-                                }}
-                            />
+                            <picture>
+                                <source srcset={getOptimisedImagePath("mentors-images", mentor.photo, "webp")} type="image/webp" />
+                                <img
+                                    src={getOptimisedImageFallback("mentors-images", mentor.photo)}
+                                    alt={mentor.name}
+                                    class="w-full md:w-48 h-48 object-cover"
+                                />
+                            </picture>
                         </div>
                     {/if}
 

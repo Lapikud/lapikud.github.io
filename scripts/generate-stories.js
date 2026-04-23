@@ -4,7 +4,7 @@ import { dirname, resolve } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const svelteSrc = readFileSync(resolve(__dirname, './src/components/Svg.svelte'), 'utf-8');
+const svelteSrc = readFileSync(resolve(__dirname, '../src/components/Svg.svelte'), 'utf-8');
 
 const match = svelteSrc.match(/export const VARIANTS\s*=\s*\[([^\]]+)\]/);
 if (!match) {
@@ -32,6 +32,6 @@ const output = `<script context="module">
 ${stories}
 `;
 
-const outPath = resolve(__dirname, './src/stories/Svg.stories.svelte');
+const outPath = resolve(__dirname, '../src/stories/Svg.stories.svelte');
 writeFileSync(outPath, output, 'utf-8');
 console.log(`✅ Generated ${variants.length} stories: ${variants.join(', ')}`);

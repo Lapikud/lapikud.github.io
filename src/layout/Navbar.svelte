@@ -16,6 +16,7 @@
   import Bot from "lucide-svelte/icons/bot";
   import HandHeart from "lucide-svelte/icons/hand-heart";
   import Trophy from "lucide-svelte/icons/trophy";
+  import ExternalLink from "lucide-svelte/icons/external-link";
   import Menu from "lucide-svelte/icons/menu";
   import X from "lucide-svelte/icons/x";
 
@@ -44,6 +45,7 @@
     return paths.includes(currentPath);
   }
 
+  // combines styles for easier modifying
   function navButtonClass(active = false) {
     return active
       ? "border-transparent text-orange-500 hover:bg-white/5"
@@ -56,18 +58,14 @@
       : "border-transparent text-white/75 hover:bg-white/5";
   }
 
-  function languageButtonClass() {
-    return "ml-3 border-transparent bg-transparent px-3 py-1 text-sm text-white/75 hover:bg-white/5";
-  }
-
   function dropdownItemClass(active = false) {
     return active
-      ? "w-full justify-start border-transparent bg-transparent text-orange-500"
-      : "w-full justify-start border-transparent bg-transparent text-black hover:text-orange-500";
+      ? "w-full justify-start gap-2 border-transparent text-orange-500"
+      : "w-full justify-start gap-2 border-transparent text-black hover:text-orange-500";
   }
 
   function dropdownPanelClass() {
-    return "nav-dropdown-panel min-w-52 border border-black/10 bg-white/95 p-1 text-black backdrop-blur-md";
+    return "nav-dropdown-panel min-w-52 border border-black/10 bg-white p-1 text-black";
   }
 
   // Update currentPath when navigation occurs
@@ -173,15 +171,15 @@
 </style>
 
 <header class="fixed inset-x-0 top-0 z-50 text-white">
-  <div class="border-b-2 border-orange-500 bg-gray-900 backdrop-blur-md">
+  <div class="border-b-2 border-orange-500 bg-gray-900">
     <Container class="py-0">
       {#if $text && Object.keys($text).length > 0}
-        <div class="flex min-h-16 items-center gap-4">
+        <div class="flex h-(--navbar-offset) items-center gap-4">
           <Button
             onClick={() => handleNavigation("/")}
-            class="nav-logo-button border-transparent bg-transparent px-0 py-3"
+            class="nav-logo-button border-transparent px-0 py-1 md:py-3"
           >
-            <img src="/assets/logo.svg" alt="Lapikud logo" class="h-12 md:h-14 w-auto" />
+            <img src="/assets/logo.svg" alt="Lapikud logo" class="h-14 w-auto" />
           </Button>
 
           <div class="ml-auto flex w-full items-center justify-end md:w-auto">
@@ -232,19 +230,31 @@
                   class={dropdownItemClass(false)}
                   onClick={() => handleNavigation("https://tipilan.ee/", { external: true })}
                 >
-                  <Gamepad2 />{$text.eventsPages.tipilan}
+                  <Gamepad2 />
+                  <span class="flex w-full items-center justify-between gap-4">
+                    {$text.eventsPages.tipilan}
+                    <ExternalLink size={16} aria-hidden="true" />
+                  </span>
                 </Button>
                 <Button
                   class={dropdownItemClass(false)}
                   onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}
                 >
-                  <Trophy />ASI Karikas
+                  <Trophy />
+                  <span class="flex w-full items-center justify-between gap-4">
+                    ASI Karikas
+                    <ExternalLink size={16} aria-hidden="true" />
+                  </span>
                 </Button>
                 <Button
                   class={dropdownItemClass(false)}
                   onClick={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
                 >
-                  <Coffee />{$text.eventsPages.repair}
+                  <Coffee />
+                  <span class="flex w-full items-center justify-between gap-4">
+                    {$text.eventsPages.repair}
+                    <ExternalLink size={16} aria-hidden="true" />
+                  </span>
                 </Button>
               </Dropdown>
 
@@ -289,7 +299,7 @@
 <!-- Full Screen Mobile Menu -->
 {#if mobileMenuOpen}
   <div 
-    class="mobile-menu-overlay fixed inset-0 z-100 bg-black/95 mobile-only overflow-y-auto"
+    class="mobile-menu-overlay fixed inset-0 z-100 bg-gray-900 mobile-only overflow-y-auto"
     data-animation
     class:menu-opening={!isClosing}
     class:menu-closing={isClosing}
@@ -298,7 +308,7 @@
       <div class="absolute top-6 right-4">
         <Button
           onClick={closeMobileMenu}
-          class="ml-auto p-2 transition-colors flex bg-transparent hover:text-orange-500 border-transparent"
+          class="ml-auto p-2 transition-colors flex bg-transparent border-transparent"
           aria-label="Close menu"
         >
           <X size={32} color="white" />
@@ -309,7 +319,7 @@
       <Stack gap="gap-5" class="flex-1 px-8 pt-24 pb-12 text-white text-xl">
         <Button
           onClick={() => handleNavigation("/")}
-          class="mb-3 border-transparent bg-transparent px-0 py-0 text-left text-white hover:text-white"
+          class="mb-3 border-transparent bg-transparent px-0 py-0 text-left"
         >
           <img src="/assets/logo.svg" alt="Lapikud Logo" class="h-12 w-auto" />
         </Button>
@@ -320,27 +330,27 @@
           <Stack gap="gap-2" class="pl-4">
             <Button
               onClick={() => handleNavigation("/lapikutest")}
-              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/lapikutest") || isCurrent("/aboutus") ? "text-orange-500" : "hover:text-orange-500"}`}
+              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/lapikutest") || isCurrent("/aboutus") ? "text-orange-500" : ""}`}
             >
               {$text.aboutPages.info}
             </Button>
             <Button
               onClick={() => handleNavigation("/tudengile")}
-              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/tudengile") || isCurrent("/student") ? "text-orange-500" : "hover:text-orange-500"}`}
+              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/tudengile") || isCurrent("/student") ? "text-orange-500" : ""}`}
             >
               <Bot size={20} />
               {$text.aboutPages.join}
             </Button>
             <Button
               onClick={() => handleNavigation("/mentorid")}
-              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/mentorid") || isCurrent("/mentors") ? "text-orange-500" : "hover:text-orange-500"}`}
+              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/mentorid") || isCurrent("/mentors") ? "text-orange-500" : ""}`}
             >
               <HandHeart size={20} />
               {$text.aboutPages.mentors}
             </Button>
             <Button
               onClick={() => handleNavigation("/juhatus")}
-              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/juhatus") || isCurrent("/management") ? "text-orange-500" : "hover:text-orange-500"}`}
+              class={`text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/juhatus") || isCurrent("/management") ? "text-orange-500" : ""}`}
             >
               <Lectern size={20} />
               {$text.aboutPages.board}
@@ -354,31 +364,40 @@
           <Stack gap="gap-2" class="pl-4">
             <Button
               onClick={() => handleNavigation("/koolitused")}
-              class="text-left transition-colors flex items-center gap-2 bg-transparent hover:text-orange-500 border-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent border-transparent ${isCurrent("/koolitused") || isCurrent("/workshops") ? "text-orange-500" : ""}"
             >
               <Presentation size={20} />
               {$text.eventsPages.workshops}
             </Button>
             <Button
               onClick={() => handleNavigation("https://tipilan.ee/", { external: true })}
-              class="text-left transition-colors flex items-center gap-2 bg-transparent hover:text-orange-500 border-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent border-transparent"
             >
               <Gamepad2 size={20} />
-              {$text.eventsPages.tipilan}
+              <span class="flex w-full items-center justify-between gap-4">
+                {$text.eventsPages.tipilan}
+                <ExternalLink size={16} aria-hidden="true" />
+              </span>
             </Button>
             <Button
               onClick={() => handleNavigation("https://asikarikas.ee/", { external: true })}
-              class="text-left transition-colors flex items-center gap-2 bg-transparent hover:text-orange-500 border-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent  border-transparent"
             >
               <Trophy size={20} />
-              ASI Karikas
+              <span class="flex w-full items-center justify-between gap-4">
+                ASI Karikas
+                <ExternalLink size={16} aria-hidden="true" />
+              </span>
             </Button>
             <Button
               onClick={() => handleNavigation("https://remondikohvik.lapikud.ee/", { external: true })}
-              class="text-left transition-colors flex items-center gap-2 bg-transparent hover:text-orange-500 border-transparent"
+              class="text-left transition-colors flex items-center gap-2 bg-transparent  border-transparent"
             >
               <Coffee size={20} />
-              {$text.eventsPages.repair}
+              <span class="flex w-full items-center justify-between gap-4">
+                {$text.eventsPages.repair}
+                <ExternalLink size={16} aria-hidden="true" />
+              </span>
             </Button>
           </Stack>
         </Stack>
@@ -387,13 +406,13 @@
         <Stack gap="gap-3">
           <Button
             onClick={() => handleNavigation("/helpdesk")}
-            class={`text-left text-2xl font-semibold transition-colors bg-transparent border-transparent ${isCurrent("/helpdesk") ? "text-orange-500" : "hover:text-orange-500"}`}
+            class={`text-left text-2xl font-semibold transition-colors bg-transparent border-transparent ${isCurrent("/helpdesk") ? "text-orange-500" : ""}`}
           >
             {$text.helpdesk}
           </Button>
           <Button
             onClick={() => handleNavigation("/kontakt")}
-            class={`text-left text-2xl font-semibold transition-colors bg-transparent border-transparent ${isCurrent("/kontakt") || isCurrent("/contact") ? "text-orange-500" : "hover:text-orange-500"}`}
+            class={`text-left text-2xl font-semibold transition-colors bg-transparent border-transparent ${isCurrent("/kontakt") || isCurrent("/contact") ? "text-orange-500" : ""}`}
           >
             {$text.contact}
           </Button>

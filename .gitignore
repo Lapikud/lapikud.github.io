@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Image optimization cache
+public/assets/**/optimised
+
 # Editor directories and files
 .vite/
 .vscode/

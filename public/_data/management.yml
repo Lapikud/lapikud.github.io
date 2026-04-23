@@ -1,35 +1,35 @@
 # Management contact info
 
 - name: Christopher Rammul
-  photo: Christopher_Rammul.jpg
+  photo: Christopher_Rammul
   role: Juhatuse esimees
   subrole: Meie suur isa
   email: christopher@lapikud.ee
   phone: +372 555 00 221
 
 - name: Erki Lasberg
-  photo: Erki_Lasberg.jpg
+  photo: Erki_Lasberg
   role: Juhatuse liige
   subrole: Helpdeski juht
   email: erki@lapikud.ee
   phone: +372 5907 9190
 
 - name: Kerdo Käärma
-  photo: Kerdo_Kaarma.jpg
+  photo: Kerdo_Kaarma
   role: Juhatuse liige
   subrole: Tarkvaravaldkonna juht
   email: kerdo@lapikud.ee
   phone: +372 5807 2867
 
 - name: Reio Opromei
-  photo: Reio_Opromei.jpg
+  photo: Reio_Opromei
   role: Juhatuse liige
   subrole: Kultuurivaldkonna juht
   email: reio@lapikud.ee
   phone: +372 5315 8489
 
 - name: Rene Arumetsa
-  photo: Rene_Arumetsa.jpg
+  photo: Rene_Arumetsa
   role: Juhatuse liige
   subrole: Finantsjuht
   email: rene@lapikud.ee

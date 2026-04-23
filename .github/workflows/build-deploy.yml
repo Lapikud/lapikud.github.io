@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Optimise images
+        run: node scripts/optimise-images.js
+
       - name: Build project
         run: npm run build
 

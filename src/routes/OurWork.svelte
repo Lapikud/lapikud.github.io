@@ -3,6 +3,7 @@
   import { onMount, onDestroy } from "svelte";
   import yaml from "js-yaml";
   import { currentLang, getLangText, createPageTextStore } from "$lib";
+  import { getOptimisedImagePath, getOptimisedImageFallback } from "$lib/imageHelpers.js";
 
   import ExternalLink from "lucide-svelte/icons/external-link";
 
@@ -33,12 +34,12 @@
 
   function projectImage(project) {
     return project?.photo
-      ? `/assets/ourwork-images/optimised/${project.photo}`
+      ? getOptimisedImagePath("ourwork-images", project.photo, "webp")
       : "";
   }
 
   function handleImageError(event, photo) {
-    event.currentTarget.src = `/assets/ourwork-images/original/${photo}`;
+    event.currentTarget.src = getOptimisedImageFallback("ourwork-images", photo);
   }
 
   function openCtaEmail() {
