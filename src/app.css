@@ -135,6 +135,13 @@ input[type="submit"] {
   }
 }
 
+/* Scale down UI for smaller screens */
+@media (max-width: 1280px) {
+  :root {
+    --ui-scale: 0.8;
+  }
+}
+
 /* Accessibility settings */
 @media (prefers-reduced-motion: reduce) {
   * {

@@ -56,24 +56,25 @@
 
 <div class="safe-area-navbar">
 <!-- Hero Section -->
-<div class="w-full bg-black">
-  <div class="flex absolute justify-center items-center flex-row w-full h-[42vh] px-4">
-    <img src={helpdesk} alt={$text["hero"]?.title || "Helpdesk logo"} class="z-10" />
+<Section class="relative bg-gray-900 min-h-[42vh] overflow-hidden" padding="none" fullWidth={true}>
+  <div class="absolute inset-0 left-1/2 w-screen -translate-x-1/2 h-[42vh]" aria-hidden="true">
+    <picture>
+      <source srcset={helpdeskbgWebpSet} type="image/webp" />
+      <img
+        class="h-full w-full object-cover object-left opacity-50 blur-[1.5px]"
+        src={helpdeskbg}
+        alt="Helpdesk"
+      />
+    </picture>
   </div>
-  <picture>
-    <source srcset={helpdeskbgWebpSet} type="image/webp" />
-    <img
-      class="h-[42vh] object-cover object-left w-full opacity-50 blur-[1.5px]"
-      src={helpdeskbg}
-      alt="Helpdesk"
-    />
-  </picture>
-</div>
+  <div class="relative flex justify-center items-center flex-row w-full h-[42vh] z-10">
+    <img src={helpdesk} alt={$text["hero"]?.title || "Helpdesk logo"} />
+  </div>
+</Section>
 
 <!-- Main Content -->
 <Section>
   <Grid columns={2} tabletColumns={1} mobileColumns={1} gap="gap-6">
-      <!-- What is HELPDESK? -->
       <div class="flex flex-col">
         <h2 class="text-4xl font-light pb-4">{$text["whatIs"]?.title || ""}</h2>
         <p class="text-lg">
@@ -81,7 +82,6 @@
         </p>
       </div>
 
-      <!-- What services do we offer? -->
       <div class="flex flex-col">
         <h2 class="text-4xl font-light pb-4">{$text["services"]?.title || ""}</h2>
         <ul class="text-lg list-disc pl-5">
@@ -127,7 +127,6 @@
         </p>
       </div>
 
-      <!-- Opening Hours & Location -->
       <div class="flex flex-col">
         <h2 class="text-4xl font-light pb-4">
           {@html $text["hours"]?.title || ""}
@@ -158,8 +157,8 @@
                 class="flex flex-col items-center hover:scale-110 transition-transform cursor-pointer"
                 title="Get directions to Akadeemia tee 5"
               >
-                <span class="text-xs font-semibold text-white bg-[#E69635] px-2 py-0.5 rounded shadow-md mb-1 whitespace-nowrap">Akadeemia tee 5</span>
-                <MapPin class="w-7 h-7 text-[#E69635] drop-shadow-lg" />
+                <span class="text-xs font-semibold text-white bg-orange-500 px-2 py-0.5 rounded shadow-md mb-1 whitespace-nowrap">Akadeemia tee 5</span>
+                <MapPin class="w-7 h-7 text-orange-500 drop-shadow-lg" />
               </div>
             </Marker>
             
@@ -174,7 +173,7 @@
                 title="Get directions to Keemia bus stop"
               >
                 <span class="text-xs font-semibold text-gray-900 bg-white px-2 py-0.5 rounded shadow-md mb-1">Keemia</span>
-                <BusFront class="w-7 h-7 text-[#E69635] drop-shadow-lg" />
+                <BusFront class="w-7 h-7 text-orange-500 drop-shadow-lg" />
               </div>
             </Marker>
             
@@ -189,7 +188,7 @@
                 title="Get directions to Tehnikaülikool bus stop"
               >
                 <span class="text-xs font-semibold text-gray-900 bg-white px-2 py-0.5 rounded shadow-md mb-1">Tehnikaülikool</span>
-                <BusFront class="w-7 h-7 text-[#E69635] drop-shadow-lg" />
+                <BusFront class="w-7 h-7 text-orange-500 drop-shadow-lg" />
               </div>
             </Marker>
           </MapLibre>
