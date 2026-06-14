@@ -1,3 +1,20 @@
+- year: 2026 (kevad)
+  members:
+    - name: Christopher Rammul
+      image: christopher_rammul.jpg
+    
+    - name: Erki Lasberg
+      image: erki_lasberg.jpg
+
+    - name: Rene Arumetsa
+      image: rene_arumetsa.jpg
+
+    - name: Reio Opromei
+      image: reio_opromei.jpg
+
+    - name: Kerdo Käärma
+      image: kerdo_kaarma.jpg
+
 - year: 2025 (talv, kevad)
   members:
     - name: Christopher Rammul
