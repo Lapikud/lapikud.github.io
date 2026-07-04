@@ -1,0 +1,43 @@
+{
+	"hero": {
+		"imageAlt": "Lapikud homepage background image",
+		"logoAlt": "Lapikud NGO",
+		"description": "Lapikud is TalTech's software development club, bringing together current and former students interested in IT.",
+		"joinButton": "Join LAPikud!"
+	},
+	"services": {
+		"student": {
+			"title": "For students",
+			"description": "Develop your skills, make great friends, and gain practical experience through real projects.",
+			"imageAlt": "For students image"
+		},
+		"helpdesk": {
+			"title": "Helpdesk",
+			"description": "HELPDESK is a computer support service provided by Lapikud for students, lecturers, and everyone interested.",
+			"imageAlt": "Helpdesk image"
+		},
+		"company": {
+			"title": "For companies",
+			"description": "We help bring your ideas to life. Our experienced students are ready to deliver your projects.",
+			"imageAlt": "For companies image"
+		}
+	},
+	"aboutSection": {
+		"title": "About us",
+		"description": "Our main goal is to create professional added value for TalTech IT students. We involve students in practical solutions where ideas can be implemented in real life and technical skills can be used in meaningful ways. Our projects often grow into useful and exciting thesis topics with clear practical value.",
+		"moreInfo": "More info",
+		"contact": "Contact",
+		"imageAlt": "Lapikud students working on a project"
+	},
+	"whatWeDo": {
+		"title": "What we do",
+		"description": "We help companies and organizations bring ideas to life by building modern digital and software solutions. Our student-led team works on real projects to deliver practical value while developing the next generation of IT talent.",
+		"moreInfo": "More info",
+		"contact": "Contact",
+		"imageAlt": "Digital solutions created by Lapikud"
+	},
+	"partners": {
+		"title": "Partners",
+		"moreInfo": "More info about partnerships"
+	}
+}

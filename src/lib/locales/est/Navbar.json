@@ -1,0 +1,18 @@
+{
+  "about": "Meist",
+  "aboutPages": {
+    "info": "Lapikutest",
+    "join": "Liitu Meiega",
+    "mentors": "Mentorid",
+    "board": "Juhatus"
+  },
+  "events": "Üritused",
+  "eventsPages": {
+    "workshops": "Koolitused",
+    "tipilan": "TipiLAN",
+    "asi": "ASI Karikas",
+    "repair": "Remondikohvik"
+  },
+  "helpdesk": "Helpdesk",
+  "contact": "Kontakt"
+}

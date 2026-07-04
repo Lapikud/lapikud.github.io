@@ -1,0 +1,13 @@
+{
+	"hero": {
+		"label": "Meie tehtud",
+		"title": "Koolitused",
+		"titleHighlight": "& töötoad.",
+		"subtitle": "Valik koolitusi, mida meie liikmed on aastate jooksul läbi viinud."
+	},
+	"details": {
+		"mentor": "Juhendaja",
+		"duration": "Kestus",
+		"date": "Toimumisaeg"
+	}
+}

@@ -1,106 +1,149 @@
-# Lapikute väliveeb
+# Lapikud External Website
 
-Tegu on [Jekyll](https://jekyllrb.com/) peale ehitatud uhiuue lehega
+![Built with Vue](https://img.shields.io/badge/Vue-3-42B883?logo=vuedotjs&logoColor=white)
+![Built with Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?logo=github)
 
-# Development plan
+Welcome! This is the public-facing website for Lapikud. It's a learning project. If something breaks, that's totally fine. You just get to learn more about git.
 
-Materials are on `Google Drive > Lapikud > Tarkvara > Väliveeb`
+Materials and design files are on **Google Drive → Lapikud → Tarkvara → Väliveeb**
 
-# Contribution guide
+---
 
-## 1. Create Issues
+## 🙋 How to help
 
-Easiest way to help would be to create issues about things that are missing and wrong
+You don't need to write code to contribute!
 
-## 2. Fork this repo and create a pull request
+### Option 1 — Report something
+Found a bug, typo, or something missing? [Open an issue](https://github.com/Lapikud/lapikud.github.io/issues) and describe what's wrong. That's already super helpful.
 
-Fork this repo to your own account and create a pull request for changes you have done in there
+### Option 2 — Fix something yourself
+1. **Fork** this repo (button in the top right on GitHub — it copies the project to your account)
+2. Make your changes
+3. Open a **pull request** back to this repo
 
-# How to setup development environment
+---
 
-Windows:
+## 🛠️ Setting up your dev environment
 
-0. Install the Windows Subsystem for Linux
+### What you need first
 
-    Install Ubuntu
+- [Node.js](https://nodejs.org/) — v20.19 or higher; use the current **LTS version** when possible
 
-    https://docs.microsoft.com/en-us/windows/wsl/install-win10
+> Node.js comes with `npm` included, so you don't need to install that separately.
 
-1. Install Ruby
+---
 
-        sudo apt install build-essential ruby ruby-dev dh-autoreconf
+### Don't have a code editor yet?
 
-2. Install Jekyll
+If you don't have a preferred code editor, [VSCode](https://code.visualstudio.com/) is a solid choice. Download and install it, and you're good to go.
 
-        sudo gem install jekyll
+---
 
-3. Clone repo
+### Windows? Set up WSL first (recommended)
 
-        git clone https://github.com/Lapikud/lapikud.github.io.git
+WSL lets you run Linux commands on Windows, which makes everything smoother.
 
-4. Serve the page (Use bash if on Windows)
+<details>
+<summary>📋 WSL setup steps</summary>
 
-        cd lapikud.github.io
-        jekyll serve --host 0.0.0.0
+**Step 1** — Enable WSL. Run these two commands in PowerShell as Administrator (this enables the necessary Windows features):
 
-5. Image converter usage (requires imagemagick)
+```bash
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
-    No one wants to download 5MB images that are then shown in a 100x100px box.
+**Step 2** — Set WSL to version 2 (the better one):
 
-    **Always resize images before committing them!**
+```bash
+wsl --set-default-version 2
+```
 
-        sudo apt-get install imagemagick
-        sh convert-past-management-images.sh
+**Step 3** — Install [Ubuntu from the Microsoft Store](https://apps.microsoft.com/store/detail/ubuntu/9NBLGGH4MSV6)
 
-MacOS:
+> ⚠️ If WSL doesn't work, check that **Virtualization** is enabled on your machine: open Task Manager → Performance tab → look for "Virtualization: Enabled"
 
-0. Install Homebrew if you don't have it already
+</details>
 
-    If you're using Bash, write `/bin/bash` instead of `/bin/zsh`.
+---
 
-        /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+### Installation
 
-1. Install the latest stable version of Ruby
+**1. Clone the repo** — this downloads the project to your computer:
 
-        brew install ruby
+```bash
+git clone https://github.com/Lapikud/lapikud.github.io.git
+cd lapikud.github.io
+```
 
-    Also configure your shell environment.
-    If you're using Bash, replace `.zshrc` with `.bash_profile`.
-    
-        if [ -d "/usr/local/opt/ruby/bin" ]; then
-            export PATH=/usr/local/opt/ruby/bin:$PATH
-            export PATH=`gem environment gemdir`/bin:$PATH
-        fi
+**2. Install dependencies** — this installs the exact package versions recorded by the project:
 
-    Check that Ruby is working.
+```bash
+npm ci
+```
 
-        ruby -v
+**3. Optimise images** — the optimised image variants are not stored in the repo, so you need to generate them locally before running the site:
 
-2. Install the latest Jekyll gem
+```bash
+npm run optimise
+```
 
-        sudo gem install jekyll
+> You only need to run this once after cloning, and again whenever you add or change images in any `original/` folder.
 
-3. Clone repo
+**4. Start the dev server** — this runs the site locally so you can see your changes live:
 
-        git clone https://github.com/Lapikud/lapikud.github.io.git
+```bash
+npm run dev
+```
 
-4. Serve the page
+Then open the URL it gives you (usually `http://localhost:5173`) in your browser. 🎉
 
-        cd lapikud.github.io
-        jekyll serve --host 0.0.0.0
+---
 
-5. Image converter usage (requires imagemagick)
+## 🧭 How the project fits together
 
-    No one wants to download 5MB images that are then shown in a 100x100px box.
-    
-    **Always resize images before committing them!**
-    
-        brew install imagemagick
-        sh convert-past-management-images.sh
+The site is a Vue 3 single-page application built with Vite. Vue starts in `src/main.js`, which mounts `src/App.vue`. The app keeps its intentionally small custom router and translation system rather than introducing larger framework plugins.
 
-# Deploy
+- `src/routes/` contains the page components and the bilingual public route table.
+- `src/components/` contains reusable UI building blocks; layout primitives live in `src/components/layout/`.
+- `src/layout/` contains the site-wide navigation and footer.
+- `src/lib/` contains routing, translations, image-path helpers, and the shared YAML loader.
+- `src/lib/locales/{est,en}/` contains escaped JSON translation data for each language.
+- `public/_data/` contains editable YAML for members, mentors, workshops, projects, partners, and pricing.
+- `public/assets/` contains source assets; generated image variants remain ignored.
+- `.storybook/` and `src/stories/` provide isolated Vue component previews.
 
-Push to master branch and wait for deployment, it could take up to 2h for the page to update.
-You can check the progress by clicking on the [environment](https://github.com/Lapikud/lapikud.github.io/deployments) link
+Page components use Vue's `<script setup>` syntax and Composition API primitives such as `ref` and `computed`. Use `usePageText("PageName")` for page translations, `loadYaml(path, fallback)` for YAML-backed content, and the exported `navigate()` helper for programmatic internal navigation.
 
-![Deployments link](https://i.imgur.com/26jnh6k.png)
+Useful commands:
+
+```bash
+npm run dev             # start the local site
+npm run build           # create a production build
+npm run storybook       # preview components in Storybook
+npm run build-storybook # verify the static Storybook build
+npm run optimise        # regenerate local image variants
+```
+
+---
+
+## 🖼️ Adding images
+
+Place your original image files (PNG, JPG, etc.) into the appropriate `public/assets/{category}/original/` folder, then run:
+
+```bash
+npm run optimise
+```
+
+The script will generate optimised WebP and JPG variants automatically. **Do not commit anything inside `optimised/` folders** — those are generated and ignored by git.
+
+> SVGs don't need optimising — just place them directly where they're needed, no `original/` folder required.
+
+---
+
+## 🚀 Deployment
+
+Nothing to do here — GitHub automatically builds and deploys the site whenever something is pushed to the `v2` branch. The optimised images are generated as part of the build, so you don't need to worry about that either.
+
+It usually takes **2–5 minutes**. You can watch it happen in the [Actions tab](https://github.com/Lapikud/lapikud.github.io/actions).

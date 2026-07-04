@@ -1,0 +1,48 @@
+services:
+  - name: "Arvuti diagnostika"
+    quantity: "15min"
+    price: "Tasuta"
+    
+  - name: "Arvuti diagnostika (alates +15min)"
+    quantity: "tk"
+    price: "20€"
+    
+  - name: "Detail paigaldamine arvutisse"
+    quantity: "tk"
+    price: "10-15€"
+    
+  - name: "Sülearvuti tolmupuhastus + termopasta"
+    quantity: "tk"
+    price: "10-20€"
+    
+  - name: "Sülearvuti ekraani paigaldus"
+    quantity: "tk"
+    price: "15€"
+    
+  - name: "Arvuti komplekteerimine"
+    quantity: "tk"
+    price: "20€"
+    
+  - name: "Tarkvara hooldustöö ja paigaldamine"
+    quantity: "tk"
+    price: "10-15€"
+    
+  - name: "Muu elektroonika parandus"
+    quantity: "tk"
+    price: "10-50€"
+    
+  - name: "Andmete taastamine"
+    quantity: "tk"
+    price: "10-30€"
+    
+  - name: "Nutiseadmete tarkvarahooldus"
+    quantity: "tk"
+    price: "15€"
+    
+  - name: "Operatsioonisüsteemi taaspaigaldus"
+    quantity: "tk"
+    price: "15€"
+    
+  - name: "Nutitelefoni klaasi/ekraani/aku vahetus"
+    quantity: "tk"
+    price: "15-30€"
