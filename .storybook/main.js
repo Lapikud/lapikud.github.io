@@ -1,9 +1,8 @@
-/** @type { import('@storybook/svelte-vite').StorybookConfig } */
+/** @type { import('@storybook/vue3-vite').StorybookConfig } */
 const config = {
-  stories: ['../src/**/*.stories.svelte'],
-  addons: ['@storybook/addon-svelte-csf'],
+  stories: ['../src/**/*.stories.js'],
   framework: {
-    name: '@storybook/svelte-vite',
+    name: '@storybook/vue3-vite',
     options: {},
   },
 };

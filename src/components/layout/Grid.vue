@@ -1,40 +1,38 @@
-<script>
-  let {
-    min = "220px", // min column width (used when columns not set)
-    columns = null, // fixed number of columns for desktop
-    tabletColumns = null, // fixed number of columns for tablet / mid screens
-    largeColumns = null, // fixed number of columns for large desktop
-    mobileColumns = null, // fixed number of columns for mobile
-    gap = "gap-3",
-    class: className = "",
-    children,
-  } = $props();
-
-  const hasTabletColumns = $derived(tabletColumns !== null);
-  const tabletCols = $derived(
-    tabletColumns ? `repeat(${tabletColumns}, 1fr)` : "1fr"
-  );
-  const desktopColumns = $derived(columns ? `repeat(${columns}, 1fr)` : "1fr");
-  const largeDesktopColumns = $derived(
-    largeColumns ? `repeat(${largeColumns}, 1fr)` : desktopColumns
-  );
-  const mobileCols = $derived(mobileColumns ? `repeat(${mobileColumns}, 1fr)` : "1fr");
+<script setup>
+  import { computed } from 'vue';
+  defineOptions({ inheritAttrs: false });
+  const props = defineProps({
+    min: { type: String, default: '220px' },
+    columns: { type: [String, Number], default: null },
+    tabletColumns: { type: [String, Number], default: null },
+    largeColumns: { type: [String, Number], default: null },
+    mobileColumns: { type: [String, Number], default: null },
+    gap: { type: String, default: 'gap-3' },
+  });
+  const hasTabletColumns = computed(() => props.tabletColumns !== null);
+  const tabletCols = computed(() => props.tabletColumns ? `repeat(${props.tabletColumns}, 1fr)` : '1fr');
+  const desktopColumns = computed(() => props.columns ? `repeat(${props.columns}, 1fr)` : '1fr');
+  const largeDesktopColumns = computed(() => props.largeColumns ? `repeat(${props.largeColumns}, 1fr)` : desktopColumns.value);
+  const mobileCols = computed(() => props.mobileColumns ? `repeat(${props.mobileColumns}, 1fr)` : '1fr');
 </script>
 
+<template>
 <div
-  class="grid {className} {gap}"
-  data-has-tablet={hasTabletColumns ? "true" : "false"}
-  style="
-    --min: {min}; 
-    --tablet-columns: {tabletCols};
-    --desktop-columns: {desktopColumns};
-    --large-desktop-columns: {largeDesktopColumns};
-    --mobile-columns: {mobileCols};
-    grid-template-columns: var(--mobile-columns);
-  "
+  :class="['grid', gap, $attrs.class]"
+  :data-has-tablet="hasTabletColumns ? 'true' : 'false'"
+  :style="{
+    '--min': min,
+    '--tablet-columns': tabletCols,
+    '--desktop-columns': desktopColumns,
+    '--large-desktop-columns': largeDesktopColumns,
+    '--mobile-columns': mobileCols,
+    gridTemplateColumns: 'var(--mobile-columns)',
+  }"
+  v-bind="$attrs"
 >
-  {@render children?.()}
+  <slot />
 </div>
+</template>
 
 <style>
   /* Mobile first: use mobileColumns by default */

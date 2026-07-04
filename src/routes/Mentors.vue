@@ -1,27 +1,23 @@
-<script>
-    import { Section, Container } from "$components";
-    import { onMount, onDestroy } from "svelte";
+<script setup>
+    import { Section, Container } from "../components/index.js";
+    import { onMounted, ref } from 'vue';
     import yaml from "js-yaml";
-    import { currentLang, getLangText, createPageTextStore } from "$lib";
-    import { getOptimisedImagePath, getOptimisedImageFallback } from "$lib/imageHelpers.js";
+    import { currentLang, getLangText, usePageText } from "../lib/index.js";
+    import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
 
-    import Mail from "lucide-svelte/icons/mail";
-    import Phone from "lucide-svelte/icons/phone";
-    import MessageCircle from "lucide-svelte/icons/message-circle";
-    import User from "lucide-svelte/icons/user";
+    import { Mail } from "@lucide/vue";
+    import { Phone } from "@lucide/vue";
+    import { MessageCircle } from "@lucide/vue";
+    import { User } from "@lucide/vue";
 
-    let mentors = [];
-    const text = createPageTextStore("Mentors");
-    
+    const mentors = ref([]);
+    const text = usePageText("Mentors");
 
-    onMount(async () => {
+
+    onMounted(async () => {
         const response = await fetch("/_data/mentors.yml");
         const yamlText = await response.text();
-        mentors = yaml.load(yamlText);
-    });
-
-    onDestroy(() => {
-        text.destroy();
+        mentors.value = yaml.load(yamlText) || [];
     });
 
     function getContactIcon(contactType) {
@@ -53,11 +49,12 @@
     }
 </script>
 
+<template>
 <div class="safe-area-navbar">
 <!-- Hero Section -->
 <Section
   padding="none"
-  fullWidth={true}
+  :fullWidth="true"
   contentClass="!px-0 !py-0"
   class="overflow-hidden text-white"
 >
@@ -67,8 +64,8 @@
 
     <Container class="relative z-10 py-[clamp(3rem,8vw,6rem)]">
       <div class="max-w-4xl">
-                <h1 class="m-0 text-[clamp(2.4rem,6vw,4.2rem)] font-bold">{$text.hero?.title || "Our Mentors"}</h1>
-                <p class="mt-4 max-w-[52ch] text-[clamp(1.05rem,1.5vw,1.25rem)] text-white/75">{$text.hero?.intro || "Lapikud who are always ready to support you in your studies and personal development."}</p>
+                <h1 class="m-0 text-[clamp(2.4rem,6vw,4.2rem)] font-bold">{{ text.hero?.title || "Our Mentors" }}</h1>
+                <p class="mt-4 max-w-[52ch] text-[clamp(1.05rem,1.5vw,1.25rem)] text-white/75">{{ text.hero?.intro || "Lapikud who are always ready to support you in your studies and personal development." }}</p>
       </div>
     </Container>
   </div>
@@ -77,119 +74,115 @@
 <!-- Mentors Grid -->
 <Section>
     <div class="flex flex-col gap-8">
-        {#each mentors as mentor}
+        <template v-for="mentor in mentors">
             <div>
                 <div class="flex flex-col md:flex-row gap-6 m-3">
                     <!-- Mentor Photo -->
-                    {#if mentor.photo}
+                    <template v-if="mentor.photo">
                         <div class="shrink-0">
                             <picture>
-                                <source srcset={getOptimisedImagePath("mentors-images", mentor.photo, "webp")} type="image/webp" />
+                                <source :srcset="getOptimisedImagePath('mentors-images', mentor.photo, 'webp')" type="image/webp" />
                                 <img
-                                    src={getOptimisedImageFallback("mentors-images", mentor.photo)}
-                                    alt={mentor.name}
+                                    :src="getOptimisedImageFallback('mentors-images', mentor.photo)"
+                                    :alt="mentor.name"
                                     class="w-full md:w-48 h-48 object-cover"
                                 />
                             </picture>
                         </div>
-                    {/if}
+                    </template>
 
                     <!-- Mentor Info -->
                     <div class="flex-1">
-                        <h3 class="text-2xl font-bold mb-2">{mentor.name}</h3>
+                        <h3 class="text-2xl font-bold mb-2">{{ mentor.name }}</h3>
 
-                        {#if mentor.age}
+                        <template v-if="mentor.age">
                             <p class="text-gray-600 mb-2">
-                                Vanus: {mentor.age}
+                                Vanus: {{ mentor.age }}
                             </p>
-                        {/if}
+                        </template>
 
-                        {#if mentor.speciality}
+                        <template v-if="mentor.speciality">
                             <p
                                 class="text-lg font-semibold mb-2"
                                 style="color: var(--orange)"
                             >
-                                {getLangText(
+                                {{ getLangText(
                                     mentor,
                                     "speciality",
-                                    $currentLang,
-                                )}
+                                    currentLang,
+                                ) }}
                             </p>
-                        {/if}
+                        </template>
 
-                        {#if mentor.teams && mentor.teams.length > 0}
+                        <template v-if="mentor.teams && mentor.teams.length > 0">
                             <div class="mb-3">
                                 <span class="font-semibold">Meeskonnad: </span>
                                 <span class="text-gray-700"
-                                    >{mentor.teams.join(", ")}</span
+                                    >{{ mentor.teams.join(", ") }}</span
                                 >
                             </div>
-                        {/if}
+                        </template>
 
-                        {#if mentor.term}
+                        <template v-if="mentor.term">
                             <p class="text-gray-600 mb-3">
-                                Ametiperiood: {mentor.term}
-                                {mentor.term === 1 ? "aasta" : "aastat"}
+                                Ametiperiood: {{ mentor.term }}
+                                {{ mentor.term === 1 ? "aasta" : "aastat" }}
                             </p>
-                        {/if}
+                        </template>
 
-                        {#if mentor.description}
+                        <template v-if="mentor.description">
                             <p
                                 class="text-sm font-semibold mb-2"
                                 style="color: var(--orange)"
                             >
-                                Otsin: {getLangText(
+                                Otsin: {{ getLangText(
                                     mentor,
                                     "description",
-                                    $currentLang,
-                                )}
+                                    currentLang,
+                                ) }}
                             </p>
-                        {/if}
+                        </template>
 
-                        {#if mentor.activities}
+                        <template v-if="mentor.activities">
                             <p class="text-gray-700 text-sm mb-4">
-                                {getLangText(
+                                {{ getLangText(
                                     mentor,
                                     "activities",
-                                    $currentLang,
-                                )}
+                                    currentLang,
+                                ) }}
                             </p>
-                        {/if}
+                        </template>
 
                         <!-- Contact Methods -->
-                        {#if mentor.contactMethods && mentor.contactMethods.length > 0}
+                        <template v-if="mentor.contactMethods && mentor.contactMethods.length > 0">
                             <div class="flex flex-wrap gap-2 mt-4">
-                                {#each mentor.contactMethods as method}
-                                    {@const IconComponent = getContactIcon(
-                                        method.name,
-                                    )}
+                                <template v-for="method in mentor.contactMethods">
                                     <a
-                                        href={getContactLink(method)}
+                                        :href="getContactLink(method)"
                                         class="inline-flex items-center gap-2 px-3 py-2 bg-orange-100 hover:bg-orange-200 rounded-lg transition-colors text-sm"
-                                        title={method.name}
-                                        target={method.value.startsWith("http")
-                                            ? "_blank"
-                                            : "_self"}
-                                        rel={method.value.startsWith("http")
-                                            ? "noopener noreferrer"
-                                            : ""}
+                                        :title="method.name"
+                                        :target="method.value.startsWith('http')
+                                            ? '_blank'
+                                            : '_self'"
+                                        :rel="method.value.startsWith('http')
+                                            ? 'noopener noreferrer'
+                                            : ''"
                                     >
-                                        <svelte:component
-                                            this={IconComponent}
-                                            size={16}
+                                        <component :is="getContactIcon(method.name)"
+                                            :size="16"
                                         />
                                         <span class="capitalize"
-                                            >{method.name}</span
+                                            >{{ method.name }}</span
                                         >
                                     </a>
-                                {/each}
+                                </template>
                             </div>
-                        {/if}
+                        </template>
                     </div>
                 </div>
             </div>
-        {/each}
+        </template>
     </div>
 </Section>
 </div>
-
+</template>

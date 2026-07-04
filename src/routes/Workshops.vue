@@ -1,26 +1,22 @@
-<script>
-  import { Section, Stack, Image } from "$components";
-  import { onMount, onDestroy } from "svelte";
+<script setup>
+  import { Section, Stack, Image } from "../components/index.js";
+  import { onMounted, ref } from 'vue';
   import yaml from "js-yaml";
-  import { currentLang, getLangText, createPageTextStore } from "$lib";
-  import { getRootAssetPath } from "$lib/imageHelpers.js";
+  import { currentLang, getLangText, usePageText } from "../lib/index.js";
+  import { getRootAssetPath } from "../lib/imageHelpers.js";
 
-  let workshops = [];
-  const text = createPageTextStore("Workshops");
+  const workshops = ref([]);
+  const text = usePageText("Workshops");
 
-  onMount(async () => {
+  onMounted(async () => {
     const response = await fetch("/_data/workshops.yml");
     const yamlText = await response.text();
     const parsed = yaml.load(yamlText) || [];
-    workshops = parsed.filter((w) => w?.title);
-  });
-
-  onDestroy(() => {
-    text.destroy();
+    workshops.value = parsed.filter((w) => w?.title);
   });
 
   function getField(workshop, field) {
-    return getLangText(workshop, field, $currentLang);
+    return getLangText(workshop, field, currentLang.value);
   }
 
   function getGallery(workshop) {
@@ -48,21 +44,22 @@
   }
 </script>
 
+<template>
 <div class="safe-area-navbar">
   <!-- Hero Section -->
   <Section bg="bg-gray-900" class="text-white">
       <div class="max-w-2xl">
         <p class="font-dm-mono text-xs uppercase tracking-widest text-orange-500 mb-4">
-          {$text["hero"]?.label}
+          {{ text.hero?.label }}
         </p>
         <h1 class="font-syne text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
-          {$text["hero"]?.title}
+          {{ text.hero?.title }}
           <em class="block text-orange-500 not-italic"
-            >{@html $text["hero"]?.titleHighlight}</em
+            ><span v-html="text.hero?.titleHighlight"></span></em
           >
         </h1>
         <p class="text-sm text-gray-400 max-w-sm leading-relaxed font-space-grotesk font-light">
-          {$text["hero"]?.subtitle}
+          {{ text.hero?.subtitle }}
         </p>
       </div>
   </Section>
@@ -70,66 +67,67 @@
   <!-- Workshops Content -->
   <Section>
     <Stack gap="lg">
-      {#each workshops as workshop, index (index)}
-        <div class={`grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 py-16 border-b border-orange-500 ${index === workshops.length - 1 ? "border-b-0" : ""}`}>
+      <template v-for="(workshop, index) in workshops" :key="index">
+        <div :class="`grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 py-16 border-b border-orange-500 ${index === workshops.length - 1 ? 'border-b-0' : ''}`">
           <!-- Gallery -->
           <div
-            class={`grid gap-1.5 ${index % 2 === 1 ? "md:order-2" : ""}`}
+            :class="`grid gap-1.5 ${index % 2 === 1 ? 'md:order-2' : ''}`"
           >
-            <div class={`grid ${getGalleryClass(getGallery(workshop).length)} gap-1.5`}>
-              {#each getGallery(workshop) as filename, i (filename)}
+            <div :class="`grid ${getGalleryClass(getGallery(workshop).length)} gap-1.5`">
+              <template v-for="(filename, i) in getGallery(workshop)" :key="filename">
                 <div
-                  class={`overflow-hidden ${getImageHeightClass(getGallery(workshop).length, i)}`}
+                  :class="`overflow-hidden ${getImageHeightClass(getGallery(workshop).length, i)}`"
                 >
                   <Image
-                    src={getRootAssetPath("workshop-images", filename, "jpg")}
-                    alt={`${getField(workshop, "title")} ${i + 1}`}
+                    :src="getRootAssetPath('workshop-images', filename, 'jpg')"
+                    :alt="`${getField(workshop, 'title')} ${i + 1}`"
                     objectFit="cover"
                     class="h-full w-full"
                     pictureClass="h-full w-full"
                   />
                 </div>
-              {/each}
+              </template>
             </div>
           </div>
 
           <!-- Content -->
-          <div class={`pt-2 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+          <div :class="`pt-2 ${index % 2 === 1 ? 'md:order-1' : ''}`">
             <h2 class="font-syne text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              {getField(workshop, "title")}
+              {{ getField(workshop, "title") }}
             </h2>
             <p class="text-sm leading-7 text-gray-600 font-space-grotesk font-light mb-7">
-              {getField(workshop, "description")}
+              {{ getField(workshop, "description") }}
             </p>
             <div class="flex flex-wrap gap-7">
               <div class="flex flex-col gap-1">
                 <span class="font-dm-mono text-xs uppercase tracking-wide text-gray-500">
-                  {$text["details"]?.mentor}
+                  {{ text.details?.mentor }}
                 </span>
                 <span class="text-sm text-gray-700 font-space-grotesk">
-                  {getField(workshop, "mentor")}
+                  {{ getField(workshop, "mentor") }}
                 </span>
               </div>
               <div class="flex flex-col gap-1">
                 <span class="font-dm-mono text-xs uppercase tracking-wide text-gray-500">
-                  {$text["details"]?.duration}
+                  {{ text.details?.duration }}
                 </span>
                 <span class="text-sm text-gray-700 font-space-grotesk">
-                  {getField(workshop, "duration")}
+                  {{ getField(workshop, "duration") }}
                 </span>
               </div>
               <div class="flex flex-col gap-1">
                 <span class="font-dm-mono text-xs uppercase tracking-wide text-gray-500">
-                  {$text["details"]?.date}
+                  {{ text.details?.date }}
                 </span>
                 <span class="text-sm text-gray-700 font-space-grotesk">
-                  {getField(workshop, "date")}
+                  {{ getField(workshop, "date") }}
                 </span>
               </div>
             </div>
           </div>
         </div>
-      {/each}
+      </template>
     </Stack>
   </Section>
 </div>
+</template>

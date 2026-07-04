@@ -1,18 +1,18 @@
-<script>
-  let {
-    onClick = () => {},
-    class: className = "",
-    children,
-  } = $props();
+<script setup>
+defineOptions({ inheritAttrs: false });
+defineProps({ onClick: { type: Function, default: () => {} } });
 </script>
 
+<template>
 <button
-  onclick={onClick}
+  @click="onClick"
+  v-bind="$attrs"
   data-animation
-  class="btn flex p-2.5 {className}"
+  :class="['btn flex p-2.5', $attrs.class]"
 >
-  {@render children?.()}
+  <slot />
 </button>
+</template>
 
 <style>
   .btn {

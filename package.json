@@ -9,28 +9,25 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "generate-stories": "node scripts/generate-stories.js",
     "optimise": "node scripts/optimise-images.js"
   },
   "devDependencies": {
-    "@storybook/addon-svelte-csf": "^5.0.11",
-    "@storybook/svelte-vite": "^10.2.15",
-    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@storybook/vue3-vite": "^10.2.15",
     "@types/js-yaml": "^4.0.9",
+    "@vitejs/plugin-vue": "^6.0.2",
     "storybook": "^10.2.15",
-    "svelte": "^5.43.8",
-    "vite": "npm:rolldown-vite@7.2.5"
+    "vite": "npm:rolldown-vite@7.2.5",
+    "vue": "^3.5.25"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"
   },
   "dependencies": {
+    "@lucide/vue": "^1.23.0",
     "@tailwindcss/vite": "^4.1.17",
     "js-yaml": "^4.1.1",
-    "lucide-svelte": "^0.554.0",
     "maplibre-gl": "^5.19.0",
     "sharp": "^0.34.5",
-    "svelte-maplibre": "^1.2.6",
     "tailwindcss": "^4.1.17"
   }
 }

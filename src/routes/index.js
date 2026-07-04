@@ -1,17 +1,17 @@
 // ADD PAGES HERE TO REGISTER ROUTES
 // examples: '/page', '/page/:id'
 
-const loadHome = () => import('./Home.svelte');
-const loadStudent = () => import('./Student.svelte');
-const loadMentors = () => import('./Mentors.svelte');
-const loadHelpdesk = () => import('./Helpdesk.svelte');
-const loadOurWork = () => import('./OurWork.svelte');
-const loadAboutUs = () => import('./AboutUs.svelte');
-const loadContact = () => import('./Contact.svelte');
-const loadManagment = () => import('./Managment.svelte');
-const loadStriim = () => import('./Striim.svelte');
-const loadCalendar = () => import('./Calendar.svelte');
-const loadWorkshops = () => import('./Workshops.svelte');
+const loadHome = () => import('./Home.vue');
+const loadStudent = () => import('./Student.vue');
+const loadMentors = () => import('./Mentors.vue');
+const loadHelpdesk = () => import('./Helpdesk.vue');
+const loadOurWork = () => import('./OurWork.vue');
+const loadAboutUs = () => import('./AboutUs.vue');
+const loadContact = () => import('./Contact.vue');
+const loadManagment = () => import('./Managment.vue');
+const loadStriim = () => import('./Striim.vue');
+const loadCalendar = () => import('./Calendar.vue');
+const loadWorkshops = () => import('./Workshops.vue');
 
 // Route mapping for language switching
 export const routeMap = {

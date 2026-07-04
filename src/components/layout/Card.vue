@@ -1,10 +1,9 @@
-<script>
-  let {
-    href = "",
-    variant = "default", // 'default' | 'animated' | 'animated-neutral' | 'glass' | 'blur'
-    class: className = "",
-    children,
-  } = $props();
+<script setup>
+  defineOptions({ inheritAttrs: false });
+  defineProps({
+    href: { type: String, default: '' },
+    variant: { type: String, default: 'default' },
+  });
 
   const variantClasses = {
     default: "card-default",
@@ -15,15 +14,17 @@
   };
 </script>
 
-{#if href}
-  <a {href} class={`card ${variantClasses[variant]} ${className}`}>
-    {@render children?.()}
+<template>
+<template v-if="href">
+  <a :href="href" :class="['card', variantClasses[variant], $attrs.class]" v-bind="$attrs">
+    <slot />
   </a>
-{:else}
-  <div class={`card ${variantClasses[variant]} ${className}`}>
-    {@render children?.()}
+</template><template v-else>
+  <div :class="['card', variantClasses[variant], $attrs.class]" v-bind="$attrs">
+    <slot />
   </div>
-{/if}
+</template>
+</template>
 
 <style>
   .card {
