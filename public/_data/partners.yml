@@ -1,25 +1,30 @@
 - name: Tehnopol
-  image: tehnopollogo
+  image: tehnopollogo.png
   url: https://www.tehnopol.ee/
   additionalText:
 
 - name: Tallinna Tehnikaülikool
-  image: taltech_logo
+  image: taltech_logo.jpg
   url: https://www.ttu.ee/
   additionalText:
 
 - name: Eesti Üliõpilaskondade Liit
-  image: eyl_logo
+  image: eyl_logo.png
   url: https://eyl.ee/
   additionalText:
 
 - name: Tallinna Tehnikaülikooli Robotiklubi
-  image: robotiklubi_logo
+  image: robotiklubi_logo.png
   url: https://www.robotiklubi.ee/
   additionalText:
 
 - name: Tallinna Tehnikaülikooli Infotehnoloogia teaduskond
-  image: taltech_IT_teaduskond_logo
+  image: taltech_IT_teaduskond_logo.png
   url: https://taltech.ee/et/infotehnoloogia-teaduskond
+  additionalText:
+
+- name: Tallinna Tehnikaülikooli Inseneri teaduskond
+  image: TalTech_Insener_EST_gradient.png
+  url: https://taltech.ee/inseneriteaduskond
   additionalText:
 
