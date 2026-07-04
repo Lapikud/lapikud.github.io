@@ -7,6 +7,7 @@
   import { computed, onMounted, ref } from 'vue';
   import { loadYaml } from '../lib/yaml.js';
   import { usePageText } from "../lib/index.js";
+  import { navigate } from "../lib/router/router.js";
 
   const members = ref({ junior: [], senior: [] });
   const text = usePageText("Student");
@@ -93,6 +94,18 @@
             <template v-for="paragraph in team.about || []">
               <p class="mb-5 text-[0.95rem] leading-8 text-black/80 last:mb-0">{{ paragraph }}</p>
             </template>
+            <div v-if="team.links?.length" class="mt-6 flex flex-wrap gap-4">
+              <a
+                v-for="link in team.links"
+                :key="link.href"
+                :href="link.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold text-orange-500 underline-offset-4 hover:underline"
+              >
+                {{ link.label }} ↗
+              </a>
+            </div>
             <div class="mt-6 flex flex-wrap gap-2">
               <template v-for="tag in team.tags || []">
                 <span class="px-3 py-1.5 text-xs font-medium text-orange-500">{{ tag }}</span>
@@ -121,6 +134,21 @@
           </div>
         </div>
       </template>
+    </div>
+  </Section>
+
+  <Section class="bg-gray-900 text-white" padding="large">
+    <div class="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+      <div>
+        <h2 class="mb-4 text-[clamp(2rem,4vw,3rem)] leading-tight font-medium">{{ text.mentor?.title || '' }}</h2>
+        <p class="max-w-3xl text-base leading-8 text-white/70">{{ text.mentor?.description || '' }}</p>
+      </div>
+      <Button
+        :onClick="() => navigate('/mentorid')"
+        class="border-orange-500 bg-orange-500 px-8 py-3 text-sm font-semibold text-black hover:opacity-90"
+      >
+        {{ text.mentor?.cta || '' }}
+      </Button>
     </div>
   </Section>
 
