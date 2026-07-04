@@ -66,6 +66,25 @@
 
     Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks. 
 
+- name: Karina Reisel
+  age: 22
+  photo: karina_reisel_mentor
+  speciality: Riistvara arendus ja programmeerimine
+  teams: ['Kultuur', 'Tarkvara']
+  term: 4
+  contactMethods:
+    - name: Discord
+      value: rinsan5781
+    - name: Messenger
+      value: https://m.me/karina.reisel
+  description: >
+    Ootan ägedaid pixleid. Kes soovivad lapi ürituste turundamisega tegutseda.
+    Kirjanikud, disainerid, fotograafid jne. Õpihimulised.
+    Lapiga liitumiseks ei ole tarvis olla proff.
+    Ootan kõiki, kes tahavad aktiivselt Lapis tegutseda.
+  activities: >
+    Ma olen jube tegus inimene. Tõenäoliselt näed sa mind tihti ülikooli ja Lapi üritustel 🤟
+    Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms.
 
 - name: Katri Lotamõis
   age: 29
@@ -77,9 +96,9 @@
     - name: Discord
       value: swagmuffin88
   description: >
-    Kedagi, kellele pakub suurt huvi kõik tarkvara ja -arendusega seonduv, aga ka arvutite kokku-lahti lammutamine. Samuti tahan koos oma pikslitega korraldada ägedaid üritusi teistele Lapikutele. Ootan uudishimulikke piksleid, kes ei karda palju küsimusi küsida, because we're all in it together 🙂.
+    Kedagi, kellele pakub suurt huvi kõik tarkvara ja -arendusega seonduv, aga ka arvutite kokku-lahti lammutamine, kuigi helpdeskis mul veel palju kogemust pole. Samuti mulle meeldiks, kui saan kultuuritiimis oma pikslitega koos korraldada ägedaid üritusi teistele Lapikutele. Ootan uudishimulikke piksleid, kes ei karda palju küsimusi küsida, because we're all in it together 🙂.
   activities: >
-    Tegelen Lapikutes põhiliselt kultuuritiimis ürituste korraldamisega ja turundamisega ning olen ka tarkvaratiimis, kus aitan arendada erinevaid tarkvaraprojekte. Erinen teistest lapikutest veidi selle poolest, et õpin hetkel hoopis Tallinna Tööstushariduskeskuses nooremtarkvaraarendaja erialal esimesel aastal. Minu tee IT-sse avas Java, mis on siiani minu lemmikuim keel tarkvaraprojektides kasutamiseks. Lapikutes olemise juures meeldib mulle kõige enam ühiste tegevuste planeerimine ning erinevate projektide kallal töötamine tiimina.
+    Tegelen Lapikutes põhiliselt kultuuritiimis ürituste korraldamisega ja turundamisega ning olen ka tarkvaratiimis, kus aitan arendada erinevaid tarkvaraprojekte. Erinen teistest lapikutest veidi selle poolest, et õpin hetkel hoopis Tallinna Tööstushariduskeskuses nooremtarkvaraarendaja erialal esimesel aastal. Minu tee IT-sse sai alguse Java õppimisest, mis on siiani mulle kõige lemmikum keel, millega töötada. Kõige lemmikum osa Lapikute juures on mu jaoks ühiste lõbusate tegevuste planeerimine ning erinevate projektide kallal töötamine tiimina.
 
 - name: Kerdo Käärma
   age: 22
@@ -138,22 +157,3 @@
     Suht vahet ei ole, ole sa ise.. saan sellesmõttes kõigiga läbi.
   activities: >
     Olen IT-entusiast, kelle igapäev möödub Helpdeski tööde, LAN-ürituste korraldamise ja aeg-ajalt ka veebilehtede arendamisega. Olen olnud abiõppejõud operatsioonisüsteemide aines, tunnen end koduselt Linuxi maailmas ning vabal ajal naudin mängimist – viimasel ajal peamiselt Path of Exile’i – ja praktiliste projektide ehitamist.
-
-
-- name: Lembitu Valdmets
-  age: 31
-  photo: lembitu_valdmets_mentor
-  speciality: Arvutisüsteemid (Lõpetanud)
-  teams: ['Helpdesk']
-  term: null
-  contactMethods:
-    - name: Messenger
-      value: https://m.me/lemps.valdmets
-    - name: Discord
-      value: lempspc
-  description: >
-    Ole mu piksel, kui sind huvitab arvutite remont, arvutitehnika riistvara, vanad arvutid, helitehnika, autoremont ja mudelism.
-  activities: >
-    Olen hetkel pikima staažiga Lapik, kes on näinud mitmeid juhatusi ja 
-    pikaaegselt aidanud kaasa Lapikute edendamisele. Kui soovid coach'ingut selles osas, 
-    kuidas ka ise juhatuse liikmeks saada, võid minuga ühendust võtta.
