@@ -4,7 +4,7 @@
     "tagline": "TalTech IT tudengite organisatsioon",
     "title": "IT-tudeng?",
     "emphasis": "Sul on koht siin.",
-    "description": "Lapikud on kolmest tiimist koosnev organisatsioon, kus saad päriselt midagi teha — arendada tarkvara, aidata inimesi tehnikaga või korraldada üritusi. Liitumine ei kohusta millegagi.",
+    "description": "Lapikute põhieesmärk on ühendada IT-st ja arvutitest huvitatud tudengeid, et üheskoos tegeleda tarkvaraprojektidega ning arvutite ja nende parandamisega. Tahame anda tudengitele ülikooli kõrvalt lisakogemust ja tööl kasulikuks osutuvaid oskuseid. Teine oluline eesmärk on pakkuda tudengitele toetavat ja lõbusat seltskonda, et ülikoolis veedetud aastad oleks ikka meeldejäävad. Selleks korraldame üritusi ja veedame koos toredalt aega.",
     "cta": "Vaata, kuidas liituda",
     "aside": "või loe esmalt, mida me teeme ↓"
   },
@@ -17,8 +17,14 @@
         "title": "Tarkvara",
         "short": "Päris projektid, päris meeskond.",
         "about": [
-          "Tarkvaratiim arendab päris kasutatavat tarkvara: veebilehti, mänge ja muid süsteeme (nt TipiLAN, mikrokontrollerid). Töötame ka välisprojektidega ning kasutame päris arendustöö töövoogu (Git, PR-id, code review).",
-          "Siin saad praktilise kogemuse tiimitööst ja arendusest, arendades nii tehnilisi kui ka suhtlusoskusi. Uued liikmed saavad tuge ja koolitusi, et sisse elada."
+          "Tarkvaratiimiga liitudes saad praktilise kogemuse tarkvara arendamisest. Selleks on meil erinevad koolitused ja projektid, millega saab liituda. Me arendame veebilehti, nagu näiteks TipiLAN, tegeleme mängude arendusega ja oleme teinud ka palju muud huvitavat, näiteks mikrokontrollereid programmeerinud.",
+          "Ootame alati uusi ideid, mida võiks järgmisena teha, kuid saame ka Lapikutest väljapoolt projekte, seega tegevust jagub. Korraldame ka iga aasta programmeerimisvõistlust ASI Karikas, kus on võimalik välja mõelda programmeerimisülesandeid.",
+          "Tarkvaratiimis õpid kasutama Githubi ja Giti. Saad kogeda, kuidas toimub tarkvara arendamine tiimiga, mis täiustab sinu tehinilisi oskuseid, kuid võib-olla veelgi tähtsamalt, sinu suhtlemisoskust. Õpid töötama erinevate programmeerimiskeeltega ja neile vastavate raamistikega. Soovime kasvatada enda liikmetes julgust ja initsiatiivi, et nende eesmärgid, olgu need kui suured tahes, ei tunduks võimatud.",
+          "Meie liikmed ka tõdevad, et just Lapikutes saadud oskused ja tutvused on põhjus, miks nad praktikale või tööle said."
+        ],
+        "links": [
+          { "label": "TipiLAN", "href": "https://tipilan.ee/" },
+          { "label": "ASI Karikas", "href": "https://asikarikas.ee/" }
         ],
         "tags": ["Git & koostöö", "Code review", "Päris projektid", "Hackathonid"],
         "whatTitle": "Mida tehakse",
@@ -39,8 +45,12 @@
         "title": "Helpdesk",
         "short": "IT-tugi inimestele, kes seda vajavad.",
         "about": [
-          "Helpdesk tegeleb arvutite ja muu tehnika hoolduse ning parandamisega — diagnostika, riistvara remont, jootmine, puhastus ja tarkvara installimine.",
-          "Lisaks pakume tudengisõbralikku IT-abi ning korraldame Remondikohviku, kus inimesed saavad oma katkise tehnika parandada koos meie juhendamisega."
+          "Helpdeski meeskonnaga ühinemine annab sulle võimaluse toimetada arvutite ning muu tehnikaga, nagu kõlarid või raadiod. Arvutitel tuleb diagnoosida probleem ning vajadusel see parandada. Lisaks tegeletakse jootmise, tolmupuhastuse, operatsioonisüsteemi installimise ja seadistamisega ning palju palju muuga.",
+          "Helpdeski eesmärk on lahendada klientide nii arvutite kui ka muu tehnikaga seonduvaid probleeme (ja olgu mainitud, et seda kõike tudengisõbraliku hinnaga pealekauba). Suur osa tasust läheb ka tegijale, et rahakott nälga ei jääks.",
+          "Helpdeskiga seonduvalt toimub ka paar korda aastas Remondikohvik. See on kogukonna üritus, kus Tallinna elanikud saavad enda katkise tehnika meile tuua ja koos Lapikute Helpdeski ning ka muude abiliste juhendamisel selle ära parandada."
+        ],
+        "links": [
+          { "label": "Remondikohvik", "href": "https://remondikohvik.lapikud.ee/" }
         ],
         "tags": ["Diagnostika", "Riistvara", "IT-tugi", "Remondiköök"],
         "whatTitle": "Mida tehakse",
@@ -61,8 +71,14 @@
         "title": "Kultuur",
         "short": "Kogukond ei püsi ise üleval.",
         "about": [
-          "Kultuuritiim ühendab ürituste korraldamise ja turundustegevuse. Meie eesmärk on hoida Lapikute kogukonna elu aktiivsena ka väljaspool õppetööd, et peale pikka ja teadmisterohket koolipäeva saaks koos mõnusalt aega veeta.",
-          "Kultuuritiim tegeleb nii väiksemate kui ka suurürituste korraldamise ja nende turundamisega ning aitab hoida Lapikute nähtavust ja aktiivsust."
+          "Kultuuritiim ühendab enda alla ürituste korraldamise ja turundustegevuse. Kultuuritiim vastutab selle eest, et Lapikute meel oleks lahutatud ja nädal sisustatud ning et peale ülikoolis veedetud pikka ja uusi teadmisi täis päeva saaks teistega koos mõnusalt aega veeta.",
+          "Näiteks oleme korraldanud videomängude LAN-e, filmiõhtuid ja seriaalide ühisvaatamisi, käinud Tallinna tunneleid avastamas, talisuplemas, ronimas, airsofti mängimas ning korraldanud pidusid, nagu pikslipidu ja vikermasetsus.",
+          "Lisaks tegeleb kultuuritiim ka mõne suurürituse turundamisega, olgu selleks siis programmeerimisvõistlus ASI Karikas või Helpdeski Remondikohvik. Muidugi ka Lapikute enda turundusega.",
+          "Saad õppida, kuidas kasutada Facebooki ja Instagrami ürituste turundamiseks ja Lapikute tegevuste kajastamiseks, kuidas luua silmajäävat plakatit/bannerit Canvas ja Figmas ning kuidas sponsoritega tegeleda. Usume, et need oskused võivad kasuks tulla nii tööotsingutel ja enda turundamisel, kui ka oma lähedastega ürituste planeerimisel."
+        ],
+        "links": [
+          { "label": "ASI Karikas", "href": "https://asikarikas.ee/" },
+          { "label": "Remondikohvik", "href": "https://remondikohvik.lapikud.ee/" }
         ],
         "tags": ["Ürituste korraldus", "Turundus", "Sotsiaalmeedia", "Figma & Canva"],
         "whatTitle": "Mida tehakse",
@@ -80,6 +96,11 @@
         ]
       }
     ]
+  },
+  "mentor": {
+    "title": "Mentorid",
+    "description": "Kui tahad meie organisatsiooniga liituda, siis pole midagi karta, sest algset sisseelamist abistavad mentorid. Liitudes saad omale mentori, kes räägib täpsemalt, mida iga tiim teeb, tutvustab sind teistele Lapikutele ja aitab esimeste ülesannetega ja igasuguste tekkinud küsimustega.",
+    "cta": "Tutvu meie mentoritega!"
   },
   "join": {
     "bgWord": "Liitu",

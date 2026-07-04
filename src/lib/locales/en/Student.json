@@ -84,6 +84,11 @@
       }
     ]
   },
+  "mentor": {
+    "title": "Mentors",
+    "description": "There is no need to worry about joining: mentors help new members settle in, explain what each team does, introduce other Lapikud members, and help with first tasks and questions.",
+    "cta": "Meet our mentors"
+  },
   "join": {
     "bgWord": "Join",
     "kicker": "Joining",
