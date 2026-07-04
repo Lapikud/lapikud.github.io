@@ -1,6 +1,6 @@
 <script setup>
     import { Section, Container } from "../components/index.js";
-    import { onMounted, ref } from 'vue';
+    import { computed, onMounted, ref } from 'vue';
     import { loadYaml } from '../lib/yaml.js';
     import { currentLang, getLangText, usePageText } from "../lib/index.js";
     import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
@@ -11,6 +11,7 @@
     import { User } from "@lucide/vue";
 
     const mentors = ref([]);
+    const activeMentors = computed(() => mentors.value.filter((mentor) => mentor.active !== false));
     const text = usePageText("Mentors");
 
 
@@ -72,7 +73,7 @@
 <!-- Mentors Grid -->
 <Section>
     <div class="flex flex-col gap-8">
-        <template v-for="mentor in mentors">
+        <template v-for="mentor in activeMentors" :key="mentor.name">
             <div>
                 <div class="flex flex-col md:flex-row gap-6 m-3">
                     <!-- Mentor Photo -->

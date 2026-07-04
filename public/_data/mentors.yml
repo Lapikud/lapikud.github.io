@@ -66,6 +66,27 @@
 
     Minuga ei hakka kunagi igav, sest mul on alati mõni naljakas tähelepanek või põnev lugu varuks.
 
+- name: Karina Reisel
+  active: false
+  age: 22
+  photo: karina_reisel_mentor
+  speciality: Riistvara arendus ja programmeerimine
+  teams: ['Kultuur', 'Tarkvara']
+  term: 4
+  contactMethods:
+    - name: Discord
+      value: rinsan5781
+    - name: Messenger
+      value: https://m.me/karina.reisel
+  description: >
+    Ootan ägedaid pixleid. Kes soovivad lapi ürituste turundamisega tegutseda.
+    Kirjanikud, disainerid, fotograafid jne. Õpihimulised.
+    Lapiga liitumiseks ei ole tarvis olla proff.
+    Ootan kõiki, kes tahavad aktiivselt Lapis tegutseda.
+  activities: >
+    Ma olen jube tegus inimene. Tõenäoliselt näed sa mind tihti ülikooli ja Lapi üritustel 🤟
+    Mulle meeldib käsitööga tegeleda: kudumine, heegeldamine, kunst, õmblus, tikkand jms.
+
 
 - name: Katri Lotamõis
   age: 29
