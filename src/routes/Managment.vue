@@ -85,8 +85,8 @@
   <h1 class="m-0 text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.12] tracking-[-0.03em] mb-10">{{ text.current?.label || "Current board" }}</h1>
     <Grid min="500px">
       <template v-for="member in currentManagement" :key="member.name">
-        <div class="flex flex-col sm:flex-row gap-6 items-start">
-          <div class="w-full sm:w-auto sm:max-w-[200px] aspect-square shrink-0">
+        <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+          <div class="h-[150px] w-[150px] shrink-0">
             <picture>
               <source :srcset="getOptimisedImagePath('management-images', member.photo, 'webp')" type="image/webp" />
               <img
