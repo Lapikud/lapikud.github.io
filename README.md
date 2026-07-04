@@ -1,6 +1,6 @@
 # Lapikud External Website
 
-![Built with Svelte](https://img.shields.io/badge/Svelte-5-FF3E00?logo=svelte&logoColor=white)
+![Built with Vue](https://img.shields.io/badge/Vue-3-42B883?logo=vuedotjs&logoColor=white)
 ![Built with Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
 ![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?logo=github)
 
@@ -28,7 +28,7 @@ Found a bug, typo, or something missing? [Open an issue](https://github.com/Lapi
 
 ### What you need first
 
-- [Node.js](https://nodejs.org/) — v18 or higher, but grab the **LTS version** (currently v24) to be safe
+- [Node.js](https://nodejs.org/) — v20.19 or higher; use the current **LTS version** when possible
 
 > Node.js comes with `npm` included, so you don't need to install that separately.
 
@@ -77,10 +77,10 @@ git clone https://github.com/Lapikud/lapikud.github.io.git
 cd lapikud.github.io
 ```
 
-**2. Install dependencies** — this installs all the packages the project needs:
+**2. Install dependencies** — this installs the exact package versions recorded by the project:
 
 ```bash
-npm install
+npm ci
 ```
 
 **3. Optimise images** — the optimised image variants are not stored in the repo, so you need to generate them locally before running the site:
@@ -98,6 +98,33 @@ npm run dev
 ```
 
 Then open the URL it gives you (usually `http://localhost:5173`) in your browser. 🎉
+
+---
+
+## 🧭 How the project fits together
+
+The site is a Vue 3 single-page application built with Vite. Vue starts in `src/main.js`, which mounts `src/App.vue`. The app keeps its intentionally small custom router and translation system rather than introducing larger framework plugins.
+
+- `src/routes/` contains the page components and the bilingual public route table.
+- `src/components/` contains reusable UI building blocks; layout primitives live in `src/components/layout/`.
+- `src/layout/` contains the site-wide navigation and footer.
+- `src/lib/` contains routing, translations, image-path helpers, and the shared YAML loader.
+- `src/lib/locales/{est,en}/` contains escaped JSON translation data for each language.
+- `public/_data/` contains editable YAML for members, mentors, workshops, projects, partners, and pricing.
+- `public/assets/` contains source assets; generated image variants remain ignored.
+- `.storybook/` and `src/stories/` provide isolated Vue component previews.
+
+Page components use Vue's `<script setup>` syntax and Composition API primitives such as `ref` and `computed`. Use `usePageText("PageName")` for page translations, `loadYaml(path, fallback)` for YAML-backed content, and the exported `navigate()` helper for programmatic internal navigation.
+
+Useful commands:
+
+```bash
+npm run dev             # start the local site
+npm run build           # create a production build
+npm run storybook       # preview components in Storybook
+npm run build-storybook # verify the static Storybook build
+npm run optimise        # regenerate local image variants
+```
 
 ---
 
