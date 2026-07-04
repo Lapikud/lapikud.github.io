@@ -1,10 +1,23 @@
 <script setup>
   import { Section, Center } from "../components/index.js";
-  import { onMounted, ref } from 'vue';
-  import { usePageText } from "../lib/index.js";
+  import { computed, onMounted, ref } from 'vue';
+  import { currentLocale, usePageText } from "../lib/index.js";
 
   const sectionElement = ref(null);
   const text = usePageText("Calendar");
+  const calendarUrl = computed(() => {
+    const params = new URLSearchParams({
+      src: 'lapikud@gmail.com',
+      ctz: 'Europe/Tallinn',
+      showTitle: '0',
+      showPrint: '0',
+      showCalendars: '0',
+      showTz: '0',
+      wkst: '2',
+      hl: currentLocale.value,
+    });
+    return `https://www.google.com/calendar/embed?${params}`;
+  });
 
   onMounted(() => {
     sectionElement.value?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -18,7 +31,7 @@
     <div class="w-full max-w-4xl">
       <iframe
         style="border: 0;"
-        src="https://www.google.com/calendar/embed?src=lapikud%40gmail.com&ctz=Europe/Tallinn&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=2"
+        :src="calendarUrl"
         :title="text.iframeTitle || 'Lapikud Calendar'"
         class="w-full"
         height="600"

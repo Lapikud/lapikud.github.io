@@ -1,8 +1,8 @@
 <script setup>
   import { Section, Grid, Card, Button } from "../components/index.js";
   import { computed, onMounted, ref } from 'vue';
-  import yaml from "js-yaml";
-  import { currentLang, getLangText, usePageText } from "../lib/index.js";
+  import { loadYaml } from '../lib/yaml.js';
+  import { currentLang, getLangText, navigate, usePageText } from "../lib/index.js";
   import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
 
   import { ExternalLink } from "@lucide/vue";
@@ -11,9 +11,7 @@
   const text = usePageText("OurWork");
 
   onMounted(async () => {
-    const response = await fetch("/_data/ourwork.yml");
-    const yamlText = await response.text();
-    const parsed = yaml.load(yamlText) || [];
+    const parsed = await loadYaml('/_data/ourwork.yml', []);
     projects.value = parsed.filter((p) => p?.title);
   });
 
@@ -43,7 +41,7 @@
   }
 
   function openCtaContact() {
-    window.location.href = "/contact";
+    navigate('/contact');
   }
 </script>
 

@@ -1,22 +1,31 @@
 <script setup>
   import { Section, Stack, Image } from "../components/index.js";
   import { onMounted, ref } from 'vue';
-  import yaml from "js-yaml";
-  import { currentLang, getLangText, usePageText } from "../lib/index.js";
+  import { loadYaml } from '../lib/yaml.js';
+  import { currentLang, currentLocale, getLangText, usePageText } from "../lib/index.js";
   import { getRootAssetPath } from "../lib/imageHelpers.js";
 
   const workshops = ref([]);
   const text = usePageText("Workshops");
 
   onMounted(async () => {
-    const response = await fetch("/_data/workshops.yml");
-    const yamlText = await response.text();
-    const parsed = yaml.load(yamlText) || [];
+    const parsed = await loadYaml('/_data/workshops.yml', []);
     workshops.value = parsed.filter((w) => w?.title);
   });
 
   function getField(workshop, field) {
     return getLangText(workshop, field, currentLang.value);
+  }
+
+  function formatDate(value) {
+    const match = String(value || '').match(/^(\d{4})-(\d{2})$/);
+    if (!match) return '';
+    const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, 1));
+    return new Intl.DateTimeFormat(currentLocale.value, {
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'UTC',
+    }).format(date);
   }
 
   function getGallery(workshop) {
@@ -55,7 +64,7 @@
         <h1 class="font-syne text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
           {{ text.hero?.title }}
           <em class="block text-orange-500 not-italic"
-            ><span v-html="text.hero?.titleHighlight"></span></em
+            >{{ text.hero?.titleHighlight }}</em
           >
         </h1>
         <p class="text-sm text-gray-400 max-w-sm leading-relaxed font-space-grotesk font-light">
@@ -120,7 +129,7 @@
                   {{ text.details?.date }}
                 </span>
                 <span class="text-sm text-gray-700 font-space-grotesk">
-                  {{ getField(workshop, "date") }}
+                  {{ formatDate(workshop.date) }}
                 </span>
               </div>
             </div>

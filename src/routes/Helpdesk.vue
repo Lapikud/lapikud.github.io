@@ -6,7 +6,7 @@
   import { onBeforeUnmount, onMounted, ref } from 'vue';
   import { usePageText } from "../lib/index.js";
   import { getHeroImageFallback, getHeroImageSrcSet, getRootAssetPath } from "../lib/imageHelpers.js";
-  import yaml from 'js-yaml';
+  import { loadYaml } from '../lib/yaml.js';
 
   import maplibregl from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
@@ -42,12 +42,12 @@
   const pricingData = ref({ services: [] });
   const mapElement = ref(null);
   let map;
+  let disposed = false;
   const text = usePageText("Helpdesk");
 
   onMounted(async () => {
-    const response = await fetch('/_data/hinnakiri.yml');
-    const yamlText = await response.text();
-    pricingData.value = yaml.load(yamlText) || { services: [] };
+    pricingData.value = await loadYaml('/_data/hinnakiri.yml', { services: [] });
+    if (disposed || !mapElement.value) return;
 
     map = new maplibregl.Map({
       container: mapElement.value,
@@ -68,13 +68,21 @@
       marker.type = 'button';
       marker.className = `helpdesk-marker helpdesk-marker--${type}`;
       marker.setAttribute('aria-label', `Get directions to ${label}`);
-      marker.innerHTML = `<span>${label}</span><b aria-hidden="true">${type === 'bus' ? '●' : '◆'}</b>`;
+      const markerLabel = document.createElement('span');
+      markerLabel.textContent = label;
+      const markerIcon = document.createElement('b');
+      markerIcon.setAttribute('aria-hidden', 'true');
+      markerIcon.textContent = type === 'bus' ? '●' : '◆';
+      marker.replaceChildren(markerLabel, markerIcon);
       marker.addEventListener('click', () => openDirections(coordinates[0], coordinates[1], type));
       new maplibregl.Marker({ element: marker }).setLngLat(coordinates).addTo(map);
     });
   });
 
-  onBeforeUnmount(() => map?.remove());
+  onBeforeUnmount(() => {
+    disposed = true;
+    map?.remove();
+  });
 </script>
 
 <template>
@@ -146,16 +154,18 @@
             </tbody>
           </table>
         </div>
-        <p class="pt-4 text-lg font-bold">
-          <span v-html="text.pricing?.note || ''"></span>
-        </p>
+        <div class="pt-4 text-lg font-bold">
+          <p v-for="note in text.pricing?.notes || []" :key="note" class="mb-4 last:mb-0">{{ note }}</p>
+        </div>
       </div>
 
       <div class="flex flex-col">
         <h2 class="text-4xl font-light pb-4">
-          <span v-html="text.hours?.title || ''"></span>
+          {{ text.hours?.title || '' }}
           <br />
-          <span v-html="text.hours?.schedule || ''"></span>
+          <template v-for="part in text.hours?.schedule || []" :key="part.emphasis">
+            <strong>{{ part.emphasis }}</strong>{{ part.text }}
+          </template>
         </h2>
         <p class="text-lg font-light opacity-70 pb-16">
           {{ text.hours?.note || '' }}
@@ -164,7 +174,11 @@
         <h2 class="text-4xl font-light pb-4">{{ text.location?.title || '' }}</h2>
         <div ref="mapElement" class="relative w-full h-96 rounded-lg overflow-hidden"></div>
         <p class="pb-4 text-lg">
-          <span v-html="text.location?.busInfo || ''"></span>
+          <span
+            v-for="(part, index) in text.location?.busInfo || []"
+            :key="index"
+            :class="part.highlight && 'text-[#E69635]'"
+          >{{ part.text }}</span>
         </p>
         <p class="text-lg font-bold">
           {{ text.location?.address || '' }}

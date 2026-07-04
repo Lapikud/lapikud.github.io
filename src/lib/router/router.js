@@ -9,27 +9,32 @@ import { switchLang } from '../i18n.js';
  */
 export function navigate(path, options = {}) {
     const { external = false } = options;
-    
+
     if (external) {
         window.open(path, '_blank', 'noopener,noreferrer');
     } else {
-        const selectedLang =
-            localStorage.getItem('language') ||
-            getLanguageFromRoute(window.location.pathname) ||
-            'est';
-
-        const resolvedPath = getTranslatedRoute(path, selectedLang);
-
-        window.history.pushState({}, "", resolvedPath);
-        window.scrollTo(0, 0);
-        window.dispatchEvent(new PopStateEvent('popstate'));
-        
-        // Update language based on new route
-        const lang = getLanguageFromRoute(resolvedPath);
-        if (lang) {
-            switchLang(lang);
+        const url = new URL(path, window.location.origin);
+        if (url.origin !== window.location.origin) {
+            window.location.assign(url.href);
+            return;
         }
+
+        const selectedLang =
+            getLanguageFromRoute(window.location.pathname) ||
+            localStorage.getItem('language') ||
+            'est';
+        url.pathname = getTranslatedRoute(url.pathname, selectedLang);
+        commitNavigation(`${url.pathname}${url.search}${url.hash}`);
     }
+}
+
+function commitNavigation(path) {
+    window.history.pushState({}, '', path);
+    window.scrollTo(0, 0);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+
+    const lang = getLanguageFromRoute(new URL(path, window.location.origin).pathname);
+    if (lang) switchLang(lang);
 }
 
 /**
@@ -40,12 +45,10 @@ export function switchLanguageRoute(targetLang) {
     const currentPath = window.location.pathname;
     const translatedPath = getTranslatedRoute(currentPath, targetLang);
     
-    // Always update the language first
     switchLang(targetLang);
-    
-    // Only navigate if the path is different
+
     if (translatedPath !== currentPath) {
-        navigate(translatedPath);
+        commitNavigation(translatedPath);
     }
 }
 

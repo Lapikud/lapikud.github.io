@@ -6,7 +6,7 @@
     Image,
   } from "../components/index.js";
   import { onMounted, ref } from 'vue';
-  import yaml from "js-yaml";
+  import { loadYaml } from '../lib/yaml.js';
   import { currentLang, getLangText, usePageText } from "../lib/index.js";
   import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
   import { Mail } from "@lucide/vue";
@@ -45,13 +45,10 @@
 
   onMounted(async () => {
     try {
-      const currentRes = await fetch('/_data/management.yml');
-      const currentYaml = await currentRes.text();
-      currentManagement.value = yaml.load(currentYaml) || [];
-
-      const pastRes = await fetch('/_data/past_management.yml');
-      const pastYaml = await pastRes.text();
-      pastManagement.value = yaml.load(pastYaml) || [];
+      [currentManagement.value, pastManagement.value] = await Promise.all([
+        loadYaml('/_data/management.yml', []),
+        loadYaml('/_data/past_management.yml', []),
+      ]);
     } catch (error) {
       console.error('Error loading management data:', error);
       loadError.value = true;

@@ -23,16 +23,28 @@
       "quantity": "Kogus/Aeg",
       "price": "Hind"
     },
-    "note": "Jupid tellitakse kliendi enda poolt või kokkuleppel tehnikuga.<br/><br/>Vajadusel tuleme üliõpilasküla ja Tehnopoli piires kohale.<br/><br/>Oma tudengisõbralike hindade ja personaalse lähenemisega pakume teenust, milles ei pea pettuma!"
+    "notes": [
+      "Jupid tellitakse kliendi enda poolt või kokkuleppel tehnikuga.",
+      "Vajadusel tuleme üliõpilasküla ja Tehnopoli piires kohale.",
+      "Oma tudengisõbralike hindade ja personaalse lähenemisega pakume teenust, milles ei pea pettuma!"
+    ]
   },
   "hours": {
     "title": "Lahtiolekuajad:",
-    "schedule": "<strong>E</strong>smaspäevast – <strong>R</strong>eedeni 14-19*",
+    "schedule": [
+      { "emphasis": "E", "text": "smaspäevast – " },
+      { "emphasis": "R", "text": "eedeni 14-19*" }
+    ],
     "note": "* Tegu on ajaperioodiga, mil meid on kõige tõenäolisem tabada. Siiski ei saa garanteerida kohalolekut."
   },
   "location": {
     "title": "Asukoht",
-    "busInfo": "Saab <span class='text-[#E69635]'>11, 37, 83, 91 bussiga Keemia peatusest</span> või <span class='text-[#E69635]'>Tehnikaülikool peatusest 10, 27, 33, 36, 45 bussiga.</span>",
+    "busInfo": [
+      { "text": "Saab " },
+      { "text": "11, 37, 83, 91 bussiga Keemia peatusest", "highlight": true },
+      { "text": " või " },
+      { "text": "Tehnikaülikool peatusest 10, 27, 33, 36, 45 bussiga.", "highlight": true }
+    ],
     "address": "Akadeemia tee 5 ühiselamu, ruum 008A"
   }
 }

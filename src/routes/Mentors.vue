@@ -1,7 +1,7 @@
 <script setup>
     import { Section, Container } from "../components/index.js";
     import { onMounted, ref } from 'vue';
-    import yaml from "js-yaml";
+    import { loadYaml } from '../lib/yaml.js';
     import { currentLang, getLangText, usePageText } from "../lib/index.js";
     import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
 
@@ -15,9 +15,7 @@
 
 
     onMounted(async () => {
-        const response = await fetch("/_data/mentors.yml");
-        const yamlText = await response.text();
-        mentors.value = yaml.load(yamlText) || [];
+        mentors.value = await loadYaml('/_data/mentors.yml', []);
     });
 
     function getContactIcon(contactType) {

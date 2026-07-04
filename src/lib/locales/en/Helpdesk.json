@@ -23,16 +23,28 @@
       "quantity": "Quantity/Time",
       "price": "Price"
     },
-    "note": "Parts are ordered by the client themselves or by agreement with the technician.<br/><br/>If needed, we can come to the student village and Technopol area.<br/><br/>With our student-friendly prices and personal approach, we offer a service you won't be disappointed with!"
+    "notes": [
+      "Parts are ordered by the client themselves or by agreement with the technician.",
+      "If needed, we can come to the student village and Technopol area.",
+      "With our student-friendly prices and personal approach, we offer a service you won't be disappointed with!"
+    ]
   },
   "hours": {
     "title": "Opening Hours:",
-    "schedule": "<strong>M</strong>onday – <strong>F</strong>riday 14-19*",
+    "schedule": [
+      { "emphasis": "M", "text": "onday – " },
+      { "emphasis": "F", "text": "riday 14-19*" }
+    ],
     "note": "* This is the time period when we are most likely to be found. However, we cannot guarantee presence."
   },
   "location": {
     "title": "Location",
-    "busInfo": "Accessible via <span class='text-[#E69635]'>buses 11, 37, 83, 91 from Keemia stop</span> or <span class='text-[#E69635]'>buses 10, 27, 33, 36, 45 from Tehnikaülikool stop.</span>",
+    "busInfo": [
+      { "text": "Accessible via " },
+      { "text": "buses 11, 37, 83, 91 from Keemia stop", "highlight": true },
+      { "text": " or " },
+      { "text": "buses 10, 27, 33, 36, 45 from Tehnikaülikool stop.", "highlight": true }
+    ],
     "address": "Akadeemia tee 5 dormitory, room 008A"
   }
 }

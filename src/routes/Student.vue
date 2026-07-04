@@ -5,7 +5,7 @@
     Button,
   } from "../components/index.js";
   import { computed, onMounted, ref } from 'vue';
-  import yaml from 'js-yaml';
+  import { loadYaml } from '../lib/yaml.js';
   import { usePageText } from "../lib/index.js";
 
   const members = ref({ junior: [], senior: [] });
@@ -13,13 +13,7 @@
   const joinFormUrl = "https://pilves.lapikud.ee/apps/forms/s/WXed8sbG2s45GMKGAiXCemgE";
 
   onMounted(async () => {
-    try {
-      const response = await fetch('/_data/members.yml');
-      const yamlText = await response.text();
-      members.value = yaml.load(yamlText) || { junior: [], senior: [] };
-    } catch {
-      members.value = { junior: [], senior: [] };
-    }
+    members.value = await loadYaml('/_data/members.yml', { junior: [], senior: [] });
   });
 
   const scrollToJoin = () => {

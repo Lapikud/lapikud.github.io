@@ -4,7 +4,7 @@
   import { usePageText, currentLang } from "../lib/index.js";
   import { getHeroImagePath, getHeroImageSrcSet, getHeroImageFallback, getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
   import { onMounted, ref } from 'vue';
-  import yaml from 'js-yaml';
+  import { loadYaml } from '../lib/yaml.js';
 
   import { ArrowRight } from "@lucide/vue";
   import { ArrowLeft } from "@lucide/vue";
@@ -14,9 +14,7 @@
   const text = usePageText("Home");
 
   onMounted(async () => {
-    const response = await fetch('/_data/partners.yml');
-    const yamlText = await response.text();
-    partners.value = yaml.load(yamlText) || [];
+    partners.value = await loadYaml('/_data/partners.yml', []);
   });
 
   const partnerLogoExtByName = {

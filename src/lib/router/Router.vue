@@ -4,26 +4,29 @@ import { onBeforeUnmount, onMounted, shallowRef, watch } from 'vue';
 const props = defineProps({ routes: { type: Object, required: true } });
 const currentPath = shallowRef(window.location.pathname);
 const CurrentComponent = shallowRef(null);
+let routeRequest = 0;
 
 async function resolveCurrentComponent(path) {
+  const request = ++routeRequest;
   const routeEntry = props.routes[path] || props.routes['/'];
   if (typeof routeEntry !== 'function') {
-    CurrentComponent.value = routeEntry || null;
+    if (request === routeRequest) CurrentComponent.value = routeEntry || null;
     return;
   }
 
   try {
     const module = await routeEntry();
-    CurrentComponent.value = module?.default || null;
+    if (request === routeRequest) CurrentComponent.value = module?.default || null;
   } catch {
-    CurrentComponent.value = null;
+    if (request === routeRequest) CurrentComponent.value = null;
   }
 }
 
-function navigate(path) {
-  window.history.pushState({}, '', path);
+function navigate(url) {
+  window.history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`);
   window.scrollTo(0, 0);
-  currentPath.value = path;
+  currentPath.value = url.pathname;
+  window.dispatchEvent(new PopStateEvent('popstate'));
 }
 
 const handlePopState = () => {
@@ -31,10 +34,16 @@ const handlePopState = () => {
 };
 
 const handleClick = (event) => {
-  if (event.target.tagName === 'A' && event.target.getAttribute('href')?.startsWith('/')) {
-    event.preventDefault();
-    navigate(event.target.getAttribute('href'));
-  }
+  if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
+  if (!anchor || anchor.target || anchor.hasAttribute('download')) return;
+
+  const url = new URL(anchor.href, window.location.href);
+  if (url.origin !== window.location.origin || !props.routes[url.pathname]) return;
+  if (url.pathname === window.location.pathname && url.hash) return;
+
+  event.preventDefault();
+  navigate(url);
 };
 
 onMounted(() => {

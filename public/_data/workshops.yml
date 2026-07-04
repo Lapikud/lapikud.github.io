@@ -12,9 +12,7 @@
   duration:
     en: 3 × 1h 30min
     est: 3 × 1h 30min
-  date:
-    en: March 2026
-    est: Märts 2026
+  date: 2026-03
   gallery:
     - temp1
     - temp2
@@ -31,11 +29,8 @@
   duration:
     en: 3 × 1h 30min
     est: 3 × 1h 30min
-  date:
-    en: March 2026
-    est: Märts 2026
+  date: 2026-03
   gallery:
     - temp1
     - temp2
     - temp3
-
