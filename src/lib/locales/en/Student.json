@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "bgWord": "Lapikud",
+    "tagline": "TalTech IT student organization",
+    "title": "IT student?",
+    "emphasis": "You have a place here.",
+    "description": "Lapikud is an organization with three teams where you can do real work — build software, help people with tech, or organize events. Joining does not commit you to anything.",
+    "cta": "See how to join",
+    "aside": "or first read what we do ↓"
+  },
+  "teams": {
+    "kicker": "Three teams",
+    "title": "Choose what truly fits you.",
+    "subtitle": "Each team has its own focus. You do not need to do everything — join the team that matches you.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Software",
+        "short": "Real projects, real team.",
+        "about": [
+          "The software team builds things people actually use. We work on external projects like TipLAN, do code reviews, and use the same workflow as in real jobs — Git, PRs, and architecture discussions.",
+          "This is where your CV gets meaningful content. You do not need to be experienced — senior members will help you get started."
+        ],
+        "tags": ["Git & collaboration", "Code review", "Real projects", "Hackathons"],
+        "whatTitle": "What we do",
+        "what": [
+          "Build new features for external projects",
+          "Do code reviews and learn from each other",
+          "Discuss architecture and technical debt",
+          "Participate in hackathons and external events"
+        ],
+        "eventsTitle": "Recurring events",
+        "events": [
+          "Weekly development sessions",
+          "Demo nights — show what you built",
+          "Workshops for new members"
+        ]
+      },
+      {
+        "number": "02",
+        "title": "Helpdesk",
+        "short": "IT support for people who need it.",
+        "about": [
+          "Helpdesk covers what lectures do not teach — diagnostics, hardware, operating system installation, and workstation setup. You work with real issues, not simulations.",
+          "We also run a public repair event with Remondiköök, where Tallinn residents can bring broken devices."
+        ],
+        "tags": ["Diagnostics", "Hardware", "IT support", "Remondiköök"],
+        "whatTitle": "What we do",
+        "what": [
+          "Diagnose and repair computers and other devices",
+          "Set up workstations and install software",
+          "Document solutions in a knowledge base",
+          "Support events from the IT side"
+        ],
+        "eventsTitle": "Recurring events",
+        "events": [
+          "Open support hours on campus",
+          "Remondiköök — public repair event",
+          "IT questions Q&A sessions"
+        ]
+      },
+      {
+        "number": "03",
+        "title": "Culture",
+        "short": "A community does not maintain itself.",
+        "about": [
+          "The culture team handles everything that keeps Lapikud alive outside of code. We plan events, manage social media channels, design materials in Canva and Figma, and organize larger events like ASI Karikas.",
+          "If you enjoy how organizations operate — communication, logistics, visuals — this is your team."
+        ],
+        "tags": ["Event organizing", "Social media", "Figma & Canva"],
+        "whatTitle": "What we do",
+        "what": [
+          "Plan and run team and public events",
+          "Manage social media channels",
+          "Design materials in Canva and Figma",
+          "Support onboarding for new members"
+        ],
+        "eventsTitle": "Recurring events",
+        "events": [
+          "Community evenings and team days",
+          "ASI Karikas and other major events",
+          "Public inspiration sessions"
+        ]
+      }
+    ]
+  },
+  "mentor": {
+    "title": "Mentors",
+    "description": "There is no need to worry about joining: mentors help new members settle in, explain what each team does, introduce other Lapikud members, and help with first tasks and questions.",
+    "cta": "Meet our mentors"
+  },
+  "join": {
+    "bgWord": "Join",
+    "kicker": "Joining",
+    "title": "Ready to join?",
+    "titleLine2": "Fill in the form.",
+    "description": "No prior experience is required in any team, even if it can be helpful. We try to find tasks suitable for every level, and if needed, we will squeeze some knowledge out of our own brains for you — meaning we will teach you how to do things.",
+    "cta": "Fill in the form →",
+    "contactPrefix": "or write to",
+    "email": "lapikud@lapikud.ee"
+  },
+  "members": {
+    "kicker": "Our people",
+    "title": "Members",
+    "senior": "Senior members",
+    "junior": "Junior members",
+    "graduates": "Alumni"
+  }
+}

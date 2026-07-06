@@ -1,0 +1,36 @@
+# Workshops & courses conducted by Lapikud members
+#
+- title:
+    en: C workshop
+    est: C koolitus
+  description:
+    en: Three-part introductory C workshop series for beginners and early-stage programmers. Covered core programming foundations and practical C basics in Estonian at TalTech IT College.
+    est: Kolmeosaline C programmeerimiskeele koolitus algajatele ja varasema kogemusega huvilistele. Käsitleti programmeerimise alusteadmisi ja C keele põhiteemasid praktiliste näidete kaudu TalTech IT Kolledžis.
+  mentor:
+    en: Lapikud mentors
+    est: MTÜ Lapikud mentorid
+  duration:
+    en: 3 × 1h 30min
+    est: 3 × 1h 30min
+  date: 2026-03
+  gallery:
+    - temp1
+    - temp2
+
+- title:
+    en: C workshop
+    est: C koolitus
+  description:
+    en: Three-part introductory C workshop series for beginners and early-stage programmers. Covered core programming foundations and practical C basics in Estonian at TalTech IT College.
+    est: Kolmeosaline C programmeerimiskeele koolitus algajatele ja varasema kogemusega huvilistele. Käsitleti programmeerimise alusteadmisi ja C keele põhiteemasid praktiliste näidete kaudu TalTech IT Kolledžis.
+  mentor:
+    en: Lapikud mentors
+    est: MTÜ Lapikud mentorid
+  duration:
+    en: 3 × 1h 30min
+    est: 3 × 1h 30min
+  date: 2026-03
+  gallery:
+    - temp1
+    - temp2
+    - temp3

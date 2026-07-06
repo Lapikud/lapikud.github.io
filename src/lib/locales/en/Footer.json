@@ -1,0 +1,13 @@
+{
+  "footer": {
+    "address": "Address: ",
+    "addressValue": "Akadeemia tee 5, 12616 Tallinn, Estonia",
+    "mail": "E-mail: ",
+    "phone": "Phone: ",
+    "messenger": "Messenger: ",
+    "reg": "Reg. code: ",
+    "bank": "Swedbank",
+    "socials": "Social Media",
+    "organization": "MTÜ Lapikud"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Võta ühendust",
+    "description": "Kas sul on küsimusi? Tahad liituda? Või soovid alustada koostööd? Võta julgelt ühendust!"
+  },
+  "methods": {
+    "title": "Kuidas meiega ühendust võtta?",
+    "subtitle": "Vali endale sobiv viis",
+    "addressTitle": "Aadress",
+    "emailTitle": "E-post",
+    "phoneTitle": "Telefon",
+    "messengerTitle": "Messenger",
+    "addressSubtitle": "ICT-teaduskond, Raja 15 ruum 111"
+  },
+  "form": {
+    "title": "Saada meile sõnum",
+    "subtitle": "Täida vorm ja me võtame sinuga ühendust",
+    "nameLabel": "Nimi *",
+    "namePlaceholder": "Sinu nimi",
+    "emailLabel": "E-post *",
+    "emailPlaceholder": "sinu@email.ee",
+    "subjectLabel": "Teema *",
+    "subjectPlaceholder": "Sõnumi teema",
+    "messageLabel": "Sõnum *",
+    "messagePlaceholder": "Kirjuta oma sõnum siia...",
+    "submit": "Saada sõnum",
+    "mailBody": {
+      "name": "Nimi",
+      "email": "E-post",
+      "message": "Sõnum"
+    }
+  },
+  "hours": {
+    "title": "Lahtiolekuajad",
+    "weekdays": "Esmaspäev - Reede:",
+    "weekdaysTime": "10:00 - 16:00",
+    "weekend": "Laupäev - Pühapäev:",
+    "weekendTime": "Suletud",
+    "note": "* Soovitame enne külastamist võtta ühendust, et vältida ootamist"
+  },
+  "location": {
+    "title": "Kuidas meid leida?",
+    "addressLabel": "Aadress:",
+    "buildingLabel": "Hoone:",
+    "roomLabel": "Ruum:",
+    "address": "Akadeemia tee 5, 12616 Tallinn",
+    "building": "ICT-teaduskond (Raja 15)",
+    "room": "111",
+    "note": "Asume Tallinna Tehnikaülikooli ICT-teaduskonna hoones. Kui tuled ühistranspordiga, on lähimad peatused \"Mustakivi\" ja \"Tehnikaülikool\"."
+  },
+  "social": {
+    "title": "Jälgi meid sotsiaalmeedias"
+  },
+  "organization": {
+    "title": "MTÜ Lapikud",
+    "registryTitle": "Registrikood",
+    "bankTitle": "Pangakonto",
+    "bankSubtitle": "Swedbank"
+  }
+}

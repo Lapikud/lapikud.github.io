@@ -1,0 +1,43 @@
+{
+	"hero": {
+		"imageAlt": "Lapikute avalehe taustapilt",
+		"logoAlt": "MTÜ Lapikud",
+		"description": "MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi ja praegusi IT huvilisi tudengeid.",
+		"joinButton": "Liitu LAPikutega!"
+	},
+	"services": {
+		"student": {
+			"title": "Tudengile",
+			"description": "Tule arenda oma oskuseid ja saa ägedaid sõpru! Omanda praktilist kogemust reaalsetest projektidest.",
+			"imageAlt": "Tudengile pilt"
+		},
+		"helpdesk": {
+			"title": "Helpdesk",
+			"description": "HELPDESK on MTÜ Lapikute poolt pakutav arvutiabiteenus. Teenus on suunatud tudengitele, õppejõududele ning kõikidele huvilistele.",
+			"imageAlt": "Helpdeski pilt"
+		},
+		"company": {
+			"title": "Ettevõttele",
+			"description": "Aitame sinu ideed ellu viia! Meie kogenud tudengid on valmis teie projekte realiseerima.",
+			"imageAlt": "Ettevõttele pilt"
+		}
+	},
+	"aboutSection": {
+		"title": "Meist",
+		"description": "Meie põhieesmärgiks on Tallinna Tehnikaülikooli IT tudengitele erialase lisandväärtuse loomine. Kaasame tudengeid huvitavatesse IT projektidesse ning anname tudengitele võimaluse midagi reaalset oma käega ära teha. Aktiivsetel tudengitel on võimalus saada meie juures esimene töökogemus. Meie projektidest kooruvad välja huvitavad ja tarvilikud lõputööd ning meie liikmeskonnast on tulnud ka lõputöö juhendaja.",
+		"moreInfo": "Rohkem infot",
+		"contact": "Kontakt",
+		"imageAlt": "Lapikute tudengid projekti kallal"
+	},
+	"whatWeDo": {
+		"title": "Keda ja kuidas kaasame",
+		"description": "Lapikud ei ole ainult IT tudengite organisatsioon – püüame kaasata oma tegevusse ka teiste teaduskondade tudengeid. Näiteks sobiksid inseneeria tudengid hästi meie Helpdeski meeskonda või majandusteaduskonna tudengid tegelema meie projektides ärilise poolega või turundamisega.",
+		"moreInfo": "Rohkem infot",
+		"contact": "Liitu meiega",
+		"imageAlt": "Lapikud parandamas riistvara"
+	},
+	"partners": {
+		"title": "Koostööpartnerid",
+		"moreInfo": "Rohkem infot partnerluste kohta"
+	}
+}

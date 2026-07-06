@@ -1,0 +1,18 @@
+{
+  "about": "About Us",
+  "aboutPages": {
+    "info": "About Lapikud",
+    "join": "Join Us",
+    "mentors": "Mentors",
+    "board": "Board"
+  },
+  "events": "Events",
+  "eventsPages": {
+    "workshops": "Workshops",
+    "tipilan": "TipiLAN",
+    "asi": "ASI Karikas",
+    "repair": "Remondikohvik"
+  },
+  "helpdesk": "Helpdesk",
+  "contact": "Contact"
+}

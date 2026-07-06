@@ -1,0 +1,175 @@
+/* Global stylesheet */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import "tailwindcss";
+
+/* Overwriting tailwindcss specific variables */
+@theme {
+  --color-orange-500: #f0941d; /* Primary color, use this for most things. */
+  --color-orange-300: #ffa80d; /* Use for hover states, accents, and highlights. (lighter than primary) */
+  --color-orange-600: #d67d0a; /* Ideally don't use */
+
+  --color-gray-100: #fffdfa;
+  --color-gray-900: #0d0d0d;
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 48px;
+
+  --max-width-2xl: 700px;
+  --max-width-3xl: 800px;
+  --max-width-4xl: 900px;
+}
+
+/* Design tokens & theme variables (light defaults) */
+:root {
+  --page-max-width: calc(1460px * var(--ui-scale));
+  --navbar-offset: calc(93px * var(--ui-scale));
+  --page-padding-inline: clamp(
+    calc(1.5rem * var(--ui-scale)),
+    calc(4vw * var(--ui-scale)),
+    calc(3rem * var(--ui-scale))
+  );
+  --ui-scale: 1;
+
+  /* spacing scale */
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 48px;
+
+  /* type scale (fluid base + modular sizes) */
+  --fs-base: clamp(1.1rem, 1vw + 1rem, 1.2rem);
+  --line-height: 1.6;
+}
+
+/* Global box sizing & accessible defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Lato", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: calc(var(--fs-base) * var(--ui-scale));
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--navbar-offset);
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  line-height: var(--line-height);
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 160ms ease, color 160ms ease;
+  overflow-x: hidden;
+  font-size: var(--fs-lg);
+}
+
+/* Basic link & button defaults that components inherit */
+a {
+  text-decoration: none;
+  font-weight: 550;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Utility: visually hidden (accessible labels) */
+.sr-only,
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+/* Safe area for content below navbar (94px scaled) */
+.safe-area-navbar {
+  padding-top: var(--navbar-offset);
+  scroll-margin-top: var(--navbar-offset);
+}
+
+/* Show/hide helpers for breakpoints */
+.mobile-only {
+  display: block;
+}
+.desktop-only {
+  display: none;
+}
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* Increase overall UI scale on large 4K-class viewports */
+@media (min-width: 2400px), (min-width: 1900px) and (min-resolution: 2dppx) {
+  :root {
+    --ui-scale: 1.5;
+  }
+}
+
+/* Scale down UI for smaller screens */
+@media (max-width: 1280px) {
+  :root {
+    --ui-scale: 0.8;
+  }
+}
+
+/* Accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Automatically apply final animation states */
+  [data-animation] { /* Everything with animation needs to be marked like this: <div class="fade-in" data-animation>Hello World</div> */
+    all: unset !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  * {
+    background: solid !important;
+    backdrop-filter: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  * {
+    background: Window !important;
+    color: WindowText !important;
+    border-color: WindowText !important;
+  }
+  a {
+    color: Highlight !important;
+  }
+}
