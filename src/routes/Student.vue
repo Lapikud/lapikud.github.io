@@ -5,16 +5,16 @@
     Button,
   } from "../components/index.js";
   import { computed, onMounted, ref } from 'vue';
-  import { loadYaml } from '../lib/yaml.js';
-  import { usePageText } from "../lib/index.js";
-  import { navigate } from "../lib/router/router.js";
+  import { useRouter, usePageText, useYaml } from "../lib/index.js";
 
+  const router = useRouter();
+  const yaml = useYaml();
   const members = ref({ junior: [], senior: [] });
   const text = usePageText("Student");
   const joinFormUrl = "https://pilves.lapikud.ee/apps/forms/s/WXed8sbG2s45GMKGAiXCemgE";
 
   onMounted(async () => {
-    members.value = await loadYaml('/_data/members.yml', { junior: [], senior: [] });
+    members.value = await yaml.loadYaml('/_data/members.yml', { junior: [], senior: [] });
   });
 
   const scrollToJoin = () => {
@@ -144,7 +144,7 @@
         <p class="max-w-3xl text-base leading-8 text-white/70">{{ text.mentor?.description || '' }}</p>
       </div>
       <Button
-        :onClick="() => navigate('/mentorid')"
+        :onClick="() => router.navigate('/mentorid')"
         class="border-orange-500 bg-orange-500 px-8 py-3 text-sm font-semibold text-black hover:opacity-90"
       >
         {{ text.mentor?.cta || '' }}

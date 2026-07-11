@@ -1,22 +1,23 @@
 <script setup>
     import { Section, Container } from "../components/index.js";
     import { computed, onMounted, ref } from 'vue';
-    import { loadYaml } from '../lib/yaml.js';
-    import { currentLang, getLangText, usePageText } from "../lib/index.js";
-    import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
+    import { currentLang, getLangText, usePageText, useYaml, useImage } from "../lib/index.js";
 
     import { Mail } from "@lucide/vue";
     import { Phone } from "@lucide/vue";
     import { MessageCircle } from "@lucide/vue";
     import { User } from "@lucide/vue";
 
+    // Initialize composables
+    const yaml = useYaml();
+    const image = useImage();
+    
     const mentors = ref([]);
     const activeMentors = computed(() => mentors.value.filter((mentor) => mentor.active !== false));
     const text = usePageText("Mentors");
 
-
     onMounted(async () => {
-        mentors.value = await loadYaml('/_data/mentors.yml', []);
+        mentors.value = await yaml.loadYaml('/_data/mentors.yml', []);
     });
 
     function getContactIcon(contactType) {
@@ -80,9 +81,9 @@
                     <template v-if="mentor.photo">
                         <div class="shrink-0">
                             <picture>
-                                <source :srcset="getOptimisedImagePath('mentors-images', mentor.photo, 'webp')" type="image/webp" />
+                                <source :srcset="image.getOptimisedImagePath('mentors-images', mentor.photo, 'webp')" type="image/webp" />
                                 <img
-                                    :src="getOptimisedImageFallback('mentors-images', mentor.photo)"
+                                    :src="image.getOptimisedImageFallback('mentors-images', mentor.photo)"
                                     :alt="mentor.name"
                                     class="w-full md:w-48 h-48 object-cover"
                                 />

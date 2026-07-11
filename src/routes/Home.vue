@@ -1,20 +1,23 @@
 <script setup>
   import {Section, Stack, Grid, Center, Image, Svg, Button} from "../components/index.js";
-  import { navigate } from "../lib/router/router.js";
-  import { usePageText, currentLang } from "../lib/index.js";
-  import { getHeroImagePath, getHeroImageSrcSet, getHeroImageFallback, getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
+  import { useRouter, usePageText, currentLang, useImage, useYaml } from "../lib/index.js";
   import { onMounted, ref } from 'vue';
-  import { loadYaml } from '../lib/yaml.js';
 
   import { ArrowRight } from "@lucide/vue";
   import { ArrowLeft } from "@lucide/vue";
 
+  // Initialize composables
+  const router = useRouter();
+  const image = useImage();
+  const yaml = useYaml();
+  
   // Partners data
   const partners = ref([]);
   const text = usePageText("Home");
-
+  
+  // Load partners data using yaml composable
   onMounted(async () => {
-    partners.value = await loadYaml('/_data/partners.yml', []);
+    partners.value = await yaml.loadYaml('/_data/partners.yml', []);
   });
 
   const partnerLogoExtByName = {
@@ -37,9 +40,9 @@
   <div class="relative min-h-screen flex items-center">
     <div class="absolute inset-0 left-1/2 w-screen -translate-x-1/2" aria-hidden="true">
       <Image
-        :webpSrc="getHeroImagePath('home-page-images', 'hero')"
-        :src="getHeroImageFallback('home-page-images', 'hero')"
-        :webpSrcSet="getHeroImageSrcSet('home-page-images', 'hero')"
+        :webpSrc="image.getHeroImagePath('home-page-images', 'hero')"
+        :src="image.getHeroImageFallback('home-page-images', 'hero')"
+        :webpSrcSet="image.getHeroImageSrcSet('home-page-images', 'hero')"
         :alt="text['hero']?.imageAlt || 'illustrative hero image'"
         objectFit="cover"
         class="w-full h-full"
@@ -72,7 +75,7 @@
           </p>
           <Button
             class="rounded-lg border-orange-500 bg-orange-500 px-3 py-2 text-gray-900 transition-colors hover:border-orange-300 hover:bg-orange-300"
-            :onClick="() => navigate('/tudengile')"
+            :onClick="() => router.navigate('/tudengile')"
           >
             {{ text.hero?.joinButton || "Liitu LAPikutega!" }}
           </Button>
@@ -99,8 +102,8 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          :webpSrc="getOptimisedImagePath('home-page-images', 'student_temp', 'webp')"
-          :src="getOptimisedImageFallback('home-page-images', 'student_temp')"
+          :webpSrc="image.getOptimisedImagePath('home-page-images', 'student_temp', 'webp')"
+          :src="image.getOptimisedImageFallback('home-page-images', 'student_temp')"
           :alt="text['services']?.student?.imageAlt || 'Tudengile Pilt'"
           objectFit="cover"
           class="w-full h-full rounded-full object-[center_35%]"
@@ -114,8 +117,8 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          :webpSrc="getOptimisedImagePath('home-page-images', 'helpdesk', 'webp')"
-          :src="getOptimisedImageFallback('home-page-images', 'helpdesk')"
+          :webpSrc="image.getOptimisedImagePath('home-page-images', 'helpdesk', 'webp')"
+          :src="image.getOptimisedImageFallback('home-page-images', 'helpdesk')"
           :alt="text['services']?.helpdesk?.imageAlt || 'Helpdesk Pilt'"
           objectFit="cover"
           class="w-full h-full rounded-full object-[center_38%]"
@@ -129,8 +132,8 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto md:col-span-2 lg:col-span-1">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          :webpSrc="getOptimisedImagePath('home-page-images', 'company_temp', 'webp')"
-          :src="getOptimisedImageFallback('home-page-images', 'company_temp')"
+          :webpSrc="image.getOptimisedImagePath('home-page-images', 'company_temp', 'webp')"
+          :src="image.getOptimisedImageFallback('home-page-images', 'company_temp')"
           :alt="text['services']?.company?.imageAlt || 'Ettevõttele Pilt'"
           objectFit="cover"
           class="w-full h-full rounded-full object-[center_25%]"
@@ -175,7 +178,7 @@
         <div class="flex flex-col items-start gap-6">
           <Button
             class="rounded-md border-3 border-orange-500 bg-transparent px-10 py-2 transition-colors hover:bg-orange-500/10"
-            :onClick="() => navigate(currentLang === 'en' ? '/aboutus' : '/lapikutest')"
+            :onClick="() => router.navigate(currentLang === 'en' ? '/aboutus' : '/lapikutest')"
           >
             {{ text.aboutSection?.moreInfo || "Rohkem infot" }}
           </Button>
@@ -183,7 +186,7 @@
           <div class="flex items-center gap-4">
             <Button
               class="border-orange-500 bg-orange-500 px-20 py-2 transition-colors hover:border-orange-300 hover:bg-orange-300"
-              :onClick="() => navigate(currentLang === 'en' ? '/contact' : '/kontakt')"
+              :onClick="() => router.navigate(currentLang === 'en' ? '/contact' : '/kontakt')"
             >
               {{ text.aboutSection?.contact || "Kontakt" }}
             </Button>
@@ -196,8 +199,8 @@
     <div class="relative overflow-hidden min-h-90 md:h-full md:self-stretch">
       <div class="absolute inset-0">
         <Image
-          :webpSrc="getOptimisedImagePath('home-page-images', 'about_us', 'webp')"
-          :src="getOptimisedImageFallback('home-page-images', 'about_us')"
+          :webpSrc="image.getOptimisedImagePath('home-page-images', 'about_us', 'webp')"
+          :src="image.getOptimisedImageFallback('home-page-images', 'about_us')"
           :alt="text['aboutSection']?.imageAlt || 'Lapikud team'"
           objectFit="cover"
           class="h-full w-full max-w-none!"
@@ -296,8 +299,8 @@
     <div class="relative overflow-hidden min-h-90 md:min-h-0 md:h-full md:self-stretch">
       <div class="absolute inset-0">
         <Image
-          :webpSrc="getOptimisedImagePath('home-page-images', 'temp', 'webp')"
-          :src="getOptimisedImageFallback('home-page-images', 'temp')"
+          :webpSrc="image.getOptimisedImagePath('home-page-images', 'temp', 'webp')"
+          :src="image.getOptimisedImageFallback('home-page-images', 'temp')"
           :alt="text['whatWeDo']?.imageAlt || 'Lapikud parandamas riistvara'"
           objectFit="cover"
           class="h-full w-full max-w-none!"
@@ -323,7 +326,7 @@
         <div class="flex flex-col items-end gap-6">
           <Button
             class="rounded-md border-3 border-orange-500 bg-transparent px-10 py-2 transition-colors hover:bg-orange-500/10"
-            :onClick="() => navigate(currentLang === 'en' ? '/ourwork' : '/ettevottele')"
+            :onClick="() => router.navigate(currentLang === 'en' ? '/ourwork' : '/ettevottele')"
           >
             {{ text.whatWeDo?.moreInfo || "Rohkem infot" }}
           </Button>
@@ -332,7 +335,7 @@
             <ArrowLeft class="h-12 w-12 text-orange-500 md:h-14 md:w-14" :strokeWidth="2.4" />
             <Button
               class="border-orange-500 bg-orange-500 px-20 py-2 transition-colors hover:border-orange-300 hover:bg-orange-300"
-              :onClick="() => navigate(currentLang === 'en' ? '/student' : '/tudengile')"
+              :onClick="() => router.navigate(currentLang === 'en' ? '/student' : '/tudengile')"
             >
               {{ text.whatWeDo?.contact || "Kontakt" }}
             </Button>
@@ -389,7 +392,7 @@
   <Center class="m-10">
     <Button
       class="rounded-md border-orange-500 bg-transparent px-20 py-3 transition-colors hover:bg-orange-500/10"
-      :onClick="() => navigate('/partners')"
+      :onClick="() => router.navigate('/partners')"
     >
       {{ text.partners?.moreInfo || "Rohkem infot partnerluste kohta" }}
     </Button>

@@ -1,10 +1,19 @@
 <script setup>
 import { onBeforeUnmount, onMounted, shallowRef, watch } from 'vue';
+import { useRouter } from './useRouter.js';
+import { getLanguageFromRoute, getTranslatedRoute } from '../../routes';
+import { switchLang } from '../i18n.js';
 
 const props = defineProps({ routes: { type: Object, required: true } });
-const currentPath = shallowRef(window.location.pathname);
+const router = useRouter();
+const currentPath = shallowRef(typeof window !== 'undefined' ? window.location.pathname : '/');
 const CurrentComponent = shallowRef(null);
 let routeRequest = 0;
+
+// Sync with router composable's currentPath
+watch(() => router.currentPath.value, (path) => {
+  currentPath.value = path;
+}, { immediate: true });
 
 async function resolveCurrentComponent(path) {
   const request = ++routeRequest;
@@ -26,11 +35,21 @@ function navigate(url) {
   window.history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`);
   window.scrollTo(0, 0);
   currentPath.value = url.pathname;
+  router.currentPath.value = url.pathname;
   window.dispatchEvent(new PopStateEvent('popstate'));
+
+  // Handle language switching based on route
+  const lang = getLanguageFromRoute(url.pathname);
+  if (lang) switchLang(lang);
 }
 
 const handlePopState = () => {
-  currentPath.value = window.location.pathname;
+  const newPath = window.location.pathname;
+  currentPath.value = newPath;
+  router.currentPath.value = newPath;
+  
+  const lang = getLanguageFromRoute(newPath);
+  if (lang) switchLang(lang);
 };
 
 const handleClick = (event) => {
@@ -54,6 +73,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('popstate', handlePopState);
   window.removeEventListener('click', handleClick);
 });
+
 watch(currentPath, resolveCurrentComponent, { immediate: true });
 </script>
 

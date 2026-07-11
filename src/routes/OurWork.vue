@@ -1,17 +1,20 @@
 <script setup>
   import { Section, Grid, Card, Button } from "../components/index.js";
   import { computed, onMounted, ref } from 'vue';
-  import { loadYaml } from '../lib/yaml.js';
-  import { currentLang, getLangText, navigate, usePageText } from "../lib/index.js";
-  import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
+  import { currentLang, getLangText, usePageText, useRouter, useYaml, useImage } from "../lib/index.js";
 
   import { ExternalLink } from "@lucide/vue";
 
+  // Initialize composables
+  const router = useRouter();
+  const yaml = useYaml();
+  const image = useImage();
+  
   const projects = ref([]);
   const text = usePageText("OurWork");
 
   onMounted(async () => {
-    const parsed = await loadYaml('/_data/ourwork.yml', []);
+    const parsed = await yaml.loadYaml('/_data/ourwork.yml', []);
     projects.value = parsed.filter((p) => p?.title);
   });
 
@@ -28,12 +31,12 @@
 
   function projectImage(project) {
     return project?.photo
-      ? getOptimisedImagePath("ourwork-images", project.photo, "webp")
+      ? image.getOptimisedImagePath("ourwork-images", project.photo, "webp")
       : "";
   }
 
   function handleImageError(event, photo) {
-    event.currentTarget.src = getOptimisedImageFallback("ourwork-images", photo);
+    event.currentTarget.src = image.getOptimisedImageFallback("ourwork-images", photo);
   }
 
   function openCtaEmail() {
@@ -41,7 +44,7 @@
   }
 
   function openCtaContact() {
-    navigate('/contact');
+    router.navigate('/contact');
   }
 </script>
 

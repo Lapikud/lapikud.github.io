@@ -4,18 +4,21 @@
     Grid,
   } from "../components/index.js";
   import { onBeforeUnmount, onMounted, ref } from 'vue';
-  import { usePageText } from "../lib/index.js";
-  import { getHeroImageFallback, getHeroImageSrcSet, getRootAssetPath } from "../lib/imageHelpers.js";
-  import { loadYaml } from '../lib/yaml.js';
+  import { useRouter, usePageText, useImage, useYaml } from "../lib/index.js";
 
   import maplibregl from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
-  import { navigate } from "../lib/router/router.js";
+  import { createElement, BusFront, MapPin } from 'lucide';
+
+  // Initialize composables
+  const router = useRouter();
+  const image = useImage();
+  const yaml = useYaml();
 
   // Images
-  const helpdeskbg = getHeroImageFallback("helpdesk-page-images", "helpdesk_bg");
-  const helpdeskbgWebpSet = getHeroImageSrcSet("helpdesk-page-images", "helpdesk_bg");
-  const helpdesk = getRootAssetPath("helpdesk-page-images", "helpdesk-on-black.png");
+  const helpdeskbg = image.getHeroImageFallback("helpdesk-page-images", "helpdesk_bg");
+  const helpdeskbgWebpSet = image.getHeroImageSrcSet("helpdesk-page-images", "helpdesk_bg");
+  const helpdesk = image.getRootAssetPath("helpdesk-page-images", "helpdesk-on-black.png");
 
   // Coordinates for Akadeemia tee 5, 12616 Tallinn [longitude, latitude]
   const center = [24.66887400515207, 59.396427975093935];
@@ -35,7 +38,7 @@
 
   // Navigate to directions using router
   const openDirections = (lng, lat, loc) => {
-    navigate(getDirectionsUrl(lng, lat, loc), { external: true });
+    router.navigate(getDirectionsUrl(lng, lat, loc), { external: true });
   };
 
   // Load pricing data
@@ -46,7 +49,7 @@
   const text = usePageText("Helpdesk");
 
   onMounted(async () => {
-    pricingData.value = await loadYaml('/_data/hinnakiri.yml', { services: [] });
+    pricingData.value = await yaml.loadYaml('/_data/hinnakiri.yml', { services: [] });
     if (disposed || !mapElement.value) return;
 
     map = new maplibregl.Map({
@@ -70,9 +73,8 @@
       marker.setAttribute('aria-label', `Get directions to ${label}`);
       const markerLabel = document.createElement('span');
       markerLabel.textContent = label;
-      const markerIcon = document.createElement('b');
+      const markerIcon = type === 'bus' ? createElement(BusFront) : createElement(MapPin);
       markerIcon.setAttribute('aria-hidden', 'true');
-      markerIcon.textContent = type === 'bus' ? '●' : '◆';
       marker.replaceChildren(markerLabel, markerIcon);
       marker.addEventListener('click', () => openDirections(coordinates[0], coordinates[1], type));
       new maplibregl.Marker({ element: marker }).setLngLat(coordinates).addTo(map);
@@ -211,6 +213,6 @@
   white-space: nowrap;
   box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
-.helpdesk-marker--location span { background: var(--orange); color: white; }
-.helpdesk-marker b { color: var(--orange); font-size: 1.5rem; line-height: 1; }
+.helpdesk-marker--location span { background: var(--color-orange-500); color: white; }
+.helpdesk-marker svg { color: var(--color-orange-500); width: 1.5rem; height: 1.5rem; }
 </style>

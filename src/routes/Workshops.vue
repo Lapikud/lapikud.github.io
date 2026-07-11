@@ -1,15 +1,17 @@
 <script setup>
   import { Section, Stack, Image } from "../components/index.js";
   import { onMounted, ref } from 'vue';
-  import { loadYaml } from '../lib/yaml.js';
-  import { currentLang, currentLocale, getLangText, usePageText } from "../lib/index.js";
-  import { getRootAssetPath } from "../lib/imageHelpers.js";
+  import { currentLang, currentLocale, getLangText, usePageText, useYaml, useImage } from "../lib/index.js";
 
+  // Initialize composables
+  const yaml = useYaml();
+  const image = useImage();
+  
   const workshops = ref([]);
   const text = usePageText("Workshops");
 
   onMounted(async () => {
-    const parsed = await loadYaml('/_data/workshops.yml', []);
+    const parsed = await yaml.loadYaml('/_data/workshops.yml', []);
     workshops.value = parsed.filter((w) => w?.title);
   });
 
@@ -88,7 +90,7 @@
                   :class="`overflow-hidden ${getImageHeightClass(getGallery(workshop).length, i)}`"
                 >
                   <Image
-                    :src="getRootAssetPath('workshop-images', filename, 'jpg')"
+                    :src="image.getRootAssetPath('workshop-images', filename, 'jpg')"
                     :alt="`${getField(workshop, 'title')} ${i + 1}`"
                     objectFit="cover"
                     class="h-full w-full"

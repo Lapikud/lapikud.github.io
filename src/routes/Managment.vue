@@ -6,12 +6,14 @@
     Image,
   } from "../components/index.js";
   import { onMounted, ref } from 'vue';
-  import { loadYaml } from '../lib/yaml.js';
-  import { currentLang, getLangText, usePageText } from "../lib/index.js";
-  import { getOptimisedImagePath, getOptimisedImageFallback } from "../lib/imageHelpers.js";
+  import { currentLang, getLangText, usePageText, useYaml, useImage } from "../lib/index.js";
   import { Mail } from "@lucide/vue";
   import { Phone } from "@lucide/vue";
 
+  // Initialize composables
+  const yaml = useYaml();
+  const image = useImage();
+  
   const currentManagement = ref([]);
   const pastManagement = ref([]);
   const loading = ref(true);
@@ -46,8 +48,8 @@
   onMounted(async () => {
     try {
       [currentManagement.value, pastManagement.value] = await Promise.all([
-        loadYaml('/_data/management.yml', []),
-        loadYaml('/_data/past_management.yml', []),
+        yaml.loadYaml('/_data/management.yml', []),
+        yaml.loadYaml('/_data/past_management.yml', []),
       ]);
     } catch (error) {
       console.error('Error loading management data:', error);
@@ -88,9 +90,9 @@
         <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
           <div class="h-[150px] w-[150px] shrink-0">
             <picture>
-              <source :srcset="getOptimisedImagePath('management-images', member.photo, 'webp')" type="image/webp" />
+              <source :srcset="image.getOptimisedImagePath('management-images', member.photo, 'webp')" type="image/webp" />
               <img
-                :src="getOptimisedImageFallback('management-images', member.photo)"
+                :src="image.getOptimisedImageFallback('management-images', member.photo)"
                 :alt="member.name"
                 class="w-full h-full object-cover rounded-md"
               />
@@ -151,8 +153,8 @@
                   <div class="h-24 w-24 overflow-hidden rounded-[10px] bg-linear-to-br outline-2 outline-transparent outline-offset-2 transition [@media(min-width:769px)]:h-28 [@media(min-width:769px)]:w-28">
                     <template v-if="member.image">
                       <Image
-                        :webpSrc="getOptimisedImagePath('past-management-images', member.image, 'webp')"
-                        :src="getOptimisedImageFallback('past-management-images', member.image)"
+                        :webpSrc="image.getOptimisedImagePath('past-management-images', member.image, 'webp')"
+                        :src="image.getOptimisedImageFallback('past-management-images', member.image)"
                         :alt="member.name"
                         objectFit="cover"
                         class="block h-full w-full"
