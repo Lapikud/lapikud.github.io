@@ -356,7 +356,7 @@ function handleResize() {
                                         )
                                     "
                                     :onClick="
-                                        () => handleNavigation('/kontakt')
+                                        () => handleNavigation('#kontakt')
                                     "
                                 >
                                     {{ text.contact }}

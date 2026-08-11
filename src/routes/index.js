@@ -7,7 +7,6 @@ const loadMentors = () => import('./Mentors.vue');
 const loadHelpdesk = () => import('./Helpdesk.vue');
 const loadOurWork = () => import('./OurWork.vue');
 const loadAboutUs = () => import('./AboutUs.vue');
-const loadContact = () => import('./Contact.vue');
 const loadManagment = () => import('./Managment.vue');
 const loadStriim = () => import('./Striim.vue');
 const loadCalendar = () => import('./Calendar.vue');
@@ -101,8 +100,6 @@ export const routes = {
   '/ourwork': loadOurWork,
   '/lapikutest': loadAboutUs,
   '/aboutus': loadAboutUs,
-  '/kontakt': loadContact,
-  '/contact': loadContact,
   '/juhatus': loadManagment,
   '/management': loadManagment,
   '/koolitused': loadWorkshops,

@@ -12,6 +12,13 @@ export function navigate(path, options = {}) {
 
     if (external) {
         window.open(path, '_blank', 'noopener,noreferrer');
+    } else if (path.startsWith('#')) {
+        const hash = path;
+        const target = document.getElementById(hash.slice(1));
+        if (target) {
+            window.history.pushState({}, '', `${window.location.pathname}${window.location.search}${hash}`);
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     } else {
         const url = new URL(path, window.location.origin);
         if (url.origin !== window.location.origin) {
@@ -29,12 +36,24 @@ export function navigate(path, options = {}) {
 }
 
 function commitNavigation(path) {
+    const hash = new URL(path, window.location.origin).hash;
     window.history.pushState({}, '', path);
-    window.scrollTo(0, 0);
     window.dispatchEvent(new PopStateEvent('popstate'));
 
     const lang = getLanguageFromRoute(new URL(path, window.location.origin).pathname);
     if (lang) switchLang(lang);
+
+    if (hash) {
+        const scrollToHash = () => {
+            const target = document.getElementById(hash.slice(1));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        requestAnimationFrame(scrollToHash);
+    } else {
+        window.scrollTo(0, 0);
+    }
 }
 
 /**
