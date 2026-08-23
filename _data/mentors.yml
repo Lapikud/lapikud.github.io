@@ -1,11 +1,11 @@
 # Mentors
 
 - name: Agnes Triin Saga
-  age: 28
+  age: 29
   photo: agnes_triin_saga_mentor.jpg
   speciality: Süsteemi administaator
   teams: ['Helpdesk']
-  term: 3
+  term: 4
   contactMethods:
     - name: Discord
       value: dragons4president
@@ -16,7 +16,7 @@
     Mulle meeldib star trek ja üldiselt sci-fi ning fantaasia, mind huvitavad reisimine, viipekeel ja strateegilised lauamängud. Tegelenud põhiliselt windowsi süsteemide (administreerimisega).
 
 - name: Christopher Rammul
-  age: 23
+  age: 24
   photo: christopher_rammul_mentor.jpg
   speciality: Mehhatroonika 
   teams: ['Kultuur', 'Juhatus']
@@ -32,11 +32,11 @@
     Olen 5. aasta elektroenergeetika ja mehhatroonika tudeng. Mulle meeldivad spontaansed ideed ja casual chillimine. Väga ei meeldi igavus, seega üritan seda igal võimalusel ära hoida.
 
 - name: Erki Lasberg
-  age: 23
+  age: 24
   photo: erki_lasberg_mentor.jpg 
   speciality: IT süsteemide administreerimine
   teams: ['Helpdesk', 'Juhatus']
-  term: 3
+  term: 4
   contactMethods:
     - name: Discord 
       value: the_legend_27__ 
@@ -48,7 +48,7 @@
     Ma olen väga hands on inimene kes püüab probleemidele läheneda mitmel erineval viisil ja ei anna alla kui mõni nendest viisidest ei tööta.   
   
 - name: Jürjo Eibak
-  age: 26
+  age: 27
   photo: jürjo_eibak_mentor.jpg
   speciality: Salastatud
   teams: ['Kultuur']
@@ -68,7 +68,7 @@
 
 
 - name: Katri Lotamõis
-  age: 29
+  age: 30
   photo: katri_lotamõis_mentor.jpg
   speciality: Tarkvaraarendus
   teams: ['Kultuur', 'Tarkvara']
@@ -82,11 +82,11 @@
     Tegelen Lapikutes põhiliselt kultuuritiimis ürituste korraldamisega ja turundamisega ning olen ka tarkvaratiimis, kus aitan arendada erinevaid tarkvaraprojekte. Erinen teistest lapikutest veidi selle poolest, et õpin hetkel hoopis Tallinna Tööstushariduskeskuses nooremtarkvaraarendaja erialal esimesel aastal. Minu tee IT-sse avas Java, mis on siiani minu lemmikuim keel tarkvaraprojektides kasutamiseks. Lapikutes olemise juures meeldib mulle kõige enam ühiste tegevuste planeerimine ning erinevate projektide kallal töötamine tiimina.
 
 - name: Kerdo Käärma
-  age: 22
+  age: 23
   photo: kerdo_käärma_mentor.jpg
   speciality: IT süsteemide arendus
   teams: ['Kultuur', 'Tarkvara', 'Juhatus']
-  term: 3
+  term: 4
   contactMethods:
     - name: Discord
       value: krooles
@@ -102,7 +102,7 @@
     FromSoftware fanboy ja anime enjoyer.
 
 - name: Reio Opromei
-  age: 24
+  age: 25
   photo: reio_opromei_mentor.jpg
   speciality: IT süsteemide arendus
   teams: ['Kultuur', 'Juhatus']
@@ -120,11 +120,11 @@
      
 
 - name: Rene Arumetsa
-  age: 29
+  age: 30
   photo: rene_arumetsa_mentor.jpg
   speciality: IT süsteemide administeerimine
   teams: ['Helpdesk', 'Tarkvara', 'Juhatus'] 
-  term: 3
+  term: 4
   contactMethods:
     - name: Discord
       value: renxik
@@ -141,7 +141,7 @@
 
 
 - name: Lembitu Valdmets
-  age: 31
+  age: 32
   photo: lembitu_valdmets_mentor.jpg
   speciality: Arvutisüsteemid (Lõpetanud)
   teams: ['Helpdesk']
