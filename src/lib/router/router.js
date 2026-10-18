@@ -1,5 +1,4 @@
-import { getTranslatedRoute, getLanguageFromRoute } from '../../routes';
-import { switchLang } from '../i18n.js';
+import { redirects } from '../../routes';
 
 /**
  * Navigate to a path (internal or external)
@@ -26,11 +25,7 @@ export function navigate(path, options = {}) {
             return;
         }
 
-        const selectedLang =
-            getLanguageFromRoute(window.location.pathname) ||
-            localStorage.getItem('language') ||
-            'est';
-        url.pathname = getTranslatedRoute(url.pathname, selectedLang);
+        url.pathname = redirects[url.pathname] || url.pathname;
         commitNavigation(`${url.pathname}${url.search}${url.hash}`);
     }
 }
@@ -39,9 +34,6 @@ function commitNavigation(path) {
     const hash = new URL(path, window.location.origin).hash;
     window.history.pushState({}, '', path);
     window.dispatchEvent(new PopStateEvent('popstate'));
-
-    const lang = getLanguageFromRoute(new URL(path, window.location.origin).pathname);
-    if (lang) switchLang(lang);
 
     if (hash) {
         const scrollToHash = () => {
@@ -53,21 +45,6 @@ function commitNavigation(path) {
         requestAnimationFrame(scrollToHash);
     } else {
         window.scrollTo(0, 0);
-    }
-}
-
-/**
- * Switch language and navigate to translated route
- * @param {string} targetLang - Target language ('est' or 'en')
- */
-export function switchLanguageRoute(targetLang) {
-    const currentPath = window.location.pathname;
-    const translatedPath = getTranslatedRoute(currentPath, targetLang);
-    
-    switchLang(targetLang);
-
-    if (translatedPath !== currentPath) {
-        commitNavigation(translatedPath);
     }
 }
 

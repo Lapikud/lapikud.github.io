@@ -7,8 +7,8 @@
   } from "../components/index.js";
   import { onMounted, ref } from 'vue';
   import { currentLang, getLangText, usePageText, useYaml, useImage } from "../lib/index.js";
-  import { Mail } from "@lucide/vue";
-  import { Phone } from "@lucide/vue";
+  import IconMail from "~icons/keyline-icons/mail-duotone";
+  import IconPhone from "~icons/keyline-icons/phone-duotone";
 
   // Initialize composables
   const yaml = useYaml();
@@ -107,13 +107,13 @@
               :href="`mailto:${member.email}`"
               class="text-base flex items-center gap-2 text-orange-500 hover:opacity-80 transition"
             >
-              <Mail :size="18" />{{ member.email }}
+              <IconMail class="size-[18px]" />{{ member.email }}
             </a>
             <a
               :href="`tel:${member.phone}`"
               class="text-base flex items-center gap-2 text-orange-500 hover:opacity-80 transition"
             >
-              <Phone :size="18" />{{ member.phone }}
+              <IconPhone class="size-[18px]" />{{ member.phone }}
             </a>
           </div>
         </div>

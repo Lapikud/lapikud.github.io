@@ -8,6 +8,38 @@
     "cta": "Vaata, kuidas liituda",
     "aside": "või loe esmalt, mida me teeme ↓"
   },
+  "activities": {
+    "title": "Mida saad sina teha?",
+    "paragraphs": [
+      [
+        { "text": "Kui tunned, et tahad osa saada meie organisatsioonist ning ennast arendada koos teiste IT-huviliste tudengitega, siis on selleks mitu valikut. Meil on kolm meeskonda: " },
+        { "text": "Tarkvara", "href": "#tarkvara" },
+        { "text": ", " },
+        { "text": "Helpdesk", "href": "#helpdesk" },
+        { "text": " ja " },
+        { "text": "Kultuur", "href": "#kultuur" },
+        { "text": "." }
+      ],
+      [
+        { "text": "Tarkvaratiimis", "href": "#tarkvara" },
+        { "text": " saad tegeleda veebilehtede, mobiilirakenduste, mängude või muude huvitavate projektide arendamisega. Lisaks ka õpid muid IT-teemasid, nagu Linuxi kasutus ja serverite püsti panemine, seda läbi meie koolituste. Hea võimalus täiendada nii enda tehnilisi kui ka sotsiaalseid oskuseid, nagu tiimitöö." }
+      ],
+      [
+        { "text": "Helpdeski meeskonnas", "href": "#helpdesk" },
+        { "text": " on võimalik omal käel parandada ja komplekteerida arvuti riistvara ning teha palju muudki tehnikaga seonduvat, abistades seeläbi kliente või tegeledes enda projektidega. Kasutada on mitmed tööriistad, nagu jootekolbid, 3D-printer, multimeetrid ja palju muud." }
+      ],
+      [
+        { "text": "Kultuuritiimis", "href": "#kultuur" },
+        { "text": " saad aidata Lapikute meeleolu ning sotsiaalmeedia üleval hoidmisega, korraldades siseüritusi ja neid ka turundades. Lisaks teevad tiimi liikmed koostööd teiste organisatsioonidega, et korraldada ühiseid üritusi. Hea võimalus panna proovile oma loovus." }
+      ],
+      [
+        { "text": "Kui on huvi, siis võib ühineda ka mitme tiimiga. Üheski tiimis pole varasemat kogemust vaja, isegi kui see tuleks kasuks. Kuid oluline on soov õppida ning edasi areneda. Kõige edukamad on olnud liikmed, kes võtavad initsiatiivi, astuvad vastu uutele väljakutsetele ning aitavad ka teisi. Sulle endale on abiks vanemad Lapikud, kes enda ajudest tarkust välja pigistavad ehk õpetavad, kuidas midagi teha." }
+      ],
+      [
+        { "text": "Sind ootab võimalus võtta osa erinevatest projektidest, koolitustest, lõbusatest üritustest ning ühiselt veedetud õhtudest (või öödest), mis mööduvad nokitsedes, koolitöid tehes või niisama chillides. Kokkuvõttes saad sõbrad, kellega ülikooli aastad mööda saata, palju uusi kogemusi ning ka mõned ilusad märked CV-sse." }
+      ]
+    ]
+  },
   "teams": {
     "kicker": "Kolm tiimi",
     "title": "Vali, mis sind päriselt kõnetab.",
@@ -52,7 +84,7 @@
         "links": [
           { "label": "Remondikohvik", "href": "https://remondikohvik.lapikud.ee/" }
         ],
-        "tags": ["Diagnostika", "Riistvara", "IT-tugi", "Remondiköök"],
+        "tags": ["Diagnostika", "Riistvara", "IT-tugi", "Remondikohvik"],
         "whatTitle": "Mida tehakse",
         "what": [
           "Diagnoositakse ja parandatakse arvuteid ja seadmeid",
@@ -63,7 +95,7 @@
         "eventsTitle": "Korduvad üritused",
         "events": [
           "Ava-abi tunnid campus'es",
-          "Remondiköök – avalik remondiüritus",
+          "Remondikohvik – avalik remondiüritus",
           "IT-küsimuste ja abi sessioonid"
         ]
       },
@@ -109,12 +141,5 @@
     "titleLine2": "Täida avaldus.",
     "description": "Üheski tiimis pole varasemat kogemust vaja, isegi kui see tuleks kasuks. Üritame leida igale tasemele vastavaid ülesandeid ning vajadusel pigistame teie jaoks enda ajudest ka tarkust välja ehk õpetame, kuidas midagi teha.",
     "cta": "Täida avaldus →"
-  },
-  "members": {
-    "kicker": "Meie inimesed",
-    "title": "Liikmed",
-    "senior": "Vanemliikmed",
-    "junior": "Noorliikmed",
-    "graduates": "Vilistlased"
   }
 }

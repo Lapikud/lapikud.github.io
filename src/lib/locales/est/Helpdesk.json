@@ -31,6 +31,7 @@
   },
   "hours": {
     "title": "Lahtiolekuajad:",
+    "short": "E–R 14–19*",
     "schedule": [
       { "emphasis": "E", "text": "smaspäevast – " },
       { "emphasis": "R", "text": "eedeni 14-19*" }
@@ -39,6 +40,7 @@
   },
   "location": {
     "title": "Asukoht",
+    "short": "Akadeemia tee 5, ruum 008A",
     "busInfo": [
       { "text": "Saab " },
       { "text": "11, 37, 83, 91 bussiga Keemia peatusest", "highlight": true },
@@ -46,5 +48,16 @@
       { "text": "Tehnikaülikool peatusest 10, 27, 33, 36, 45 bussiga.", "highlight": true }
     ],
     "address": "Akadeemia tee 5 ühiselamu, ruum 008A"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "items": [
+      { "label": "E-mail", "value": "helpdesk@lapikud.ee", "href": "mailto:helpdesk@lapikud.ee" },
+      { "label": "Telefon", "value": "+372 581 607 99", "href": "tel:+37258160799" },
+      { "label": "Facebook Messenger", "value": "m.me/Lapikud", "href": "https://m.me/Lapikud" }
+    ],
+    "facebook": {
+      "cta": "Jälgi lehte"
+    }
   }
 }

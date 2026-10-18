@@ -1,24 +1,9 @@
 import { computed, onScopeDispose, ref, watch } from 'vue';
-import { getLanguageFromRoute } from '../routes';
 
 const localeModules = import.meta.glob('./locales/*/*.json');
-const supportedLanguages = new Set(['est', 'en']);
-export const languageLocales = { est: 'et-EE', en: 'en-GB' };
+export const languageLocales = { est: 'et-EE' };
 
-function getInitialLanguage() {
-    if (typeof window === 'undefined') return 'est';
-
-    const langFromRoute = getLanguageFromRoute(window.location.pathname);
-    if (langFromRoute) {
-        localStorage.setItem('language', langFromRoute);
-        return langFromRoute;
-    }
-
-    const savedLanguage = localStorage.getItem('language');
-    return supportedLanguages.has(savedLanguage) ? savedLanguage : 'est';
-}
-
-export const currentLang = ref(getInitialLanguage());
+export const currentLang = ref('est');
 export const currentLocale = computed(() => languageLocales[currentLang.value]);
 export const text = ref({});
 let translationRequest = 0;
@@ -60,19 +45,6 @@ export function usePageText(pageName) {
     return pageText;
 }
 
-export function switchLang(lang) {
-    if (!supportedLanguages.has(lang)) return;
-    currentLang.value = lang;
-    if (typeof window !== 'undefined') localStorage.setItem('language', lang);
-}
-
 watch(currentLocale, (locale) => {
     if (typeof document !== 'undefined') document.documentElement.lang = locale;
 }, { immediate: true });
-
-if (typeof window !== 'undefined') {
-    window.addEventListener('popstate', () => {
-        const lang = getLanguageFromRoute(window.location.pathname);
-        if (lang) switchLang(lang);
-    });
-}

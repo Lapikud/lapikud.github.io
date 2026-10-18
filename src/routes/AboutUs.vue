@@ -12,8 +12,7 @@
 <template>
 <div class="safe-area-navbar">
 <Section>
-  <p>In development...</p>
-  <p>Põhikiri siia?</p>
+  <p>{{ text.placeholder }}</p>
 </Section>
 </div>
 </template>

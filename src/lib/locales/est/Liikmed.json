@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "kicker": "Meist",
+    "title": "Liikmed",
+    "description": "Kõik, kes on ning kunagi olid Lapikute liikmed."
+  },
+  "groups": {
+    "junior": "Noorliikmed",
+    "senior": "Vanemliikmed",
+    "graduates": "Vilistlased"
+  }
+}

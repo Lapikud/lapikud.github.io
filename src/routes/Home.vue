@@ -1,10 +1,10 @@
 <script setup>
   import {Section, Stack, Grid, Center, Image, Svg, Button} from "../components/index.js";
-  import { useRouter, usePageText, currentLang, useImage, useYaml } from "../lib/index.js";
+  import { useRouter, usePageText, useImage, useYaml } from "../lib/index.js";
   import { onMounted, ref } from 'vue';
 
-  import { ArrowRight } from "@lucide/vue";
-  import { ArrowLeft } from "@lucide/vue";
+  import IconArrowRight from "~icons/keyline-icons/arrow-right-duotone";
+  import IconArrowLeft from "~icons/keyline-icons/arrow-left-duotone";
 
   // Initialize composables
   const router = useRouter();
@@ -70,6 +70,7 @@
     <div class="relative z-20 flex min-h-screen w-full items-stretch py-8 md:py-12">
       <div class="flex w-full max-w-115 flex-col justify-end">
         <div class="flex flex-col items-start gap-5">
+          <p class="terminal terminal-prompt cursor-blink text-sm text-white/85 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] md:text-base" aria-hidden="true">whoami</p>
           <p class="w-full max-w-110 text-left text-lg leading-[165%] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] md:max-w-125 md:text-xl">
             {{ text.hero?.description || "MTÜ Lapikud on Tallinna Tehnikaülikooli Tarkvaraarendusklubi, mis ühendab endisi ja praegusi IT huvilisi tudengeid." }}
           </p>
@@ -117,11 +118,11 @@
     <Center dir="col" class="w-full max-w-sm justify-start mx-auto">
       <div class="w-[min(72vw,240px)] md:w-[min(26vw,280px)] lg:w-[min(23vw,300px)] aspect-square rounded-full overflow-hidden">
         <Image
-          :webpSrc="image.getOptimisedImagePath('home-page-images', 'helpdesk', 'webp')"
-          :src="image.getOptimisedImageFallback('home-page-images', 'helpdesk')"
+          :webpSrc="image.getOptimisedImagePath('home-page-images', 'event_1', 'webp')"
+          :src="image.getOptimisedImageFallback('home-page-images', 'event_1')"
           :alt="text['services']?.helpdesk?.imageAlt || 'Helpdesk Pilt'"
           objectFit="cover"
-          class="w-full h-full rounded-full object-[center_38%]"
+          class="w-full h-full rounded-full object-[center_5%] scale-[1.15]"
           pictureClass="block w-full h-full"
         />
       </div>
@@ -178,7 +179,7 @@
         <div class="flex flex-col items-start gap-6">
           <Button
             class="rounded-md border-3 border-orange-500 bg-transparent px-10 py-2 transition-colors hover:bg-orange-500/10"
-            :onClick="() => router.navigate(currentLang === 'en' ? '/aboutus' : '/lapikutest')"
+            :onClick="() => router.navigate('/lapikutest')"
           >
             {{ text.aboutSection?.moreInfo || "Rohkem infot" }}
           </Button>
@@ -186,11 +187,11 @@
           <div class="flex items-center gap-4">
             <Button
               class="border-orange-500 bg-orange-500 px-20 py-2 transition-colors hover:border-orange-300 hover:bg-orange-300"
-              :onClick="() => router.navigate(currentLang === 'en' ? '/contact' : '/kontakt')"
+              :onClick="() => router.navigate('#kontakt')"
             >
               {{ text.aboutSection?.contact || "Kontakt" }}
             </Button>
-            <ArrowRight class="h-12 w-12 text-orange-500 md:h-14 md:w-14" :strokeWidth="2.4" />
+            <IconArrowRight class="arrow-accent h-12 w-12 text-orange-500 md:h-14 md:w-14" />
           </div>
         </div>
       </div>
@@ -326,16 +327,16 @@
         <div class="flex flex-col items-end gap-6">
           <Button
             class="rounded-md border-3 border-orange-500 bg-transparent px-10 py-2 transition-colors hover:bg-orange-500/10"
-            :onClick="() => router.navigate(currentLang === 'en' ? '/ourwork' : '/ettevottele')"
+            :onClick="() => router.navigate('/meietood')"
           >
             {{ text.whatWeDo?.moreInfo || "Rohkem infot" }}
           </Button>
 
           <div class="flex items-center gap-4">
-            <ArrowLeft class="h-12 w-12 text-orange-500 md:h-14 md:w-14" :strokeWidth="2.4" />
+            <IconArrowLeft class="arrow-accent h-12 w-12 text-orange-500 md:h-14 md:w-14" />
             <Button
               class="border-orange-500 bg-orange-500 px-20 py-2 transition-colors hover:border-orange-300 hover:bg-orange-300"
-              :onClick="() => router.navigate(currentLang === 'en' ? '/student' : '/tudengile')"
+              :onClick="() => router.navigate('/tudengile')"
             >
               {{ text.whatWeDo?.contact || "Kontakt" }}
             </Button>
@@ -402,3 +403,10 @@
 <!-- Spacer-->
 <Section bg="bg-orange-500" class="h-3"/>
 </template>
+
+<style scoped>
+  /* Heavier keyline for the large decorative arrows (replaces the old :strokeWidth="2.4") */
+  .arrow-accent :deep(path) {
+    stroke-width: 2.4;
+  }
+</style>

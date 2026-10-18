@@ -49,6 +49,6 @@ import { text } from "../lib/index.js";
         </Container>
         </div>
     </Grid>
-    <Center><small class="text-orange-500 pt-6">© 2026 {{ text.footer?.organization || "MTÜ Lapikud" }}</small></Center>
+    <Center><small class="terminal cursor-blink text-orange-500 pt-6">© 2026 {{ text.footer?.organization || "MTÜ Lapikud" }}</small></Center>
 </Section>
 </template>

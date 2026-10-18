@@ -1,8 +1,9 @@
 {
   "about": "Meist",
   "aboutPages": {
-    "info": "Lapikutest",
-    "join": "Liitu Meiega",
+    "pohikiri": "Põhikiri",
+    "students": "Tudengile",
+    "members": "Liikmed",
     "mentors": "Mentorid",
     "board": "Juhatus"
   },
@@ -14,5 +15,6 @@
     "repair": "Remondikohvik"
   },
   "helpdesk": "Helpdesk",
+  "ourwork": "Ettevõttele",
   "contact": "Kontakt"
 }

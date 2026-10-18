@@ -1,18 +1,33 @@
 <script setup>
 import { onBeforeUnmount, onMounted, shallowRef, watch } from 'vue';
 import { useRouter } from './useRouter.js';
-import { getLanguageFromRoute, getTranslatedRoute } from '../../routes';
-import { switchLang } from '../i18n.js';
+import { redirects } from '../../routes';
 
 const props = defineProps({ routes: { type: Object, required: true } });
 const router = useRouter();
-const currentPath = shallowRef(typeof window !== 'undefined' ? window.location.pathname : '/');
+
+// Follow legacy English route redirects and normalise the URL
+function normalizePath(path) {
+  return redirects[path] || path;
+}
+
+function applyRedirect(path) {
+  const target = normalizePath(path);
+  if (target !== path) {
+    window.history.replaceState({}, '', target);
+  }
+  return target;
+}
+
+const currentPath = shallowRef(
+  typeof window !== 'undefined' ? applyRedirect(window.location.pathname) : '/',
+);
 const CurrentComponent = shallowRef(null);
 let routeRequest = 0;
 
 // Sync with router composable's currentPath
 watch(() => router.currentPath.value, (path) => {
-  currentPath.value = path;
+  currentPath.value = normalizePath(path);
 }, { immediate: true });
 
 async function resolveCurrentComponent(path) {
@@ -32,24 +47,18 @@ async function resolveCurrentComponent(path) {
 }
 
 function navigate(url) {
+  url.pathname = normalizePath(url.pathname);
   window.history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`);
   window.scrollTo(0, 0);
   currentPath.value = url.pathname;
   router.currentPath.value = url.pathname;
   window.dispatchEvent(new PopStateEvent('popstate'));
-
-  // Handle language switching based on route
-  const lang = getLanguageFromRoute(url.pathname);
-  if (lang) switchLang(lang);
 }
 
 const handlePopState = () => {
-  const newPath = window.location.pathname;
+  const newPath = applyRedirect(window.location.pathname);
   currentPath.value = newPath;
   router.currentPath.value = newPath;
-  
-  const lang = getLanguageFromRoute(newPath);
-  if (lang) switchLang(lang);
 };
 
 const handleClick = (event) => {
@@ -58,7 +67,8 @@ const handleClick = (event) => {
   if (!anchor || anchor.target || anchor.hasAttribute('download')) return;
 
   const url = new URL(anchor.href, window.location.href);
-  if (url.origin !== window.location.origin || !props.routes[url.pathname]) return;
+  if (url.origin !== window.location.origin) return;
+  if (url.pathname !== window.location.pathname && !props.routes[normalizePath(url.pathname)]) return;
   if (url.pathname === window.location.pathname && url.hash) return;
 
   event.preventDefault();
@@ -67,11 +77,9 @@ const handleClick = (event) => {
 
 onMounted(() => {
   window.addEventListener('popstate', handlePopState);
-  window.addEventListener('click', handleClick);
 });
 onBeforeUnmount(() => {
   window.removeEventListener('popstate', handlePopState);
-  window.removeEventListener('click', handleClick);
 });
 
 watch(currentPath, resolveCurrentComponent, { immediate: true });

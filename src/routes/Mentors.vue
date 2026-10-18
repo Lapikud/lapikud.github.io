@@ -3,10 +3,10 @@
     import { computed, onMounted, ref } from 'vue';
     import { currentLang, getLangText, usePageText, useYaml, useImage } from "../lib/index.js";
 
-    import { Mail } from "@lucide/vue";
-    import { Phone } from "@lucide/vue";
-    import { MessageCircle } from "@lucide/vue";
-    import { User } from "@lucide/vue";
+    import IconMail from "~icons/keyline-icons/mail-duotone";
+    import IconPhone from "~icons/keyline-icons/phone-duotone";
+    import IconMessage from "~icons/keyline-icons/message-duotone";
+    import IconUser from "~icons/keyline-icons/user-duotone";
 
     // Initialize composables
     const yaml = useYaml();
@@ -22,15 +22,15 @@
 
     function getContactIcon(contactType) {
         const type = contactType.toLowerCase();
-        if (type.includes("email") || type.includes("e-post")) return Mail;
-        if (type.includes("phone") || type.includes("telefon")) return Phone;
+        if (type.includes("email") || type.includes("e-post")) return IconMail;
+        if (type.includes("phone") || type.includes("telefon")) return IconPhone;
         if (
             type.includes("messenger") ||
             type.includes("discord") ||
             type.includes("facebook")
         )
-            return MessageCircle;
-        return User;
+            return IconMessage;
+        return IconUser;
     }
 
     function getContactLink(method) {
@@ -169,7 +169,7 @@
                                             : ''"
                                     >
                                         <component :is="getContactIcon(method.name)"
-                                            :size="16"
+                                            class="size-4"
                                         />
                                         <span class="capitalize"
                                             >{{ method.name }}</span

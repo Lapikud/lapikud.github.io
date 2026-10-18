@@ -1,6 +1,6 @@
 /* Global stylesheet */
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Lato:wght@300;400;700;900&family=Syncopate:wght@400;700&display=swap");
 @import "tailwindcss";
 
 /* Overwriting tailwindcss specific variables */
@@ -48,6 +48,8 @@
   /* type scale (fluid base + modular sizes) */
   --fs-base: clamp(1.1rem, 1vw + 1rem, 1.2rem);
   --line-height: 1.6;
+  --font-terminal: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 }
 
 /* Global box sizing & accessible defaults */
@@ -64,6 +66,7 @@ html {
   font-size: calc(var(--fs-base) * var(--ui-scale));
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: var(--navbar-offset);
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 body {
@@ -90,6 +93,59 @@ input[type="button"],
 input[type="submit"] {
   font: inherit;
   cursor: pointer;
+}
+
+/* Headings use Syncopate */
+h1,
+h2 {
+  font-family: "Syncopate", "Lato", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Orange text selection, matches the terminal cursor */
+::selection {
+  background: var(--color-orange-500);
+  color: var(--color-gray-900);
+}
+
+/* Terminal-flavoured accents */
+.terminal {
+  font-family: var(--font-terminal);
+  letter-spacing: 0.02em;
+}
+
+/* Prefix with an orange shell prompt */
+.terminal-prompt::before {
+  content: "$ ";
+  color: var(--color-orange-500);
+}
+
+/* Blinking block cursor */
+.cursor-blink::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.2em;
+  vertical-align: -0.15em;
+  background: var(--color-orange-500);
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink::after {
+    animation: none;
+  }
 }
 
 /* Utility: visually hidden (accessible labels) */

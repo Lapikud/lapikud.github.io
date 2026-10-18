@@ -1,7 +1,10 @@
 # Our work
 #
 - title: Tipilan
-  photo: tipilan.jpg
+  photo: tipilan_2026_full.png
+  photos:
+    - tipilan_2026_full.png
+    - tipilan.png
   url: http://tipilan.ee/
   description: Tipilan on Eesti suurim üliõpilaste korraldatav LAN-üritus. Lapikud tagas ürituse IT-infrastruktuuri ja veebilehe toimimise.
 

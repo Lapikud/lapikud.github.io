@@ -1,6 +1,5 @@
-import { computed, onScopeDispose, ref, watch } from 'vue';
-import { getLanguageFromRoute, getTranslatedRoute } from '../../routes';
-import { switchLang } from '../i18n.js';
+import { computed, onScopeDispose, ref } from 'vue';
+import { redirects } from '../../routes';
 
 /**
  * Vue composable for router functionality
@@ -30,11 +29,7 @@ export function useRouter() {
       return;
     }
 
-    const selectedLang =
-      getLanguageFromRoute(window.location.pathname) ||
-      localStorage.getItem('language') ||
-      'est';
-    url.pathname = getTranslatedRoute(url.pathname, selectedLang);
+    url.pathname = redirects[url.pathname] || url.pathname;
     commitNavigation(`${url.pathname}${url.search}${url.hash}`);
   }
 
@@ -46,24 +41,6 @@ export function useRouter() {
     window.scrollTo(0, 0);
     currentPath.value = path;
     window.dispatchEvent(new PopStateEvent('popstate'));
-
-    const lang = getLanguageFromRoute(new URL(path, window.location.origin).pathname);
-    if (lang) switchLang(lang);
-  }
-
-  /**
-   * Switch language and navigate to translated route
-   * @param {string} targetLang - Target language ('est' or 'en')
-   */
-  function switchLanguageRoute(targetLang) {
-    const currentPath = window.location.pathname;
-    const translatedPath = getTranslatedRoute(currentPath, targetLang);
-    
-    switchLang(targetLang);
-
-    if (translatedPath !== currentPath) {
-      commitNavigation(translatedPath);
-    }
   }
 
   /**
@@ -101,12 +78,10 @@ export function useRouter() {
   if (typeof window !== 'undefined') {
     const handlePopState = () => {
       currentPath.value = window.location.pathname;
-      const lang = getLanguageFromRoute(window.location.pathname);
-      if (lang) switchLang(lang);
     };
 
     window.addEventListener('popstate', handlePopState);
-    
+
     onScopeDispose(() => {
       window.removeEventListener('popstate', handlePopState);
     });
@@ -116,7 +91,6 @@ export function useRouter() {
     currentPath,
     currentRoute,
     navigate,
-    switchLanguageRoute,
     goBack,
     reload,
     getPath,
