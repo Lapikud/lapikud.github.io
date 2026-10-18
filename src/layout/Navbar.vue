@@ -8,6 +8,7 @@ import {
 import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
 
 // Icon imports (Keyline via unplugin-icons)
+import IconHistory from "~icons/keyline-icons/history-duotone";
 import IconPodium from "~icons/keyline-icons/podium-duotone";
 import IconBot from "~icons/keyline-icons/bot-duotone";
 import IconUsers from "~icons/keyline-icons/users-duotone";
@@ -34,10 +35,11 @@ const handleScroll = () => {
 };
 
 const aboutRoutes = [
-    "/pohikiri",
     "/tudengile",
+    "/ajalugu",
     "/liikmed",
     "/juhatus",
+    "/pohikiri",
 ];
 
 const eventsRoutes = [];
@@ -53,16 +55,16 @@ function isInGroup(paths) {
 // Dropdown contents (labels, icons, target routes)
 const aboutItems = computed(() => [
     {
-        label: text.value.aboutPages?.pohikiri,
-        href: "/pohikiri",
-        icon: IconFileText,
-        active: isCurrent("/pohikiri"),
-    },
-    {
         label: text.value.aboutPages?.students,
         href: "/tudengile",
         icon: IconBot,
         active: isCurrent("/tudengile"),
+    },
+    {
+        label: text.value.aboutPages?.ajalugu,
+        href: "/ajalugu",
+        icon: IconHistory,
+        active: isCurrent("/ajalugu"),
     },
     {
         label: text.value.aboutPages?.members,
@@ -75,6 +77,12 @@ const aboutItems = computed(() => [
         href: "/juhatus",
         icon: IconPodium,
         active: isCurrent("/juhatus"),
+    },
+    {
+        label: text.value.aboutPages?.pohikiri,
+        href: "/pohikiri",
+        icon: IconFileText,
+        active: isCurrent("/pohikiri"),
     },
 ]);
 
@@ -304,8 +312,18 @@ function handleResize() {
                     <button
                         type="button"
                         class="menu-item menu-row"
-                        :class="{ 'menu-row-active': isCurrent('/liikmed') }"
+                        :class="{ 'menu-row-active': isCurrent('/ajalugu') }"
                         style="animation-delay: 100ms"
+                        @click="handleNavigation('/ajalugu')"
+                    >
+                        <IconHistory class="size-5" />
+                        {{ text.aboutPages.ajalugu }}
+                    </button>
+                    <button
+                        type="button"
+                        class="menu-item menu-row"
+                        :class="{ 'menu-row-active': isCurrent('/liikmed') }"
+                        style="animation-delay: 150ms"
                         @click="handleNavigation('/liikmed')"
                     >
                         <IconUsers class="size-5" />
@@ -315,11 +333,21 @@ function handleResize() {
                         type="button"
                         class="menu-item menu-row"
                         :class="{ 'menu-row-active': isCurrent('/juhatus') }"
-                        style="animation-delay: 150ms"
+                        style="animation-delay: 200ms"
                         @click="handleNavigation('/juhatus')"
                     >
                         <IconPodium class="size-5" />
                         {{ text.aboutPages.board }}
+                    </button>
+                    <button
+                        type="button"
+                        class="menu-item menu-row"
+                        :class="{ 'menu-row-active': isCurrent('/pohikiri') }"
+                        style="animation-delay: 250ms"
+                        @click="handleNavigation('/pohikiri')"
+                    >
+                        <IconFileText class="size-5" />
+                        {{ text.aboutPages.pohikiri }}
                     </button>
 
                     <!-- Events Section -->

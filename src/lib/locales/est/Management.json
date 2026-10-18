@@ -1,16 +1,10 @@
 {
   "hero": {
-    "eyebrow": "MTÜ Lapikud",
+    "eyebrow": "Meist",
     "title": "Juhtkond",
     "intro": "Inimesed, kes viivad organisatsiooni edasi."
   },
   "current": {
     "label": "Praegune juhtkond"
-  },
-  "history": {
-    "label": "Organisatsiooni juhtinud inimesed läbi aegade",
-    "hint": "Tänu kõigile, kes on Lapikuid juhtinud"
-  },
-  "loading": "Laadin andmeid…",
-  "error": "Juhtkonna andmete laadimine ebaõnnestus."
+  }
 }

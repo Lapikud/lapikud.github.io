@@ -7,6 +7,7 @@ const loadHelpdesk = () => import('./Helpdesk.vue');
 const loadOurWork = () => import('./OurWork.vue');
 const loadAboutUs = () => import('./AboutUs.vue');
 const loadPohikiri = () => import('./Pohikiri.vue');
+const loadAjalugu = () => import('./Ajalugu.vue');
 const loadManagment = () => import('./Managment.vue');
 const loadStriim = () => import('./Striim.vue');
 const loadCalendar = () => import('./Calendar.vue');
@@ -19,6 +20,7 @@ export const redirects = {
   '/ettevottele': '/meietood',
   '/aboutus': '/lapikutest',
   '/statute': '/pohikiri',
+  '/history': '/ajalugu',
   '/contact': '/kontakt',
   '/management': '/juhatus',
   '/calendar': '/kalender',
@@ -31,6 +33,7 @@ export const routes = {
   '/meietood': loadOurWork,
   '/lapikutest': loadAboutUs,
   '/pohikiri': loadPohikiri,
+  '/ajalugu': loadAjalugu,
   '/liikmed': loadLiikmed,
   '/juhatus': loadManagment,
   '/striim': loadStriim,
